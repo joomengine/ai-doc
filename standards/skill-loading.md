@@ -40,7 +40,7 @@ This repository workflow does not install a personal ChatGPT skill. Any client-s
 1. Read entrypoint metadata to select a task route, then read that route's instructions.
 2. Load the exact contract fields, workflow, examples and source evidence needed for the requested change. Do not preload every module or every architecture chapter.
 3. Load another model's entrypoint when an actual relationship crosses its boundary, such as a package Field referencing a Field Type or a consumer using a Super Power.
-4. Reuse the canonical shared resources: [engineering policy](../AGENTS.md), [registries](../registries/modules.json), [validation tools](../tools/README.md), [Playground](../testing/playground/README.md), and [human issue reporting](../testing/reporting-issues.md). Keep detailed model semantics in their existing contracts and references; route to them instead of maintaining duplicate copies in skill bodies.
+4. Reuse the canonical shared resources: [engineering policy](../AGENTS.md), [registries](../registries/modules.json), [validation tools](../tools/README.md), [repository network discovery](repository-network.md), [Playground](../testing/playground/README.md), and [human issue reporting](../testing/reporting-issues.md). Keep detailed model semantics in their existing contracts and references; route to them instead of maintaining duplicate copies in skill bodies.
 
 Use the task-specific workflow for actual authoring and integration. To inspect tools or check the documentation distribution, run from its root after satisfying [tool prerequisites](../tools/README.md):
 

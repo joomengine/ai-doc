@@ -1,5 +1,7 @@
 # Package repositories and the inspected examples
 
+[`joomengine/packages`](https://github.com/joomengine/packages) is the default Package repository. Use the [shared network workflow](../standards/repository-network.md) to discover its maintained mirrors; other package repositories retain their own source identities.
+
 These repositories distribute **JCB authoring graphs**, not installable Joomla extension ZIPs. A repository may contain several component roots and reusable entities shared by those roots. Its records, associations, indexes and transported assets have different contracts. Use the [specification](specification.md) and [entity reference](reference/README.md) as the format authority; a convenient example does not redefine the format.
 
 ## Pinned corpus and useful roles

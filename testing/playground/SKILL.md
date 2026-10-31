@@ -15,7 +15,7 @@ Read the [common procedure](README.md) and choose the requested supported runtim
 | Package blueprint | [Graph acquisition, component/module/plugin build and runtime](../../packages/workflows/validate-and-integrate.md) |
 | Author a package in the GUI and publish its source | [Author and export](../../packages/workflows/author-in-playground.md) |
 
-Configure the correct repository target/provider/read branch and effective precedence. Choose Init, Pull or Reset according to the model's actual semantics. Reopen saved records and compare the intended change before compilation. Distinguish JCB repository Push from compiling/downloading an installable extension ZIP.
+Use the [repository network workflow](../../standards/repository-network.md#configure-jcb-and-playground) when selecting a monitored core mirror or recovering source access. Configure the correct repository target/provider/read branch and effective precedence. Choose Init, Pull or Reset according to the model's actual semantics. Reopen saved records and compare the intended change before compilation. Distinguish JCB repository Push from compiling/downloading an installable extension ZIP.
 
 Use Code to inspect actual generated/installed files and diagnose requests. Return durable fixes to maintained source, reacquire/recompile/reinstall and retest. Database-held JCB definitions are not updated by editing generated PHP. Optional in-Playground AI and MCP have separate capabilities; consult the [source and capability ledger](sources.md) rather than assuming external-agent access.
 

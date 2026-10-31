@@ -19,6 +19,7 @@ The official [JoomEngine skills repository](https://github.com/joomengine/skills
 | Prepare a JCB bug report for human submission | [Issue reporting](testing/reporting-issues.md) |
 | Find the right JCB architecture context | [Architecture map](architecture/README.md) |
 | Add another operational module to this repository | [Module authoring standard](standards/module-authoring.md) |
+| Discover monitored core mirrors, reduce GitHub reads or recover source access | [Repository network workflow](standards/repository-network.md) |
 | Check registered Power repositories and their roles | [Power repository registry](registries/power-repositories.json) |
 | Find the official Field Types baseline and additional catalogue rules | [Field Type repository registry](registries/field-type-repositories.json) |
 | Find the official Snippets baseline and additional catalogue rules | [Snippet repository registry](registries/snippet-repositories.json) |
@@ -41,6 +42,8 @@ Reuse is a design decision, not a requirement to inherit from an unsuitable clas
 Every repository must account for its domain's current core catalogue when allocating a new GUID, as well as additional configured catalogues and local unpublished records. Preserve the original GUID when improving or overriding the same item; generate a fresh collision-checked identity for a distinct new item. Retain source provenance and effective repository order so intentional overrides are visible rather than silently replacing unrelated definitions.
 
 These are different entity formats. A Field Type describes the foundation and configurable properties of concrete fields; a Snippet supplies reusable source content. Use the relevant module's contract instead of copying Super Power file layouts or settings into them.
+
+Use the maintained [repository network](standards/repository-network.md) for core-source discovery and alternative read transports. Its live target list expands over time; preserve canonical identity and record the actual mirror and revision. [`joomengine/packages`](https://github.com/joomengine/packages) is the default Package repository.
 
 ## Default integration environment
 

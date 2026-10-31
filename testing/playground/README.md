@@ -6,6 +6,8 @@
 
 **Evidence boundary:** implementation claims here use Playground `main` at `4a2d017c653a12d5524f677772e4db50aa044e26`, inspected 2026-10-31. Its default recipe uses Joomla 6.2.0 and a browser-adapted JCB 6.2.0 package. JCB acquisition details are additionally traced to the separately pinned JCB `6.x` source. Those are distinct version identities. Compare the live installation before relying on a controller name or format. See [sources and freshness](sources.md) and the [observed verification record](verification.md); neither this procedure nor upstream Playground CI proves a candidate change passed.
 
+For monitored core mirrors and access recovery, use [repository network discovery and JCB setup](../../standards/repository-network.md#configure-jcb-and-playground). Preserve the actual candidate branch and keep read transport separate from authorized Push destinations.
+
 ## Reading path
 
 | Task | Read next |
