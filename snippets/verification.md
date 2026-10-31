@@ -31,8 +31,21 @@ The [entity regression suite](../tests/run-entity-tests.sh) checks complete and 
 
 Static checks establish only the [documented tooling profile](../tools/README.md). Duplicate JSON keys, actual library/package availability, complete import graph behaviour, consumer code adaptation and runtime effects require the stated additional review/integration evidence.
 
-## Integration not executed
+## Playground available; Snippet integration not executed
 
-**Installed JCB import/reset, editor insertion, component compilation, browser rendering, accessibility and dynamic-data security tests were not run.** No suitable installed JCB consumer was available. The [consumer integration workflow](workflows/integrate.md) documents these steps, including separately acquiring categories/libraries, verifying assets, adapting copied source, and checking dynamic output in its actual escaping context.
+The shared browser-based Playground is now an available integration route; see its [setup](../testing/playground/README.md), [configuration](../testing/playground/configuration.md) and [environment verification record](../testing/playground/verification.md) for the actual environment and observed operations. A shared Power import establishes only that recorded path. It does not establish Snippet acquisition, dependency resolution, copying, compilation or rendering.
+
+**No live Snippet fixture import or consumer compilation has been executed.** The following module-specific stages remain **not run**:
+
+| Stage | Evidence still required |
+| --- | --- |
+| Snippet repository resolution | Enabled Snippet target, intended read branch and effective source/order for a selected GUID |
+| Init, Pull and Reset | Persisted snippet values before/after each applicable operation; stable identity; separate type/library resolution and update results |
+| Real consumer and copy boundary | Source copied/adapted into a saved Site View or Custom Admin View; catalog refresh leaves that copy unchanged; deliberate consumer update persists |
+| Compilation and installation | Generated view contains the intended source, assets and resolved context; compiled component installs into the declared target |
+| Browser, accessibility and security | Actual route renders; compatible assets load; relevant keyboard, focus, dynamic escaping and permission/form cases pass |
+| Authoritative fix round trip | Any diagnosis made in JoomEngine Code returns to snippet/blueprint/compiler source and survives regeneration and retesting |
+
+The [consumer integration workflow](workflows/integrate.md) is the default authorized testing path for these stages. Record actual results and blockers here using the shared evidence format when it is executed. Source review and the static/fresh-agent exercises above remain valid at their stated scope; they are not substitutes for these checks.
 
 The current core's Bootstrap v4/UIkit v2 classifications are historical specimen facts, not proof of compatibility with a new Joomla template. JSON validity and an existing library GUID cannot certify a working frontend.

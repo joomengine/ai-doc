@@ -35,8 +35,8 @@ if [[ -f $root/registries/power-repositories.json ]]; then
 	jq -e '.version==1 and (.repositories|type=="array" and length>=7) and ([.repositories[].id]|length==(unique|length)) and all(.repositories[]; (.id|type=="string") and (.url|type=="string") and (.branch|type=="string") and .index=="super-powers.json")' "$root/registries/power-repositories.json" >/dev/null || fail 'Invalid Power registry'
 fi
 if [[ -f $root/registries/modules.json ]]; then
-	jq -e 'def nonempty: type=="string" and length>0; .version==1 and (.modules|type=="array") and ([.modules[].id]|length==(unique|length)) and all(.modules[]; . as $m | (.id|nonempty) and (.path|nonempty) and (.scope|nonempty) and (.entrypoint|nonempty and startswith($m.path+"/")) and (.source_baseline|nonempty) and (["in-progress","documented","deprecated"]|index($m.status)!=null) and (.verification.static|nonempty) and (.verification.integration|nonempty))' "$root/registries/modules.json" >/dev/null || fail 'Invalid module registry'
-	while IFS= read -r destination; do safe_file "$root" "$destination" >/dev/null; done < <(jq -r '.modules[]|.entrypoint,.source_baseline' "$root/registries/modules.json")
+	jq -e 'def nonempty: type=="string" and length>0; .version==1 and (.modules|type=="array") and ([.modules[].id]|length==(unique|length)) and all(.modules[]; . as $m | (.id|nonempty) and (.path|nonempty) and (.scope|nonempty) and (.entrypoint|nonempty and startswith($m.path+"/")) and (.source_baseline|nonempty) and (.test_workflow|nonempty and startswith($m.path+"/")) and (["in-progress","documented","deprecated"]|index($m.status)!=null) and (.verification.static|nonempty) and (.verification.integration|nonempty))' "$root/registries/modules.json" >/dev/null || fail 'Invalid module registry'
+	while IFS= read -r destination; do safe_file "$root" "$destination" >/dev/null; done < <(jq -r '.modules[]|.entrypoint,.source_baseline,.test_workflow' "$root/registries/modules.json")
 fi
 for domain in field-types snippets; do
 	entity_domain "$domain"

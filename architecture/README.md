@@ -8,6 +8,8 @@ This directory connects operational tasks in `ai-doc` to the broader [Joomla Com
 
 Start with the relevant operational module and workflow. Read the architecture articles needed to understand a dependency, boundary, or failure. Do not require every agent to ingest the complete publication for a small change.
 
+For implementation validation, follow the [shared Playground workflow](../testing/playground/README.md) and the module's `test_workflow` in the [registry](../registries/modules.json). Trace the authored definition through the local JCB record, an actual consuming blueprint, generated extension files and exercised runtime behaviour. Playground provides the default browser environment; each module defines its own assertions. A successful import or unrelated compilation does not establish the complete architectural path.
+
 | Task or question | Authoritative architecture reading path | What to carry into implementation |
 | --- | --- | --- |
 | Understand the whole system | [Overview](https://architecture.joomlacomponentbuilder.com/markdown/index.md), [reading guide](https://architecture.joomlacomponentbuilder.com/markdown/reading-guide.md), [white paper](https://architecture.joomlacomponentbuilder.com/markdown/white-paper.md) | Identify the input, transformation, and output being changed before choosing a module. |

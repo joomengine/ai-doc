@@ -38,11 +38,12 @@ Use a descriptive lowercase directory name with hyphens. The following are requi
 | `specification.md` | Exact artifact/operation contract, lifecycle, identities, relationships, encoding, transformations, and edge cases |
 | Field/reference documentation when structured data exists | Every serialized field: type/domain, absent/null/empty semantics, conditions, references, transforms, examples, and authority |
 | `workflows/` | Complete creation, maintenance, debugging, compatibility, and verification procedures for advertised tasks |
+| Module-specific integration workflow | Shared Playground setup plus exact model operations, assertions on persisted data, real consumer construction, compilation/output checks, runtime scenarios and recovery |
 | `examples/` | Minimal complete valid examples plus meaningful variants, provenance, execution instructions, and restrictions on reuse |
 | `sources.md` | Evidence map, pinned revisions, upstream references, discovered disagreements, and freshness procedure |
 | Schemas/tooling when useful | Structural checks and cross-file validation, documented dependencies, nonzero failure exits, and clear coverage limits |
 
-The module must be linked from the root README and `registries/modules.json`. Record `id`, `path`, `entrypoint`, `status`, `scope`, `source_baseline`, and `verification`. `status` must be `in-progress`, `documented`, or `deprecated`; `documented` means the documentation meets this standard, not that every target environment has been exercised. `verification` must separately state static and integration evidence.
+The module must be linked from the root README and `registries/modules.json`. Record `id`, `path`, `entrypoint`, `status`, `scope`, `source_baseline`, `test_workflow`, and `verification`. `test_workflow` is a repository-relative path to that module's actual acceptance procedure, not merely the shared environment guide. The repository checker requires it to exist. `status` must be `in-progress`, `documented`, or `deprecated`; `documented` means the documentation meets this standard, not that every target environment has been exercised. `verification` must separately state static and integration evidence.
 
 Choose one canonical location for each rule. Use links and short reminders elsewhere. Make the reading path task-based: fixing a method should not require reading every architecture chapter, while creating an empty repository must lead through every necessary step.
 
@@ -78,6 +79,22 @@ Commands must match shipped tools, include their prerequisites, handle paths saf
 
 Workflow authorization follows the user's task. Documentation must not add blanket approval pauses for ordinary authorized work. Do not imply permission to publish, send communications, or merge beyond that task.
 
+### Default Playground path for every model
+
+Link the [shared Playground workflow](../testing/playground/README.md) and [configuration reference](../testing/playground/configuration.md) from each module's entry point and acceptance procedure. With browser access, a supported target and authorization for implementation/testing, an agent uses this path by default. Honor an explicit opt-out, a read-only/documentation-only task or another requested environment. Offer or ask about testing only when a real scope decision remains; do not require the user to repeat permission for ordinary authorized validation. Report unsupported versions, unavailable browsers, network failures and other blockers instead of silently skipping tests or changing targets.
+
+For each newly introduced model, document these specifics rather than merely saying “test in Playground”:
+
+1. The applicable repository target/provider and identity rules, enabled-state and ordering checks, read branch and dependencies. Some subjects have no repository importer; document their actual supported entry path instead of inventing one.
+2. The actual Init, Pull, Reset, save/export or other operations available in the targeted release: what they select, replace, preserve or traverse. Similar toolbar labels do not establish identical semantics across models or versions.
+3. The persisted fields and relationships to inspect after import or editing, including encoding, defaults, identity, dependency resolution and a distinctive expected change. A success notification is insufficient evidence.
+4. The smallest real consuming blueprint/component that exercises the changed item. Name required references, linked fields/views, namespaces, libraries, assets and permissions. An unreferenced record and an unrelated successful compile do not test the change.
+5. The expected generated XML/PHP/SQL/assets and installed runtime actions, including meaningful failure cases. Cover creation and updates separately where they differ. State when compilation is not applicable and provide the actual consuming path.
+6. The relevant Joomla/JCB/PHP matrix, version-specific assertions and native-platform checks. Read currently supported Playground targets from its configuration; do not present planned Joomla 7, alpha or development releases as available.
+7. The evidence to retain and failure recovery, including return of diagnostic editor changes to authoritative source, regeneration and the [human issue-reporting procedure](../testing/reporting-issues.md).
+
+JoomEngine Code can aid inspection and debugging; its installed files are a separate representation from database-held JCB definitions and repository source. Describe how changes return to the correct authoring layer. The optional in-Playground AI, browser automation and MCP are distinct capabilities with different access and execution limits; reuse the shared guide's current evidence instead of assuming they are interchangeable.
+
 ## 6. Examples and reusable instructions
 
 Use complete examples at the smallest size that demonstrates the rule. Cover meaningful variations, not dozens of equivalent snippets. For a repository format, include creation from an empty directory and at least one realistic dependency relationship.
@@ -109,6 +126,7 @@ Before marking a module `documented`, require:
 - Scope and evidence map are explicit; every advertised workflow has a complete path.
 - Significant settings and lifecycle edge cases have authoritative support or named gaps.
 - Examples and tool commands agree with the contract and work at their stated validation level.
+- A `test_workflow` links the module to Playground and defines model-specific import/update, consumer, compilation and runtime acceptance (or explains why a stage is inapplicable). Its verification record distinguishes performed, failed, blocked, declined and not-run stages with evidence.
 - Root and module navigation, registry entries, and relevant CI checks pass.
 - Independent review or a fresh-agent exercise has been performed and blocking findings resolved.
 - The PR states changes, source revisions, verification evidence, and remaining limits truthfully.

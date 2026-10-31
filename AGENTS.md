@@ -8,6 +8,7 @@ This repository documents the **whole Joomla Component Builder (JCB) ecosystem**
 2. Read the selected module's entry point, contract, and relevant workflow. Load supporting references only as the task requires.
 3. Before changing implementation-dependent behaviour, inspect the authoritative source at the target revision. Documentation records verified behaviour; it cannot override a changed implementation.
 4. Before extending these docs, follow `standards/module-authoring.md`. Use the same module contract, evidence discipline, workflows, validation, and completion criteria for every future subject.
+5. For implementation work, follow the module's `test_workflow` in `registries/modules.json` and the shared [Playground integration workflow](testing/playground/README.md). Testing must exercise the affected model, its real consumer and the intended Joomla/PHP target.
 
 ## Non-negotiable project policy
 
@@ -18,6 +19,9 @@ This repository documents the **whole Joomla Component Builder (JCB) ecosystem**
 - Preserve portable placeholders, field-specific empty/null/sentinel values, public contracts, and upstream licensing. Follow the repository's tabs and established code style.
 - Distinguish **project policy**, **verified implementation behaviour**, **observed examples**, and **unverified gaps**. Cite exact source revisions for implementation claims. Never present an inferred or untested feature as verified.
 - A successful static check does not prove a JCB import, compilation, or runtime integration. State which checks actually ran and which remain unavailable.
+- When browser access and a suitable supported target are available, use Playground by default for authorized implementation validation, unless the user opts out or the task does not affect executable behaviour. Choose the requested versions, verify the installed JCB version, import or refresh the candidate, inspect persisted values, and compile and exercise a real consumer where relevant. Record blockers and unrun stages honestly; browser availability alone is not a pass. Do not add a routine permission pause to already authorized testing. Ask when missing scope, private data, credentials, publication or external effects require the user's decision.
+- Use JoomEngine Code to inspect or diagnose generated/installed output. Carry lasting fixes back to the authoritative repository definition, blueprint or compiler source and regenerate; an editor-only patch does not prove the maintained source works.
+- JCB issue submission is human-led. Prepare a minimal, sanitized reproduction and direct the user to the [official JCB issue chooser](https://git.vdm.dev/joomla/Component-Builder/issues/new/choose) using the [reporting procedure](testing/reporting-issues.md). Do not submit on the human's behalf under this policy.
 - Stay within the requested scope and authorization. Make work reviewable through focused commits and a PR when requested; do not merge merely because checks pass.
 
 ## Documentation quality

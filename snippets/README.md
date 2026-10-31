@@ -12,7 +12,8 @@ This module explains how to create, extend, maintain and debug **JCB Snippet rep
 | Author or change a serialized value | [Field reference](fields.md) |
 | Start with an empty repository or add a snippet/type | [Creation workflow](workflows/create.md) |
 | Fix a snippet, debug missing entries or migrate old flat files | [Maintenance workflow](workflows/maintain.md) |
-| Use a snippet in a component and verify its assets/behaviour | [Consumer integration](workflows/integrate.md) |
+| Prepare the default browser test environment and select supported versions | [Playground setup](../testing/playground/README.md) and [configuration](../testing/playground/configuration.md) |
+| Import/update a snippet, copy it into a real view, compile and test its assets/behaviour | [Consumer integration in Playground](workflows/integrate.md) |
 | Inspect complete examples | [Examples](examples/README.md) |
 | Check what was actually tested | [Verification](verification.md) |
 | Document another JCB area to the same standard | [Module-authoring standard](../standards/module-authoring.md) |
@@ -27,4 +28,6 @@ This module explains how to create, extend, maintain and debug **JCB Snippet rep
 6. JCB's snippet selector displays source for inspection/copying. Save clears that selector in the inspected consumers; the compiler processes the consumer's own copied source. Updating a catalog snippet does not rewrite previously copied view code.
 7. Keep attribution, upstream license, framework versions, integration instructions and security/accessibility requirements explicit. Imported code and rich preview text are not assumed safe merely because JSON validation passes.
 
-Static tooling validates a bounded repository profile and catalog references. It cannot establish a real JCB import, component compilation, CSS/JavaScript availability, browser accessibility or safe handling of dynamic data. The integration workflow is a required separate gate for claims about a working component.
+For authorized implementation validation, use the shared Playground environment by default when browser access and a suitable target are available, following its configuration and the module's [consumer integration workflow](workflows/integrate.md). That workflow checks repository resolution, persisted snippet/type/library relationships, copying into a real Site View or Custom Admin View, generated output, and installed browser behaviour. Use JoomEngine Code to inspect output; return fixes to the authoritative snippet or consumer blueprint and recompile.
+
+Static tooling validates a bounded repository profile and catalog references. It cannot establish a real JCB import, component compilation, CSS/JavaScript availability, browser accessibility or safe handling of dynamic data. Shared Playground availability is recorded separately from this module's [verification status](verification.md): Snippet import, compilation and runtime tests have not yet been executed. The integration workflow is a required separate gate for claims about a working component.
