@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/joomengine/ai-doc/super-powers/schemas/index.schema.json",
+  "title": "Super Power canonical repository index",
+  "type": "object",
+  "propertyNames": {"pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"},
+  "additionalProperties": {
+    "type": "object",
+    "required": ["guid", "name", "type", "namespace", "path", "settings", "power", "code", "spk"],
+    "properties": {
+      "guid": {"type": "string", "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"},
+      "name": {"type": "string", "minLength": 1},
+      "type": {"enum": ["class", "abstract class", "final class", "interface", "trait"]},
+      "namespace": {"type": "string", "minLength": 1},
+      "path": {"type": "string", "pattern": "^src/[0-9a-f-]{36}$"},
+      "settings": {"type": "string", "pattern": "^src/[0-9a-f-]{36}/settings\\.json$"},
+      "power": {"type": "string", "pattern": "^src/[0-9a-f-]{36}/code\\.power$"},
+      "code": {"type": "string", "pattern": "^src/[0-9a-f-]{36}/code\\.php$"},
+      "spk": {"type": "string", "pattern": "^Super---[0-9a-f_]{36}---Power$"}
+    },
+    "additionalProperties": true
+  }
+}

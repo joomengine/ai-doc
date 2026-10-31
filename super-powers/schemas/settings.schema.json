@@ -1,0 +1,409 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/joomengine/ai-doc/super-powers/schemas/settings.schema.json",
+  "title": "Super Power portable authoring settings profile",
+  "description": "An ai-doc structural profile. Not a complete replacement for JCB version-specific form/compiler validation. Unknown fields are preserved.",
+  "type": "object",
+  "required": [
+    "guid",
+    "name",
+    "system_name",
+    "namespace",
+    "type",
+    "add_head",
+    "add_licensing_template",
+    "power_version"
+  ],
+  "properties": {
+    "guid": {
+      "$ref": "#/$defs/guid"
+    },
+    "name": {
+      "type": "string",
+      "pattern": "^[a-zA-Z_][a-zA-Z0-9_]*$"
+    },
+    "system_name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "namespace": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^(?:[a-zA-Z_][a-zA-Z0-9_]*|\\[\\[\\[[a-zA-Z_][a-zA-Z0-9_]*\\]\\]\\])(?:\\.(?:[a-zA-Z_][a-zA-Z0-9_]*|\\[\\[\\[[a-zA-Z_][a-zA-Z0-9_]*\\]\\]\\]))*(?:\\\\(?:[a-zA-Z_][a-zA-Z0-9_]*|\\[\\[\\[[a-zA-Z_][a-zA-Z0-9_]*\\]\\]\\])(?:\\.(?:[a-zA-Z_][a-zA-Z0-9_]*|\\[\\[\\[[a-zA-Z_][a-zA-Z0-9_]*\\]\\]\\]))*)+$"
+    },
+    "type": {
+      "enum": [
+        "class",
+        "abstract class",
+        "final class",
+        "interface",
+        "trait"
+      ]
+    },
+    "power_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "description": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "add_head": {
+      "enum": [
+        0,
+        1,
+        "0",
+        "1"
+      ]
+    },
+    "head": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "add_licensing_template": {
+      "enum": [
+        1,
+        2,
+        "1",
+        "2"
+      ]
+    },
+    "licensing_template": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "extends": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/reference"
+        },
+        {
+          "enum": [
+            null,
+            ""
+          ]
+        }
+      ]
+    },
+    "extends_custom": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "implements": {
+      "$ref": "#/$defs/references"
+    },
+    "implements_custom": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "extendsinterfaces": {
+      "$ref": "#/$defs/references"
+    },
+    "extendsinterfaces_custom": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "use_selection": {
+      "anyOf": [
+        {
+          "enum": [
+            null,
+            ""
+          ]
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/useRow"
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/$defs/useRow"
+          }
+        }
+      ]
+    },
+    "load_selection": {
+      "anyOf": [
+        {
+          "enum": [
+            null,
+            ""
+          ]
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/loadRow"
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/$defs/loadRow"
+          }
+        }
+      ]
+    },
+    "composer": {
+      "anyOf": [
+        {
+          "enum": [
+            null,
+            ""
+          ]
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/composerRow"
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/$defs/composerRow"
+          }
+        }
+      ]
+    }
+  },
+  "additionalProperties": true,
+  "$defs": {
+    "guid": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+    },
+    "reference": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/guid"
+        },
+        {
+          "enum": [
+            -1,
+            "-1"
+          ]
+        }
+      ]
+    },
+    "references": {
+      "anyOf": [
+        {
+          "enum": [
+            null,
+            ""
+          ]
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/reference"
+          }
+        }
+      ]
+    },
+    "useRow": {
+      "type": "object",
+      "required": [
+        "use",
+        "as"
+      ],
+      "properties": {
+        "use": {
+          "$ref": "#/$defs/guid"
+        },
+        "as": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[a-zA-Z_][a-zA-Z0-9_]*$"
+        }
+      },
+      "additionalProperties": true
+    },
+    "loadRow": {
+      "type": "object",
+      "required": [
+        "load"
+      ],
+      "properties": {
+        "load": {
+          "$ref": "#/$defs/guid"
+        }
+      },
+      "additionalProperties": true
+    },
+    "composerImport": {
+      "type": "object",
+      "required": [
+        "use"
+      ],
+      "properties": {
+        "use": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": true
+    },
+    "composerRow": {
+      "type": "object",
+      "required": [
+        "access_point",
+        "namespace"
+      ],
+      "properties": {
+        "access_point": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_.-]+(/[A-Za-z0-9_.-]+)*$",
+          "not": {
+            "pattern": "(^|/)\\.\\.?(/|$)"
+          }
+        },
+        "namespace": {
+          "anyOf": [
+            {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/composerImport"
+              }
+            },
+            {
+              "type": "object",
+              "additionalProperties": {
+                "$ref": "#/$defs/composerImport"
+              }
+            }
+          ]
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "required": [
+          "extends"
+        ],
+        "properties": {
+          "extends": {
+            "enum": [
+              -1,
+              "-1"
+            ]
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "extends_custom"
+        ],
+        "properties": {
+          "extends_custom": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "required": [
+          "implements"
+        ],
+        "properties": {
+          "implements": {
+            "type": "array",
+            "contains": {
+              "enum": [
+                -1,
+                "-1"
+              ]
+            }
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "implements_custom"
+        ],
+        "properties": {
+          "implements_custom": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "required": [
+          "extendsinterfaces"
+        ],
+        "properties": {
+          "extendsinterfaces": {
+            "type": "array",
+            "contains": {
+              "enum": [
+                -1,
+                "-1"
+              ]
+            }
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "extendsinterfaces_custom"
+        ],
+        "properties": {
+          "extendsinterfaces_custom": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "required": [
+          "add_licensing_template"
+        ],
+        "properties": {
+          "add_licensing_template": {
+            "enum": [
+              2,
+              "2"
+            ]
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "licensing_template"
+        ],
+        "properties": {
+          "licensing_template": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    }
+  ]
+}

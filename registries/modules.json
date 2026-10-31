@@ -6,11 +6,11 @@
       "id": "super-powers",
       "path": "super-powers",
       "entrypoint": "super-powers/README.md",
-      "status": "in-progress",
+      "status": "documented",
       "scope": "Create, extend, maintain, debug, and validate PHP Super Power repositories; excludes package entity serialization and Joomla Power repository formats.",
       "source_baseline": "super-powers/sources.md",
       "verification": {
-        "static": "Pending implementation validation.",
+        "static": "Local documentation checks, 34 regression checks, PHP 8.3.6 smoke test, ShellCheck and independent fresh-agent creation exercise passed; see super-powers/verification.md.",
         "integration": "JCB import, compilation, and consumer runtime checks require a supported JCB environment; none are claimed by static validation."
       }
     }

@@ -23,6 +23,7 @@ The implementation baseline is the inspected JCB `6.x` revision, with a comparis
 | Learn meaningful format variations | [Complete reference examples](examples/README.md) |
 | Run checks or generate a new GUID | [Tools](../tools/README.md) |
 | Verify authority or refresh this module | [Sources and freshness](sources.md) |
+| Review what was actually tested | [Module verification record](verification.md) |
 
 ## The maintenance boundary
 

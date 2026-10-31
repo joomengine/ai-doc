@@ -1,0 +1,29 @@
+name: Documentation and tooling
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: documentation-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install validation dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install --yes jq php-cli shellcheck
+      - name: Check shell scripts
+        run: shellcheck -x -P tools tools/*.sh tools/lib/*.sh tests/*.sh
+      - name: Validate documentation and regression fixtures
+        run: bash tools/check.sh
