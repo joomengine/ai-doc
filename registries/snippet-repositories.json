@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "purpose": "Mandatory official-core discovery and identity-collision baseline for every Snippet repository; add authorized task-specific repositories without removing the core.",
+  "identity_policy": "A new snippet or snippet type requires a securely generated UUIDv4 checked against current core and configured indexes plus local additions. Preserve identity when improving the same item or maintaining an explicitly intended fork override. A new unrelated snippet must never reuse a core GUID.",
+  "ordering": "Discovery order does not override the consuming JCB installation's configured repository precedence. Preserve all matches and provenance.",
+  "repositories": [
+    {
+      "id": "joomengine/snippets",
+      "url": "https://github.com/joomengine/snippets.git",
+      "branch": "master",
+      "index": "snippet-index.json",
+      "related_indexes": {
+        "snippet_type": "snippet-type.json"
+      },
+      "role": "official-core",
+      "core": true,
+      "required_for_collision_check": true,
+      "inspection": {
+        "checked_at": "2026-10-31",
+        "commit": "a7f536be6ea7a8af5bdf86d81c9f7f547b862365",
+        "snippet_count": 353,
+        "snippet_type_count": 40
+      }
+    }
+  ]
+}

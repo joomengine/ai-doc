@@ -1,6 +1,6 @@
 # Verification tools
 
-These tools enforce this repository's **portable authoring profile** and expose gaps; they do not implement the JCB compiler. Run them from an `ai-doc` checkout. They only read Power repositories. Fetching writes a new catalogue directory; GUID generation prints a candidate without reserving it.
+These tools enforce each documented module's **portable authoring profile** and expose gaps; they do not implement the JCB compiler. Run them from an `ai-doc` checkout. They only read the repositories being validated. Fetching writes a new catalogue directory; GUID generation prints a candidate without reserving it.
 
 ## Requirements
 
@@ -94,3 +94,73 @@ shellcheck -x -P tools tools/*.sh tools/lib/*.sh tests/*.sh
 `check.sh` checks shell syntax, parses all JSON, checks relative Markdown **file destinations** outside fenced code blocks, checks the Power and module registries, and runs `tests/run-tests.sh`. It does not validate remote URLs, Markdown fragments/anchors, full Markdown syntax, arbitrary reference-style links, or render diagrams. The CI workflow supplies PHP and ShellCheck and runs these checks on pull requests and pushes to `main`.
 
 The tests use temporary synthetic catalogues and mutate the complete maintained [minimal repository](../super-powers/examples/minimal-repository/README.md). They exercise empty bodies, sentinels, malformed nested metadata, singleton JSON documents, identity/SPK/declaration/body drift, comment-only declaration spoofing, unsafe paths, incomplete/stale/tampered catalogues, unresolved references and ordered duplicates. Synthetic catalogue timestamps/mode labels are fixture inputs, not live-source evidence. Test files are cleaned automatically; no upstream repositories are changed.
+
+## Field Type and Snippet catalogues
+
+These modules have separate identity domains and separate authoritative core repositories. Their tools do **not** read or require the seven Super Power indexes. Use the corresponding registry and retain its mandatory official core entry:
+
+| Domain argument | Mandatory core | Registry | Primary and related indexes |
+| --- | --- | --- | --- |
+| `field-types` | `joomengine/joomla-fieldtypes` | [field-type-repositories.json](../registries/field-type-repositories.json) | `index.json` |
+| `snippets` | `joomengine/snippets` | [snippet-repositories.json](../registries/snippet-repositories.json) | `snippet-index.json`, `snippet-type.json` |
+
+```bash
+bash tools/fetch-entity-catalog.sh field-types /tmp/jcb-field-types-catalog
+bash tools/fetch-entity-catalog.sh snippets /tmp/jcb-snippets-catalog
+```
+
+The optional third argument is a task-specific registry with the same shape. Include all authorized project/fork repositories in the consumer's intended order **without removing the official core**. Each repository must have an `id`, matching public GitHub HTTPS `url`, `branch` and domain-specific `index`. The core registry entry must declare `required_for_collision_check: true`; changing this flag cannot disable the core requirement. Retrieval supports public GitHub only.
+
+Fetching reads each index from an exact fetched Git commit, verifies its canonical shape, and records the registry hash, UTC time, ordered repositories, commit IDs, source paths and SHA-256 hashes in `manifest.json`. Exact index bytes are in `indexes/`. `entries.json` retains every occurrence. `resolution.json` groups by entity and GUID, recording the first configured occurrence as `selected` and every later one as `shadowed`; it includes identities with no shadowing too. For example:
+
+```bash
+jq '.[] | select(.shadowed | length > 0)' /tmp/jcb-field-types-catalog/resolution.json
+```
+
+A non-core Snippet repository may lack `snippet-type.json` when all its classifications come from other catalogues. That absence is explicitly recorded in `absent_optional_indexes`. The core Snippet repository must supply both indexes. New authored repositories should supply both, using `{}` for an empty local classification index. Failed required fetches publish no completed catalogue.
+
+A local candidate repository is validated as an editing candidate; the tools do not automatically insert it into the saved catalogue's precedence or change JCB configuration. Local/catalogue identity overlaps are reported. Document the intended consumer order and selected source separately when proposing a fork override. Catalogue hashes detect accidental modifications, not maliciously fabricated provenance; use the snapshot produced by the fetcher.
+
+## Allocate and validate entity identities
+
+```bash
+bash tools/new-entity-guid.sh field-types /tmp/jcb-field-types-catalog /path/to/field-type-repository
+bash tools/new-entity-guid.sh snippets /tmp/jcb-snippets-catalog /path/to/snippet-repository
+```
+
+Each command accepts additional local working repositories as further arguments. The allocator requires the domain's core catalogue, verifies all index hashes, requires a `live` snapshot no older than 24 hours, and checks a cryptographically generated UUIDv4 against **every** core/additional/shadowed occurrence and supplied local index. Snippet allocation checks both snippet and classification identities. Supply working copies containing unpublished additions; those identities are not yet visible in remote indexes. No external reservation or universal-uniqueness claim is made.
+
+Preserve an existing GUID for the same item, including an intentional fork override. A genuinely new definition must never adopt an existing core GUID. During validation, mark every newly authored record explicitly with a repeated `--new-guid UUID` argument using its generated identity. This adds the fresh-catalogue and zero-collision gates, and checks that the new identity occurs exactly once locally. Ordinary maintenance omits this flag; the validator cannot infer whether a copied identifier represents an intentional same-item override or a mistaken new item.
+
+```bash
+bash tools/validate-field-type-repository.sh /path/to/field-type-repository /tmp/jcb-field-types-catalog
+bash tools/validate-snippet-repository.sh /path/to/snippet-repository /tmp/jcb-snippets-catalog
+```
+
+Append `--new-guid` followed by each actual new UUID when performing creation. Existing-item maintenance can inspect an older hashed snapshot, but a fresh fetch remains necessary before deciding what currently exists upstream. Domain validators return `0` for implemented static checks passing, `1` for invalid data/profile/collision/integrity, and `2` for unresolved Snippet Type references. Empty indexes are valid starting repositories.
+
+Both validators enforce singleton JSON documents, canonical GUID-keyed index paths, item/index identity and name agreement, confined regular files, absence of unindexed `item.json` files, and their module-specific metadata. They reject escaping symlinks and path traversal. Unrelated local snippet and classification records cannot share a GUID. Additional unknown fields remain untouched; passing them through is not a claim that JCB imports them. Duplicate JSON object keys are not comprehensively detected by `jq` and must be rejected during review.
+
+### Field Type coverage
+
+The [Field Type item schema](../field-types/schemas/item.schema.json), [index schema](../field-types/schemas/index.schema.json) and executable profile describe complete current authored records, including all fourteen exported fields. They validate current form option domains, preserve historical `datalenght` spelling, accept numeric/string flags where documented, and validate property rows in native arrays or keyed objects. Property names must be unique, and exactly one `type` row must exist. An encoded JSON string in `properties` is rejected: the current importer encodes native input again and would double-encode such a string. Migration requires explicitly decoding once, inspecting the resulting rows, and saving native JSON before validation.
+
+The index summary follows the Field Type override: PHP-compatible ASCII trimming of `short_description` (fallback to description only for absent/null), with an empty result represented as `null`. This complete authoring profile requires the source text fields explicitly; sparse historical/null records need source-specific investigation. `store: 4` belongs to a legacy compiler branch and is outside the current form's authoring options; it is not silently converted.
+
+Static validation does not establish Joomla XML attribute support, custom field class availability, valid SQL default/length expressions, store/encryption runtime configuration, generated PHP safety, editor reset behaviour, or import/compile/form correctness. Active `Other` length selections require a nonempty companion value. The selectors retain their companion text without executing or claiming to validate SQL; an empty default companion can intentionally represent an empty-string default. The actual supported Joomla/JCB targets and integration checks remain mandatory.
+
+### Snippet coverage
+
+The [Snippet item](../snippets/schemas/item.schema.json), [Snippet index](../snippets/schemas/index.schema.json), [classification item](../snippets/schemas/type-item.schema.json) and [classification index](../snippets/schemas/type-index.schema.json) schemas describe the current GUID-indexed repository format, not the legacy flat-file format. No migration, execution, browser rendering, PHP evaluation or external asset loading occurs.
+
+The profile requires the explicit text fields, nonempty source/heading and an HTTP(S) reference URL without embedded credentials. The raw index description is preserved exactly, including trailing newlines; unlike Field Types, Snippets use the shared mapper without trimming. Exactly one outgoing `snippet_type` and one `library` dependency row must agree with their scalar GUIDs, table names, keys and directions. Snippet Type existence is checked against the local plus ordered catalogue indexes. The generic JCB resolver supports broader relationships, but additional dependency entities are outside this ordinary-snippet profile and fail explicitly; inspect the relevant source and extend the verified profile before claiming their closure is validated.
+
+Library definitions live in the package channel, not these snippet indexes. Each validation reports library availability/assets as **UNVERIFIED**, even when all Snippet Type references resolve. This result cannot establish that the required Bootstrap/UIkit/library assets are installed, licensed, loaded, compatible or functional. Validate that separate dependency and runtime integration before calling a snippet ready for use.
+
+When `--new-guid` identifies a new snippet, the tool also enforces the documented current form boundaries: 150 characters for title/URL/heading, 50 for contributor text, and nonempty usage guidance. New classification names are limited to 150 characters and their descriptions to 255. Existing attribution is not silently truncated: ordinary maintenance does not apply these new-only length restrictions. SQL byte limits, browser safety/escaping, resource loading, content trust, and actual Joomla rendering still need separate checks.
+
+### Tests and schema limits for both modules
+
+`tests/run-entity-tests.sh` exercises complete fixtures, native/encoded property representations, metadata corruption, path confinement, missing/stale/tampered/core-less catalogues, separate creation/maintenance identities, cross-entity local collisions, ordered overrides, external type lookup and incomplete dependency closure. The suite is offline and uses synthetic catalogue metadata explicitly marked as test inputs. `tools/check.sh` runs it alongside the existing Super Power regression suite and validates the new registries. Existing CI requires no extra runtime or network access for these tests.
+
+As with the Power module, JSON Schemas are editor/external-validator structural profiles. Shipped commands execute their explicit `jq` checks, not a generic schema evaluator. Cross-file relationships, collision checks, ordered provenance, new-only form limits and semantic property-name constraints are additional executable rules. No schema or static test replaces the module's documented JCB integration procedure.

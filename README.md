@@ -2,16 +2,20 @@
 
 Operational documentation for agents working across the **Joomla Component Builder (JCB) ecosystem**. This repository explains how to understand a task, locate authoritative sources, make consistent changes, and verify the result. It is not a replacement for JCB source code or its [architecture publication](https://architecture.joomlacomponentbuilder.com/).
 
-**Start with [AGENTS.md](AGENTS.md), then follow the relevant task below.** Super Powers is the first documented operational module. Other subjects remain routed to the architecture publication until their own modules meet the same acceptance standard.
+**Start with [AGENTS.md](AGENTS.md), then follow the relevant task below.** Operational modules cover Super Powers, Field Types, and Snippets. Consult the [module registry](registries/modules.json) for each module's coverage and verification status. Other subjects remain routed to the architecture publication until their own modules meet the same acceptance standard.
 
 ## Choose the task
 
 | Task | Read next |
 | --- | --- |
 | Understand, create, extend, maintain, or debug a Super Power repository | [Super Powers](super-powers/README.md) |
+| Create or maintain Field Types, research Joomla properties/defaults, or override a core definition | [Field Types](field-types/README.md) |
+| Create or maintain reusable view snippets and their classifications | [Snippets](snippets/README.md) |
 | Find the right JCB architecture context | [Architecture map](architecture/README.md) |
 | Add another operational module to this repository | [Module authoring standard](standards/module-authoring.md) |
 | Check registered Power repositories and their roles | [Power repository registry](registries/power-repositories.json) |
+| Find the official Field Types baseline and additional catalogue rules | [Field Type repository registry](registries/field-type-repositories.json) |
+| Find the official Snippets baseline and additional catalogue rules | [Snippet repository registry](registries/snippet-repositories.json) |
 | Determine documented scope and validation status | [Module registry](registries/modules.json) |
 | Run the repository checks | [Validation tools](tools/README.md) |
 
@@ -34,7 +38,7 @@ These are different entity formats. A Field Type describes the foundation and co
 
 ## How to use the documentation efficiently
 
-Read the module entry point, the contract sections relevant to the change, and its workflow. Follow source links when a claim depends on version-specific behaviour or when evidence has changed. Use examples to understand the format; do not copy their identities into new powers.
+Read the module entry point, the contract sections relevant to the change, and its workflow. Follow source links when a claim depends on version-specific behaviour or when evidence has changed. Use examples to understand the format; do not copy their identities into distinct new records.
 
 The documentation distinguishes project policy, implementation behaviour verified at a recorded revision, observed examples, and known gaps. Static validation, JCB import/compilation, and application runtime checks are separate levels of evidence. A check at one level never silently certifies the others.
 

@@ -1,0 +1,9 @@
+{
+  "6b3e057c-1587-4969-b032-7631b21e0e0e": {
+    "name": "Service hours panel",
+    "desc": "A noninteractive information panel with a visible heading and an explicit accessible section label.",
+    "path": "src/6b3e057c-1587-4969-b032-7631b21e0e0e",
+    "settings": "src/6b3e057c-1587-4969-b032-7631b21e0e0e/item.json",
+    "guid": "6b3e057c-1587-4969-b032-7631b21e0e0e"
+  }
+}

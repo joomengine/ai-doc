@@ -14,6 +14,7 @@ A Field Type is a **metadata definition** used to author and compile concrete JC
 | Create a repository, add a type, maintain a fork or verify an import | [Workflows](workflows/README.md) |
 | Inspect complete specimens and custom-field variants | [Examples](examples/README.md) |
 | Reproduce or refresh the evidence | [Sources and known limits](sources.md) |
+| Review what was actually tested | [Verification record](verification.md) |
 
 Read only the task-relevant route after these invariants. Use [the module-authoring standard](../standards/module-authoring.md) when extending these instructions rather than introducing a parallel documentation convention.
 

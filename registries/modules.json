@@ -13,6 +13,30 @@
         "static": "Local documentation checks, 34 regression checks, PHP 8.3.6 smoke test, ShellCheck and independent fresh-agent creation exercise passed; see super-powers/verification.md.",
         "integration": "JCB import, compilation, and consumer runtime checks require a supported JCB environment; none are claimed by static validation."
       }
+    },
+    {
+      "id": "field-types",
+      "path": "field-types",
+      "entrypoint": "field-types/README.md",
+      "status": "documented",
+      "scope": "Create, extend, maintain, debug and validate Field Type catalogues, including Joomla source research, property/default evidence and intentional ordered overrides. Distinguishes Field Type metadata from concrete fields and runtime PHP implementations.",
+      "source_baseline": "field-types/sources.md",
+      "verification": {
+        "static": "Source review, current core 49-record validation, both complete fixtures, fresh-agent creation/override exercise, 22 independent negative probes and combined 75-regression check passed; see field-types/verification.md.",
+        "integration": "Installed JCB import/refresh, generated forms and consumer runtime checks have not been run."
+      }
+    },
+    {
+      "id": "snippets",
+      "path": "snippets",
+      "entrypoint": "snippets/README.md",
+      "status": "documented",
+      "scope": "Create, extend, maintain, debug and validate current Snippet repositories, snippet classifications and ordered overrides. Covers copy-to-view behavior, frontend dependency evidence and recognition of legacy formats.",
+      "source_baseline": "snippets/sources.md",
+      "verification": {
+        "static": "Source review, current core 353-snippet/40-type validation, complete fixture, fresh-agent creation/override exercise, 22 independent negative probes and combined 75-regression check passed; external libraries remain unverified; see snippets/verification.md.",
+        "integration": "Installed JCB import/refresh, editor insertion, compiled view and browser checks have not been run."
+      }
     }
   ]
 }
