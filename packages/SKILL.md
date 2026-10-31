@@ -9,6 +9,7 @@ Read [scope and baseline](README.md) and the shared [operating contract](../AGEN
 
 | Task | Load and execute |
 | --- | --- |
+| Discover a maintained core mirror or recover public source access | [Shared repository network](../standards/repository-network.md) |
 | Select the correct entity or nested setting | [Model router](models/README.md) and the matching field file in [contract inventory](model-contracts.json) |
 | Understand portable records, indexes and identities | [Serialization and graph contract](specification.md) |
 | Start an empty repository or author a coherent graph | [Repository creation](workflows/create-repository.md) and [complete examples](examples/README.md) |

@@ -11,6 +11,7 @@ Record the repository and branch, intended pattern and consuming view, existing 
 
 | Task | Load and follow |
 | --- | --- |
+| Discover a maintained core mirror or recover public source access | [Shared repository network](../standards/repository-network.md) |
 | Start a repository or add a snippet/classification | [Creation workflow](workflows/create.md) |
 | Correct source, maintain an override or migrate old flat files | [Maintenance workflow](workflows/maintain.md) |
 | Understand complete source, classification and dependency records | [Examples](examples/README.md) and [field reference](fields.md) |

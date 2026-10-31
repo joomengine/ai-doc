@@ -11,6 +11,7 @@ Record the target repository and branch, requested behaviour, existing identity 
 
 | Task | Load and follow |
 | --- | --- |
+| Discover a maintained core mirror or recover public source access | [Shared repository network](../standards/repository-network.md) |
 | Start an empty repository | [Create a repository](workflows/create-repository.md) |
 | Add a class, interface or trait | [Create a Power](workflows/create-power.md) and affected [settings fields](settings-reference.md) |
 | Fix, extend, debug or improve performance | [Maintain and debug](workflows/maintain-and-debug.md) |

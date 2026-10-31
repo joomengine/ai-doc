@@ -82,6 +82,10 @@ Commands must match shipped tools, include their prerequisites, handle paths saf
 
 Workflow authorization follows the user's task. Documentation must not add blanket approval pauses for ordinary authorized work. Do not imply permission to publish, send communications, or merge beyond that task.
 
+### Shared repository discovery for every model
+
+Link the [repository network workflow](repository-network.md) from each model skill that reads core repositories. Identify its logical core source and the exact discovered API target when available. Discover targets dynamically as the maintained network expands; document missing-target behavior without guessing mirror paths. Reuse shared monitored-status, bounded recovery, caching and provenance rules. Preserve custom forks, repository precedence, branch requirements, new-identity collision checks and authorized write destinations when changing read transport. Record current retrieval-tool support and limits; a mirror URL alone does not establish a usable catalogue or import.
+
 ### Default Playground path for every model
 
 Link the [shared Playground workflow](../testing/playground/README.md) and [configuration reference](../testing/playground/configuration.md) from each module's entry point and acceptance procedure. With browser access, a supported target and authorization for implementation/testing, an agent uses this path by default. Honor an explicit opt-out, a read-only/documentation-only task or another requested environment. Offer or ask about testing only when a real scope decision remains; do not require the user to repeat permission for ordinary authorized validation. Report unsupported versions, unavailable browsers, network failures and other blockers instead of silently skipping tests or changing targets.

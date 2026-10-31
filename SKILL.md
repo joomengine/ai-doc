@@ -1,6 +1,6 @@
 ---
 name: joomengine-jcb
-description: "Create, extend, maintain, debug and validate Joomla Component Builder repositories and blueprints that generate Joomla components, modules and plugins. Use for JCB Super Powers, Field Types, Snippets, Packages, their sub-models, repository identity/dependency resolution, and Playground authoring, export and integration testing. Select the relevant model skill and contract before editing source."
+description: "Create, extend, maintain, debug and validate Joomla Component Builder repositories and blueprints that generate Joomla components, modules and plugins. Use for JCB Super Powers, Field Types, Snippets, Packages, their sub-models, repository identity/dependency resolution, decentralized mirror discovery, and Playground authoring, export and integration testing. Select the relevant model skill and contract before editing source."
 ---
 
 # JoomEngine JCB skills
@@ -17,6 +17,7 @@ Read [AGENTS.md](AGENTS.md) for the operating contract. Identify the requested a
 | Locate wider JCB blueprint concepts | [Architecture map](architecture/README.md) |
 | Author, test or export in browser-hosted JCB | [Playground skill](testing/playground/SKILL.md) |
 | Select environment versions and deployment parameters | [Playground configuration](testing/playground/configuration.md) |
+| Discover maintained core mirrors or reduce GitHub reads | [Repository network](standards/repository-network.md) |
 | Run static checks | [Tools](tools/README.md) |
 | Introduce another model or sub-model | [Module authoring standard](standards/module-authoring.md) |
 

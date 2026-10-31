@@ -11,6 +11,7 @@ Record the target repository and branch, existing or proposed Field Type identit
 
 | Task | Load and follow |
 | --- | --- |
+| Discover a maintained core mirror or recover public source access | [Shared repository network](../standards/repository-network.md) |
 | Start an empty catalogue | [Create a repository](workflows/create-repository.md) |
 | Add a genuinely distinct Field Type | [Create a Field Type](workflows/create-field-type.md) |
 | Extend a definition, maintain an override or diagnose a failure | [Maintain and debug](workflows/maintain-and-debug.md) |
