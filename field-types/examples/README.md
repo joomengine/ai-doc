@@ -22,7 +22,7 @@ The [Joomla research guide](../joomla-research.md) links the exact source consum
 
 ## Validate the repository contract
 
-From the `ai-doc` root, with Git, Bash and jq installed:
+From the `skills` root, with Git, Bash and jq installed:
 
 ```bash
 catalog_dir=$(mktemp -d)

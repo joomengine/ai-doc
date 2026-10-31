@@ -30,7 +30,7 @@ shellcheck -x -P tools tools/*.sh tools/lib/*.sh tests/*.sh
 php -n super-powers/examples/minimal-repository/smoke.php
 ```
 
-These check documentation links/registries, JSON and shell syntax, positive/negative repository fixtures, GUID catalogue gates, path boundaries, source/representation checks and the maintained example's behaviour. CI repeats the offline checks in its own declared environment; consult the [PR checks](https://github.com/joomengine/ai-doc/pull/1/checks) for the result of the exact published commit.
+These check documentation links/registries, JSON and shell syntax, positive/negative repository fixtures, GUID catalogue gates, path boundaries, source/representation checks and the maintained example's behaviour. CI repeats the offline checks in its own declared environment; consult the [PR checks](https://github.com/joomengine/skills/pull/1/checks) for the result of the exact published commit.
 
 ## Live Playground import smoke test
 

@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Field Type complete current-authoring profile",
-  "description": "ai-doc structural profile, not an upstream JCB schema. Properties must be native JSON; cross-file and unique-property checks run separately.",
+  "description": "skills structural profile, not an upstream JCB schema. Properties must be native JSON; cross-file and unique-property checks run separately.",
   "type": "object",
   "required": [
     "name",

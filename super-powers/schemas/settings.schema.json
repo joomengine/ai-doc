@@ -1,8 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/joomengine/ai-doc/super-powers/schemas/settings.schema.json",
+  "$id": "https://github.com/joomengine/skills/super-powers/schemas/settings.schema.json",
   "title": "Super Power portable authoring settings profile",
-  "description": "An ai-doc structural profile. Not a complete replacement for JCB version-specific form/compiler validation. Unknown fields are preserved.",
+  "description": "An skills structural profile. Not a complete replacement for JCB version-specific form/compiler validation. Unknown fields are preserved.",
   "type": "object",
   "required": [
     "guid",

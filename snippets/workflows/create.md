@@ -8,7 +8,7 @@ Use Bash, jq, Git and the hashing/path utilities listed in [tools](../../tools/R
 
 ## 1. Empty repository setup
 
-For a real task use the authorized target checkout and a focused new branch. For a disposable bootstrap exercise, the following runs from the root of `ai-doc` and creates an isolated repository:
+For a real task use the authorized target checkout and a focused new branch. For a disposable bootstrap exercise, the following runs from the root of `skills` and creates an isolated repository:
 
 ```sh
 docs_dir=$(pwd -P)
@@ -24,7 +24,7 @@ bash "$docs_dir/tools/fetch-entity-catalog.sh" snippets "$catalog_dir"
 
 `main` is the exercise branch, not a required JCB repository branch. Configure the actual read/write branches explicitly. The official core currently uses `master`. Additional authorized repositories belong in a task-specific copy of the registry; retain the official core and its mandatory collision-check flag. Use the fetch tool's registry argument and keep all resulting provenance, not just a flat GUID list.
 
-Add a README identifying this as a Snippet repository, its library/runtime requirements, license and import procedure. Add a local `AGENTS.md` pointer to this module; `ai-doc/AGENTS.md` does not automatically govern another checkout. Existing licenses and attribution must be preserved; new original code needs the project owner's chosen license. Empty indexes are an initial state, not a useful finished deliverable.
+Add a README identifying this as a Snippet repository, its library/runtime requirements, license and import procedure. Add a local `AGENTS.md` pointer to this module; `skills/AGENTS.md` does not automatically govern another checkout. Existing licenses and attribution must be preserved; new original code needs the project owner's chosen license. Empty indexes are an initial state, not a useful finished deliverable.
 
 ## 2. Reuse and allocate identities
 

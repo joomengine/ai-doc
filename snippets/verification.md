@@ -27,7 +27,7 @@ bash tools/check.sh
 shellcheck -x -P tools tools/*.sh tools/lib/*.sh tests/*.sh
 ```
 
-The [entity regression suite](../tests/run-entity-tests.sh) checks complete and empty repositories, snippet/type identity separation, core collisions, required core indexes, catalogue integrity/freshness, ordered overrides, unresolved or wrong-kind type references, dependency metadata consistency, canonical paths and JSON shape. It never executes snippet content. The combined check also retains the existing Super Power regression suite. [PR #2 checks](https://github.com/joomengine/ai-doc/pull/2/checks) identifies the result for the exact published commit.
+The [entity regression suite](../tests/run-entity-tests.sh) checks complete and empty repositories, snippet/type identity separation, core collisions, required core indexes, catalogue integrity/freshness, ordered overrides, unresolved or wrong-kind type references, dependency metadata consistency, canonical paths and JSON shape. It never executes snippet content. The combined check also retains the existing Super Power regression suite. [PR #2 checks](https://github.com/joomengine/skills/pull/2/checks) identifies the result for the exact published commit.
 
 Static checks establish only the [documented tooling profile](../tools/README.md). Duplicate JSON keys, actual library/package availability, complete import graph behaviour, consumer code adaptation and runtime effects require the stated additional review/integration evidence.
 

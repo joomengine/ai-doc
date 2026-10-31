@@ -1,6 +1,6 @@
-# Joomla Component Builder: agent documentation
+# JoomEngine Skills
 
-Operational documentation for agents working across the **Joomla Component Builder (JCB) ecosystem**. This repository explains how to understand a task, locate authoritative sources, make consistent changes, and verify the result. It is not a replacement for JCB source code or its [architecture publication](https://architecture.joomlacomponentbuilder.com/).
+The official [JoomEngine skills repository](https://github.com/joomengine/skills) provides operational guidance for agents working across the **Joomla Component Builder (JCB) ecosystem**. Use [SKILL.md](SKILL.md) as the concise task router, then load only the relevant module, reference and workflow. This repository explains how to locate authoritative sources, make consistent changes and verify the result; it complements JCB source code and its [architecture publication](https://architecture.joomlacomponentbuilder.com/).
 
 **Start with [AGENTS.md](AGENTS.md), then follow the relevant task below.** Operational modules cover Super Powers, Field Types, and Snippets. Consult the [module registry](registries/modules.json) for each module's coverage and verification status. Other subjects remain routed to the architecture publication until their own modules meet the same acceptance standard.
 
