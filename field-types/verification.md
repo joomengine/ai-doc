@@ -18,7 +18,7 @@ The same agent exercised a separate intentional override of the existing officia
 
 ## Repeatable checks and coverage
 
-The final local run passed 34 existing Power regression checks plus 41 Field Type/Snippet checks (**75 total**), documentation/registry checks and ShellCheck. The independent review's 22-case negative matrix also passed after its two findings were corrected. All 49 current core Field Type records passed the static authoring profile. The PHP-enabled combined run used PHP 8.3.6; none of these results imply live JCB execution.
+The final local run passed 34 existing Power regression checks plus 41 Field Type/Snippet checks (**75 total**), documentation/registry checks and ShellCheck. The combined checks passed with both jq 1.7 and 1.8.1 after correcting a Snippet filter binding exposed by CI. The independent review's 22-case negative matrix also passed after its two findings were corrected. All 49 current core Field Type records passed the static authoring profile. The PHP-enabled combined run used PHP 8.3.6; none of these results imply live JCB execution.
 
 From the documentation repository root:
 
