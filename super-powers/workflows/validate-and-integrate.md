@@ -28,36 +28,46 @@ From an `ai-doc` checkout, use the command interfaces in the [workflow index](RE
 
 ## JCB import and compile acceptance procedure
 
-This is an executable acceptance procedure for an operator/agent with a suitable test JCB instance. It is not evidence that this documentation build ran JCB. Use a disposable or backed-up development instance, not an unreviewed production instance.
+**Project policy:** use [JoomEngine Playground](../../testing/playground/README.md) as the default browser integration environment. Follow its shared setup and [repository/branch configuration](../../testing/playground/configuration.md), then perform the Power-specific checks below. A target requiring capabilities unavailable there needs a documented suitable test environment; name the limitation and the checks moved there. Do not silently replace an integration result with static validation.
+
+The [shared receipt](../../testing/playground/verification.md) records an observed upstream Regex import. It does not mean this complete acceptance procedure, a candidate PR branch or this module's fixtures have been exercised. Use a separate disposable test site or preserve the local state affected by the test.
 
 ### 1. Record and prepare the environment
 
-- Record the JCB version/commit, Joomla version, PHP version, extension/component revision, changed GUIDs, power repository revision, and all dependency repository revisions.
+- Record the actual installed JCB version/commit when available, Joomla version, PHP version, extension/component revision, changed GUIDs, power repository revision, and all dependency repository revisions. A source-inspected branch is not automatically the installed package: the implementation evidence below is `6.x@408703a` (manifest `6.2.1-alpha1`), whereas the recorded browser smoke test used installed JCB `6.2.0`.
 - Choose a small test component with an explicit namespace prefix and component namespace. Use a second distinct namespace context when changing portability, aliases, or placement.
 - Preserve any local JCB definitions that differ from remote source before refreshing them. Repository reset is an update operation, not a read-only comparison.
-- In the test instance's repository configuration, select the correct host/owner/repository and **read branch** containing the candidate source. Record precedence against other repositories containing the same GUID. Do not change the production/default branch merely to test a PR.
+- Use the shared configuration procedure to register the host/owner/repository and **read branch** containing the candidate source. For Powers, the repository target is Super Powers. Record the resolved commit and precedence against other repositories containing the same GUID; the write branch does not select import source. A test of upstream `master` does not establish that a candidate branch imports correctly.
 - Configure required dependency repositories and credentials through the test environment. Keep credentials out of the repository and test evidence.
 
 ### 2. Import a new power or refresh an existing one
 
-Use JCB's supported Powers initialization/refresh actions for the targeted version. In the inspected JCB `6.x` implementation, `powers.initPowers` opens initialization selection; the selected-powers reset action resolves the GUIDs and calls the package builder's reset path. Both operations require the relevant Joomla permissions and request token. Use the UI/API's supported authenticated flow rather than constructing unauthenticated controller requests.
+Use the supported authenticated browser flow. These control semantics were verified in the pinned source; check the installed version if its screens or results differ. The actions require their corresponding Joomla permissions and request tokens.
 
-Initialization and refresh are not equivalent. The remote getter's `init(..., force=false)` leaves a power that already exists locally classified as local; that is not proof the changed body was imported. Select the intended existing GUID and use the supported refresh/reset operation when verifying an update.
+| Action | Selection and source scope | Appropriate assertion |
+| --- | --- | --- |
+| **Init** | Opens Initialization Selection without requiring local list rows. Choose a repository, then absent remote GUIDs. Calls package initialization with that explicit repository and `force=false`. | A previously absent GUID appears as a persisted local Power with the expected settings/body. Existing local items are skipped; their disabled/local state is not a new import. |
+| **Pull** | Opens Pull Selection without requiring local list rows. Choose the intended repository and remote items. Calls initialization with that repository and `force=true`. | A deliberate update to an existing GUID replaces the intended local values from the selected read branch. It can also initialize absent selected items; it is not a Git merge. |
+| **Reset** | Requires selected rows in the local Powers list. Resolves their local IDs to GUIDs and resets through the approved ordered repositories, without an explicit repository selection. | The persisted definitions match the first effective source for those GUIDs; this may differ from the source selected in an earlier Init/Pull. |
+
+Preserve any local edits before Pull or Reset. Package operations can also process tracked dependencies/assets: initialization carries the selected repository and force setting into queued dependencies; reset follows its tracked direct-child/asset path. Inspect the reported scope rather than treating a one-item selection as proof that only one database record can be touched. For cross-repository dependencies, make the required local definitions available through their actual sources and verify them; do not assume an explicit-repository import automatically searches every configured source for its dependencies.
+
+For global lookup, the first indexed GUID wins, and an invalid selected payload does not imply fallback to a later duplicate. Changing order or a read branch does not update local records. Use a fresh request after configuration changes, then the appropriate action and persisted-value checks; repository indexes and request trackers can retain state within a request.
 
 Inspect the imported record through JCB:
 
 1. Confirm the GUID, name, type, portable namespace, and version match the proposed settings.
-2. Confirm `main_class_code` contains the expected `code.power` body, including a distinctive changed method where relevant.
+2. Reopen the saved record and confirm `main_class_code` contains the expected `code.power` body. For an update, record a distinctive old/new method, literal or documented behavior before refreshing, then verify the candidate value afterward. Choose a real part of the proposed change rather than adding production test markers. A success toast or an unchanged existing record does not demonstrate refresh.
 3. Confirm inheritance, interfaces, imports/aliases, load selections, custom header flags/content, Composer metadata, and licensing values required by this power survived import.
 4. Confirm dependency powers are available and selected from the expected repositories. Capture actionable import messages if anything is missing.
 
-Do not expect a `code.php`-only edit to appear in `main_class_code`: the Power grep/import path reads settings plus the indexed raw power body.
+Do not expect a `code.php`-only edit to appear in `main_class_code`: the Power grep/import path reads settings plus the indexed raw power body. The inspected initialization getter reports an added category after calling storage without checking its return value, so its log alone is insufficient. If UI inspection only confirms visible methods and metadata, report that scope; do not call it a byte/hash comparison.
 
 ### 3. Compile a real reference
 
 Add an actual reference to the changed power in the test component using its active `Super___...___Power` token, or exercise an existing component reference. An unreferenced power may not be included, so a successful compile without a call/reference is insufficient.
 
-For a service-based power, invoke it through the same factory/provider/service identifier intended for consumers. Ensure the changed provider is itself included and registered. For an interface or abstract class, include a concrete implementation/consumer that exercises the changed contract.
+For a service-based power, invoke it through the same factory/provider/service identifier intended for consumers. Ensure the changed provider is itself included and registered. For an interface or abstract class, include a concrete implementation/consumer that exercises the changed contract. Where `load_selection` is relevant, verify the intended included-only dependency even if there is no PHP `use` statement. Do not treat an imported dependency or a provider class present in a file as proof that its service was registered or constructed.
 
 Compile the test component and inspect its generated output:
 
@@ -67,13 +77,17 @@ Compile the test component and inspect its generated output:
 - Dependencies and autoload registration are present, and there are no collisions after namespace relocation.
 - Generated PHP lints on the target interpreter.
 
+Use the Playground **Code** interface, following the shared procedure, to locate and read the actual generated or installed files. Record their paths and the relevant namespace/import/body/autoload evidence. An upstream `code.php` preview or the saved raw-body editor is not generated component output. If compilation produces an archive, inspect its contents or install the test build and inspect the installed files; identify which artifact was checked. If the environment cannot run the required PHP lint, perform it in the declared matching PHP environment and record that boundary.
+
 When portability changed, repeat with a different namespace prefix/component namespace and verify that no source-specific resolved prefix leaked into the result.
 
 ### 4. Exercise and report the runtime path
 
 Install/run the compiled extension only in the authorized test environment. Exercise the smallest real caller, DI construction, success case, and relevant failure/edge case. For an API client, validate request encoding and response/error handling using controlled fixtures before an optional live service check.
 
-Report each stage independently with its exact revisions and observed result. A suitable report includes: repository checks; PHP versions and lint/test results; JCB import/refresh result; compile namespace/path inspection; runtime result; and any limitation. If JCB was unavailable, write **“JCB import/compile not run”** and retain this procedure as the next concrete validation step.
+Run the caller through the installed extension's actual route, command or service consumer and assert an observable result. A manually pasted class that bypasses generated imports, autoloading or DI does not verify that path. For a pure helper, record a deterministic input and expected return; for stateful code, also inspect the intended state change and relevant failure case. Do not count opening the editor or compiling an unused class as runtime execution.
+
+Report each stage independently using the [shared evidence procedure](../../testing/playground/README.md) and [receipt](../../testing/playground/verification.md): repository checks, PHP lint/tests, new import or existing-item refresh, generated namespace/path inspection, runtime caller and limits. If import ran but compilation did not, say exactly that. If access or a capability fails, record the observed blocker and the next concrete step; do not retain an obsolete blanket claim that no environment exists.
 
 ## Round-trip and drift investigation
 
@@ -85,9 +99,13 @@ A round trip can expose compiler/exporter assumptions missing from a hand-author
 
 The implementation observations above were checked against JCB `6.x` commit `408703a857ad937479b1e28de7f693af178dcc83`:
 
-- [Powers controller initialization and reset](https://github.com/vdm-io/Joomla-Component-Builder/blob/408703a857ad937479b1e28de7f693af178dcc83/admin/src/Controller/PowersController.php): permission/token checks, initialization selection, selected-GUID reset.
+- [Powers controller initialization, Pull and Reset](https://github.com/vdm-io/Joomla-Component-Builder/blob/408703a857ad937479b1e28de7f693af178dcc83/admin/src/Controller/PowersController.php): permission/token checks, selection-screen redirects, selected-local-GUID reset.
+- [Selection AJAX actions](https://github.com/vdm-io/Joomla-Component-Builder/blob/408703a857ad937479b1e28de7f693af178dcc83/admin/src/Model/AjaxModel.php#L6770): Init uses the selected repository; `pullSelectedPackages()` passes `force=true`.
+- [Initialization selection table](https://github.com/vdm-io/Joomla-Component-Builder/blob/408703a857ad937479b1e28de7f693af178dcc83/admin/layouts/powerselectiontable.php#L96) prevents selecting existing local entries; [Pull selection table](https://github.com/vdm-io/Joomla-Component-Builder/blob/408703a857ad937479b1e28de7f693af178dcc83/admin/layouts/powerpullselectiontable.php) does not apply that local-entry exclusion.
+- [Package builder](https://github.com/vdm-io/Joomla-Component-Builder/blob/408703a857ad937479b1e28de7f693af178dcc83/libraries/vendor_jcb/VDM.Joomla/src/Componentbuilder/Package/Builder/Get.php#L124): selected-repository initialization, queued dependencies/assets and reset scope.
 - [Remote getter](https://github.com/vdm-io/Joomla-Component-Builder/blob/408703a857ad937479b1e28de7f693af178dcc83/libraries/vendor_jcb/VDM.Joomla/src/Abstraction/Remote/Get.php): `init`, local-existence behaviour, read-branch selection.
 - [Power grep](https://github.com/vdm-io/Joomla-Component-Builder/blob/408703a857ad937479b1e28de7f693af178dcc83/libraries/vendor_jcb/VDM.Joomla/src/Componentbuilder/Power/Grep.php): settings and raw power loading into `main_class_code`.
 - [Repository form](https://github.com/vdm-io/Joomla-Component-Builder/blob/408703a857ad937479b1e28de7f693af178dcc83/admin/forms/repository.xml): separate repository host and read/write branch fields.
+- [Grep lookup and cache](https://github.com/vdm-io/Joomla-Component-Builder/blob/408703a857ad937479b1e28de7f693af178dcc83/libraries/vendor_jcb/VDM.Joomla/src/Abstraction/Grep.php#L676): single-source lookup, first remote GUID match and repository index caching. [Power configuration](https://github.com/vdm-io/Joomla-Component-Builder/blob/408703a857ad937479b1e28de7f693af178dcc83/libraries/vendor_jcb/VDM.Joomla/src/Componentbuilder/Power/Config.php#L201) constructs approved source order.
 
 For another JCB version, verify these paths/actions before applying the procedure. These references support implementation behaviour; the test matrix and reporting requirements are documentation policy.

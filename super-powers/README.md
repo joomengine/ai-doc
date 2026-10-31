@@ -19,6 +19,7 @@ The implementation baseline is the inspected JCB `6.x` revision, with a comparis
 | Improve performance or grow a Power subsystem | [Scaling and performance](workflows/maintain-and-debug.md#scaling-and-performance), then [shared-contract evolution](workflows/evolve-shared-contracts.md) |
 | Change a shared interface or foundational class | [Evolve shared contracts](workflows/evolve-shared-contracts.md) |
 | Verify a change from metadata through JCB | [Validation and integration](workflows/validate-and-integrate.md) |
+| Prepare the default browser integration environment | [Shared Playground procedure](../testing/playground/README.md), then the Super Powers [integration steps](workflows/validate-and-integrate.md#jcb-import-and-compile-acceptance-procedure) |
 | Choose an existing dependency | [Reuse and dependency policy](reuse-and-dependencies.md) |
 | Learn meaningful format variations | [Complete reference examples](examples/README.md) |
 | Run checks or generate a new GUID | [Tools](../tools/README.md) |
@@ -48,6 +49,6 @@ The seven repositories are the owner's minimum official discovery set, not a cla
 
 ## What completion means
 
-A source change is ready for review when the requested behaviour is implemented in the authoritative files, all affected representations and navigation are consistent, relevant checks pass, and the review describes compatibility, source revisions, and remaining verification limits. Use the workflow's integration recipe on the supported JCB/PHP/Joomla environment before claiming import/compile/runtime acceptance.
+A source change is ready for review when the requested behaviour is implemented in the authoritative files, all affected representations and navigation are consistent, relevant checks pass, and the review describes compatibility, source revisions, and remaining verification limits. Use [JoomEngine Playground](../testing/playground/README.md) as the default browser integration environment and follow this module's import, compilation and runtime assertions. The shared procedure owns site setup, repository configuration, browser operation and evidence handling; this module owns what must be verified for a Power.
 
-This module ships static tooling and complete integration procedures. The module's recorded [verification status](../registries/modules.json) is the evidence for what has actually been exercised; documentation does not substitute for an installed JCB environment.
+The [verification record](verification.md) includes one successful live import of the existing upstream Regex Power on JCB 6.2.0. That smoke test did not exercise a proposed branch change, refresh, compilation or runtime caller. The [module registry](../registries/modules.json) and [shared Playground receipt](../testing/playground/verification.md) keep these limits explicit; an import result does not establish broader acceptance.

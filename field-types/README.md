@@ -12,6 +12,7 @@ A Field Type is a **metadata definition** used to author and compile concrete JC
 | Change an item or property without confusing examples and defaults | [Field reference](fields-reference.md) |
 | Establish which attributes Joomla really supports | [Joomla source research](joomla-research.md) |
 | Create a repository, add a type, maintain a fork or verify an import | [Workflows](workflows/README.md) |
+| Test a candidate in a browser through JCB and Joomla | [Playground setup](../testing/playground/README.md), then [Field Type acceptance](workflows/validate-and-integrate.md) |
 | Inspect complete specimens and custom-field variants | [Examples](examples/README.md) |
 | Reproduce or refresh the evidence | [Sources and known limits](sources.md) |
 | Review what was actually tested | [Verification record](verification.md) |
@@ -27,9 +28,10 @@ Read only the task-relevant route after these invariants. Use [the module-author
 5. **Research Joomla implementation first.** Check the target field class, ancestors, layouts, forms/filter/validation behaviour and installed dependencies before documenting a property as supported. Metadata text and an old example are insufficient evidence.
 6. **Treat import/update as a separate step.** A Git commit or changed repository order does not automatically replace an existing JCB database record. Refresh the intended Field Type, then inspect and compile representative consumers.
 7. **Preserve the exact serialization contract.** Keep `datalenght`/`datalenght_other` spellings; `properties` is native nested JSON, not a JSON string. Preserve field-specific empty forms and omitted unchecked flags.
+8. **Use Playground as the default browser integration path.** Follow the shared [setup and configuration](../testing/playground/configuration.md), then test this entity's imported record, concrete Fields, compiled output, and runtime form. Another entity's successful browser import does not establish Field Type acceptance.
 
 ## Applicability and proof
 
 The JCB repository contract was inspected on `6.x` at `408703a857ad937479b1e28de7f693af178dcc83`; the core catalogue on `master` at `3be64d59378b5650825b97b44dbd58f2cdb82fcb` contains 49 entries. These are recorded source baselines, not minimum supported version numbers or an assertion that all 49 definitions are correct for every Joomla target. See [sources](sources.md) for inspection dates, source paths and Joomla research scope.
 
-This module documents metadata authoring and static checks, plus an integration procedure. A successful repository validation does not prove import success, SQL compatibility, a generated custom field's PHP validity, or runtime form behaviour. The PR and workflow result must say which of those checks were actually executed.
+This module documents metadata authoring and static checks, plus a browser integration procedure using [JoomEngine Playground](../testing/playground/README.md). The [shared browser verification record](../testing/playground/verification.md) establishes the observations made for that path; the [Field Type verification record](verification.md) separately identifies this module's completed and unexecuted stages. A successful repository validation does not prove import success, SQL compatibility, a generated custom field's PHP validity, or runtime form behaviour. The PR and workflow result must say which checks were actually executed.

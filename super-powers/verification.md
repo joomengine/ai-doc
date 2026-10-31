@@ -1,6 +1,6 @@
 # Module verification record
 
-**Date:** 2026-10-31. This records validation of the initial documentation module, not certification of every Power or future repository revision. Source revisions are in [sources.md](sources.md) and the [repository registry](../registries/power-repositories.json).
+**Date:** 2026-10-31. This records validation of the initial documentation module and a subsequent live Playground import smoke test, not certification of every Power or future repository revision. Source revisions are in [sources.md](sources.md) and the [repository registry](../registries/power-repositories.json). The canonical browser receipt is [shared Playground verification](../testing/playground/verification.md).
 
 ## Evidence and review
 
@@ -32,9 +32,25 @@ php -n super-powers/examples/minimal-repository/smoke.php
 
 These check documentation links/registries, JSON and shell syntax, positive/negative repository fixtures, GUID catalogue gates, path boundaries, source/representation checks and the maintained example's behaviour. CI repeats the offline checks in its own declared environment; consult the [PR checks](https://github.com/joomengine/ai-doc/pull/1/checks) for the result of the exact published commit.
 
+## Live Playground import smoke test
+
+An agent operated the browser UI in [JoomEngine Playground](../testing/playground/README.md) with installed **JCB 6.2.0, Joomla 6.2.0 and PHP 8.4.1**. It created a GitHub repository entry for `joomengine/super-powers`, selected read branch `master`, and imported the previously absent Regex Power through Init.
+
+| Observed check | Result |
+| --- | --- |
+| Power identity | `0e6235bf-08ef-428a-bc0a-93957587e936`, saved local ID `1268` |
+| Local Powers count | Increased from `142` to `143` |
+| Reopened saved metadata | GUID, `Regex` name, version `1.0.0`, portable namespace `[[[NamespacePrefix]]]\Joomla\Utilities.Regex` and description verified |
+| Reopened saved body | All six methods visible and checked: `match`, `capture`, `optional`, `oneOrMore`, `noneOrMore`, `anyOf` |
+| Initial MathHelper candidate | Already present locally and disabled in initialization selection; it was not newly imported |
+
+This establishes a working browser route from repository registration and branch selection through fetching and saving one upstream Power, followed by reopening its stored metadata and methods. It is visual/record inspection, not a complete raw-code byte/hash equality claim. See the [shared receipt](../testing/playground/verification.md) for the browser evidence and exact scope.
+
+The pinned JCB source used to explain control semantics is `6.x@408703a857ad937479b1e28de7f693af178dcc83`, whose manifest is `6.2.1-alpha1`; it is not the same artifact as the installed `6.2.0` package. The observed Init result does not prove every source-described action behaves identically on that installed package.
+
 ## Limits and next integration gate
 
-**JCB import/compile not run.** No installed JCB consumer environment was available in this documentation build. The [integration workflow](workflows/validate-and-integrate.md) specifies the remaining import/refresh, two-namespace compilation, generated-path inspection and consumer-runtime procedure.
+**Live upstream import passed; candidate-branch import, refresh, compilation and runtime remain untested.** No staged implementation branch, PR fixture or fresh-agent Quorum artifact was imported. Pull/Reset of an existing item, dependency resolution, a compiled SPK reference, generated-source inspection, two-namespace portability, extension installation and a consumer runtime call were not executed in this smoke test. The [integration workflow](workflows/validate-and-integrate.md) specifies these remaining gates in the default Playground environment. An available browser environment has now been demonstrated; the earlier documentation build's lack of an installed consumer is historical, not a current blanket blocker.
 
 The supplied repositories are not a closed dependency universe, and several existing artifacts differ from the stricter new-authoring profile. The source survey found 23 structured edges to 14 GUIDs outside the seven indexes and seven indexed generated PHP files missing from the shared foundation snapshot; their settings and bodies were present. These are dated source observations, not exceptions that allow a newly authored repository to omit required artifacts or invent dependencies. No source Power repository was modified by this documentation work.
 

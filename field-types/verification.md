@@ -31,8 +31,20 @@ The focused [entity regression suite](../tests/run-entity-tests.sh) covers compl
 
 The [tool reference](../tools/README.md) identifies the stricter authoring profile and its limits. A historical record rejected by that profile needs investigation; it is not automatically proof that the JCB importer rejects it.
 
-## Integration not executed
+## Browser path and entity-specific verification
 
-**JCB import/reset, compilation, database execution, and live Joomla form checks were not run.** No installed JCB test instance was available. The [integration workflow](workflows/validate-and-integrate.md) supplies the remaining procedure, including both new and existing concrete Fields, namespace/class resolution for custom fields, generated XML/PHP/SQL inspection and runtime validation.
+[JoomEngine Playground](../testing/playground/README.md) is the default browser integration path. Its [shared verification record](../testing/playground/verification.md) records the observed setup and Power import flow. That evidence establishes access to the shared browser workflow; it does **not** verify a Field Type fixture, its importer behaviour, or a compiled form. The browser path is available; the entity-specific stages below have not been executed in this documentation update.
+
+| Field Type stage | Recorded outcome |
+| --- | --- |
+| Candidate/fixture Init, repository-specific Pull, and ordered Reset in Playground | Not run |
+| Imported properties/flags/defaults and preserved-GUID override inspection | Not run |
+| New and existing concrete Field authoring, association, saved XML and database settings | Not run |
+| Component compilation and generated XML/PHP/SQL inspection | Not run |
+| Compiled extension installation and actual custom field class resolution | Not run |
+| Browser rendering, valid/invalid submission, storage and save/reload cases | Not run |
+| Relevant Joomla/PHP runtime matrix | Not run |
+
+The [Field Type integration workflow](workflows/validate-and-integrate.md) applies the shared [configuration procedure](../testing/playground/configuration.md) to these stages. It covers fresh candidate identities versus retained-GUID overrides, both new and existing concrete Fields, the distinct Init/Pull/Reset scopes, generated XML/PHP/SQL, own-custom class boundaries, installation, submission, and storage. This documentation update defines the path; it does not report those entity-specific checks as executed.
 
 Static success does not establish SQL compatibility, custom PHP inheritance/runtime correctness, Joomla class availability or the effect of a change on every consumer. The core catalogue's existing Text/List descriptions were compared with current Joomla source without changing that upstream repository.
