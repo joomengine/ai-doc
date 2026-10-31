@@ -1,0 +1,508 @@
+{
+    "entity": "component_router",
+    "kind": "database",
+    "config_sources": [
+        {
+            "class": "ComponentRouter",
+            "path": "libraries/vendor_jcb/VDM.Joomla/src/Componentbuilder/Package/ComponentRouter/Remote/Config.php",
+            "url": "https://github.com/vdm-io/Joomla-Component-Builder/blob/408703a857ad937479b1e28de7f693af178dcc83/libraries/vendor_jcb/VDM.Joomla/src/Componentbuilder/Package/ComponentRouter/Remote/Config.php",
+            "sha256": "5d07c270977bbe6d17baca0803b88c9aa71d7152816fb12f14d913a1ea364fb2"
+        }
+    ],
+    "config": {
+        "area": "Component Router",
+        "prefix_key": "",
+        "suffix_key": "",
+        "main_readme_path": "",
+        "item_readme_name": "",
+        "index_path": "index/component-router.json",
+        "src_path": "src/joomla_component/children",
+        "settings_name": "component-router.json",
+        "guid_field": "joomla_component",
+        "guid_helper_field": null,
+        "ignore": [
+            "access"
+        ],
+        "files": [],
+        "folders": [],
+        "map": [],
+        "children": [],
+        "index_map": {
+            "name": "index_map_IndexName",
+            "path": "index_map_IndexPath",
+            "settings": "index_map_IndexSettingsPath",
+            "guid": "index_map_IndexGUID"
+        },
+        "index_header": [
+            "name",
+            "path",
+            "settings",
+            "guid",
+            "local"
+        ],
+        "placeholders": [],
+        "table": "component_router"
+    },
+    "identity_kind": "parent_guid",
+    "table_source": {
+        "path": "libraries/vendor_jcb/VDM.Joomla/src/Componentbuilder/Table.php",
+        "url": "https://github.com/vdm-io/Joomla-Component-Builder/blob/408703a857ad937479b1e28de7f693af178dcc83/libraries/vendor_jcb/VDM.Joomla/src/Componentbuilder/Table.php",
+        "sha256": "630abb56cb664be947f45f08f8812af136402d50bcc2c0feec5702b9e870b573"
+    },
+    "form_source": {
+        "path": "admin/forms/component_router.xml",
+        "url": "https://github.com/vdm-io/Joomla-Component-Builder/blob/408703a857ad937479b1e28de7f693af178dcc83/admin/forms/component_router.xml",
+        "sha256": "fd90089d5a086fe4c8e7281cbda2edcabfc77ec60d7cc6c110e8953a5fcc29a5"
+    },
+    "fields": {
+        "joomla_component": {
+            "table_metadata": {
+                "name": "joomla_component",
+                "guid": "591df1a2-b685-4378-845a-f8a1d1985548",
+                "label": "COM_COMPONENTBUILDER_COMPONENT_ROUTER_JOOMLA_COMPONENT_LABEL",
+                "type": "joomlacomponents",
+                "title": true,
+                "list": "components_routers",
+                "store": null,
+                "tab_name": "Settings",
+                "db": {
+                    "type": "VARCHAR(36)",
+                    "default": "",
+                    "GUID": "591df1a2-b685-4378-845a-f8a1d1985548",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": {
+                    "type": 1,
+                    "table": "#__componentbuilder_joomla_component",
+                    "component": "com_componentbuilder",
+                    "entity": "joomla_component",
+                    "value": "system_name",
+                    "key": "guid"
+                }
+            },
+            "config_map_target": "joomla_component",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "joomlacomponents",
+                        "name": "joomla_component",
+                        "label": "COM_COMPONENTBUILDER_COMPONENT_ROUTER_JOOMLA_COMPONENT_LABEL",
+                        "description": "COM_COMPONENTBUILDER_COMPONENT_ROUTER_JOOMLA_COMPONENT_DESCRIPTION",
+                        "class": "list_class",
+                        "multiple": "false",
+                        "required": "true",
+                        "readonly": "true",
+                        "button": "false"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "mode_constructor_before_parent": {
+            "table_metadata": {
+                "name": "mode_constructor_before_parent",
+                "guid": "4582a192-d46e-4dd9-9bbd-ee2e2ddd20e5",
+                "label": "COM_COMPONENTBUILDER_COMPONENT_ROUTER_MODE_CONSTRUCTOR_BEFORE_PARENT_LABEL",
+                "type": "radio",
+                "title": false,
+                "list": "components_routers",
+                "store": null,
+                "tab_name": "Settings",
+                "db": {
+                    "type": "TINYINT(1)",
+                    "default": "0",
+                    "GUID": "4582a192-d46e-4dd9-9bbd-ee2e2ddd20e5",
+                    "null_switch": "NOT NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "mode_constructor_before_parent",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "radio",
+                        "name": "mode_constructor_before_parent",
+                        "label": "COM_COMPONENTBUILDER_COMPONENT_ROUTER_MODE_CONSTRUCTOR_BEFORE_PARENT_LABEL",
+                        "description": "COM_COMPONENTBUILDER_COMPONENT_ROUTER_MODE_CONSTRUCTOR_BEFORE_PARENT_DESCRIPTION",
+                        "class": "btn-group btn-group-yesno",
+                        "default": "1"
+                    },
+                    "options": [
+                        {
+                            "attributes": {
+                                "value": "1"
+                            },
+                            "label": "COM_COMPONENTBUILDER_COMPONENT_ROUTER_DEFAULT"
+                        },
+                        {
+                            "attributes": {
+                                "value": "2"
+                            },
+                            "label": "COM_COMPONENTBUILDER_COMPONENT_ROUTER_MANUAL"
+                        },
+                        {
+                            "attributes": {
+                                "value": "3"
+                            },
+                            "label": "COM_COMPONENTBUILDER_COMPONENT_ROUTER_CODE"
+                        }
+                    ],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "mode_constructor_after_parent": {
+            "table_metadata": {
+                "name": "mode_constructor_after_parent",
+                "guid": "2b31ca2e-11ff-4f57-8c90-2b9bed743202",
+                "label": "COM_COMPONENTBUILDER_COMPONENT_ROUTER_MODE_CONSTRUCTOR_AFTER_PARENT_LABEL",
+                "type": "radio",
+                "title": false,
+                "list": "components_routers",
+                "store": null,
+                "tab_name": "Settings",
+                "db": {
+                    "type": "TINYINT(1)",
+                    "default": "0",
+                    "GUID": "2b31ca2e-11ff-4f57-8c90-2b9bed743202",
+                    "null_switch": "NOT NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "mode_constructor_after_parent",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "radio",
+                        "name": "mode_constructor_after_parent",
+                        "label": "COM_COMPONENTBUILDER_COMPONENT_ROUTER_MODE_CONSTRUCTOR_AFTER_PARENT_LABEL",
+                        "description": "COM_COMPONENTBUILDER_COMPONENT_ROUTER_MODE_CONSTRUCTOR_AFTER_PARENT_DESCRIPTION",
+                        "class": "btn-group btn-group-yesno",
+                        "default": "1"
+                    },
+                    "options": [
+                        {
+                            "attributes": {
+                                "value": "1"
+                            },
+                            "label": "COM_COMPONENTBUILDER_COMPONENT_ROUTER_NONE"
+                        },
+                        {
+                            "attributes": {
+                                "value": "3"
+                            },
+                            "label": "COM_COMPONENTBUILDER_COMPONENT_ROUTER_CODE"
+                        }
+                    ],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "mode_methods": {
+            "table_metadata": {
+                "name": "mode_methods",
+                "guid": "25fead1f-bb12-40e6-9e03-4e31b236f2e1",
+                "label": "COM_COMPONENTBUILDER_COMPONENT_ROUTER_MODE_METHODS_LABEL",
+                "type": "radio",
+                "title": false,
+                "list": "components_routers",
+                "store": null,
+                "tab_name": "Settings",
+                "db": {
+                    "type": "TINYINT(1)",
+                    "default": "0",
+                    "GUID": "25fead1f-bb12-40e6-9e03-4e31b236f2e1",
+                    "null_switch": "NOT NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "mode_methods",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "radio",
+                        "name": "mode_methods",
+                        "label": "COM_COMPONENTBUILDER_COMPONENT_ROUTER_MODE_METHODS_LABEL",
+                        "description": "COM_COMPONENTBUILDER_COMPONENT_ROUTER_MODE_METHODS_DESCRIPTION",
+                        "class": "btn-group btn-group-yesno",
+                        "default": "1"
+                    },
+                    "options": [
+                        {
+                            "attributes": {
+                                "value": "0"
+                            },
+                            "label": "COM_COMPONENTBUILDER_COMPONENT_ROUTER_NONE"
+                        },
+                        {
+                            "attributes": {
+                                "value": "1"
+                            },
+                            "label": "COM_COMPONENTBUILDER_COMPONENT_ROUTER_DEFAULT"
+                        },
+                        {
+                            "attributes": {
+                                "value": "3"
+                            },
+                            "label": "COM_COMPONENTBUILDER_COMPONENT_ROUTER_CODE"
+                        }
+                    ],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "methods_code": {
+            "table_metadata": {
+                "name": "methods_code",
+                "guid": "3ab69198-0827-452b-93a4-6c7bb02ae7ae",
+                "label": "COM_COMPONENTBUILDER_COMPONENT_ROUTER_METHODS_CODE_LABEL",
+                "type": "editor",
+                "title": false,
+                "list": "components_routers",
+                "store": "base64",
+                "tab_name": "Settings",
+                "db": {
+                    "type": "MEDIUMTEXT",
+                    "default": "EMPTY",
+                    "GUID": "3ab69198-0827-452b-93a4-6c7bb02ae7ae",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "methods_code",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "editor",
+                        "name": "methods_code",
+                        "label": "COM_COMPONENTBUILDER_COMPONENT_ROUTER_METHODS_CODE_LABEL",
+                        "description": "COM_COMPONENTBUILDER_COMPONENT_ROUTER_METHODS_CODE_DESCRIPTION",
+                        "width": "100%",
+                        "height": "800px",
+                        "cols": "40",
+                        "rows": "300",
+                        "buttons": "no",
+                        "syntax": "php",
+                        "editor": "codemirror|none",
+                        "filter": "raw",
+                        "validate": "code",
+                        "showon": "mode_methods:3"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "constructor_after_parent_code": {
+            "table_metadata": {
+                "name": "constructor_after_parent_code",
+                "guid": "a411a365-69c8-4f70-a734-25956a9f3393",
+                "label": "COM_COMPONENTBUILDER_COMPONENT_ROUTER_CONSTRUCTOR_AFTER_PARENT_CODE_LABEL",
+                "type": "editor",
+                "title": false,
+                "list": "components_routers",
+                "store": "base64",
+                "tab_name": "Settings",
+                "db": {
+                    "type": "MEDIUMTEXT",
+                    "default": "EMPTY",
+                    "GUID": "a411a365-69c8-4f70-a734-25956a9f3393",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "constructor_after_parent_code",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "editor",
+                        "name": "constructor_after_parent_code",
+                        "label": "COM_COMPONENTBUILDER_COMPONENT_ROUTER_CONSTRUCTOR_AFTER_PARENT_CODE_LABEL",
+                        "description": "COM_COMPONENTBUILDER_COMPONENT_ROUTER_CONSTRUCTOR_AFTER_PARENT_CODE_DESCRIPTION",
+                        "width": "100%",
+                        "height": "800px",
+                        "cols": "40",
+                        "rows": "300",
+                        "buttons": "no",
+                        "syntax": "php",
+                        "editor": "codemirror|none",
+                        "filter": "raw",
+                        "validate": "code",
+                        "showon": "mode_constructor_after_parent:3"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "constructor_before_parent_manual": {
+            "table_metadata": {
+                "name": "constructor_before_parent_manual",
+                "guid": "2321b486-80c4-4e24-81c5-6ddd205592ac",
+                "label": "COM_COMPONENTBUILDER_COMPONENT_ROUTER_CONSTRUCTOR_BEFORE_PARENT_MANUAL_LABEL",
+                "type": "subform",
+                "title": false,
+                "list": "components_routers",
+                "store": "json",
+                "tab_name": "Settings",
+                "db": {
+                    "type": "TEXT",
+                    "default": "EMPTY",
+                    "GUID": "2321b486-80c4-4e24-81c5-6ddd205592ac",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null,
+                "fields": {
+                    "siteview": {
+                        "name": "siteview",
+                        "type": "siteviews",
+                        "link": {
+                            "type": 1,
+                            "table": "#__componentbuilder_site_view",
+                            "component": "com_componentbuilder",
+                            "entity": "site_view",
+                            "value": "system_name",
+                            "key": "guid"
+                        }
+                    }
+                }
+            },
+            "config_map_target": "constructor_before_parent_manual",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "subform",
+                        "name": "constructor_before_parent_manual",
+                        "label": "COM_COMPONENTBUILDER_COMPONENT_ROUTER_CONSTRUCTOR_BEFORE_PARENT_MANUAL_LABEL",
+                        "layout": "repeatablejcb",
+                        "multiple": "true",
+                        "description": "COM_COMPONENTBUILDER_COMPONENT_ROUTER_CONSTRUCTOR_BEFORE_PARENT_MANUAL_DESCRIPTION",
+                        "icon": "list",
+                        "showon": "mode_constructor_before_parent:2"
+                    },
+                    "options": [],
+                    "nested_fields": [
+                        {
+                            "attributes": {
+                                "type": "siteviews",
+                                "name": "siteview",
+                                "label": "COM_COMPONENTBUILDER_COMPONENT_ROUTER_SITEVIEW_LABEL",
+                                "description": "COM_COMPONENTBUILDER_COMPONENT_ROUTER_SITEVIEW_DESCRIPTION",
+                                "layout": "joomla.form.field.list-fancy-select",
+                                "multiple": "false",
+                                "required": "true",
+                                "button": "false"
+                            },
+                            "options": [],
+                            "nested_fields": []
+                        }
+                    ]
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "object",
+                "array",
+                "string"
+            ]
+        },
+        "constructor_before_parent_code": {
+            "table_metadata": {
+                "name": "constructor_before_parent_code",
+                "guid": "65544263-3215-4574-a977-dbf8ac2ce72a",
+                "label": "COM_COMPONENTBUILDER_COMPONENT_ROUTER_CONSTRUCTOR_BEFORE_PARENT_CODE_LABEL",
+                "type": "editor",
+                "title": false,
+                "list": "components_routers",
+                "store": "base64",
+                "tab_name": "Settings",
+                "db": {
+                    "type": "MEDIUMTEXT",
+                    "default": "EMPTY",
+                    "GUID": "65544263-3215-4574-a977-dbf8ac2ce72a",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "constructor_before_parent_code",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "editor",
+                        "name": "constructor_before_parent_code",
+                        "label": "COM_COMPONENTBUILDER_COMPONENT_ROUTER_CONSTRUCTOR_BEFORE_PARENT_CODE_LABEL",
+                        "description": "COM_COMPONENTBUILDER_COMPONENT_ROUTER_CONSTRUCTOR_BEFORE_PARENT_CODE_DESCRIPTION",
+                        "width": "100%",
+                        "height": "800px",
+                        "cols": "40",
+                        "rows": "300",
+                        "buttons": "no",
+                        "syntax": "php",
+                        "editor": "codemirror|none",
+                        "filter": "raw",
+                        "validate": "code",
+                        "showon": "mode_constructor_before_parent:3"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        }
+    },
+    "source_license": {
+        "header": "GNU General Public License version 2 or later; see LICENSE.txt",
+        "spdx": "GPL-2.0-or-later",
+        "copyright": "Copyright (C) 2015 Vast Development Method. All rights reserved.",
+        "file": "LICENSE.txt",
+        "sha256": "2332109384fc0476519a1d02e1f050dd05ea2251fa66c06f9c5239585147828c",
+        "url": "https://github.com/vdm-io/Joomla-Component-Builder/blob/408703a857ad937479b1e28de7f693af178dcc83/LICENSE.txt"
+    }
+}

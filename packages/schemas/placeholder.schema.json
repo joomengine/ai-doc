@@ -1,0 +1,29 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "placeholder package serialized envelope",
+    "description": "Generated from pinned Table and Remote Config. Bounds known JSON types only, not conditional forms, SQL defaults, compiler behavior or semantic closure. Filesystem payloads are raw files; their Config map is only transport metadata.",
+    "type": "object",
+    "properties": {
+        "target": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/placeholder.json for exact metadata, conditions and subfields."
+        },
+        "value": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/placeholder.json for exact metadata, conditions and subfields."
+        },
+        "@dependencies": {
+            "$ref": "dependencies.schema.json"
+        }
+    },
+    "additionalProperties": false,
+    "required": [
+        "target"
+    ]
+}

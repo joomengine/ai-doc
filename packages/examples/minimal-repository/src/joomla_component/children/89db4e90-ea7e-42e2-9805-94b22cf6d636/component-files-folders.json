@@ -1,0 +1,43 @@
+{
+	"joomla_component": "89db4e90-ea7e-42e2-9805-94b22cf6d636",
+	"addfiles": {
+		"addfiles0": {
+			"file": "aidoc-package-notice.txt",
+			"path": "media/aidoc-package-notice.txt",
+			"notnew": "0"
+		}
+	},
+	"addfolders": {
+		"addfolders0": {
+			"folder": "aidoc-package-assets",
+			"path": "media/aidoc-package-assets"
+		}
+	},
+	"addfilesfullpath": null,
+	"addfoldersfullpath": null,
+	"@dependencies": [
+		{
+			"key": "guid",
+			"value": "89db4e90-ea7e-42e2-9805-94b22cf6d636",
+			"entity": "joomla_component",
+			"table": "#__componentbuilder_joomla_component",
+			"direction": "out"
+		},
+		{
+			"key": "c3f64e43-5f0c-5b58-8aad-cb1f61ad9fad.txt",
+			"pointer": "c3f64e43-5f0c-5b58-8aad-cb1f61ad9fad--txt",
+			"value": "aidoc-package-notice.txt",
+			"entity": "file",
+			"table": "file_system",
+			"target": "custom"
+		},
+		{
+			"key": "54376eec-75f2-5d0c-a47a-6c9bd8e9a4e7.zip",
+			"pointer": "54376eec-75f2-5d0c-a47a-6c9bd8e9a4e7--zip",
+			"value": "aidoc-package-assets",
+			"entity": "folder",
+			"table": "file_system",
+			"target": "custom"
+		}
+	]
+}

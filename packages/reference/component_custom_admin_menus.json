@@ -1,0 +1,333 @@
+{
+    "entity": "component_custom_admin_menus",
+    "kind": "database",
+    "config_sources": [
+        {
+            "class": "ComponentCustomAdminMenus",
+            "path": "libraries/vendor_jcb/VDM.Joomla/src/Componentbuilder/Package/ComponentCustomAdminMenus/Remote/Config.php",
+            "url": "https://github.com/vdm-io/Joomla-Component-Builder/blob/408703a857ad937479b1e28de7f693af178dcc83/libraries/vendor_jcb/VDM.Joomla/src/Componentbuilder/Package/ComponentCustomAdminMenus/Remote/Config.php",
+            "sha256": "289cba348de1ebdf72b7c956110238f534dde2adda9cb0b65d931257b7c611cd"
+        }
+    ],
+    "config": {
+        "area": "Component Custom Admin Menus",
+        "prefix_key": "",
+        "suffix_key": "",
+        "main_readme_path": "",
+        "item_readme_name": "",
+        "index_path": "index/component-custom-admin-menus.json",
+        "src_path": "src/joomla_component/children",
+        "settings_name": "component-custom-admin-menus.json",
+        "guid_field": "joomla_component",
+        "guid_helper_field": null,
+        "ignore": [
+            "access"
+        ],
+        "files": {
+            "addcustommenus|icon": "image"
+        },
+        "folders": [],
+        "map": [],
+        "children": [],
+        "index_map": {
+            "name": "index_map_IndexName",
+            "path": "index_map_IndexPath",
+            "settings": "index_map_IndexSettingsPath",
+            "guid": "index_map_IndexGUID"
+        },
+        "index_header": [
+            "name",
+            "path",
+            "settings",
+            "guid",
+            "local"
+        ],
+        "placeholders": [],
+        "table": "component_custom_admin_menus"
+    },
+    "identity_kind": "parent_guid",
+    "table_source": {
+        "path": "libraries/vendor_jcb/VDM.Joomla/src/Componentbuilder/Table.php",
+        "url": "https://github.com/vdm-io/Joomla-Component-Builder/blob/408703a857ad937479b1e28de7f693af178dcc83/libraries/vendor_jcb/VDM.Joomla/src/Componentbuilder/Table.php",
+        "sha256": "630abb56cb664be947f45f08f8812af136402d50bcc2c0feec5702b9e870b573"
+    },
+    "form_source": {
+        "path": "admin/forms/component_custom_admin_menus.xml",
+        "url": "https://github.com/vdm-io/Joomla-Component-Builder/blob/408703a857ad937479b1e28de7f693af178dcc83/admin/forms/component_custom_admin_menus.xml",
+        "sha256": "c872764294b033eb0f6062ac3b17228e768fa67ea5d69d747e780a361ef2248b"
+    },
+    "fields": {
+        "joomla_component": {
+            "table_metadata": {
+                "name": "joomla_component",
+                "guid": "591df1a2-b685-4378-845a-f8a1d1985548",
+                "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_MENUS_JOOMLA_COMPONENT_LABEL",
+                "type": "joomlacomponents",
+                "title": true,
+                "list": "components_custom_admin_menus",
+                "store": null,
+                "tab_name": "Menus",
+                "db": {
+                    "type": "VARCHAR(36)",
+                    "default": "",
+                    "GUID": "591df1a2-b685-4378-845a-f8a1d1985548",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": {
+                    "type": 1,
+                    "table": "#__componentbuilder_joomla_component",
+                    "component": "com_componentbuilder",
+                    "entity": "joomla_component",
+                    "value": "system_name",
+                    "key": "guid"
+                }
+            },
+            "config_map_target": "joomla_component",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "joomlacomponents",
+                        "name": "joomla_component",
+                        "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_MENUS_JOOMLA_COMPONENT_LABEL",
+                        "description": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_MENUS_JOOMLA_COMPONENT_DESCRIPTION",
+                        "class": "list_class",
+                        "multiple": "false",
+                        "required": "true",
+                        "readonly": "true",
+                        "button": "false"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "addcustommenus": {
+            "table_metadata": {
+                "name": "addcustommenus",
+                "guid": "60d68340-14c1-45a9-8240-30f6bdf96345",
+                "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_MENUS_ADDCUSTOMMENUS_LABEL",
+                "type": "subform",
+                "title": false,
+                "list": "components_custom_admin_menus",
+                "store": "json",
+                "tab_name": "Menus",
+                "db": {
+                    "type": "TEXT",
+                    "default": "EMPTY",
+                    "GUID": "60d68340-14c1-45a9-8240-30f6bdf96345",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null,
+                "fields": {
+                    "name": {
+                        "name": "name",
+                        "type": "text",
+                        "link": null
+                    },
+                    "name_code": {
+                        "name": "name_code",
+                        "type": "text",
+                        "link": null
+                    },
+                    "link": {
+                        "name": "link",
+                        "type": "text",
+                        "link": null
+                    },
+                    "icon": {
+                        "name": "icon",
+                        "type": "filelist",
+                        "link": null
+                    },
+                    "mainmenu": {
+                        "name": "mainmenu",
+                        "type": "checkbox",
+                        "link": null
+                    },
+                    "dashboard_list": {
+                        "name": "dashboard_list",
+                        "type": "checkbox",
+                        "link": null
+                    },
+                    "submenu": {
+                        "name": "submenu",
+                        "type": "checkbox",
+                        "link": null
+                    },
+                    "before": {
+                        "name": "before",
+                        "type": "componentadminmenus",
+                        "link": {
+                            "type": 1,
+                            "table": "#__componentbuilder_admin_view",
+                            "component": "com_componentbuilder",
+                            "entity": "admin_view",
+                            "value": "system_name",
+                            "key": "guid"
+                        }
+                    }
+                }
+            },
+            "config_map_target": "addcustommenus",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "subform",
+                        "name": "addcustommenus",
+                        "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_MENUS_ADDCUSTOMMENUS_LABEL",
+                        "layout": "repeatablejcb",
+                        "multiple": "true",
+                        "default": "",
+                        "icon": "list"
+                    },
+                    "options": [],
+                    "nested_fields": [
+                        {
+                            "attributes": {
+                                "type": "text",
+                                "name": "name",
+                                "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_MENUS_NAME_LABEL",
+                                "size": "40",
+                                "maxlength": "150",
+                                "description": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_MENUS_NAME_DESCRIPTION",
+                                "class": "text_area",
+                                "readonly": "false",
+                                "disabled": "false",
+                                "required": "true",
+                                "filter": "STRING",
+                                "message": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_MENUS_NAME_MESSAGE",
+                                "hint": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_MENUS_NAME_HINT"
+                            },
+                            "options": [],
+                            "nested_fields": []
+                        },
+                        {
+                            "attributes": {
+                                "type": "text",
+                                "name": "name_code",
+                                "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_MENUS_NAME_CODE_LABEL",
+                                "size": "40",
+                                "maxlength": "50",
+                                "default": "",
+                                "description": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_MENUS_NAME_CODE_DESCRIPTION",
+                                "class": "text_area",
+                                "required": "true",
+                                "filter": "CMD",
+                                "message": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_MENUS_NAME_CODE_MESSAGE",
+                                "hint": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_MENUS_NAME_CODE_HINT"
+                            },
+                            "options": [],
+                            "nested_fields": []
+                        },
+                        {
+                            "attributes": {
+                                "type": "text",
+                                "name": "link",
+                                "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_MENUS_LINK_LABEL",
+                                "size": "50",
+                                "maxlength": "150",
+                                "description": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_MENUS_LINK_DESCRIPTION",
+                                "class": "text_area",
+                                "readonly": "false",
+                                "disabled": "false",
+                                "required": "false",
+                                "filter": "STRING",
+                                "message": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_MENUS_LINK_MESSAGE",
+                                "hint": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_MENUS_LINK_HINT"
+                            },
+                            "options": [],
+                            "nested_fields": []
+                        },
+                        {
+                            "attributes": {
+                                "type": "filelist",
+                                "name": "icon",
+                                "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_MENUS_ICON_LABEL",
+                                "directory": "images",
+                                "default": "true",
+                                "description": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_MENUS_ICON_DESCRIPTION",
+                                "hide_default": "true"
+                            },
+                            "options": [],
+                            "nested_fields": []
+                        },
+                        {
+                            "attributes": {
+                                "type": "checkbox",
+                                "name": "mainmenu",
+                                "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_MENUS_MAINMENU_LABEL",
+                                "value": "1",
+                                "default": "1",
+                                "description": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_MENUS_MAINMENU_DESCRIPTION",
+                                "class": "inputbox"
+                            },
+                            "options": [],
+                            "nested_fields": []
+                        },
+                        {
+                            "attributes": {
+                                "type": "checkbox",
+                                "name": "dashboard_list",
+                                "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_MENUS_DASHBOARD_LIST_LABEL",
+                                "value": "1",
+                                "default": "1",
+                                "description": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_MENUS_DASHBOARD_LIST_DESCRIPTION",
+                                "class": "inputbox"
+                            },
+                            "options": [],
+                            "nested_fields": []
+                        },
+                        {
+                            "attributes": {
+                                "type": "checkbox",
+                                "name": "submenu",
+                                "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_MENUS_SUBMENU_LABEL",
+                                "value": "1",
+                                "default": "1",
+                                "description": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_MENUS_SUBMENU_DESCRIPTION",
+                                "class": "inputbox"
+                            },
+                            "options": [],
+                            "nested_fields": []
+                        },
+                        {
+                            "attributes": {
+                                "type": "componentadminmenus",
+                                "name": "before",
+                                "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_MENUS_BEFORE_LABEL",
+                                "description": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_MENUS_BEFORE_DESCRIPTION",
+                                "layout": "joomla.form.field.list-fancy-select",
+                                "multiple": "false",
+                                "button": "false"
+                            },
+                            "options": [],
+                            "nested_fields": []
+                        }
+                    ]
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "object",
+                "array",
+                "string"
+            ]
+        }
+    },
+    "source_license": {
+        "header": "GNU General Public License version 2 or later; see LICENSE.txt",
+        "spdx": "GPL-2.0-or-later",
+        "copyright": "Copyright (C) 2015 Vast Development Method. All rights reserved.",
+        "file": "LICENSE.txt",
+        "sha256": "2332109384fc0476519a1d02e1f050dd05ea2251fa66c06f9c5239585147828c",
+        "url": "https://github.com/vdm-io/Joomla-Component-Builder/blob/408703a857ad937479b1e28de7f693af178dcc83/LICENSE.txt"
+    }
+}

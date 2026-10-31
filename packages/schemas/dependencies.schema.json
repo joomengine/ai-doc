@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Package dependency descriptors (bounded envelope)",
+  "type": "array",
+  "uniqueItems": true,
+  "items": {
+    "type": "object",
+    "required": ["key", "value", "entity", "table"],
+    "properties": {
+      "key": {"type": "string", "minLength": 1},
+      "value": {"type": "string", "minLength": 1},
+      "entity": {"type": "string", "minLength": 1},
+      "table": {"type": "string", "minLength": 1},
+      "direction": {"enum": ["in", "out"]},
+      "pointer": {"type": "string", "minLength": 1},
+      "target": {"enum": ["custom", "compiler", "image", "images", "full"]}
+    },
+    "if": {"properties": {"entity": {"enum": ["file", "folder"]}}},
+    "then": {"required": ["pointer", "target"], "properties": {"table": {"const": "file_system"}}, "not": {"required": ["direction"]}},
+    "else": {"required": ["direction"]}
+  }
+}

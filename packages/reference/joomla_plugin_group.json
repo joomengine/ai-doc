@@ -1,0 +1,222 @@
+{
+    "entity": "joomla_plugin_group",
+    "kind": "database",
+    "config_sources": [
+        {
+            "class": "JoomlaPluginGroup",
+            "path": "libraries/vendor_jcb/VDM.Joomla/src/Componentbuilder/Package/JoomlaPluginGroup/Remote/Config.php",
+            "url": "https://github.com/vdm-io/Joomla-Component-Builder/blob/408703a857ad937479b1e28de7f693af178dcc83/libraries/vendor_jcb/VDM.Joomla/src/Componentbuilder/Package/JoomlaPluginGroup/Remote/Config.php",
+            "sha256": "f480cd4dd7bafc16ebecc5b4d30520a3ecb5ecfa69117817072457b5c9c50ada"
+        }
+    ],
+    "config": {
+        "area": "Joomla Plugin Group",
+        "prefix_key": "",
+        "suffix_key": "",
+        "main_readme_path": "",
+        "item_readme_name": "",
+        "index_path": "index/joomla-plugin-group.json",
+        "src_path": "src/joomla_plugin_group",
+        "settings_name": "item.json",
+        "guid_field": "guid",
+        "guid_helper_field": null,
+        "ignore": [
+            "access"
+        ],
+        "files": [],
+        "folders": [],
+        "map": [],
+        "children": [],
+        "index_map": {
+            "name": "index_map_IndexName",
+            "path": "index_map_IndexPath",
+            "settings": "index_map_IndexSettingsPath",
+            "guid": "index_map_IndexGUID"
+        },
+        "index_header": [
+            "name",
+            "path",
+            "settings",
+            "guid",
+            "local"
+        ],
+        "placeholders": [],
+        "table": "joomla_plugin_group"
+    },
+    "identity_kind": "guid",
+    "table_source": {
+        "path": "libraries/vendor_jcb/VDM.Joomla/src/Componentbuilder/Table.php",
+        "url": "https://github.com/vdm-io/Joomla-Component-Builder/blob/408703a857ad937479b1e28de7f693af178dcc83/libraries/vendor_jcb/VDM.Joomla/src/Componentbuilder/Table.php",
+        "sha256": "630abb56cb664be947f45f08f8812af136402d50bcc2c0feec5702b9e870b573"
+    },
+    "form_source": {
+        "path": "admin/forms/joomla_plugin_group.xml",
+        "url": "https://github.com/vdm-io/Joomla-Component-Builder/blob/408703a857ad937479b1e28de7f693af178dcc83/admin/forms/joomla_plugin_group.xml",
+        "sha256": "0e18295c99f17daf1f1afe684bfc24c583d8569de4bc4c64e232320f4a6d788e"
+    },
+    "fields": {
+        "name": {
+            "table_metadata": {
+                "name": "name",
+                "guid": "5d3d34dd-4876-4c6a-86ab-b4e162f22c08",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_PLUGIN_GROUP_NAME_LABEL",
+                "type": "text",
+                "title": true,
+                "list": "joomla_plugin_groups",
+                "store": null,
+                "tab_name": "Details",
+                "db": {
+                    "type": "VARCHAR(255)",
+                    "default": "",
+                    "GUID": "5d3d34dd-4876-4c6a-86ab-b4e162f22c08",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": null
+            },
+            "config_map_target": "name",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "text",
+                        "name": "name",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_PLUGIN_GROUP_NAME_LABEL",
+                        "size": "40",
+                        "maxlength": "150",
+                        "description": "COM_COMPONENTBUILDER_JOOMLA_PLUGIN_GROUP_NAME_DESCRIPTION",
+                        "class": "text_area",
+                        "readonly": "false",
+                        "disabled": "false",
+                        "required": "true",
+                        "filter": "STRING",
+                        "message": "COM_COMPONENTBUILDER_JOOMLA_PLUGIN_GROUP_NAME_MESSAGE",
+                        "hint": "COM_COMPONENTBUILDER_JOOMLA_PLUGIN_GROUP_NAME_HINT"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "class_extends": {
+            "table_metadata": {
+                "name": "class_extends",
+                "guid": "956a8d9c-7f14-402f-85c9-7cdc4f3c0969",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_PLUGIN_GROUP_CLASS_EXTENDS_LABEL",
+                "type": "ModalSelect",
+                "title": false,
+                "list": "joomla_plugin_groups",
+                "store": null,
+                "tab_name": "Details",
+                "db": {
+                    "type": "VARCHAR(36)",
+                    "default": "",
+                    "GUID": "956a8d9c-7f14-402f-85c9-7cdc4f3c0969",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": {
+                    "type": 1,
+                    "table": "#__componentbuilder_class_extends",
+                    "component": "com_componentbuilder",
+                    "entity": "class_extends",
+                    "value": "name",
+                    "key": "guid"
+                }
+            },
+            "config_map_target": "class_extends",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "ModalSelect",
+                        "name": "class_extends",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_PLUGIN_GROUP_CLASS_EXTENDS_LABEL",
+                        "sql_title_table": "#__componentbuilder_class_extends",
+                        "sql_title_column": "name",
+                        "data-key-name": "guid",
+                        "sql_title_key": "guid",
+                        "urlSelect": "index.php?option=com_componentbuilder&view=class_extendings&layout=modal&tmpl=component&titleKey=guid&filter[extension_type]=plugins",
+                        "urlNew": "index.php?option=com_componentbuilder&task=class_extends.add&layout=modal&tmpl=component",
+                        "urlEdit": "index.php?option=com_componentbuilder&task=class_extends.edit&guid={id}&layout=modal&tmpl=component&titleKey=guid",
+                        "titleSelect": "COM_COMPONENTBUILDER_JOOMLA_PLUGIN_GROUP_CLASS_EXTENDS_TITLESELECT",
+                        "titleNew": "COM_COMPONENTBUILDER_JOOMLA_PLUGIN_GROUP_CLASS_EXTENDS_TITLENEW",
+                        "titleEdit": "COM_COMPONENTBUILDER_JOOMLA_PLUGIN_GROUP_CLASS_EXTENDS_TITLEEDIT",
+                        "iconSelect": "icon-copy",
+                        "select": "true",
+                        "new": "true",
+                        "edit": "true",
+                        "clear": "true",
+                        "required": "true",
+                        "class": "input-large",
+                        "description": "COM_COMPONENTBUILDER_JOOMLA_PLUGIN_GROUP_CLASS_EXTENDS_DESCRIPTION",
+                        "hint": "COM_COMPONENTBUILDER_JOOMLA_PLUGIN_GROUP_CLASS_EXTENDS_HINT"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "guid": {
+            "table_metadata": {
+                "name": "guid",
+                "guid": "5aa57bbe-7b19-4db9-915c-561863458d2b",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_PLUGIN_GROUP_GUID_LABEL",
+                "type": "text",
+                "title": false,
+                "list": "joomla_plugin_groups",
+                "store": null,
+                "tab_name": "publishing",
+                "db": {
+                    "type": "VARCHAR(36)",
+                    "default": "",
+                    "GUID": "5aa57bbe-7b19-4db9-915c-561863458d2b",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": null
+            },
+            "config_map_target": "guid",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "text",
+                        "name": "guid",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_PLUGIN_GROUP_GUID_LABEL",
+                        "size": "40",
+                        "maxlength": "40",
+                        "description": "COM_COMPONENTBUILDER_JOOMLA_PLUGIN_GROUP_GUID_DESCRIPTION",
+                        "class": "text_area",
+                        "readonly": "true",
+                        "filter": "CMD",
+                        "validate": "guid",
+                        "hint": "COM_COMPONENTBUILDER_JOOMLA_PLUGIN_GROUP_GUID_HINT"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        }
+    },
+    "source_license": {
+        "header": "GNU General Public License version 2 or later; see LICENSE.txt",
+        "spdx": "GPL-2.0-or-later",
+        "copyright": "Copyright (C) 2015 Vast Development Method. All rights reserved.",
+        "file": "LICENSE.txt",
+        "sha256": "2332109384fc0476519a1d02e1f050dd05ea2251fa66c06f9c5239585147828c",
+        "url": "https://github.com/vdm-io/Joomla-Component-Builder/blob/408703a857ad937479b1e28de7f693af178dcc83/LICENSE.txt"
+    }
+}

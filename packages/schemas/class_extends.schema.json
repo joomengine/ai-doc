@@ -1,0 +1,51 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "class_extends package serialized envelope",
+    "description": "Generated from pinned Table and Remote Config. Bounds known JSON types only, not conditional forms, SQL defaults, compiler behavior or semantic closure. Filesystem payloads are raw files; their Config map is only transport metadata.",
+    "type": "object",
+    "properties": {
+        "name": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/class_extends.json for exact metadata, conditions and subfields."
+        },
+        "extension_type": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/class_extends.json for exact metadata, conditions and subfields."
+        },
+        "guid": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/class_extends.json for exact metadata, conditions and subfields."
+        },
+        "head": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/class_extends.json for exact metadata, conditions and subfields."
+        },
+        "comment": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/class_extends.json for exact metadata, conditions and subfields."
+        },
+        "@dependencies": {
+            "$ref": "dependencies.schema.json"
+        }
+    },
+    "additionalProperties": false,
+    "required": [
+        "guid"
+    ]
+}

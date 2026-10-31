@@ -1,0 +1,76 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "component_router package serialized envelope",
+    "description": "Generated from pinned Table and Remote Config. Bounds known JSON types only, not conditional forms, SQL defaults, compiler behavior or semantic closure. Filesystem payloads are raw files; their Config map is only transport metadata.",
+    "type": "object",
+    "properties": {
+        "joomla_component": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/component_router.json for exact metadata, conditions and subfields."
+        },
+        "mode_constructor_before_parent": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/component_router.json for exact metadata, conditions and subfields."
+        },
+        "mode_constructor_after_parent": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/component_router.json for exact metadata, conditions and subfields."
+        },
+        "mode_methods": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/component_router.json for exact metadata, conditions and subfields."
+        },
+        "methods_code": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/component_router.json for exact metadata, conditions and subfields."
+        },
+        "constructor_after_parent_code": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/component_router.json for exact metadata, conditions and subfields."
+        },
+        "constructor_before_parent_manual": {
+            "type": [
+                "null",
+                "object",
+                "array",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/component_router.json for exact metadata, conditions and subfields."
+        },
+        "constructor_before_parent_code": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/component_router.json for exact metadata, conditions and subfields."
+        },
+        "@dependencies": {
+            "$ref": "dependencies.schema.json"
+        }
+    },
+    "additionalProperties": false,
+    "required": [
+        "joomla_component"
+    ]
+}

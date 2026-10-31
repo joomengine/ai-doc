@@ -14,6 +14,8 @@
 | Super Power acceptance | [Import, compile and runtime workflow](../../super-powers/workflows/validate-and-integrate.md) |
 | Field Type acceptance | [New/existing Field, compilation and runtime workflow](../../field-types/workflows/validate-and-integrate.md) |
 | Snippet acceptance | [Acquisition, copied consumer and runtime workflow](../../snippets/workflows/integrate.md) |
+| Package blueprint acceptance | [Graph acquisition, component/module/plugin compile and runtime](../../packages/workflows/validate-and-integrate.md) |
+| Build in the GUI and export source | [Package authoring, write destinations and Push/read-back](../../packages/workflows/author-in-playground.md) |
 | Understand what has actually run | [Verification record](verification.md) |
 | Preserve and hand off a defect | [Issue reporting](../reporting-issues.md) |
 
@@ -28,6 +30,7 @@ Read the entity's specification and run its applicable static checks first. Reco
 | Super Power | Repository `settings.json` and `code.power`, plus consistent index/derived representations |
 | Field Type | Repository `item.json` and index; actual Field choices remain separate JCB authoring data |
 | Snippet | Repository item/index/type references; copied consumer markup is maintained separately |
+| Package blueprint | Per-model repository payloads/indexes, parent-owned records and assets; see the exact [package contract](../../packages/specification.md) |
 | Compiled extension | Its JCB authoring source and dependencies; generated PHP/XML is evidence of the result |
 
 Use the task's staging branch or fork to expose the candidate to JCB. Commit a coherent source/index change and record its SHA. Push that branch when repository publication is already authorized by the task. If publication is outside the authorization, use an approved accessible staging source or report acquisition as blocked; do not silently publish the work. A local checkout invisible to the browser cannot be tested by configuring its filesystem path as a Git repository.
@@ -48,7 +51,7 @@ Record these values for every effective source:
 
 | Setting | Required check |
 | --- | --- |
-| Content target | Super Power (`1`), Field Types (`3`), or Snippets (`5`) for these modules; do not confuse Joomla Power (`2`) or Packages (`4`) with them |
+| Content target | Super Power (`1`), Joomla Power (`2`), Field Types (`3`), Packages (`4`), or Snippets (`5`) as appropriate; a package's concrete Fields differ from Field Type catalogue records |
 | Provider/type | GitHub or Gitea matching the actual host; these are independent of the content target |
 | Host, organization and repository | Exact source; the inspected GitHub provider normalizes its API base to `https://api.github.com`; Gitea uses the configured base |
 | Read branch | Candidate branch containing the tested commit, explicitly set; a write branch does not select import source |
@@ -75,6 +78,8 @@ Use the entity list's supported authenticated toolbar/selection flow with its no
 | **Push** in JCB | Writes to the configured remote source. It is unnecessary for a read/import test and belongs only to an authorized export/publication step. |
 
 Import only the required items. Capture meaningful success/local/not-found/error results. Inspect the saved local record's GUID, changed content and dependencies; a toast, record count or HTTP 200 is insufficient. For an update, check a distinctive intended difference. If a cached index or wrong branch hides a change, verify remote commit, indexed paths and selection first, then use the target version's supported reload/refresh path. Do not bypass an import failure by writing directly to JCB's database and call that a successful repository import.
+
+Package authoring may start in this GUI: create and connect the actual component/module/plugin records, compile/test them, then export their portable source through Push. Follow the [package authoring workflow](../../packages/workflows/author-in-playground.md) before supplying credentials or writing. Audit all eligible package write destinations; the inspected generic exporter can write beyond one apparently selected repository. Verify the remote payload/index/asset diff and acquire it into another test instance. A compiler ZIP download is not this repository export.
 
 ### 5. Exercise the actual authoring consumer
 

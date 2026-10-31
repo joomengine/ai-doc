@@ -1,0 +1,282 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "dynamic_get package serialized envelope",
+    "description": "Generated from pinned Table and Remote Config. Bounds known JSON types only, not conditional forms, SQL defaults, compiler behavior or semantic closure. Filesystem payloads are raw files; their Config map is only transport metadata.",
+    "type": "object",
+    "properties": {
+        "name": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/dynamic_get.json for exact metadata, conditions and subfields."
+        },
+        "main_source": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/dynamic_get.json for exact metadata, conditions and subfields."
+        },
+        "gettype": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/dynamic_get.json for exact metadata, conditions and subfields."
+        },
+        "php_calculation": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/dynamic_get.json for exact metadata, conditions and subfields."
+        },
+        "php_router_parse": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/dynamic_get.json for exact metadata, conditions and subfields."
+        },
+        "add_php_after_getitems": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/dynamic_get.json for exact metadata, conditions and subfields."
+        },
+        "add_php_router_parse": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/dynamic_get.json for exact metadata, conditions and subfields."
+        },
+        "view_selection": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/dynamic_get.json for exact metadata, conditions and subfields."
+        },
+        "add_php_before_getitems": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/dynamic_get.json for exact metadata, conditions and subfields."
+        },
+        "add_php_before_getitem": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/dynamic_get.json for exact metadata, conditions and subfields."
+        },
+        "add_php_after_getitem": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/dynamic_get.json for exact metadata, conditions and subfields."
+        },
+        "db_table_main": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/dynamic_get.json for exact metadata, conditions and subfields."
+        },
+        "php_custom_get": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/dynamic_get.json for exact metadata, conditions and subfields."
+        },
+        "plugin_events": {
+            "type": [
+                "null",
+                "object",
+                "array",
+                "string",
+                "number",
+                "boolean"
+            ],
+            "description": "Source-derived envelope; see reference/dynamic_get.json for exact metadata, conditions and subfields."
+        },
+        "db_selection": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/dynamic_get.json for exact metadata, conditions and subfields."
+        },
+        "view_table_main": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/dynamic_get.json for exact metadata, conditions and subfields."
+        },
+        "add_php_getlistquery": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/dynamic_get.json for exact metadata, conditions and subfields."
+        },
+        "join_db_table": {
+            "type": [
+                "null",
+                "object",
+                "array",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/dynamic_get.json for exact metadata, conditions and subfields."
+        },
+        "select_all": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/dynamic_get.json for exact metadata, conditions and subfields."
+        },
+        "php_before_getitem": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/dynamic_get.json for exact metadata, conditions and subfields."
+        },
+        "getcustom": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/dynamic_get.json for exact metadata, conditions and subfields."
+        },
+        "php_after_getitem": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/dynamic_get.json for exact metadata, conditions and subfields."
+        },
+        "pagination": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/dynamic_get.json for exact metadata, conditions and subfields."
+        },
+        "php_getlistquery": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/dynamic_get.json for exact metadata, conditions and subfields."
+        },
+        "php_before_getitems": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/dynamic_get.json for exact metadata, conditions and subfields."
+        },
+        "filter": {
+            "type": [
+                "null",
+                "object",
+                "array",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/dynamic_get.json for exact metadata, conditions and subfields."
+        },
+        "php_after_getitems": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/dynamic_get.json for exact metadata, conditions and subfields."
+        },
+        "where": {
+            "type": [
+                "null",
+                "object",
+                "array",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/dynamic_get.json for exact metadata, conditions and subfields."
+        },
+        "order": {
+            "type": [
+                "null",
+                "object",
+                "array",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/dynamic_get.json for exact metadata, conditions and subfields."
+        },
+        "addcalculation": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/dynamic_get.json for exact metadata, conditions and subfields."
+        },
+        "group": {
+            "type": [
+                "null",
+                "object",
+                "array",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/dynamic_get.json for exact metadata, conditions and subfields."
+        },
+        "global": {
+            "type": [
+                "null",
+                "object",
+                "array",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/dynamic_get.json for exact metadata, conditions and subfields."
+        },
+        "guid": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/dynamic_get.json for exact metadata, conditions and subfields."
+        },
+        "join_view_table": {
+            "type": [
+                "null",
+                "object",
+                "array",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/dynamic_get.json for exact metadata, conditions and subfields."
+        },
+        "@dependencies": {
+            "$ref": "dependencies.schema.json"
+        }
+    },
+    "additionalProperties": false,
+    "required": [
+        "guid"
+    ]
+}

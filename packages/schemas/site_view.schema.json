@@ -1,0 +1,305 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "site_view package serialized envelope",
+    "description": "Generated from pinned Table and Remote Config. Bounds known JSON types only, not conditional forms, SQL defaults, compiler behavior or semantic closure. Filesystem payloads are raw files; their Config map is only transport metadata.",
+    "type": "object",
+    "properties": {
+        "system_name": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/site_view.json for exact metadata, conditions and subfields."
+        },
+        "name": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/site_view.json for exact metadata, conditions and subfields."
+        },
+        "description": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/site_view.json for exact metadata, conditions and subfields."
+        },
+        "main_get": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/site_view.json for exact metadata, conditions and subfields."
+        },
+        "add_php_view": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/site_view.json for exact metadata, conditions and subfields."
+        },
+        "php_ajaxmethod": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/site_view.json for exact metadata, conditions and subfields."
+        },
+        "add_php_document": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/site_view.json for exact metadata, conditions and subfields."
+        },
+        "javascript_file": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/site_view.json for exact metadata, conditions and subfields."
+        },
+        "view_toolbar": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/site_view.json for exact metadata, conditions and subfields."
+        },
+        "context": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/site_view.json for exact metadata, conditions and subfields."
+        },
+        "default": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/site_view.json for exact metadata, conditions and subfields."
+        },
+        "snippet": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/site_view.json for exact metadata, conditions and subfields."
+        },
+        "add_php_jview_display": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/site_view.json for exact metadata, conditions and subfields."
+        },
+        "custom_get": {
+            "type": [
+                "null",
+                "object",
+                "array",
+                "string",
+                "number",
+                "boolean"
+            ],
+            "description": "Source-derived envelope; see reference/site_view.json for exact metadata, conditions and subfields."
+        },
+        "add_php_jview": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/site_view.json for exact metadata, conditions and subfields."
+        },
+        "js_document": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/site_view.json for exact metadata, conditions and subfields."
+        },
+        "codename": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/site_view.json for exact metadata, conditions and subfields."
+        },
+        "css_document": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/site_view.json for exact metadata, conditions and subfields."
+        },
+        "add_javascript_file": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/site_view.json for exact metadata, conditions and subfields."
+        },
+        "css": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/site_view.json for exact metadata, conditions and subfields."
+        },
+        "add_js_document": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/site_view.json for exact metadata, conditions and subfields."
+        },
+        "libraries": {
+            "type": [
+                "null",
+                "object",
+                "array",
+                "string",
+                "number",
+                "boolean"
+            ],
+            "description": "Source-derived envelope; see reference/site_view.json for exact metadata, conditions and subfields."
+        },
+        "add_css_document": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/site_view.json for exact metadata, conditions and subfields."
+        },
+        "dynamic_get": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/site_view.json for exact metadata, conditions and subfields."
+        },
+        "add_css": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/site_view.json for exact metadata, conditions and subfields."
+        },
+        "add_php_ajax": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/site_view.json for exact metadata, conditions and subfields."
+        },
+        "add_custom_button": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/site_view.json for exact metadata, conditions and subfields."
+        },
+        "ajax_input": {
+            "type": [
+                "null",
+                "object",
+                "array",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/site_view.json for exact metadata, conditions and subfields."
+        },
+        "button_position": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/site_view.json for exact metadata, conditions and subfields."
+        },
+        "php_document": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/site_view.json for exact metadata, conditions and subfields."
+        },
+        "php_view": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/site_view.json for exact metadata, conditions and subfields."
+        },
+        "custom_button": {
+            "type": [
+                "null",
+                "object",
+                "array",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/site_view.json for exact metadata, conditions and subfields."
+        },
+        "php_jview_display": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/site_view.json for exact metadata, conditions and subfields."
+        },
+        "php_controller": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/site_view.json for exact metadata, conditions and subfields."
+        },
+        "php_jview": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/site_view.json for exact metadata, conditions and subfields."
+        },
+        "php_model": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/site_view.json for exact metadata, conditions and subfields."
+        },
+        "guid": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/site_view.json for exact metadata, conditions and subfields."
+        },
+        "add_view_toolbar": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/site_view.json for exact metadata, conditions and subfields."
+        },
+        "@dependencies": {
+            "$ref": "dependencies.schema.json"
+        }
+    },
+    "additionalProperties": false,
+    "required": [
+        "guid"
+    ]
+}

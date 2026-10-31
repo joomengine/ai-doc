@@ -1,0 +1,512 @@
+{
+    "entity": "class_method",
+    "kind": "database",
+    "config_sources": [
+        {
+            "class": "ClassMethod",
+            "path": "libraries/vendor_jcb/VDM.Joomla/src/Componentbuilder/Package/ClassMethod/Remote/Config.php",
+            "url": "https://github.com/vdm-io/Joomla-Component-Builder/blob/408703a857ad937479b1e28de7f693af178dcc83/libraries/vendor_jcb/VDM.Joomla/src/Componentbuilder/Package/ClassMethod/Remote/Config.php",
+            "sha256": "d88708f124f825a546e2a4b98bcbeabfe46560c157d0701dd791484febeb87e2"
+        }
+    ],
+    "config": {
+        "area": "Class Method",
+        "prefix_key": "",
+        "suffix_key": "",
+        "main_readme_path": "",
+        "item_readme_name": "",
+        "index_path": "index/class-method.json",
+        "src_path": "src/class_method",
+        "settings_name": "item.json",
+        "guid_field": "guid",
+        "guid_helper_field": null,
+        "ignore": [
+            "access"
+        ],
+        "files": [],
+        "folders": [],
+        "map": [],
+        "children": [],
+        "index_map": {
+            "name": "index_map_IndexName",
+            "path": "index_map_IndexPath",
+            "settings": "index_map_IndexSettingsPath",
+            "guid": "index_map_IndexGUID"
+        },
+        "index_header": [
+            "name",
+            "path",
+            "settings",
+            "guid",
+            "local"
+        ],
+        "placeholders": [],
+        "table": "class_method"
+    },
+    "identity_kind": "guid",
+    "table_source": {
+        "path": "libraries/vendor_jcb/VDM.Joomla/src/Componentbuilder/Table.php",
+        "url": "https://github.com/vdm-io/Joomla-Component-Builder/blob/408703a857ad937479b1e28de7f693af178dcc83/libraries/vendor_jcb/VDM.Joomla/src/Componentbuilder/Table.php",
+        "sha256": "630abb56cb664be947f45f08f8812af136402d50bcc2c0feec5702b9e870b573"
+    },
+    "form_source": {
+        "path": "admin/forms/class_method.xml",
+        "url": "https://github.com/vdm-io/Joomla-Component-Builder/blob/408703a857ad937479b1e28de7f693af178dcc83/admin/forms/class_method.xml",
+        "sha256": "1cdc75b8b889fb245f1d0ca62c4f4214df808e22b6161b27ab196a01a93134cb"
+    },
+    "fields": {
+        "name": {
+            "table_metadata": {
+                "name": "name",
+                "guid": "5d3d34dd-4876-4c6a-86ab-b4e162f22c08",
+                "label": "COM_COMPONENTBUILDER_CLASS_METHOD_NAME_LABEL",
+                "type": "text",
+                "title": true,
+                "list": "class_methods",
+                "store": null,
+                "tab_name": "Details",
+                "db": {
+                    "type": "VARCHAR(255)",
+                    "default": "",
+                    "GUID": "5d3d34dd-4876-4c6a-86ab-b4e162f22c08",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": null
+            },
+            "config_map_target": "name",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "text",
+                        "name": "name",
+                        "label": "COM_COMPONENTBUILDER_CLASS_METHOD_NAME_LABEL",
+                        "size": "40",
+                        "maxlength": "150",
+                        "description": "COM_COMPONENTBUILDER_CLASS_METHOD_NAME_DESCRIPTION",
+                        "class": "text_area",
+                        "readonly": "false",
+                        "disabled": "false",
+                        "required": "true",
+                        "filter": "STRING",
+                        "message": "COM_COMPONENTBUILDER_CLASS_METHOD_NAME_MESSAGE",
+                        "hint": "COM_COMPONENTBUILDER_CLASS_METHOD_NAME_HINT"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "visibility": {
+            "table_metadata": {
+                "name": "visibility",
+                "guid": "7222c742-0092-439c-84de-1973e4e2b180",
+                "label": "COM_COMPONENTBUILDER_CLASS_METHOD_VISIBILITY_LABEL",
+                "type": "list",
+                "title": false,
+                "list": "class_methods",
+                "store": null,
+                "tab_name": "Details",
+                "db": {
+                    "type": "VARCHAR(255)",
+                    "default": "",
+                    "GUID": "7222c742-0092-439c-84de-1973e4e2b180",
+                    "null_switch": "NOT NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": null
+            },
+            "config_map_target": "visibility",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "list",
+                        "name": "visibility",
+                        "label": "COM_COMPONENTBUILDER_CLASS_METHOD_VISIBILITY_LABEL",
+                        "description": "COM_COMPONENTBUILDER_CLASS_METHOD_VISIBILITY_DESCRIPTION",
+                        "class": "list_class",
+                        "layout": "joomla.form.field.list-fancy-select",
+                        "multiple": "false",
+                        "filter": "STRING",
+                        "required": "true"
+                    },
+                    "options": [
+                        {
+                            "attributes": {
+                                "value": "public"
+                            },
+                            "label": "COM_COMPONENTBUILDER_CLASS_METHOD_PUBLIC"
+                        },
+                        {
+                            "attributes": {
+                                "value": "protected"
+                            },
+                            "label": "COM_COMPONENTBUILDER_CLASS_METHOD_PROTECTED"
+                        },
+                        {
+                            "attributes": {
+                                "value": "private"
+                            },
+                            "label": "COM_COMPONENTBUILDER_CLASS_METHOD_PRIVATE"
+                        },
+                        {
+                            "attributes": {
+                                "value": "public static"
+                            },
+                            "label": "COM_COMPONENTBUILDER_CLASS_METHOD_PUBLIC_STATIC"
+                        },
+                        {
+                            "attributes": {
+                                "value": "protected static"
+                            },
+                            "label": "COM_COMPONENTBUILDER_CLASS_METHOD_PROTECTED_STATIC"
+                        },
+                        {
+                            "attributes": {
+                                "value": "private static"
+                            },
+                            "label": "COM_COMPONENTBUILDER_CLASS_METHOD_PRIVATE_STATIC"
+                        }
+                    ],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "extension_type": {
+            "table_metadata": {
+                "name": "extension_type",
+                "guid": "7e059ab7-d79b-4218-9488-6f38d85d17a0",
+                "label": "COM_COMPONENTBUILDER_CLASS_METHOD_EXTENSION_TYPE_LABEL",
+                "type": "list",
+                "title": false,
+                "list": "class_methods",
+                "store": null,
+                "tab_name": "Details",
+                "db": {
+                    "type": "VARCHAR(64)",
+                    "default": "",
+                    "GUID": "7e059ab7-d79b-4218-9488-6f38d85d17a0",
+                    "null_switch": "NOT NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "extension_type",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "list",
+                        "name": "extension_type",
+                        "label": "COM_COMPONENTBUILDER_CLASS_METHOD_EXTENSION_TYPE_LABEL",
+                        "description": "COM_COMPONENTBUILDER_CLASS_METHOD_EXTENSION_TYPE_DESCRIPTION",
+                        "class": "list_class",
+                        "layout": "joomla.form.field.list-fancy-select",
+                        "multiple": "false",
+                        "required": "true"
+                    },
+                    "options": [
+                        {
+                            "attributes": {
+                                "value": ""
+                            },
+                            "label": "COM_COMPONENTBUILDER_CLASS_METHOD_SELECT_AN_OPTION"
+                        },
+                        {
+                            "attributes": {
+                                "value": "powers"
+                            },
+                            "label": "COM_COMPONENTBUILDER_CLASS_METHOD_POWERS"
+                        },
+                        {
+                            "attributes": {
+                                "value": "components"
+                            },
+                            "label": "COM_COMPONENTBUILDER_CLASS_METHOD_COMPONENTS"
+                        },
+                        {
+                            "attributes": {
+                                "value": "plugins"
+                            },
+                            "label": "COM_COMPONENTBUILDER_CLASS_METHOD_PLUGINS"
+                        },
+                        {
+                            "attributes": {
+                                "value": "modules"
+                            },
+                            "label": "COM_COMPONENTBUILDER_CLASS_METHOD_MODULES"
+                        }
+                    ],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "guid": {
+            "table_metadata": {
+                "name": "guid",
+                "guid": "5aa57bbe-7b19-4db9-915c-561863458d2b",
+                "label": "COM_COMPONENTBUILDER_CLASS_METHOD_GUID_LABEL",
+                "type": "text",
+                "title": false,
+                "list": "class_methods",
+                "store": null,
+                "tab_name": "publishing",
+                "db": {
+                    "type": "VARCHAR(36)",
+                    "default": "",
+                    "GUID": "5aa57bbe-7b19-4db9-915c-561863458d2b",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": null
+            },
+            "config_map_target": "guid",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "text",
+                        "name": "guid",
+                        "label": "COM_COMPONENTBUILDER_CLASS_METHOD_GUID_LABEL",
+                        "size": "40",
+                        "maxlength": "40",
+                        "description": "COM_COMPONENTBUILDER_CLASS_METHOD_GUID_DESCRIPTION",
+                        "class": "text_area",
+                        "readonly": "true",
+                        "filter": "CMD",
+                        "validate": "guid",
+                        "hint": "COM_COMPONENTBUILDER_CLASS_METHOD_GUID_HINT"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "code": {
+            "table_metadata": {
+                "name": "code",
+                "guid": "abaff633-2a9f-4be1-b057-241f657953a1",
+                "label": "COM_COMPONENTBUILDER_CLASS_METHOD_CODE_LABEL",
+                "type": "editor",
+                "title": false,
+                "list": "class_methods",
+                "store": "base64",
+                "tab_name": "Details",
+                "db": {
+                    "type": "MEDIUMTEXT",
+                    "default": "EMPTY",
+                    "GUID": "abaff633-2a9f-4be1-b057-241f657953a1",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "code",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "editor",
+                        "name": "code",
+                        "label": "COM_COMPONENTBUILDER_CLASS_METHOD_CODE_LABEL",
+                        "description": "COM_COMPONENTBUILDER_CLASS_METHOD_CODE_DESCRIPTION",
+                        "width": "100%",
+                        "height": "600px",
+                        "cols": "15",
+                        "rows": "30",
+                        "buttons": "no",
+                        "syntax": "php",
+                        "editor": "codemirror|none",
+                        "filter": "raw",
+                        "validate": "code"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "comment": {
+            "table_metadata": {
+                "name": "comment",
+                "guid": "dd400eb4-8762-4ab5-bc4e-fa1feacc4dfd",
+                "label": "COM_COMPONENTBUILDER_CLASS_METHOD_COMMENT_LABEL",
+                "type": "textarea",
+                "title": false,
+                "list": "class_methods",
+                "store": "base64",
+                "tab_name": "Details",
+                "db": {
+                    "type": "TEXT",
+                    "default": "EMPTY",
+                    "GUID": "dd400eb4-8762-4ab5-bc4e-fa1feacc4dfd",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "comment",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "textarea",
+                        "name": "comment",
+                        "label": "COM_COMPONENTBUILDER_CLASS_METHOD_COMMENT_LABEL",
+                        "rows": "10",
+                        "cols": "5",
+                        "description": "COM_COMPONENTBUILDER_CLASS_METHOD_COMMENT_DESCRIPTION",
+                        "class": "text_area",
+                        "filter": "string",
+                        "hint": "COM_COMPONENTBUILDER_CLASS_METHOD_COMMENT_HINT",
+                        "required": "false"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "joomla_plugin_group": {
+            "table_metadata": {
+                "name": "joomla_plugin_group",
+                "guid": "4ece5fde-e910-467b-abba-5596c9bd994a",
+                "label": "COM_COMPONENTBUILDER_CLASS_METHOD_JOOMLA_PLUGIN_GROUP_LABEL",
+                "type": "ModalSelect",
+                "title": false,
+                "list": "class_methods",
+                "store": null,
+                "tab_name": "Details",
+                "db": {
+                    "type": "VARCHAR(36)",
+                    "default": "",
+                    "GUID": "4ece5fde-e910-467b-abba-5596c9bd994a",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": {
+                    "type": 1,
+                    "table": "#__componentbuilder_joomla_plugin_group",
+                    "component": "com_componentbuilder",
+                    "entity": "joomla_plugin_group",
+                    "value": "name",
+                    "key": "guid"
+                }
+            },
+            "config_map_target": "joomla_plugin_group",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "ModalSelect",
+                        "name": "joomla_plugin_group",
+                        "label": "COM_COMPONENTBUILDER_CLASS_METHOD_JOOMLA_PLUGIN_GROUP_LABEL",
+                        "sql_title_table": "#__componentbuilder_joomla_plugin_group",
+                        "sql_title_column": "name",
+                        "data-key-name": "guid",
+                        "sql_title_key": "guid",
+                        "urlSelect": "index.php?option=com_componentbuilder&view=joomla_plugin_groups&layout=modal&tmpl=component&titleKey=guid",
+                        "urlNew": "index.php?option=com_componentbuilder&task=joomla_plugin_group.add&layout=modal&tmpl=component",
+                        "urlEdit": "index.php?option=com_componentbuilder&task=joomla_plugin_group.edit&guid={id}&layout=modal&tmpl=component&titleKey=guid",
+                        "titleSelect": "COM_COMPONENTBUILDER_CLASS_METHOD_JOOMLA_PLUGIN_GROUP_TITLESELECT",
+                        "titleNew": "COM_COMPONENTBUILDER_CLASS_METHOD_JOOMLA_PLUGIN_GROUP_TITLENEW",
+                        "titleEdit": "COM_COMPONENTBUILDER_CLASS_METHOD_JOOMLA_PLUGIN_GROUP_TITLEEDIT",
+                        "iconSelect": "icon-copy",
+                        "select": "true",
+                        "new": "true",
+                        "edit": "true",
+                        "clear": "true",
+                        "class": "input-large",
+                        "description": "COM_COMPONENTBUILDER_CLASS_METHOD_JOOMLA_PLUGIN_GROUP_DESCRIPTION",
+                        "hint": "COM_COMPONENTBUILDER_CLASS_METHOD_JOOMLA_PLUGIN_GROUP_HINT",
+                        "showon": "extension_type:plugins"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "arguments": {
+            "table_metadata": {
+                "name": "arguments",
+                "guid": "d2a2f6cf-1689-438b-b2c2-b244b8cbf078",
+                "label": "COM_COMPONENTBUILDER_CLASS_METHOD_ARGUMENTS_LABEL",
+                "type": "text",
+                "title": false,
+                "list": "class_methods",
+                "store": "base64",
+                "tab_name": "Details",
+                "db": {
+                    "type": "TEXT",
+                    "default": "EMPTY",
+                    "GUID": "d2a2f6cf-1689-438b-b2c2-b244b8cbf078",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "arguments",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "text",
+                        "name": "arguments",
+                        "label": "COM_COMPONENTBUILDER_CLASS_METHOD_ARGUMENTS_LABEL",
+                        "size": "150",
+                        "maxlength": "350",
+                        "description": "COM_COMPONENTBUILDER_CLASS_METHOD_ARGUMENTS_DESCRIPTION",
+                        "class": "text_area",
+                        "filter": "STRING",
+                        "hint": "COM_COMPONENTBUILDER_CLASS_METHOD_ARGUMENTS_HINT",
+                        "autocomplete": "on"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        }
+    },
+    "source_license": {
+        "header": "GNU General Public License version 2 or later; see LICENSE.txt",
+        "spdx": "GPL-2.0-or-later",
+        "copyright": "Copyright (C) 2015 Vast Development Method. All rights reserved.",
+        "file": "LICENSE.txt",
+        "sha256": "2332109384fc0476519a1d02e1f050dd05ea2251fa66c06f9c5239585147828c",
+        "url": "https://github.com/vdm-io/Joomla-Component-Builder/blob/408703a857ad937479b1e28de7f693af178dcc83/LICENSE.txt"
+    }
+}

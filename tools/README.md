@@ -1,6 +1,6 @@
 # Verification tools
 
-These tools enforce each documented module's **portable authoring profile** and expose gaps; they do not implement the JCB compiler. Run them from an `ai-doc` checkout. They only read the repositories being validated. Fetching writes a new catalogue directory; GUID generation prints a candidate without reserving it.
+These tools enforce each documented module's **portable authoring profile** and expose gaps; they do not implement the JCB compiler. Run them from a JoomEngine `skills` checkout. They only read the repositories being validated. Fetching writes a new catalogue directory; GUID generation prints a candidate without reserving it.
 
 ## Requirements
 
@@ -9,7 +9,7 @@ These tools enforce each documented module's **portable authoring profile** and 
 - Linux's `/proc/sys/kernel/random/uuid`, or OpenSSL as the fallback secure random source.
 - Network access to public GitHub repositories only for catalogue fetching. The regression suite is offline. ShellCheck is a separate CI check.
 
-On Ubuntu, the required optional validation packages can be installed with `sudo apt-get install jq php-cli shellcheck`. Tools invoke `php -n`, which bypasses user PHP configuration, and explicitly load the tokenizer extension if needed. A nonstandard isolated PHP runtime can supply `PHP_TOKENIZER_EXTENSION` as the absolute path to its tokenizer shared library. No generated Power code is executed during repository validation. The separate example smoke test intentionally executes the small maintained example.
+On Ubuntu, the required optional validation packages can be installed with `sudo apt-get install jq php-cli php-xml unzip shellcheck`. Tools invoke `php -n`, which bypasses user PHP configuration, and explicitly load the tokenizer extension if needed. A nonstandard isolated PHP runtime can supply `PHP_TOKENIZER_EXTENSION` as the absolute path to its tokenizer shared library. No generated Power code is executed during repository validation. The separate example smoke test intentionally executes the small maintained example.
 
 All public tools support `--help`.
 
@@ -91,7 +91,7 @@ bash tools/check.sh
 shellcheck -x -P tools tools/*.sh tools/lib/*.sh tests/*.sh
 ```
 
-`check.sh` checks shell syntax, parses all JSON, checks relative Markdown **file destinations** outside fenced code blocks, validates the module and repository registries, and runs both `tests/run-tests.sh` and `tests/run-entity-tests.sh`. Every module must declare a `test_workflow` path under its module directory that resolves to an existing file within this repository. These structural checks do not establish that a workflow is complete or that its integration tests passed. The checker does not validate remote URLs, Markdown fragments/anchors, full Markdown syntax, arbitrary reference-style links, or render diagrams. The CI workflow supplies PHP and ShellCheck and runs these checks on pull requests and pushes to `main`.
+`check.sh` checks shell syntax, parses all JSON, checks relative Markdown **file destinations** outside fenced code blocks, validates the module and repository registries, and runs the Power, entity and Package regression suites plus `tools/check-skills.sh`. Every module must declare a `test_workflow` path under its module directory that resolves to an existing file within this repository. These structural checks do not establish that a workflow is complete or that its integration tests passed. The checker does not validate remote URLs, Markdown fragments/anchors, full Markdown syntax, arbitrary reference-style links, or render diagrams. The CI workflow supplies PHP and ShellCheck and runs these checks on pull requests and pushes to `main`.
 
 These checks and this repository's CI do not run Playground browser acceptance tests. Follow the [shared Playground procedure](../testing/playground/README.md) and the model-specific `test_workflow` in [modules.json](../registries/modules.json) for repository acquisition, real consumer integration, compilation and runtime validation. Report offline checks and observed browser results separately.
 
@@ -166,3 +166,37 @@ When `--new-guid` identifies a new snippet, the tool also enforces the documente
 `tests/run-entity-tests.sh` exercises complete fixtures, native/encoded property representations, metadata corruption, path confinement, missing/stale/tampered/core-less catalogues, separate creation/maintenance identities, cross-entity local collisions, ordered overrides, external type lookup and incomplete dependency closure. The suite is offline and uses synthetic catalogue metadata explicitly marked as test inputs. `tools/check.sh` runs it alongside the existing Super Power regression suite and validates the new registries. Existing CI requires no extra runtime or network access for these tests.
 
 As with the Power module, JSON Schemas are editor/external-validator structural profiles. Shipped commands execute their explicit `jq` checks, not a generic schema evaluator. Cross-file relationships, collision checks, ordered provenance, new-only form limits and semantic property-name constraints are additional executable rules. No schema or static test replaces the module's documented JCB integration procedure.
+
+## Generate exact Package field references
+
+```bash
+bash tools/generate-package-contracts.sh /path/to/pinned-jcb-source /tmp/package-contracts
+```
+
+The source must be a Git checkout without tracked edits, and the output directory must not exist. PHP CLI with tokenizer and SimpleXML reads literal property declarations in `Table.php`, base Remote Config and every Package Remote Config; it parses form XML with network/DTD expansion disabled. It never includes or executes inspected JCB code. Unsupported executable expressions fail rather than being evaluated. Successful generation publishes the directory atomically; compare it with the maintained `packages/` files and review every source change before replacing them.
+
+The pinned baseline has **42 Config classes, 40 database entities plus one logical filesystem entity, and 527 projected top-level fields**. File and Folder share `file_system`. The [inventory](../packages/model-contracts.json) routes to each entity's Markdown summary, complete JSON field reference and schema. JSON preserves all Table metadata, nested field definitions, storage flags, relationship keys and form attributes/options; it distinguishes SQL defaults from form defaults. Source file SHA-256 hashes and the Git commit identify the inputs. Standard database bookkeeping fields are not silently added to the projection. Compiler/import overrides remain in the [protocol](../packages/specification.md); metadata is not executable compiler logic.
+
+Generated schemas are editor/external-validator envelopes, not full form or compiler validators. Shipped commands run explicit `jq` checks. Missing/null properties may be legal exports; null does not mean clearing during import. JSON-stored scalar XML remains a string, decoded code remains text, and structured subforms remain native JSON. Conditional form requirements, exact option domains, database coercion, transformations, nested field completeness and target Joomla semantics require the consumer tests.
+
+## Validate Package repositories
+
+```bash
+bash tools/validate-package-repository.sh packages/examples/minimal-repository \
+  --with /path/to/joomla-fieldtypes \
+  --report /tmp/package-validation.json
+```
+
+`--with REPOSITORY` is repeatable and ordered. The candidate is first; subsequent sources can supply package indexes, `super-powers.json`, Field Type `index.json`, or Snippet indexes. An identity is typed by its entity: a Power GUID cannot satisfy a Field Type reference. This command reads exact local files and records repository paths and available Git HEADs; dirty working files remain the actual inputs, so HEAD alone does not authenticate the bytes. It does not fetch sources, assert freshness, reserve identifiers or infer a new-vs-existing identity decision. Follow the [Package creation workflow](../packages/workflows/create-repository.md) for current source acquisition, collision checks and GUID/natural-key distinctions.
+
+The validator checks known index layouts, configured identity keys, canonical item/child paths, existence and repository containment (including symlinks), singleton JSON documents, known projected fields and basic JSON types. It accepts exported nulls and missing optional fields, numeric/string form flags and list/keyed subforms; nonempty encoded subform strings fail. Unindexed `item.json` and known child sidecars fail. Natural keys and parent-GUID children retain their separate identities. Automated CustomCode's outer function-name bucket and path-derived index GUID are checked as the documented special case.
+
+Declared dependency descriptors require coherent entity/table/key/direction; inbound ownership follows configured children. File/folder descriptors use their distinct key/pointer/value/target envelope. Referenced raw assets must exist, stay inside the repository and agree with the descriptor's normalized path; bytes are not executed. ZIP assets additionally require `unzip`; listing checks reject common absolute/traversing member paths and symlinks without extracting them. These are bounded transport checks, not an archive security audit, decompression-budget/CRC check or proof of safe target extraction. The validator does not recompute Normalize UUIDv5 keys or emulate target filesystem/constants.
+
+The reference check follows explicit `@dependencies` and supported Table relationship fields, including nested subforms. It selects the first typed identity from the supplied order and retains every shadowed occurrence. Context-local database-ID/tab relationships are reported as deferred. It does not discover every compiler token, dynamically computed relationship or missing descriptor, validate all conditional fields, prove ownership for undeclared sidecars, or emulate JCB's full installed-state/repository-cache resolution. In particular, existing installed items can affect real lookup; verify actual consumer precedence. Additional repositories' payloads are read for identity lookup but receive no candidate-field-profile pass, and their transitive dependencies are not recursively validated. An external index proves typed membership only, not payload validity or runtime availability.
+
+Exit `0` means the implemented static checks passed; `1` means malformed/unsafe input; `2` means unresolved typed references. An optional new report file contains all ordered occurrences, selected/shadowed identities and reference findings. Static success is followed by the [Package integration workflow](../packages/workflows/validate-and-integrate.md). `tests/run-package-tests.sh` exercises the complete fixture, natural keys, external entity boundaries, metadata/path corruption, missing assets, subform encoding, ordered overlays and safe metadata generation. Its external indexes are synthetic offline test inputs, never live core evidence.
+
+The Package authoring profile also rejects records with fewer than two non-null modeled fields, matching the model's minimum field-count gate, and rejects raw asset bytes that PHP considers empty (`""` or exactly `"0"`). Known scalar form fields cannot contain object/array values even when nested in a subform. These additional checks still do not establish database persistence or form validity for an arbitrary target installation.
+
+Exporter-produced sidecars with only a parent key and all other fields null occur in the public catalogues. They fail this stricter minimum-field authoring gate because they carry no independently modeled content; that finding does **not** mean their JSON is corrupt or that JCB cannot encounter them. Preserve the source snapshot and report the profile mismatch. Do not invent replacement values merely to make an old export pass.

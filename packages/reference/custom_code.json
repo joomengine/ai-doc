@@ -1,0 +1,687 @@
+{
+    "entity": "custom_code",
+    "kind": "database",
+    "config_sources": [
+        {
+            "class": "CustomCode",
+            "path": "libraries/vendor_jcb/VDM.Joomla/src/Componentbuilder/Package/CustomCode/Remote/Config.php",
+            "url": "https://github.com/vdm-io/Joomla-Component-Builder/blob/408703a857ad937479b1e28de7f693af178dcc83/libraries/vendor_jcb/VDM.Joomla/src/Componentbuilder/Package/CustomCode/Remote/Config.php",
+            "sha256": "c7383e1b87ae049551a045dde61695caad4404a391a8879325c7a82fdd8eca25"
+        }
+    ],
+    "config": {
+        "area": "Custom Code",
+        "prefix_key": "[CUSTOMCODE=",
+        "suffix_key": "]",
+        "main_readme_path": "README_CUSTOM_CODES.md",
+        "item_readme_name": "README.md",
+        "index_path": "index/custom-code.json",
+        "src_path": "src/custom_code",
+        "settings_name": "item.json",
+        "guid_field": "function_name",
+        "guid_helper_field": null,
+        "ignore": [
+            "access"
+        ],
+        "files": [],
+        "folders": [],
+        "map": [],
+        "children": [],
+        "index_map": {
+            "name": "index_map_IndexName",
+            "desc": "index_map_ShortDescription",
+            "path": "index_map_IndexPath",
+            "settings": "index_map_IndexSettingsPath",
+            "guid": "index_map_IndexGUID"
+        },
+        "index_header": [
+            "name",
+            "desc",
+            "path",
+            "settings",
+            "guid",
+            "local"
+        ],
+        "placeholders": [],
+        "table": "custom_code"
+    },
+    "identity_kind": "natural_key",
+    "table_source": {
+        "path": "libraries/vendor_jcb/VDM.Joomla/src/Componentbuilder/Table.php",
+        "url": "https://github.com/vdm-io/Joomla-Component-Builder/blob/408703a857ad937479b1e28de7f693af178dcc83/libraries/vendor_jcb/VDM.Joomla/src/Componentbuilder/Table.php",
+        "sha256": "630abb56cb664be947f45f08f8812af136402d50bcc2c0feec5702b9e870b573"
+    },
+    "form_source": {
+        "path": "admin/forms/custom_code.xml",
+        "url": "https://github.com/vdm-io/Joomla-Component-Builder/blob/408703a857ad937479b1e28de7f693af178dcc83/admin/forms/custom_code.xml",
+        "sha256": "d71a4c1db880c12141825baedeabcdd46ba35b9bd5137687b70497fefc08b10f"
+    },
+    "fields": {
+        "system_name": {
+            "table_metadata": {
+                "name": "system_name",
+                "guid": "acfe906b-6e61-4f94-ae66-359e4bc3e4cc",
+                "label": "COM_COMPONENTBUILDER_CUSTOM_CODE_SYSTEM_NAME_LABEL",
+                "type": "text",
+                "title": true,
+                "list": "custom_codes",
+                "store": null,
+                "tab_name": "Details",
+                "db": {
+                    "type": "VARCHAR(255)",
+                    "default": "",
+                    "GUID": "acfe906b-6e61-4f94-ae66-359e4bc3e4cc",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": null
+            },
+            "config_map_target": "system_name",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "text",
+                        "name": "system_name",
+                        "label": "COM_COMPONENTBUILDER_CUSTOM_CODE_SYSTEM_NAME_LABEL",
+                        "size": "10",
+                        "maxlength": "50",
+                        "default": "",
+                        "description": "COM_COMPONENTBUILDER_CUSTOM_CODE_SYSTEM_NAME_DESCRIPTION",
+                        "class": "text_area",
+                        "filter": "STRING",
+                        "message": "COM_COMPONENTBUILDER_CUSTOM_CODE_SYSTEM_NAME_MESSAGE",
+                        "hint": "COM_COMPONENTBUILDER_CUSTOM_CODE_SYSTEM_NAME_HINT"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "path": {
+            "table_metadata": {
+                "name": "path",
+                "guid": "b7942a37-45cc-4005-b4b5-e716cbf176f9",
+                "label": "COM_COMPONENTBUILDER_CUSTOM_CODE_PATH_LABEL",
+                "type": "text",
+                "title": false,
+                "list": "custom_codes",
+                "store": null,
+                "tab_name": "Details",
+                "db": {
+                    "type": "TEXT",
+                    "default": "EMPTY",
+                    "GUID": "b7942a37-45cc-4005-b4b5-e716cbf176f9",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "path",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "text",
+                        "name": "path",
+                        "label": "COM_COMPONENTBUILDER_CUSTOM_CODE_PATH_LABEL",
+                        "size": "100",
+                        "maxlength": "250",
+                        "description": "COM_COMPONENTBUILDER_CUSTOM_CODE_PATH_DESCRIPTION",
+                        "class": "text_area span12",
+                        "required": "true",
+                        "filter": "PATH",
+                        "message": "COM_COMPONENTBUILDER_CUSTOM_CODE_PATH_MESSAGE",
+                        "hint": "COM_COMPONENTBUILDER_CUSTOM_CODE_PATH_HINT"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "target": {
+            "table_metadata": {
+                "name": "target",
+                "guid": "b4fce451-7c6d-4cf9-8b1c-f8be6dbcec5b",
+                "label": "COM_COMPONENTBUILDER_CUSTOM_CODE_TARGET_LABEL",
+                "type": "radio",
+                "title": false,
+                "list": "custom_codes",
+                "store": null,
+                "tab_name": "Details",
+                "db": {
+                    "type": "TINYINT(1)",
+                    "default": "0",
+                    "GUID": "b4fce451-7c6d-4cf9-8b1c-f8be6dbcec5b",
+                    "null_switch": "NOT NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": null
+            },
+            "config_map_target": "target",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "radio",
+                        "name": "target",
+                        "label": "COM_COMPONENTBUILDER_CUSTOM_CODE_TARGET_LABEL",
+                        "description": "COM_COMPONENTBUILDER_CUSTOM_CODE_TARGET_DESCRIPTION",
+                        "class": "btn-group btn-group-yesno",
+                        "default": "2"
+                    },
+                    "options": [
+                        {
+                            "attributes": {
+                                "value": "2"
+                            },
+                            "label": "COM_COMPONENTBUILDER_CUSTOM_CODE_JCB_MANUAL"
+                        },
+                        {
+                            "attributes": {
+                                "value": "1"
+                            },
+                            "label": "COM_COMPONENTBUILDER_CUSTOM_CODE_HASH_AUTOMATION"
+                        }
+                    ],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "type": {
+            "table_metadata": {
+                "name": "type",
+                "guid": "d1c48683-2655-4e49-9f13-6b25f2b0a0d0",
+                "label": "COM_COMPONENTBUILDER_CUSTOM_CODE_TYPE_LABEL",
+                "type": "radio",
+                "title": false,
+                "list": "custom_codes",
+                "store": null,
+                "tab_name": "Details",
+                "db": {
+                    "type": "TINYINT(1)",
+                    "default": "0",
+                    "GUID": "d1c48683-2655-4e49-9f13-6b25f2b0a0d0",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": null
+            },
+            "config_map_target": "type",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "radio",
+                        "name": "type",
+                        "label": "COM_COMPONENTBUILDER_CUSTOM_CODE_TYPE_LABEL",
+                        "description": "COM_COMPONENTBUILDER_CUSTOM_CODE_TYPE_DESCRIPTION",
+                        "class": "btn-group btn-group-yesno",
+                        "default": "0",
+                        "required": "true"
+                    },
+                    "options": [
+                        {
+                            "attributes": {
+                                "value": "1"
+                            },
+                            "label": "COM_COMPONENTBUILDER_CUSTOM_CODE_REPLACEMENT"
+                        },
+                        {
+                            "attributes": {
+                                "value": "2"
+                            },
+                            "label": "COM_COMPONENTBUILDER_CUSTOM_CODE_INSERTION"
+                        }
+                    ],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "comment_type": {
+            "table_metadata": {
+                "name": "comment_type",
+                "guid": "176c63c6-65b1-4a91-97f2-db4d1e36911a",
+                "label": "COM_COMPONENTBUILDER_CUSTOM_CODE_COMMENT_TYPE_LABEL",
+                "type": "radio",
+                "title": false,
+                "list": "custom_codes",
+                "store": null,
+                "tab_name": "Details",
+                "db": {
+                    "type": "TINYINT(1)",
+                    "default": "1",
+                    "GUID": "176c63c6-65b1-4a91-97f2-db4d1e36911a",
+                    "null_switch": "NOT NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "comment_type",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "radio",
+                        "name": "comment_type",
+                        "label": "COM_COMPONENTBUILDER_CUSTOM_CODE_COMMENT_TYPE_LABEL",
+                        "description": "COM_COMPONENTBUILDER_CUSTOM_CODE_COMMENT_TYPE_DESCRIPTION",
+                        "class": "btn-group btn-group-yesno",
+                        "default": "1",
+                        "required": "true"
+                    },
+                    "options": [
+                        {
+                            "attributes": {
+                                "value": "1"
+                            },
+                            "label": "COM_COMPONENTBUILDER_CUSTOM_CODE_PHPJS"
+                        },
+                        {
+                            "attributes": {
+                                "value": "2"
+                            },
+                            "label": "COM_COMPONENTBUILDER_CUSTOM_CODE_HTML"
+                        }
+                    ],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "joomla_version": {
+            "table_metadata": {
+                "name": "joomla_version",
+                "guid": "a6c87660-f1fe-490d-b1c5-9755e6db1e19",
+                "label": "COM_COMPONENTBUILDER_CUSTOM_CODE_JOOMLA_VERSION_LABEL",
+                "type": "number",
+                "title": false,
+                "list": "custom_codes",
+                "store": null,
+                "tab_name": "Details",
+                "db": {
+                    "type": "INT(11)",
+                    "default": "3",
+                    "GUID": "a6c87660-f1fe-490d-b1c5-9755e6db1e19",
+                    "null_switch": "NOT NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "joomla_version",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "number",
+                        "name": "joomla_version",
+                        "label": "COM_COMPONENTBUILDER_CUSTOM_CODE_JOOMLA_VERSION_LABEL",
+                        "default": "6",
+                        "class": "text_area",
+                        "min": "3",
+                        "max": "6",
+                        "step": "1",
+                        "showon": "target:1"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "function_name": {
+            "table_metadata": {
+                "name": "function_name",
+                "guid": "3a3c43e6-18c2-4fc6-aebe-0ed8d5c6416f",
+                "label": "COM_COMPONENTBUILDER_CUSTOM_CODE_FUNCTION_NAME_LABEL",
+                "type": "text",
+                "title": false,
+                "list": "custom_codes",
+                "store": null,
+                "tab_name": "Details",
+                "db": {
+                    "type": "VARCHAR(255)",
+                    "default": "",
+                    "GUID": "3a3c43e6-18c2-4fc6-aebe-0ed8d5c6416f",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": null
+            },
+            "config_map_target": "function_name",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "text",
+                        "name": "function_name",
+                        "label": "COM_COMPONENTBUILDER_CUSTOM_CODE_FUNCTION_NAME_LABEL",
+                        "size": "40",
+                        "description": "COM_COMPONENTBUILDER_CUSTOM_CODE_FUNCTION_NAME_DESCRIPTION",
+                        "class": "input-large-text",
+                        "required": "true"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "code": {
+            "table_metadata": {
+                "name": "code",
+                "guid": "777b846c-f3f4-4eb3-a73a-a460d28976dc",
+                "label": "COM_COMPONENTBUILDER_CUSTOM_CODE_CODE_LABEL",
+                "type": "editor",
+                "title": false,
+                "list": "custom_codes",
+                "store": "base64",
+                "tab_name": "Details",
+                "db": {
+                    "type": "MEDIUMTEXT",
+                    "default": "EMPTY",
+                    "GUID": "777b846c-f3f4-4eb3-a73a-a460d28976dc",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "code",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "editor",
+                        "name": "code",
+                        "label": "COM_COMPONENTBUILDER_CUSTOM_CODE_CODE_LABEL",
+                        "description": "COM_COMPONENTBUILDER_CUSTOM_CODE_CODE_DESCRIPTION",
+                        "width": "100%",
+                        "height": "450px",
+                        "cols": "15",
+                        "rows": "30",
+                        "buttons": "no",
+                        "syntax": "php",
+                        "editor": "codemirror|none",
+                        "filter": "raw",
+                        "validate": "code"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "hashendtarget": {
+            "table_metadata": {
+                "name": "hashendtarget",
+                "guid": "3347f841-b8e8-4f52-acbd-0bada696e540",
+                "label": "COM_COMPONENTBUILDER_CUSTOM_CODE_HASHENDTARGET_LABEL",
+                "type": "text",
+                "title": false,
+                "list": "custom_codes",
+                "store": null,
+                "tab_name": "Details",
+                "db": {
+                    "type": "VARCHAR(64)",
+                    "default": "",
+                    "GUID": "3347f841-b8e8-4f52-acbd-0bada696e540",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "hashendtarget",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "text",
+                        "name": "hashendtarget",
+                        "label": "COM_COMPONENTBUILDER_CUSTOM_CODE_HASHENDTARGET_LABEL",
+                        "size": "50",
+                        "maxlength": "150",
+                        "default": "",
+                        "description": "COM_COMPONENTBUILDER_CUSTOM_CODE_HASHENDTARGET_DESCRIPTION",
+                        "class": "text_area",
+                        "readonly": "true",
+                        "filter": "STRING",
+                        "message": "COM_COMPONENTBUILDER_CUSTOM_CODE_HASHENDTARGET_MESSAGE",
+                        "hint": "COM_COMPONENTBUILDER_CUSTOM_CODE_HASHENDTARGET_HINT"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "to_line": {
+            "table_metadata": {
+                "name": "to_line",
+                "guid": "ebbfce08-7d5a-416a-aad2-b23b78bd926b",
+                "label": "COM_COMPONENTBUILDER_CUSTOM_CODE_TO_LINE_LABEL",
+                "type": "text",
+                "title": false,
+                "list": "custom_codes",
+                "store": null,
+                "tab_name": "Details",
+                "db": {
+                    "type": "VARCHAR(100)",
+                    "default": "",
+                    "GUID": "ebbfce08-7d5a-416a-aad2-b23b78bd926b",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": null
+            },
+            "config_map_target": "to_line",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "text",
+                        "name": "to_line",
+                        "label": "COM_COMPONENTBUILDER_CUSTOM_CODE_TO_LINE_LABEL",
+                        "size": "10",
+                        "maxlength": "50",
+                        "description": "COM_COMPONENTBUILDER_CUSTOM_CODE_TO_LINE_DESCRIPTION",
+                        "class": "text_area",
+                        "filter": "FLOAT",
+                        "message": "COM_COMPONENTBUILDER_CUSTOM_CODE_TO_LINE_MESSAGE",
+                        "hint": "COM_COMPONENTBUILDER_CUSTOM_CODE_TO_LINE_HINT",
+                        "onchange": "if(!jQuery(this).val().match(/^\\d+$/)){jQuery(this).val('')};"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "from_line": {
+            "table_metadata": {
+                "name": "from_line",
+                "guid": "82e196f5-cc38-4045-8be3-c1067b23df72",
+                "label": "COM_COMPONENTBUILDER_CUSTOM_CODE_FROM_LINE_LABEL",
+                "type": "text",
+                "title": false,
+                "list": "custom_codes",
+                "store": null,
+                "tab_name": "Details",
+                "db": {
+                    "type": "VARCHAR(100)",
+                    "default": "",
+                    "GUID": "82e196f5-cc38-4045-8be3-c1067b23df72",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": null
+            },
+            "config_map_target": "from_line",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "text",
+                        "name": "from_line",
+                        "label": "COM_COMPONENTBUILDER_CUSTOM_CODE_FROM_LINE_LABEL",
+                        "size": "10",
+                        "maxlength": "50",
+                        "description": "COM_COMPONENTBUILDER_CUSTOM_CODE_FROM_LINE_DESCRIPTION",
+                        "class": "text_area",
+                        "filter": "FLOAT",
+                        "message": "COM_COMPONENTBUILDER_CUSTOM_CODE_FROM_LINE_MESSAGE",
+                        "hint": "COM_COMPONENTBUILDER_CUSTOM_CODE_FROM_LINE_HINT",
+                        "onchange": "if(!jQuery(this).val().match(/^\\d+$/)){jQuery(this).val('')};"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "hashtarget": {
+            "table_metadata": {
+                "name": "hashtarget",
+                "guid": "e0272089-9156-409b-8444-61e2e3e755bf",
+                "label": "COM_COMPONENTBUILDER_CUSTOM_CODE_HASHTARGET_LABEL",
+                "type": "text",
+                "title": false,
+                "list": "custom_codes",
+                "store": null,
+                "tab_name": "Details",
+                "db": {
+                    "type": "VARCHAR(64)",
+                    "default": "",
+                    "GUID": "e0272089-9156-409b-8444-61e2e3e755bf",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "hashtarget",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "text",
+                        "name": "hashtarget",
+                        "label": "COM_COMPONENTBUILDER_CUSTOM_CODE_HASHTARGET_LABEL",
+                        "size": "50",
+                        "maxlength": "150",
+                        "default": "",
+                        "description": "COM_COMPONENTBUILDER_CUSTOM_CODE_HASHTARGET_DESCRIPTION",
+                        "class": "text_area",
+                        "readonly": "true",
+                        "filter": "STRING",
+                        "message": "COM_COMPONENTBUILDER_CUSTOM_CODE_HASHTARGET_MESSAGE",
+                        "hint": "COM_COMPONENTBUILDER_CUSTOM_CODE_HASHTARGET_HINT"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "component": {
+            "table_metadata": {
+                "name": "component",
+                "guid": "04886e45-7821-40a6-ae2b-2f46c6b45906",
+                "label": "COM_COMPONENTBUILDER_CUSTOM_CODE_COMPONENT_LABEL",
+                "type": "joomlacomponent",
+                "title": false,
+                "list": "custom_codes",
+                "store": null,
+                "tab_name": "Details",
+                "db": {
+                    "type": "VARCHAR(36)",
+                    "default": "",
+                    "GUID": "04886e45-7821-40a6-ae2b-2f46c6b45906",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": {
+                    "type": 1,
+                    "table": "#__componentbuilder_joomla_component",
+                    "component": "com_componentbuilder",
+                    "entity": "joomla_component",
+                    "value": "system_name",
+                    "key": "guid"
+                }
+            },
+            "config_map_target": "component",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "joomlacomponent",
+                        "name": "component",
+                        "label": "COM_COMPONENTBUILDER_CUSTOM_CODE_COMPONENT_LABEL",
+                        "class": "list_class",
+                        "layout": "joomla.form.field.list-fancy-select",
+                        "multiple": "false",
+                        "default": "0",
+                        "required": "true",
+                        "button": "true"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        }
+    },
+    "source_license": {
+        "header": "GNU General Public License version 2 or later; see LICENSE.txt",
+        "spdx": "GPL-2.0-or-later",
+        "copyright": "Copyright (C) 2015 Vast Development Method. All rights reserved.",
+        "file": "LICENSE.txt",
+        "sha256": "2332109384fc0476519a1d02e1f050dd05ea2251fa66c06f9c5239585147828c",
+        "url": "https://github.com/vdm-io/Joomla-Component-Builder/blob/408703a857ad937479b1e28de7f693af178dcc83/LICENSE.txt"
+    }
+}

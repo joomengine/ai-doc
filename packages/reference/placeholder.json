@@ -1,0 +1,160 @@
+{
+    "entity": "placeholder",
+    "kind": "database",
+    "config_sources": [
+        {
+            "class": "Placeholder",
+            "path": "libraries/vendor_jcb/VDM.Joomla/src/Componentbuilder/Package/Placeholder/Remote/Config.php",
+            "url": "https://github.com/vdm-io/Joomla-Component-Builder/blob/408703a857ad937479b1e28de7f693af178dcc83/libraries/vendor_jcb/VDM.Joomla/src/Componentbuilder/Package/Placeholder/Remote/Config.php",
+            "sha256": "07b3ed5176795c4ab47a0a2a111854e7e2999a790131c7bdfb16006a158f52c8"
+        }
+    ],
+    "config": {
+        "area": "Placeholder",
+        "prefix_key": "",
+        "suffix_key": "",
+        "main_readme_path": "",
+        "item_readme_name": "",
+        "index_path": "index/placeholder.json",
+        "src_path": "src/placeholder",
+        "settings_name": "item.json",
+        "guid_field": "target",
+        "guid_helper_field": null,
+        "ignore": [
+            "access"
+        ],
+        "files": [],
+        "folders": [],
+        "map": [],
+        "children": [],
+        "index_map": {
+            "name": "index_map_IndexName",
+            "path": "index_map_IndexPath",
+            "settings": "index_map_IndexSettingsPath",
+            "guid": "index_map_IndexGUID"
+        },
+        "index_header": [
+            "name",
+            "path",
+            "settings",
+            "guid",
+            "local"
+        ],
+        "placeholders": [],
+        "table": "placeholder"
+    },
+    "identity_kind": "natural_key",
+    "table_source": {
+        "path": "libraries/vendor_jcb/VDM.Joomla/src/Componentbuilder/Table.php",
+        "url": "https://github.com/vdm-io/Joomla-Component-Builder/blob/408703a857ad937479b1e28de7f693af178dcc83/libraries/vendor_jcb/VDM.Joomla/src/Componentbuilder/Table.php",
+        "sha256": "630abb56cb664be947f45f08f8812af136402d50bcc2c0feec5702b9e870b573"
+    },
+    "form_source": {
+        "path": "admin/forms/placeholder.xml",
+        "url": "https://github.com/vdm-io/Joomla-Component-Builder/blob/408703a857ad937479b1e28de7f693af178dcc83/admin/forms/placeholder.xml",
+        "sha256": "a39c3257af340413c73a6ebf2ab39fe6d4f2d962cc1cd6934e3cee092a8ab521"
+    },
+    "fields": {
+        "target": {
+            "table_metadata": {
+                "name": "target",
+                "guid": "65b533a8-0d70-44af-a9d1-785983eb4ef3",
+                "label": "COM_COMPONENTBUILDER_PLACEHOLDER_TARGET_LABEL",
+                "type": "text",
+                "title": true,
+                "list": "placeholders",
+                "store": null,
+                "tab_name": "Details",
+                "db": {
+                    "type": "VARCHAR(255)",
+                    "default": "",
+                    "GUID": "65b533a8-0d70-44af-a9d1-785983eb4ef3",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": null
+            },
+            "config_map_target": "target",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "text",
+                        "name": "target",
+                        "label": "COM_COMPONENTBUILDER_PLACEHOLDER_TARGET_LABEL",
+                        "size": "50",
+                        "maxlength": "150",
+                        "description": "COM_COMPONENTBUILDER_PLACEHOLDER_TARGET_DESCRIPTION",
+                        "class": "text_area",
+                        "required": "true",
+                        "filter": "STRING",
+                        "validate": "uniqueplaceholder",
+                        "message": "COM_COMPONENTBUILDER_PLACEHOLDER_TARGET_MESSAGE",
+                        "hint": "COM_COMPONENTBUILDER_PLACEHOLDER_TARGET_HINT",
+                        "autocomplete": "off"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "value": {
+            "table_metadata": {
+                "name": "value",
+                "guid": "b14c6496-2aaf-4198-8fc1-cf034525fb91",
+                "label": "COM_COMPONENTBUILDER_PLACEHOLDER_VALUE_LABEL",
+                "type": "textarea",
+                "title": false,
+                "list": "placeholders",
+                "store": "base64",
+                "tab_name": "Details",
+                "db": {
+                    "type": "TEXT",
+                    "default": "EMPTY",
+                    "GUID": "b14c6496-2aaf-4198-8fc1-cf034525fb91",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "value",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "textarea",
+                        "name": "value",
+                        "label": "COM_COMPONENTBUILDER_PLACEHOLDER_VALUE_LABEL",
+                        "rows": "1",
+                        "cols": "110",
+                        "default": "default text",
+                        "description": "COM_COMPONENTBUILDER_PLACEHOLDER_VALUE_DESCRIPTION",
+                        "message": "COM_COMPONENTBUILDER_PLACEHOLDER_VALUE_MESSAGE",
+                        "class": "text_area span12",
+                        "filter": "RAW",
+                        "hint": "COM_COMPONENTBUILDER_PLACEHOLDER_VALUE_HINT",
+                        "required": "true"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        }
+    },
+    "source_license": {
+        "header": "GNU General Public License version 2 or later; see LICENSE.txt",
+        "spdx": "GPL-2.0-or-later",
+        "copyright": "Copyright (C) 2015 Vast Development Method. All rights reserved.",
+        "file": "LICENSE.txt",
+        "sha256": "2332109384fc0476519a1d02e1f050dd05ea2251fa66c06f9c5239585147828c",
+        "url": "https://github.com/vdm-io/Joomla-Component-Builder/blob/408703a857ad937479b1e28de7f693af178dcc83/LICENSE.txt"
+    }
+}

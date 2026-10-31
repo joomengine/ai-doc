@@ -1,5 +1,7 @@
 # Field Types operational module
 
+For task execution, start with this model’s [SKILL.md](SKILL.md); use this page and its references for the detailed contract and evidence.
+
 This module explains how to create, maintain, extend, compare, import and debug **JCB Field Type repositories**. The core authority is [`joomengine/joomla-fieldtypes`](https://github.com/joomengine/joomla-fieldtypes). Every additional Field Type repository must consult that core catalogue for existing identities and capabilities. A fork can intentionally preserve an existing GUID to override that same Field Type; a genuinely different Field Type must receive a new, collision-checked UUIDv4.
 
 A Field Type is a **metadata definition** used to author and compile concrete JCB Fields. It describes XML properties, examples and authoring flags, and may suggest database settings. It is not the concrete Field, a Joomla `FormField` PHP implementation, or a Super Power. Adding metadata for a new `type` does not implement or install the corresponding Joomla field class.

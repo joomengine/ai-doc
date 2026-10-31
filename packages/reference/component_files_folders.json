@@ -1,0 +1,577 @@
+{
+    "entity": "component_files_folders",
+    "kind": "database",
+    "config_sources": [
+        {
+            "class": "ComponentFilesFolders",
+            "path": "libraries/vendor_jcb/VDM.Joomla/src/Componentbuilder/Package/ComponentFilesFolders/Remote/Config.php",
+            "url": "https://github.com/vdm-io/Joomla-Component-Builder/blob/408703a857ad937479b1e28de7f693af178dcc83/libraries/vendor_jcb/VDM.Joomla/src/Componentbuilder/Package/ComponentFilesFolders/Remote/Config.php",
+            "sha256": "2fcb7cc55a9a3e9e081ae6c9e205bebb88e1a0cef163acd3a5166ab07c3c714a"
+        }
+    ],
+    "config": {
+        "area": "Component Files Folders",
+        "prefix_key": "",
+        "suffix_key": "",
+        "main_readme_path": "",
+        "item_readme_name": "",
+        "index_path": "index/component-files-folders.json",
+        "src_path": "src/joomla_component/children",
+        "settings_name": "component-files-folders.json",
+        "guid_field": "joomla_component",
+        "guid_helper_field": null,
+        "ignore": [
+            "access"
+        ],
+        "files": {
+            "addfiles|file": "custom",
+            "addfilesfullpath|filepath": "full"
+        },
+        "folders": {
+            "addfolders|folder": "custom",
+            "addfoldersfullpath|folderpath": "full"
+        },
+        "map": [],
+        "children": [],
+        "index_map": {
+            "name": "index_map_IndexName",
+            "path": "index_map_IndexPath",
+            "settings": "index_map_IndexSettingsPath",
+            "guid": "index_map_IndexGUID"
+        },
+        "index_header": [
+            "name",
+            "path",
+            "settings",
+            "guid",
+            "local"
+        ],
+        "placeholders": [],
+        "table": "component_files_folders"
+    },
+    "identity_kind": "parent_guid",
+    "table_source": {
+        "path": "libraries/vendor_jcb/VDM.Joomla/src/Componentbuilder/Table.php",
+        "url": "https://github.com/vdm-io/Joomla-Component-Builder/blob/408703a857ad937479b1e28de7f693af178dcc83/libraries/vendor_jcb/VDM.Joomla/src/Componentbuilder/Table.php",
+        "sha256": "630abb56cb664be947f45f08f8812af136402d50bcc2c0feec5702b9e870b573"
+    },
+    "form_source": {
+        "path": "admin/forms/component_files_folders.xml",
+        "url": "https://github.com/vdm-io/Joomla-Component-Builder/blob/408703a857ad937479b1e28de7f693af178dcc83/admin/forms/component_files_folders.xml",
+        "sha256": "8a60dd6b0170c43a8d795168ebf7efed16e65bb28bff3713a673461fc77c572a"
+    },
+    "fields": {
+        "joomla_component": {
+            "table_metadata": {
+                "name": "joomla_component",
+                "guid": "591df1a2-b685-4378-845a-f8a1d1985548",
+                "label": "COM_COMPONENTBUILDER_COMPONENT_FILES_FOLDERS_JOOMLA_COMPONENT_LABEL",
+                "type": "joomlacomponents",
+                "title": true,
+                "list": "components_files_folders",
+                "store": null,
+                "tab_name": "Basic",
+                "db": {
+                    "type": "VARCHAR(36)",
+                    "default": "",
+                    "GUID": "591df1a2-b685-4378-845a-f8a1d1985548",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": {
+                    "type": 1,
+                    "table": "#__componentbuilder_joomla_component",
+                    "component": "com_componentbuilder",
+                    "entity": "joomla_component",
+                    "value": "system_name",
+                    "key": "guid"
+                }
+            },
+            "config_map_target": "joomla_component",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "joomlacomponents",
+                        "name": "joomla_component",
+                        "label": "COM_COMPONENTBUILDER_COMPONENT_FILES_FOLDERS_JOOMLA_COMPONENT_LABEL",
+                        "description": "COM_COMPONENTBUILDER_COMPONENT_FILES_FOLDERS_JOOMLA_COMPONENT_DESCRIPTION",
+                        "class": "list_class",
+                        "multiple": "false",
+                        "required": "true",
+                        "readonly": "true",
+                        "button": "false"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "addfoldersfullpath": {
+            "table_metadata": {
+                "name": "addfoldersfullpath",
+                "guid": "fe780ac8-ed30-481c-8700-84472caa0072",
+                "label": "COM_COMPONENTBUILDER_COMPONENT_FILES_FOLDERS_ADDFOLDERSFULLPATH_LABEL",
+                "type": "subform",
+                "title": false,
+                "list": "components_files_folders",
+                "store": "json",
+                "tab_name": "Advance",
+                "db": {
+                    "type": "TEXT",
+                    "default": "EMPTY",
+                    "GUID": "fe780ac8-ed30-481c-8700-84472caa0072",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null,
+                "fields": {
+                    "folderpath": {
+                        "name": "folderpath",
+                        "type": "text",
+                        "link": null
+                    },
+                    "path": {
+                        "name": "path",
+                        "type": "text",
+                        "link": null
+                    },
+                    "rename": {
+                        "name": "rename",
+                        "type": "checkbox",
+                        "link": null
+                    }
+                }
+            },
+            "config_map_target": "addfoldersfullpath",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "subform",
+                        "name": "addfoldersfullpath",
+                        "label": "COM_COMPONENTBUILDER_COMPONENT_FILES_FOLDERS_ADDFOLDERSFULLPATH_LABEL",
+                        "layout": "joomla.form.field.subform.repeatable-table",
+                        "multiple": "true",
+                        "description": "COM_COMPONENTBUILDER_COMPONENT_FILES_FOLDERS_ADDFOLDERSFULLPATH_DESCRIPTION",
+                        "default": "",
+                        "icon": "list"
+                    },
+                    "options": [],
+                    "nested_fields": [
+                        {
+                            "attributes": {
+                                "type": "text",
+                                "name": "folderpath",
+                                "label": "COM_COMPONENTBUILDER_COMPONENT_FILES_FOLDERS_FOLDERPATH_LABEL",
+                                "size": "70",
+                                "maxlength": "300",
+                                "default": "",
+                                "description": "COM_COMPONENTBUILDER_COMPONENT_FILES_FOLDERS_FOLDERPATH_DESCRIPTION",
+                                "class": "text_area",
+                                "required": "false",
+                                "filter": "PATH",
+                                "message": "COM_COMPONENTBUILDER_COMPONENT_FILES_FOLDERS_FOLDERPATH_MESSAGE",
+                                "hint": "COM_COMPONENTBUILDER_COMPONENT_FILES_FOLDERS_FOLDERPATH_HINT"
+                            },
+                            "options": [],
+                            "nested_fields": []
+                        },
+                        {
+                            "attributes": {
+                                "type": "text",
+                                "name": "path",
+                                "label": "COM_COMPONENTBUILDER_COMPONENT_FILES_FOLDERS_PATH_LABEL",
+                                "size": "40",
+                                "maxlength": "150",
+                                "description": "COM_COMPONENTBUILDER_COMPONENT_FILES_FOLDERS_PATH_DESCRIPTION",
+                                "class": "text_area",
+                                "readonly": "false",
+                                "disabled": "false",
+                                "required": "true",
+                                "filter": "PATH",
+                                "message": "COM_COMPONENTBUILDER_COMPONENT_FILES_FOLDERS_PATH_MESSAGE",
+                                "hint": "COM_COMPONENTBUILDER_COMPONENT_FILES_FOLDERS_PATH_HINT"
+                            },
+                            "options": [],
+                            "nested_fields": []
+                        },
+                        {
+                            "attributes": {
+                                "type": "checkbox",
+                                "name": "rename",
+                                "label": "COM_COMPONENTBUILDER_COMPONENT_FILES_FOLDERS_RENAME_LABEL",
+                                "value": "1",
+                                "default": "",
+                                "class": "inputbox"
+                            },
+                            "options": [],
+                            "nested_fields": []
+                        }
+                    ]
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "object",
+                "array",
+                "string"
+            ]
+        },
+        "addfilesfullpath": {
+            "table_metadata": {
+                "name": "addfilesfullpath",
+                "guid": "e5f50226-6749-4bd3-9aa1-cf3db6ce448d",
+                "label": "COM_COMPONENTBUILDER_COMPONENT_FILES_FOLDERS_ADDFILESFULLPATH_LABEL",
+                "type": "subform",
+                "title": false,
+                "list": "components_files_folders",
+                "store": "json",
+                "tab_name": "Advance",
+                "db": {
+                    "type": "TEXT",
+                    "default": "EMPTY",
+                    "GUID": "e5f50226-6749-4bd3-9aa1-cf3db6ce448d",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null,
+                "fields": {
+                    "filepath": {
+                        "name": "filepath",
+                        "type": "text",
+                        "link": null
+                    },
+                    "path": {
+                        "name": "path",
+                        "type": "text",
+                        "link": null
+                    },
+                    "notnew": {
+                        "name": "notnew",
+                        "type": "checkbox",
+                        "link": null
+                    }
+                }
+            },
+            "config_map_target": "addfilesfullpath",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "subform",
+                        "name": "addfilesfullpath",
+                        "label": "COM_COMPONENTBUILDER_COMPONENT_FILES_FOLDERS_ADDFILESFULLPATH_LABEL",
+                        "layout": "joomla.form.field.subform.repeatable-table",
+                        "multiple": "true",
+                        "description": "COM_COMPONENTBUILDER_COMPONENT_FILES_FOLDERS_ADDFILESFULLPATH_DESCRIPTION",
+                        "default": "",
+                        "icon": "list"
+                    },
+                    "options": [],
+                    "nested_fields": [
+                        {
+                            "attributes": {
+                                "type": "text",
+                                "name": "filepath",
+                                "label": "COM_COMPONENTBUILDER_COMPONENT_FILES_FOLDERS_FILEPATH_LABEL",
+                                "size": "70",
+                                "maxlength": "300",
+                                "default": "",
+                                "description": "COM_COMPONENTBUILDER_COMPONENT_FILES_FOLDERS_FILEPATH_DESCRIPTION",
+                                "class": "text_area",
+                                "required": "false",
+                                "filter": "PATH",
+                                "message": "COM_COMPONENTBUILDER_COMPONENT_FILES_FOLDERS_FILEPATH_MESSAGE",
+                                "hint": "COM_COMPONENTBUILDER_COMPONENT_FILES_FOLDERS_FILEPATH_HINT"
+                            },
+                            "options": [],
+                            "nested_fields": []
+                        },
+                        {
+                            "attributes": {
+                                "type": "text",
+                                "name": "path",
+                                "label": "COM_COMPONENTBUILDER_COMPONENT_FILES_FOLDERS_PATH_LABEL",
+                                "size": "40",
+                                "maxlength": "150",
+                                "description": "COM_COMPONENTBUILDER_COMPONENT_FILES_FOLDERS_PATH_DESCRIPTION",
+                                "class": "text_area",
+                                "readonly": "false",
+                                "disabled": "false",
+                                "required": "true",
+                                "filter": "PATH",
+                                "message": "COM_COMPONENTBUILDER_COMPONENT_FILES_FOLDERS_PATH_MESSAGE",
+                                "hint": "COM_COMPONENTBUILDER_COMPONENT_FILES_FOLDERS_PATH_HINT"
+                            },
+                            "options": [],
+                            "nested_fields": []
+                        },
+                        {
+                            "attributes": {
+                                "type": "checkbox",
+                                "name": "notnew",
+                                "label": "COM_COMPONENTBUILDER_COMPONENT_FILES_FOLDERS_NOTNEW_LABEL",
+                                "value": "1",
+                                "default": "",
+                                "description": "COM_COMPONENTBUILDER_COMPONENT_FILES_FOLDERS_NOTNEW_DESCRIPTION",
+                                "class": "inputbox"
+                            },
+                            "options": [],
+                            "nested_fields": []
+                        }
+                    ]
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "object",
+                "array",
+                "string"
+            ]
+        },
+        "addfolders": {
+            "table_metadata": {
+                "name": "addfolders",
+                "guid": "483f2c40-2348-4168-817b-471f5ba96984",
+                "label": "COM_COMPONENTBUILDER_COMPONENT_FILES_FOLDERS_ADDFOLDERS_LABEL",
+                "type": "subform",
+                "title": false,
+                "list": "components_files_folders",
+                "store": "json",
+                "tab_name": "Basic",
+                "db": {
+                    "type": "TEXT",
+                    "default": "EMPTY",
+                    "GUID": "483f2c40-2348-4168-817b-471f5ba96984",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null,
+                "fields": {
+                    "folder": {
+                        "name": "folder",
+                        "type": "customfolderlist",
+                        "link": {
+                            "type": 2,
+                            "table": "",
+                            "component": "",
+                            "entity": "",
+                            "value": "",
+                            "key": ""
+                        }
+                    },
+                    "path": {
+                        "name": "path",
+                        "type": "text",
+                        "link": null
+                    },
+                    "rename": {
+                        "name": "rename",
+                        "type": "checkbox",
+                        "link": null
+                    }
+                }
+            },
+            "config_map_target": "addfolders",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "subform",
+                        "name": "addfolders",
+                        "label": "COM_COMPONENTBUILDER_COMPONENT_FILES_FOLDERS_ADDFOLDERS_LABEL",
+                        "layout": "joomla.form.field.subform.repeatable-table",
+                        "multiple": "true",
+                        "description": "COM_COMPONENTBUILDER_COMPONENT_FILES_FOLDERS_ADDFOLDERS_DESCRIPTION",
+                        "default": "",
+                        "icon": "list"
+                    },
+                    "options": [],
+                    "nested_fields": [
+                        {
+                            "attributes": {
+                                "type": "customfolderlist",
+                                "name": "folder",
+                                "label": "COM_COMPONENTBUILDER_COMPONENT_FILES_FOLDERS_FOLDER_LABEL",
+                                "description": "COM_COMPONENTBUILDER_COMPONENT_FILES_FOLDERS_FOLDER_DESCRIPTION",
+                                "class": "list_class",
+                                "multiple": "false",
+                                "default": "0",
+                                "required": "true",
+                                "button": "false"
+                            },
+                            "options": [],
+                            "nested_fields": []
+                        },
+                        {
+                            "attributes": {
+                                "type": "text",
+                                "name": "path",
+                                "label": "COM_COMPONENTBUILDER_COMPONENT_FILES_FOLDERS_PATH_LABEL",
+                                "size": "40",
+                                "maxlength": "150",
+                                "description": "COM_COMPONENTBUILDER_COMPONENT_FILES_FOLDERS_PATH_DESCRIPTION",
+                                "class": "text_area",
+                                "readonly": "false",
+                                "disabled": "false",
+                                "required": "true",
+                                "filter": "PATH",
+                                "message": "COM_COMPONENTBUILDER_COMPONENT_FILES_FOLDERS_PATH_MESSAGE",
+                                "hint": "COM_COMPONENTBUILDER_COMPONENT_FILES_FOLDERS_PATH_HINT"
+                            },
+                            "options": [],
+                            "nested_fields": []
+                        },
+                        {
+                            "attributes": {
+                                "type": "checkbox",
+                                "name": "rename",
+                                "label": "COM_COMPONENTBUILDER_COMPONENT_FILES_FOLDERS_RENAME_LABEL",
+                                "value": "1",
+                                "default": "",
+                                "class": "inputbox"
+                            },
+                            "options": [],
+                            "nested_fields": []
+                        }
+                    ]
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "object",
+                "array",
+                "string"
+            ]
+        },
+        "addfiles": {
+            "table_metadata": {
+                "name": "addfiles",
+                "guid": "143f8b3d-5b58-4b26-aaad-a5f14a57865b",
+                "label": "COM_COMPONENTBUILDER_COMPONENT_FILES_FOLDERS_ADDFILES_LABEL",
+                "type": "subform",
+                "title": false,
+                "list": "components_files_folders",
+                "store": "json",
+                "tab_name": "Basic",
+                "db": {
+                    "type": "TEXT",
+                    "default": "EMPTY",
+                    "GUID": "143f8b3d-5b58-4b26-aaad-a5f14a57865b",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null,
+                "fields": {
+                    "file": {
+                        "name": "file",
+                        "type": "customfilelist",
+                        "link": {
+                            "type": 2,
+                            "table": "",
+                            "component": "",
+                            "entity": "",
+                            "value": "",
+                            "key": ""
+                        }
+                    },
+                    "path": {
+                        "name": "path",
+                        "type": "text",
+                        "link": null
+                    },
+                    "notnew": {
+                        "name": "notnew",
+                        "type": "checkbox",
+                        "link": null
+                    }
+                }
+            },
+            "config_map_target": "addfiles",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "subform",
+                        "name": "addfiles",
+                        "label": "COM_COMPONENTBUILDER_COMPONENT_FILES_FOLDERS_ADDFILES_LABEL",
+                        "layout": "joomla.form.field.subform.repeatable-table",
+                        "multiple": "true",
+                        "description": "COM_COMPONENTBUILDER_COMPONENT_FILES_FOLDERS_ADDFILES_DESCRIPTION",
+                        "default": "",
+                        "icon": "list"
+                    },
+                    "options": [],
+                    "nested_fields": [
+                        {
+                            "attributes": {
+                                "type": "customfilelist",
+                                "name": "file",
+                                "label": "COM_COMPONENTBUILDER_COMPONENT_FILES_FOLDERS_FILE_LABEL",
+                                "description": "COM_COMPONENTBUILDER_COMPONENT_FILES_FOLDERS_FILE_DESCRIPTION",
+                                "class": "list_class",
+                                "multiple": "false",
+                                "default": "0",
+                                "required": "true",
+                                "button": "false"
+                            },
+                            "options": [],
+                            "nested_fields": []
+                        },
+                        {
+                            "attributes": {
+                                "type": "text",
+                                "name": "path",
+                                "label": "COM_COMPONENTBUILDER_COMPONENT_FILES_FOLDERS_PATH_LABEL",
+                                "size": "40",
+                                "maxlength": "150",
+                                "description": "COM_COMPONENTBUILDER_COMPONENT_FILES_FOLDERS_PATH_DESCRIPTION",
+                                "class": "text_area",
+                                "readonly": "false",
+                                "disabled": "false",
+                                "required": "true",
+                                "filter": "PATH",
+                                "message": "COM_COMPONENTBUILDER_COMPONENT_FILES_FOLDERS_PATH_MESSAGE",
+                                "hint": "COM_COMPONENTBUILDER_COMPONENT_FILES_FOLDERS_PATH_HINT"
+                            },
+                            "options": [],
+                            "nested_fields": []
+                        },
+                        {
+                            "attributes": {
+                                "type": "checkbox",
+                                "name": "notnew",
+                                "label": "COM_COMPONENTBUILDER_COMPONENT_FILES_FOLDERS_NOTNEW_LABEL",
+                                "value": "1",
+                                "default": "",
+                                "description": "COM_COMPONENTBUILDER_COMPONENT_FILES_FOLDERS_NOTNEW_DESCRIPTION",
+                                "class": "inputbox"
+                            },
+                            "options": [],
+                            "nested_fields": []
+                        }
+                    ]
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "object",
+                "array",
+                "string"
+            ]
+        }
+    },
+    "source_license": {
+        "header": "GNU General Public License version 2 or later; see LICENSE.txt",
+        "spdx": "GPL-2.0-or-later",
+        "copyright": "Copyright (C) 2015 Vast Development Method. All rights reserved.",
+        "file": "LICENSE.txt",
+        "sha256": "2332109384fc0476519a1d02e1f050dd05ea2251fa66c06f9c5239585147828c",
+        "url": "https://github.com/vdm-io/Joomla-Component-Builder/blob/408703a857ad937479b1e28de7f693af178dcc83/LICENSE.txt"
+    }
+}

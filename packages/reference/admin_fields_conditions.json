@@ -1,0 +1,408 @@
+{
+    "entity": "admin_fields_conditions",
+    "kind": "database",
+    "config_sources": [
+        {
+            "class": "AdminFieldsConditions",
+            "path": "libraries/vendor_jcb/VDM.Joomla/src/Componentbuilder/Package/AdminFieldsConditions/Remote/Config.php",
+            "url": "https://github.com/vdm-io/Joomla-Component-Builder/blob/408703a857ad937479b1e28de7f693af178dcc83/libraries/vendor_jcb/VDM.Joomla/src/Componentbuilder/Package/AdminFieldsConditions/Remote/Config.php",
+            "sha256": "e2814d65df5b621b73d70f11e1a157f664528490f1e1224bbf57ed5e8dae63b7"
+        }
+    ],
+    "config": {
+        "area": "Admin Fields Conditions",
+        "prefix_key": "",
+        "suffix_key": "",
+        "main_readme_path": "",
+        "item_readme_name": "",
+        "index_path": "index/admin-fields-conditions.json",
+        "src_path": "src/admin_view/children",
+        "settings_name": "admin-fields-conditions.json",
+        "guid_field": "admin_view",
+        "guid_helper_field": null,
+        "ignore": [
+            "access"
+        ],
+        "files": [],
+        "folders": [],
+        "map": [],
+        "children": [],
+        "index_map": {
+            "name": "index_map_IndexName",
+            "path": "index_map_IndexPath",
+            "settings": "index_map_IndexSettingsPath",
+            "guid": "index_map_IndexGUID"
+        },
+        "index_header": [
+            "name",
+            "path",
+            "settings",
+            "guid",
+            "local"
+        ],
+        "placeholders": [],
+        "table": "admin_fields_conditions"
+    },
+    "identity_kind": "parent_guid",
+    "table_source": {
+        "path": "libraries/vendor_jcb/VDM.Joomla/src/Componentbuilder/Table.php",
+        "url": "https://github.com/vdm-io/Joomla-Component-Builder/blob/408703a857ad937479b1e28de7f693af178dcc83/libraries/vendor_jcb/VDM.Joomla/src/Componentbuilder/Table.php",
+        "sha256": "630abb56cb664be947f45f08f8812af136402d50bcc2c0feec5702b9e870b573"
+    },
+    "form_source": {
+        "path": "admin/forms/admin_fields_conditions.xml",
+        "url": "https://github.com/vdm-io/Joomla-Component-Builder/blob/408703a857ad937479b1e28de7f693af178dcc83/admin/forms/admin_fields_conditions.xml",
+        "sha256": "89272dc031e8dde15d899a6cceb4e9adc9baba5781aafda9fe510a98ea1ea597"
+    },
+    "fields": {
+        "admin_view": {
+            "table_metadata": {
+                "name": "admin_view",
+                "guid": "3ac1327d-75d6-4a16-913d-ef4fdf54c11c",
+                "label": "COM_COMPONENTBUILDER_ADMIN_FIELDS_CONDITIONS_ADMIN_VIEW_LABEL",
+                "type": "adminviewsreadonly",
+                "title": true,
+                "list": "admins_fields_conditions",
+                "store": null,
+                "tab_name": "Conditions",
+                "db": {
+                    "type": "VARCHAR(36)",
+                    "default": "",
+                    "GUID": "3ac1327d-75d6-4a16-913d-ef4fdf54c11c",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": {
+                    "type": 1,
+                    "table": "#__componentbuilder_admin_view",
+                    "component": "com_componentbuilder",
+                    "entity": "admin_view",
+                    "value": "system_name",
+                    "key": "guid"
+                }
+            },
+            "config_map_target": "admin_view",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "adminviewsreadonly",
+                        "name": "admin_view",
+                        "label": "COM_COMPONENTBUILDER_ADMIN_FIELDS_CONDITIONS_ADMIN_VIEW_LABEL",
+                        "description": "COM_COMPONENTBUILDER_ADMIN_FIELDS_CONDITIONS_ADMIN_VIEW_DESCRIPTION",
+                        "class": "list_class",
+                        "layout": "joomla.form.field.list-fancy-select",
+                        "multiple": "false",
+                        "required": "true",
+                        "readonly": "true",
+                        "button": "false"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "addconditions": {
+            "table_metadata": {
+                "name": "addconditions",
+                "guid": "434a8099-51f0-49d1-bbbb-ed7aa5145a3c",
+                "label": "COM_COMPONENTBUILDER_ADMIN_FIELDS_CONDITIONS_ADDCONDITIONS_LABEL",
+                "type": "subform",
+                "title": false,
+                "list": "admins_fields_conditions",
+                "store": "json",
+                "tab_name": "Conditions",
+                "db": {
+                    "type": "MEDIUMTEXT",
+                    "default": "EMPTY",
+                    "GUID": "434a8099-51f0-49d1-bbbb-ed7aa5145a3c",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null,
+                "fields": {
+                    "target_field": {
+                        "name": "target_field",
+                        "type": "targetfields",
+                        "link": {
+                            "type": 1,
+                            "table": "#__componentbuilder_field",
+                            "component": "com_componentbuilder",
+                            "entity": "field",
+                            "value": "name",
+                            "key": "guid"
+                        }
+                    },
+                    "target_behavior": {
+                        "name": "target_behavior",
+                        "type": "list",
+                        "link": null
+                    },
+                    "target_relation": {
+                        "name": "target_relation",
+                        "type": "list",
+                        "link": null
+                    },
+                    "match_field": {
+                        "name": "match_field",
+                        "type": "matchfield",
+                        "link": {
+                            "type": 1,
+                            "table": "#__componentbuilder_field",
+                            "component": "com_componentbuilder",
+                            "entity": "field",
+                            "value": "name",
+                            "key": "guid"
+                        }
+                    },
+                    "match_behavior": {
+                        "name": "match_behavior",
+                        "type": "list",
+                        "link": null
+                    },
+                    "match_options": {
+                        "name": "match_options",
+                        "type": "textarea",
+                        "link": null
+                    }
+                }
+            },
+            "config_map_target": "addconditions",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "subform",
+                        "name": "addconditions",
+                        "label": "COM_COMPONENTBUILDER_ADMIN_FIELDS_CONDITIONS_ADDCONDITIONS_LABEL",
+                        "layout": "joomla.form.field.subform.repeatable-table",
+                        "multiple": "true",
+                        "description": "COM_COMPONENTBUILDER_ADMIN_FIELDS_CONDITIONS_ADDCONDITIONS_DESCRIPTION",
+                        "default": "",
+                        "icon": "list"
+                    },
+                    "options": [],
+                    "nested_fields": [
+                        {
+                            "attributes": {
+                                "type": "targetfields",
+                                "name": "target_field",
+                                "label": "COM_COMPONENTBUILDER_ADMIN_FIELDS_CONDITIONS_TARGET_FIELD_LABEL",
+                                "description": "COM_COMPONENTBUILDER_ADMIN_FIELDS_CONDITIONS_TARGET_FIELD_DESCRIPTION",
+                                "layout": "joomla.form.field.list-fancy-select",
+                                "multiple": "true",
+                                "required": "true",
+                                "button": "false"
+                            },
+                            "options": [],
+                            "nested_fields": []
+                        },
+                        {
+                            "attributes": {
+                                "type": "list",
+                                "name": "target_behavior",
+                                "label": "COM_COMPONENTBUILDER_ADMIN_FIELDS_CONDITIONS_TARGET_BEHAVIOR_LABEL",
+                                "description": "COM_COMPONENTBUILDER_ADMIN_FIELDS_CONDITIONS_TARGET_BEHAVIOR_DESCRIPTION",
+                                "layout": "joomla.form.field.list-fancy-select",
+                                "multiple": "false",
+                                "filter": "INT",
+                                "required": "true",
+                                "default": "1"
+                            },
+                            "options": [
+                                {
+                                    "attributes": {
+                                        "value": "1"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_ADMIN_FIELDS_CONDITIONS_SHOW_TOGGLE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "2"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_ADMIN_FIELDS_CONDITIONS_HIDE_TOGGLE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "3"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_ADMIN_FIELDS_CONDITIONS_SHOW_ONLY"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "4"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_ADMIN_FIELDS_CONDITIONS_HIDE_ONLY"
+                                }
+                            ],
+                            "nested_fields": []
+                        },
+                        {
+                            "attributes": {
+                                "type": "list",
+                                "name": "target_relation",
+                                "label": "COM_COMPONENTBUILDER_ADMIN_FIELDS_CONDITIONS_TARGET_RELATION_LABEL",
+                                "description": "COM_COMPONENTBUILDER_ADMIN_FIELDS_CONDITIONS_TARGET_RELATION_DESCRIPTION",
+                                "layout": "joomla.form.field.list-fancy-select",
+                                "multiple": "false",
+                                "filter": "INT",
+                                "required": "true",
+                                "default": "0"
+                            },
+                            "options": [
+                                {
+                                    "attributes": {
+                                        "value": "0"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_ADMIN_FIELDS_CONDITIONS_ISOLATE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "1"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_ADMIN_FIELDS_CONDITIONS_CHAIN"
+                                }
+                            ],
+                            "nested_fields": []
+                        },
+                        {
+                            "attributes": {
+                                "type": "matchfield",
+                                "name": "match_field",
+                                "label": "COM_COMPONENTBUILDER_ADMIN_FIELDS_CONDITIONS_MATCH_FIELD_LABEL",
+                                "description": "COM_COMPONENTBUILDER_ADMIN_FIELDS_CONDITIONS_MATCH_FIELD_DESCRIPTION",
+                                "layout": "joomla.form.field.list-fancy-select",
+                                "multiple": "false",
+                                "required": "true",
+                                "button": "false"
+                            },
+                            "options": [],
+                            "nested_fields": []
+                        },
+                        {
+                            "attributes": {
+                                "type": "list",
+                                "name": "match_behavior",
+                                "label": "COM_COMPONENTBUILDER_ADMIN_FIELDS_CONDITIONS_MATCH_BEHAVIOR_LABEL",
+                                "description": "COM_COMPONENTBUILDER_ADMIN_FIELDS_CONDITIONS_MATCH_BEHAVIOR_DESCRIPTION",
+                                "layout": "joomla.form.field.list-fancy-select",
+                                "multiple": "false",
+                                "filter": "INT",
+                                "required": "true",
+                                "default": "1"
+                            },
+                            "options": [
+                                {
+                                    "attributes": {
+                                        "value": "1"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_ADMIN_FIELDS_CONDITIONS_IS_ONLY_4_LISTRADIOCHECKBOXES"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "2"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_ADMIN_FIELDS_CONDITIONS_IS_NOT_ONLY_4_LISTRADIOCHECKBOXES"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "3"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_ADMIN_FIELDS_CONDITIONS_ANY_SELECTION_ONLY_4_LISTRADIOCHECKBOXESDYNAMIC_LIST"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "4"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_ADMIN_FIELDS_CONDITIONS_ACTIVE_ONLY_4_TEXT_FIELD"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "5"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_ADMIN_FIELDS_CONDITIONS_UNACTIVE_ONLY_4_TEXT_FIELD"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "6"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_ADMIN_FIELDS_CONDITIONS_KEY_WORD_ALL_CASESENSITIVE_ONLY_4_TEXT_FIELD"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "7"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_ADMIN_FIELDS_CONDITIONS_KEY_WORD_ANY_CASESENSITIVE_ONLY_4_TEXT_FIELD"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "8"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_ADMIN_FIELDS_CONDITIONS_KEY_WORD_ALL_CASEINSENSITIVE_ONLY_4_TEXT_FIELD"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "9"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_ADMIN_FIELDS_CONDITIONS_KEY_WORD_ANY_CASEINSENSITIVE_ONLY_4_TEXT_FIELD"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "10"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_ADMIN_FIELDS_CONDITIONS_MIN_LENGTH_ONLY_4_TEXT_FIELD"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "11"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_ADMIN_FIELDS_CONDITIONS_MAX_LENGTH_ONLY_4_TEXT_FIELD"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "12"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_ADMIN_FIELDS_CONDITIONS_EXACT_LENGTH_ONLY_4_TEXT_FIELD"
+                                }
+                            ],
+                            "nested_fields": []
+                        },
+                        {
+                            "attributes": {
+                                "type": "textarea",
+                                "name": "match_options",
+                                "label": "COM_COMPONENTBUILDER_ADMIN_FIELDS_CONDITIONS_MATCH_OPTIONS_LABEL",
+                                "rows": "10",
+                                "cols": "5",
+                                "class": "text_area",
+                                "filter": "STRING",
+                                "hint": "COM_COMPONENTBUILDER_ADMIN_FIELDS_CONDITIONS_MATCH_OPTIONS_HINT",
+                                "required": "true"
+                            },
+                            "options": [],
+                            "nested_fields": []
+                        }
+                    ]
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "object",
+                "array",
+                "string"
+            ]
+        }
+    },
+    "source_license": {
+        "header": "GNU General Public License version 2 or later; see LICENSE.txt",
+        "spdx": "GPL-2.0-or-later",
+        "copyright": "Copyright (C) 2015 Vast Development Method. All rights reserved.",
+        "file": "LICENSE.txt",
+        "sha256": "2332109384fc0476519a1d02e1f050dd05ea2251fa66c06f9c5239585147828c",
+        "url": "https://github.com/vdm-io/Joomla-Component-Builder/blob/408703a857ad937479b1e28de7f693af178dcc83/LICENSE.txt"
+    }
+}

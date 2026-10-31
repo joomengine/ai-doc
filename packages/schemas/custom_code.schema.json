@@ -1,0 +1,110 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "custom_code package serialized envelope",
+    "description": "Generated from pinned Table and Remote Config. Bounds known JSON types only, not conditional forms, SQL defaults, compiler behavior or semantic closure. Filesystem payloads are raw files; their Config map is only transport metadata.",
+    "type": "object",
+    "properties": {
+        "system_name": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/custom_code.json for exact metadata, conditions and subfields."
+        },
+        "path": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/custom_code.json for exact metadata, conditions and subfields."
+        },
+        "target": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/custom_code.json for exact metadata, conditions and subfields."
+        },
+        "type": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/custom_code.json for exact metadata, conditions and subfields."
+        },
+        "comment_type": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/custom_code.json for exact metadata, conditions and subfields."
+        },
+        "joomla_version": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/custom_code.json for exact metadata, conditions and subfields."
+        },
+        "function_name": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/custom_code.json for exact metadata, conditions and subfields."
+        },
+        "code": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/custom_code.json for exact metadata, conditions and subfields."
+        },
+        "hashendtarget": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/custom_code.json for exact metadata, conditions and subfields."
+        },
+        "to_line": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/custom_code.json for exact metadata, conditions and subfields."
+        },
+        "from_line": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/custom_code.json for exact metadata, conditions and subfields."
+        },
+        "hashtarget": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/custom_code.json for exact metadata, conditions and subfields."
+        },
+        "component": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/custom_code.json for exact metadata, conditions and subfields."
+        },
+        "@dependencies": {
+            "$ref": "dependencies.schema.json"
+        }
+    },
+    "additionalProperties": false,
+    "required": [
+        "function_name"
+    ]
+}

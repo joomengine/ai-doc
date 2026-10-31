@@ -1,0 +1,231 @@
+{
+    "entity": "joomla_module_updates",
+    "kind": "database",
+    "config_sources": [
+        {
+            "class": "JoomlaModuleUpdates",
+            "path": "libraries/vendor_jcb/VDM.Joomla/src/Componentbuilder/Package/JoomlaModuleUpdates/Remote/Config.php",
+            "url": "https://github.com/vdm-io/Joomla-Component-Builder/blob/408703a857ad937479b1e28de7f693af178dcc83/libraries/vendor_jcb/VDM.Joomla/src/Componentbuilder/Package/JoomlaModuleUpdates/Remote/Config.php",
+            "sha256": "c9e71576067f1a68c59c8483e036c631bfb1b4ad03d8e6ad17d933a858f33019"
+        }
+    ],
+    "config": {
+        "area": "Joomla Module Updates",
+        "prefix_key": "",
+        "suffix_key": "",
+        "main_readme_path": "",
+        "item_readme_name": "",
+        "index_path": "index/joomla-module-updates.json",
+        "src_path": "src/joomla_module/children",
+        "settings_name": "joomla-module-updates.json",
+        "guid_field": "joomla_module",
+        "guid_helper_field": null,
+        "ignore": [
+            "access"
+        ],
+        "files": [],
+        "folders": [],
+        "map": [],
+        "children": [],
+        "index_map": {
+            "name": "index_map_IndexName",
+            "path": "index_map_IndexPath",
+            "settings": "index_map_IndexSettingsPath",
+            "guid": "index_map_IndexGUID"
+        },
+        "index_header": [
+            "name",
+            "path",
+            "settings",
+            "guid",
+            "local"
+        ],
+        "placeholders": [],
+        "table": "joomla_module_updates"
+    },
+    "identity_kind": "parent_guid",
+    "table_source": {
+        "path": "libraries/vendor_jcb/VDM.Joomla/src/Componentbuilder/Table.php",
+        "url": "https://github.com/vdm-io/Joomla-Component-Builder/blob/408703a857ad937479b1e28de7f693af178dcc83/libraries/vendor_jcb/VDM.Joomla/src/Componentbuilder/Table.php",
+        "sha256": "630abb56cb664be947f45f08f8812af136402d50bcc2c0feec5702b9e870b573"
+    },
+    "form_source": {
+        "path": "admin/forms/joomla_module_updates.xml",
+        "url": "https://github.com/vdm-io/Joomla-Component-Builder/blob/408703a857ad937479b1e28de7f693af178dcc83/admin/forms/joomla_module_updates.xml",
+        "sha256": "db0665cd39d8e69a06c6019700d747ce043d4476025220ae54e796ae8f8fcf29"
+    },
+    "fields": {
+        "joomla_module": {
+            "table_metadata": {
+                "name": "joomla_module",
+                "guid": "79251a06-b217-4b3a-8485-b7286cb15bf6",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_MODULE_UPDATES_JOOMLA_MODULE_LABEL",
+                "type": "joomlamodules",
+                "title": true,
+                "list": "joomla_modules_updates",
+                "store": null,
+                "tab_name": "Updates",
+                "db": {
+                    "type": "VARCHAR(36)",
+                    "default": "",
+                    "GUID": "79251a06-b217-4b3a-8485-b7286cb15bf6",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": {
+                    "type": 1,
+                    "table": "#__componentbuilder_joomla_module",
+                    "component": "com_componentbuilder",
+                    "entity": "joomla_module",
+                    "value": "system_name",
+                    "key": "guid"
+                }
+            },
+            "config_map_target": "joomla_module",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "joomlamodules",
+                        "name": "joomla_module",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_MODULE_UPDATES_JOOMLA_MODULE_LABEL",
+                        "class": "list_class span12",
+                        "layout": "joomla.form.field.list-fancy-select",
+                        "multiple": "false",
+                        "readonly": "true"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "version_update": {
+            "table_metadata": {
+                "name": "version_update",
+                "guid": "7d49445c-4e95-4fd5-a2a4-a20bbcd4d812",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_MODULE_UPDATES_VERSION_UPDATE_LABEL",
+                "type": "subform",
+                "title": false,
+                "list": "joomla_modules_updates",
+                "store": "json",
+                "tab_name": "Updates",
+                "db": {
+                    "type": "MEDIUMTEXT",
+                    "default": "EMPTY",
+                    "GUID": "7d49445c-4e95-4fd5-a2a4-a20bbcd4d812",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null,
+                "fields": {
+                    "version": {
+                        "name": "version",
+                        "type": "text",
+                        "link": null
+                    },
+                    "mysql": {
+                        "name": "mysql",
+                        "type": "textarea",
+                        "link": null
+                    },
+                    "url": {
+                        "name": "url",
+                        "type": "url",
+                        "link": null
+                    }
+                }
+            },
+            "config_map_target": "version_update",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "subform",
+                        "name": "version_update",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_MODULE_UPDATES_VERSION_UPDATE_LABEL",
+                        "layout": "repeatablejcb",
+                        "multiple": "true",
+                        "description": "COM_COMPONENTBUILDER_JOOMLA_MODULE_UPDATES_VERSION_UPDATE_DESCRIPTION",
+                        "default": "",
+                        "icon": "list"
+                    },
+                    "options": [],
+                    "nested_fields": [
+                        {
+                            "attributes": {
+                                "type": "text",
+                                "name": "version",
+                                "label": "COM_COMPONENTBUILDER_JOOMLA_MODULE_UPDATES_VERSION_LABEL",
+                                "size": "10",
+                                "maxlength": "50",
+                                "default": "",
+                                "description": "COM_COMPONENTBUILDER_JOOMLA_MODULE_UPDATES_VERSION_DESCRIPTION",
+                                "class": "text_area",
+                                "readonly": "false",
+                                "disabled": "false",
+                                "required": "false",
+                                "filter": "STRING",
+                                "message": "COM_COMPONENTBUILDER_JOOMLA_MODULE_UPDATES_VERSION_MESSAGE",
+                                "hint": "COM_COMPONENTBUILDER_JOOMLA_MODULE_UPDATES_VERSION_HINT"
+                            },
+                            "options": [],
+                            "nested_fields": []
+                        },
+                        {
+                            "attributes": {
+                                "type": "textarea",
+                                "name": "mysql",
+                                "label": "COM_COMPONENTBUILDER_JOOMLA_MODULE_UPDATES_MYSQL_LABEL",
+                                "rows": "30",
+                                "cols": "15",
+                                "description": "COM_COMPONENTBUILDER_JOOMLA_MODULE_UPDATES_MYSQL_DESCRIPTION",
+                                "class": "text_area mysql_update",
+                                "filter": "raw",
+                                "hint": "COM_COMPONENTBUILDER_JOOMLA_MODULE_UPDATES_MYSQL_HINT"
+                            },
+                            "options": [],
+                            "nested_fields": []
+                        },
+                        {
+                            "attributes": {
+                                "type": "url",
+                                "name": "url",
+                                "label": "COM_COMPONENTBUILDER_JOOMLA_MODULE_UPDATES_URL_LABEL",
+                                "size": "60",
+                                "maxlength": "150",
+                                "default": "",
+                                "description": "COM_COMPONENTBUILDER_JOOMLA_MODULE_UPDATES_URL_DESCRIPTION",
+                                "class": "text_area version_url",
+                                "required": "true",
+                                "filter": "raw",
+                                "validated": "url",
+                                "message": "COM_COMPONENTBUILDER_JOOMLA_MODULE_UPDATES_URL_MESSAGE",
+                                "hint": "COM_COMPONENTBUILDER_JOOMLA_MODULE_UPDATES_URL_HINT"
+                            },
+                            "options": [],
+                            "nested_fields": []
+                        }
+                    ]
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "object",
+                "array",
+                "string"
+            ]
+        }
+    },
+    "source_license": {
+        "header": "GNU General Public License version 2 or later; see LICENSE.txt",
+        "spdx": "GPL-2.0-or-later",
+        "copyright": "Copyright (C) 2015 Vast Development Method. All rights reserved.",
+        "file": "LICENSE.txt",
+        "sha256": "2332109384fc0476519a1d02e1f050dd05ea2251fa66c06f9c5239585147828c",
+        "url": "https://github.com/vdm-io/Joomla-Component-Builder/blob/408703a857ad937479b1e28de7f693af178dcc83/LICENSE.txt"
+    }
+}

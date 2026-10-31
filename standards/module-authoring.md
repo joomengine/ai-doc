@@ -35,6 +35,7 @@ Use a descriptive lowercase directory name with hyphens. The following are requi
 | Path or responsibility | Required content |
 | --- | --- |
 | `README.md` | Scope/non-scope, supported versions, source baseline, task routing, operating invariants, verification limits |
+| `SKILL.md` | Concise Agent Skills entry point: task-specific trigger, prerequisites, direct workflow/reference routes, critical exceptions and completion criteria |
 | `specification.md` | Exact artifact/operation contract, lifecycle, identities, relationships, encoding, transformations, and edge cases |
 | Field/reference documentation when structured data exists | Every serialized field: type/domain, absent/null/empty semantics, conditions, references, transforms, examples, and authority |
 | `workflows/` | Complete creation, maintenance, debugging, compatibility, and verification procedures for advertised tasks |
@@ -43,9 +44,11 @@ Use a descriptive lowercase directory name with hyphens. The following are requi
 | `sources.md` | Evidence map, pinned revisions, upstream references, discovered disagreements, and freshness procedure |
 | Schemas/tooling when useful | Structural checks and cross-file validation, documented dependencies, nonzero failure exits, and clear coverage limits |
 
-The module must be linked from the root README and `registries/modules.json`. Record `id`, `path`, `entrypoint`, `status`, `scope`, `source_baseline`, `test_workflow`, and `verification`. `test_workflow` is a repository-relative path to that module's actual acceptance procedure, not merely the shared environment guide. The repository checker requires it to exist. `status` must be `in-progress`, `documented`, or `deprecated`; `documented` means the documentation meets this standard, not that every target environment has been exercised. `verification` must separately state static and integration evidence.
+The module must be linked from the root skill/README and `registries/modules.json`. Record `id`, `path`, `entrypoint`, `skill_entrypoint`, `status`, `scope`, `source_baseline`, `test_workflow`, and `verification`. Register the skill's name and path in `registries/skills.json`; follow [loading and distribution](skill-loading.md) and the bounded frontmatter profile enforced by `tools/check-skills.sh`. Keep the complete distribution coherent; nested model entry points must not imply standalone installation when they require shared resources. `test_workflow` is a repository-relative path to that module's actual acceptance procedure, not merely the shared environment guide. The repository checker requires it to exist. `status` must be `in-progress`, `documented`, or `deprecated`; `documented` means the documentation meets this standard, not that every target environment has been exercised. `verification` must separately state static and integration evidence.
 
 Choose one canonical location for each rule. Use links and short reminders elsewhere. Make the reading path task-based: fixing a method should not require reading every architecture chapter, while creating an empty repository must lead through every necessary step.
+
+For a model with sub-models, provide an exhaustive source-derived inventory and a task router. Distinguish independent entities, parent-owned child records, nested form settings, external models and compiler-only features. Put exact field/option metadata in focused per-entity references and operational choices in the corresponding guide. Generated references must record their source revision and derivation, preserve meaningful nested metadata, and have a repeatable update path. Do not generate filler prose or imply that a field list establishes consumer semantics.
 
 ## 4. Contract completeness
 
@@ -128,6 +131,7 @@ Before marking a module `documented`, require:
 - Examples and tool commands agree with the contract and work at their stated validation level.
 - A `test_workflow` links the module to Playground and defines model-specific import/update, consumer, compilation and runtime acceptance (or explains why a stage is inapplicable). Its verification record distinguishes performed, failed, blocked, declined and not-run stages with evidence.
 - Root and module navigation, registry entries, and relevant CI checks pass.
+- Skill names/descriptions/routes pass the declared metadata profile, and all model entry points work within the complete distribution. Verify a representative task loads only its required resources; do not claim client installation or automatic discovery without exercising that client.
 - Independent review or a fresh-agent exercise has been performed and blocking findings resolved.
 - The PR states changes, source revisions, verification evidence, and remaining limits truthfully.
 

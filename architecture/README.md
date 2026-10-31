@@ -10,6 +10,8 @@ Start with the relevant operational module and workflow. Read the architecture a
 
 For implementation validation, follow the [shared Playground workflow](../testing/playground/README.md) and the module's `test_workflow` in the [registry](../registries/modules.json). Trace the authored definition through the local JCB record, an actual consuming blueprint, generated extension files and exercised runtime behaviour. Playground provides the default browser environment; each module defines its own assertions. A successful import or unrelated compilation does not establish the complete architectural path.
 
+For concrete blueprint authoring, use the [Packages skill](../packages/SKILL.md), [sub-model router](../packages/models/README.md) and [field contract inventory](../packages/model-contracts.json). They connect the architecture to actual package records and nested settings, with separate routes to Field Types, Powers and Snippets when a dependency crosses model boundaries.
+
 | Task or question | Authoritative architecture reading path | What to carry into implementation |
 | --- | --- | --- |
 | Understand the whole system | [Overview](https://architecture.joomlacomponentbuilder.com/markdown/index.md), [reading guide](https://architecture.joomlacomponentbuilder.com/markdown/reading-guide.md), [white paper](https://architecture.joomlacomponentbuilder.com/markdown/white-paper.md) | Identify the input, transformation, and output being changed before choosing a module. |

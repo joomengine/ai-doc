@@ -1,5 +1,7 @@
 # Super Powers: operational module
 
+For task execution, start with this model’s [SKILL.md](SKILL.md); use this page and its references for the detailed contract and evidence.
+
 Use this module to **create, extend, maintain, debug, or scale a PHP Super Power repository**, including starting from an empty repository. The instructions apply across the seven registered repositories and can be extended to additional authorized repositories. The repository named [`joomengine/super-powers`](https://github.com/joomengine/super-powers) is the central shared foundation and reference standard; *Super Power repository* also describes the format used by specialist repositories.
 
 ## Scope and evidence

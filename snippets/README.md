@@ -1,5 +1,7 @@
 # Snippet repositories
 
+For task execution, start with this model’s [SKILL.md](SKILL.md); use this page and its references for the detailed contract and evidence.
+
 This module explains how to create, extend, maintain and debug **JCB Snippet repositories**. Snippets provide reusable source material, usually HTML for Site Views, Custom Admin Views, layouts and templates. They help beginners compose working interfaces and let experienced developers reuse documented patterns. They are not Super Power classes, PHP Custom Code records, Joomla extensions or automatically synchronized view implementations.
 
 **Project policy:** [`joomengine/snippets`](https://github.com/joomengine/snippets) is the official **core** catalog. Every new Snippet repository must account for its current GUIDs. A genuinely new item must never reuse a core GUID. Maintaining the same item, including an intentional fork override, retains its identity and requires an explicit provenance/precedence record. Search core before inventing a duplicate pattern.
