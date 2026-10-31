@@ -52,7 +52,7 @@ Apply a default-core mirror only to the corresponding core source. It does not r
 
 ## Fetch once and reuse the result
 
-Use Bash, curl, jq, Git and the [tool prerequisites](../tools/README.md). Run these blocks in the same Bash session from the skills checkout root. The first block makes one project request and saves its receipt in a new temporary directory. It validates the response before publishing the local snapshot.
+An agent may perform discovery with any supported read-only HTTP client. The reproducible commands below use Bash, curl, jq, Git and the [tool prerequisites](../tools/README.md). Run these blocks in the same Bash session from the skills checkout root. The first block makes one project request and saves its receipt in a new temporary directory. It validates the response before publishing the local snapshot.
 
 ```bash
 set -euo pipefail
@@ -62,15 +62,16 @@ curl --fail --silent --show-error --location --max-redirs 3 \
 	--proto '=https' --proto-redir '=https' \
 	--connect-timeout 10 --max-time 30 \
 	--output "$network_dir/project.pending.json" "$network_url"
-jq -e '
+jq -e -s '
 	def text: type == "string" and length > 0;
+	length == 1 and (.[0] |
 	.project == "jcb" and (.targets | type == "array")
 	and ([.targets[].target] | length == (unique | length))
 	and all(.targets[];
 		(.target | text) and (.network | type == "array")
 		and all(.network[];
 			(.name | text) and (.url | text and startswith("https://"))
-			and (.status == 0 or .status == 1)))
+			and (.status == 0 or .status == 1))))
 ' "$network_dir/project.pending.json" >/dev/null
 mv -- "$network_dir/project.pending.json" "$network_dir/project.json"
 date -u +%Y-%m-%dT%H:%M:%SZ > "$network_dir/observed-at.txt"
@@ -80,9 +81,30 @@ jq -r '.targets[] | .target as $target | .network[] |
 printf 'Discovery receipt: %s\n' "$network_dir"
 ```
 
-Reuse this snapshot across targets in the same acquisition phase. Keep the response and observation time with the task evidence. Refresh after a failed endpoint, a resumed task or before a final freshness-sensitive identity check; do not label a cached status as freshly observed. This is an agent workflow policy, not a cache lifetime promised by the service. Prefer an existing suitable checkout and local searches to another remote request.
+Reuse this snapshot across targets in the same acquisition phase. Keep the response and observation time with the task evidence. Refresh after a failed endpoint, a resumed task or before a final freshness-sensitive identity check; do not label a cached status as freshly observed. Refreshing discovery updates endpoint-health evidence only. A final new-identity collision check also needs freshly fetched required indexes; never update an old catalogue timestamp merely because discovery succeeded. Record unresolved synchronization uncertainty. This is an agent workflow policy, not a cache lifetime promised by the service. Prefer an existing suitable checkout and local searches to another remote request.
 
-The catalogue tools currently use Git transport to fetch their registered GitHub sources. Discovery can already be used for direct mirror Git reads under the following procedure. Preserve source provenance and all required catalogue membership checks; do not fabricate a compatible manifest to bypass a fetcher's supported source requirements.
+The following complete example selects an advertised online Field Type mirror and uses it to fetch the official catalogue. The first eligible node is a candidate, not an API-guaranteed priority or fastest endpoint. Inspect the printed URL; use another advertised candidate if it is unsuitable. Prefer community hosts over concentrating routine load on `git.vdm.dev`.
+
+```bash
+network_target=joomla-fieldtypes
+mirror_url=$(jq -er --arg target "$network_target" '
+	[.targets[] | select(.target == $target) | .network[] |
+		select(.status == 1) |
+		select(.url | startswith("https://git.vdm.dev/") | not)][0].url
+	// error("No eligible monitored-online mirror; use the recovery workflow")
+' "$network_dir/project.json")
+printf 'Selected %s: %s\n' "$network_target" "$mirror_url"
+jq -n --arg url "$mirror_url" \
+	'{"joomengine/joomla-fieldtypes": $url}' > "$network_dir/sources.json"
+bash tools/fetch-entity-catalog.sh field-types \
+	"$network_dir/field-types-catalog" --sources "$network_dir/sources.json"
+jq '.repositories[] | {id, url, fetch_url, branch, commit, indexes}' \
+	"$network_dir/field-types-catalog/manifest.json"
+```
+
+`--sources` is an explicit canonical-repository-ID → retrieval-URL map. The fetcher retains canonical `id`/`url`, order and the registry's branch, and records the actual `fetch_url`, fetched commit and index hashes. Both catalogue fetchers support it; see [tools](../tools/README.md) for the exact arguments. Mapped repositories use that transport; unmapped repositories still use their registered source. An override failure fails the fetch rather than silently substituting different bytes. A catalogue is published only after all required sources pass.
+
+These tools already use Git transport rather than GitHub REST to read indexes. A mirror override reduces GitHub-hosted reads as well. A complete Super Power catalogue still requires every registered source: when discovery has no mirror for a required specialist repository, a partial mirror map does not remove that requirement. Do not fabricate a live manifest or mark an incomplete collision scan complete.
 
 ## Read source and retain provenance
 
@@ -135,5 +157,9 @@ These source findings aid diagnosis. Prepare a minimal reproduction for [human-l
 On **2026-10-31**, direct project discovery returned HTTP 200 with 11 targets. Target-specific requests for `packages`, `snippets` and `joomla-fieldtypes` returned JSON; both status-filtered Super Power requests returned only their requested status. Counts and online/offline states are observations, not a static endpoint registry. The API documentation's source link led to a general organization page; no specific backend source revision was established.
 
 A read from advertised `https://codeberg.org/joomla/super-powers` resolved `master@9cd980492bed4c8177a6e32b703641950ec93604`. Its 187-entry `super-powers.json` passed the inspected index checks and matched an already available canonical checkout byte-for-byte, SHA-256 `4c64190a6d3a076458397182f004beee65c89eb98e8a57cc8816da846ed6368d`. That comparison made no new GitHub API request and proves only this recorded index match. Browser import, compilation and runtime were not exercised by these network reads.
+
+An independent existing-agent exercise followed the root skill and this guide using one discovery snapshot, then fetched the Field Type catalogue through `https://codeberg.org/joomla/joomla-fieldtypes` with `--sources`. It retained canonical identity and `master@3be64d59378b5650825b97b44dbd58f2cdb82fcb`, validated 49 entries and zero shadows, and matched the existing canonical index: SHA-256 `2665594ac7792a1a55935cadfe01f2de243491b483d66326234bdfe587191e41`. Manifest/index checks and catalogue freshness passed. No fresh-session, payload, GUID-allocation or JCB runtime test is implied.
+
+The completed change passed 146 offline regressions (38 transport checks plus 108 existing model checks), ShellCheck, documentation/registry checks and skill validation. Transport regressions cover selected bytes and order, older manifests, invalid maps, failed fetches, Git URL rewrites and timeout behavior. The final Field Type fetch was repeated after the transport guards were finalized, reusing the saved discovery response. These checks do not certify every mirror or JCB runtime behavior.
 
 When adding a model, link this guide, identify its logical core and exact discovered target when available, and explain missing-target handling. Preserve the existing shared protocol instead of embedding a fixed host list in each skill. Reverify endpoint shape, source-specific resolution and branch/content behavior when the service or JCB implementation changes.
