@@ -1,0 +1,115 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Current Snippet item authoring profile",
+  "type": "object",
+  "required": [
+    "name",
+    "url",
+    "type",
+    "heading",
+    "library",
+    "guid",
+    "contributor_email",
+    "contributor_name",
+    "contributor_website",
+    "contributor_company",
+    "snippet",
+    "usage",
+    "description",
+    "@dependencies"
+  ],
+  "properties": {
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "guid": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+    },
+    "type": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+    },
+    "library": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+    },
+    "snippet": {
+      "type": "string",
+      "minLength": 1
+    },
+    "@dependencies": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "key",
+          "value",
+          "entity",
+          "table",
+          "direction"
+        ],
+        "properties": {
+          "key": {
+            "type": "string",
+            "minLength": 1
+          },
+          "value": {
+            "type": "string",
+            "minLength": 1
+          },
+          "entity": {
+            "type": "string",
+            "minLength": 1,
+            "enum": [
+              "snippet_type",
+              "library"
+            ]
+          },
+          "table": {
+            "type": "string",
+            "minLength": 1
+          },
+          "direction": {
+            "enum": [
+              "out",
+              "in"
+            ]
+          }
+        },
+        "additionalProperties": true
+      },
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "url": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^https?://[^/@\\s?#]+(?:[/?#][^\\s]*)?$"
+    },
+    "heading": {
+      "type": "string",
+      "minLength": 1
+    },
+    "contributor_email": {
+      "type": "string"
+    },
+    "contributor_name": {
+      "type": "string"
+    },
+    "contributor_website": {
+      "type": "string"
+    },
+    "contributor_company": {
+      "type": "string"
+    },
+    "usage": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

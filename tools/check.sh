@@ -2,6 +2,7 @@
 set -euo pipefail
 TOOLS_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)
 source "$TOOLS_DIR/lib/common.sh"
+source "$TOOLS_DIR/lib/entity-common.sh"
 if [[ ${1:-} == --help ]]; then
 	printf '%s\n' 'Usage: bash tools/check.sh' 'Offline checks: shell syntax; all JSON parses; relative Markdown link files exist;' 'registry structure; regression tests. Does not fetch URLs or validate anchors.'
 	exit 0
@@ -37,5 +38,10 @@ if [[ -f $root/registries/modules.json ]]; then
 	jq -e 'def nonempty: type=="string" and length>0; .version==1 and (.modules|type=="array") and ([.modules[].id]|length==(unique|length)) and all(.modules[]; . as $m | (.id|nonempty) and (.path|nonempty) and (.scope|nonempty) and (.entrypoint|nonempty and startswith($m.path+"/")) and (.source_baseline|nonempty) and (["in-progress","documented","deprecated"]|index($m.status)!=null) and (.verification.static|nonempty) and (.verification.integration|nonempty))' "$root/registries/modules.json" >/dev/null || fail 'Invalid module registry'
 	while IFS= read -r destination; do safe_file "$root" "$destination" >/dev/null; done < <(jq -r '.modules[]|.entrypoint,.source_baseline' "$root/registries/modules.json")
 fi
+for domain in field-types snippets; do
+	entity_domain "$domain"
+	validate_entity_registry "$root/registries/$ENTITY_REGISTRY"
+done
 bash "$root/tests/run-tests.sh"
+bash "$root/tests/run-entity-tests.sh"
 printf 'PASS: offline documentation and tooling checks.\n'

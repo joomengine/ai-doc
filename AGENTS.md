@@ -1,6 +1,6 @@
 # Agent operating contract
 
-This repository documents the **whole Joomla Component Builder (JCB) ecosystem**. Super Powers is its first operational module. Follow the task's relevant module; do not impose Super Power file formats on other JCB entities.
+This repository documents the **whole Joomla Component Builder (JCB) ecosystem**. Its operational modules cover Super Powers, Field Types, and Snippets. Follow the task's relevant module and verification status; do not impose one entity's file format, dependency rules, or identity semantics on another.
 
 ## Start here
 

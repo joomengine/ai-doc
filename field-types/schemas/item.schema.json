@@ -1,0 +1,244 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Field Type complete current-authoring profile",
+  "description": "ai-doc structural profile, not an upstream JCB schema. Properties must be native JSON; cross-file and unique-property checks run separately.",
+  "type": "object",
+  "required": [
+    "name",
+    "store",
+    "null_switch",
+    "indexes",
+    "datadefault_other",
+    "datadefault",
+    "short_description",
+    "datatype",
+    "has_defaults",
+    "properties",
+    "description",
+    "datalenght",
+    "datalenght_other",
+    "guid"
+  ],
+  "properties": {
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "guid": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+    },
+    "store": {
+      "enum": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        "0",
+        "1",
+        "2",
+        "3",
+        "5",
+        "6"
+      ]
+    },
+    "has_defaults": {
+      "enum": [
+        0,
+        1,
+        "0",
+        "1"
+      ]
+    },
+    "null_switch": {
+      "enum": [
+        "",
+        "NULL",
+        "NOT NULL"
+      ]
+    },
+    "indexes": {
+      "enum": [
+        "",
+        0,
+        1,
+        2,
+        "0",
+        "1",
+        "2"
+      ]
+    },
+    "datatype": {
+      "enum": [
+        "",
+        "CHAR",
+        "VARCHAR",
+        "TEXT",
+        "MEDIUMTEXT",
+        "LONGTEXT",
+        "BLOB",
+        "TINYBLOB",
+        "MEDIUMBLOB",
+        "LONGBLOB",
+        "DATETIME",
+        "DATE",
+        "TIME",
+        "INT",
+        "TINYINT",
+        "BIGINT",
+        "FLOAT",
+        "DECIMAL",
+        "DOUBLE"
+      ]
+    },
+    "datadefault": {
+      "enum": [
+        "",
+        0,
+        1,
+        "0",
+        "1",
+        "CURRENT_TIMESTAMP",
+        "DATETIME",
+        "Other"
+      ]
+    },
+    "datalenght": {
+      "enum": [
+        "",
+        1,
+        7,
+        10,
+        11,
+        36,
+        50,
+        64,
+        100,
+        255,
+        1024,
+        2048,
+        "1",
+        "7",
+        "10",
+        "11",
+        "36",
+        "50",
+        "64",
+        "100",
+        "255",
+        "1024",
+        "2048",
+        "Other"
+      ]
+    },
+    "datalenght_other": {
+      "type": "string"
+    },
+    "datadefault_other": {
+      "type": "string"
+    },
+    "short_description": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "properties": {
+      "anyOf": [
+        {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/property"
+          }
+        },
+        {
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": {
+            "$ref": "#/$defs/property"
+          }
+        }
+      ]
+    }
+  },
+  "additionalProperties": true,
+  "$defs": {
+    "property": {
+      "type": "object",
+      "required": [
+        "name",
+        "example",
+        "description"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "example": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "adjustable": {
+          "enum": [
+            0,
+            1,
+            "0",
+            "1"
+          ]
+        },
+        "mandatory": {
+          "enum": [
+            0,
+            1,
+            "0",
+            "1"
+          ]
+        },
+        "translatable": {
+          "enum": [
+            0,
+            1,
+            "0",
+            "1"
+          ]
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "required": [
+          "has_defaults",
+          "datalenght"
+        ],
+        "properties": {
+          "has_defaults": {
+            "enum": [
+              1,
+              "1"
+            ]
+          },
+          "datalenght": {
+            "const": "Other"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "datalenght_other": {
+            "type": "string",
+            "pattern": "\\S"
+          }
+        }
+      }
+    }
+  ]
+}
