@@ -27,6 +27,7 @@ check_entity_catalog() {
 	[[ -f $catalog/manifest.json ]] || fail "Missing catalog manifest: $catalog"
 	jq -e -s 'length==1' "$catalog/manifest.json" >/dev/null || fail 'Expected one catalog manifest'
 	jq -e --arg kind "$ENTITY_KIND" --arg core "$ENTITY_CORE" '.version==1 and .kind==$kind and (.repositories|type=="array" and length>0) and ([.repositories[].id]|length==(unique|length)) and any(.repositories[]; .id==$core) and all(.repositories[]; (.id|test("^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$")) and .url==("https://github.com/"+.id+".git") and (.branch|type=="string" and length>0) and (.commit|test("^[0-9a-f]{40}$")) and (.indexes|type=="array" and length>0) and ([.indexes[].entity]|length==(unique|length)) and all(.indexes[]; (.file|test("^indexes/[0-9]+-[a-z_]+\\.json$")) and (.sha256|test("^[0-9a-f]{64}$"))))' "$catalog/manifest.json" >/dev/null || fail "Invalid $ENTITY_KIND catalog or absent core $ENTITY_CORE"
+	validate_fetch_urls "$catalog/manifest.json"
 	while IFS= read -r repository; do
 		if [[ $ENTITY_KIND == field-types ]]; then
 			jq -e '.indexes|length==1 and .[0].entity=="fieldtype" and .[0].source_path=="index.json"' <<<"$repository" >/dev/null || fail 'Wrong fieldtype index mapping'
