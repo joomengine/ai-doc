@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "purpose": "Task routing and evidence status for JCB agent documentation modules, not a JCB runtime configuration.",
+  "modules": [
+    {
+      "id": "super-powers",
+      "path": "super-powers",
+      "entrypoint": "super-powers/README.md",
+      "status": "in-progress",
+      "scope": "Create, extend, maintain, debug, and validate PHP Super Power repositories; excludes package entity serialization and Joomla Power repository formats.",
+      "source_baseline": "super-powers/sources.md",
+      "verification": {
+        "static": "Pending implementation validation.",
+        "integration": "JCB import, compilation, and consumer runtime checks require a supported JCB environment; none are claimed by static validation."
+      }
+    }
+  ]
+}
