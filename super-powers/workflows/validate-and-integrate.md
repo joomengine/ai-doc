@@ -16,7 +16,7 @@ Validation is layered. Each layer answers a different question; report them sepa
 
 ## Static sequence
 
-From an `ai-doc` checkout, use the command interfaces in the [workflow index](README.md) and [tool reference](../../tools/README.md):
+From an `skills` checkout, use the command interfaces in the [workflow index](README.md) and [tool reference](../../tools/README.md):
 
 1. Fetch the current registered catalogue into a fresh directory. Inspect its completion status, revisions, hashes, and resolution order. Preserve additional project-specific repository provenance.
 2. Validate the entire authored repository, not just the edited settings file. This catches stale index entries and references to sibling powers.

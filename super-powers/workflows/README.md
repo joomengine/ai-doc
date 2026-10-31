@@ -24,7 +24,7 @@ These procedures apply to PHP Super Power repositories. They do not describe Joo
 
 ## Tools and working directories
 
-Run the commands below from an `ai-doc` checkout. `CATALOG_DIR` and `REPO_DIR` in command descriptions mean paths chosen for the current task, not literal file names to commit. Use the scripts' `--help` before automation. The [tools documentation](../../tools/README.md) defines their guarantees and limitations.
+Run the commands below from an `skills` checkout. `CATALOG_DIR` and `REPO_DIR` in command descriptions mean paths chosen for the current task, not literal file names to commit. Use the scripts' `--help` before automation. The [tools documentation](../../tools/README.md) defines their guarantees and limitations.
 
 | Operation | Command interface |
 | --- | --- |

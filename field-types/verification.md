@@ -27,7 +27,7 @@ bash tools/check.sh
 shellcheck -x -P tools tools/*.sh tools/lib/*.sh tests/*.sh
 ```
 
-The focused [entity regression suite](../tests/run-entity-tests.sh) covers complete and empty repositories, mandatory core catalogues, catalogue integrity/freshness, ordered provenance, new-versus-retained identities, canonical paths, escaping symlinks, JSON shape, double-encoded properties, duplicate property names, flag domains, database selectors and index/item consistency. The existing Super Power checks remain part of the combined run. Consult [PR #2 checks](https://github.com/joomengine/ai-doc/pull/2/checks) for the exact published commit's CI result.
+The focused [entity regression suite](../tests/run-entity-tests.sh) covers complete and empty repositories, mandatory core catalogues, catalogue integrity/freshness, ordered provenance, new-versus-retained identities, canonical paths, escaping symlinks, JSON shape, double-encoded properties, duplicate property names, flag domains, database selectors and index/item consistency. The existing Super Power checks remain part of the combined run. Consult [PR #2 checks](https://github.com/joomengine/skills/pull/2/checks) for the exact published commit's CI result.
 
 The [tool reference](../tools/README.md) identifies the stricter authoring profile and its limits. A historical record rejected by that profile needs investigation; it is not automatically proof that the JCB importer rejects it.
 

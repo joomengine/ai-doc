@@ -25,7 +25,7 @@ Read the [specification](../specification.md), [field reference](../fields-refer
 
 ## Tool interfaces
 
-Run these from an `ai-doc` checkout with the dependencies documented in [Tools](../../tools/README.md). Uppercase path names below describe arguments chosen for the current task, not literal paths to commit.
+Run these from an `skills` checkout with the dependencies documented in [Tools](../../tools/README.md). Uppercase path names below describe arguments chosen for the current task, not literal paths to commit.
 
 | Operation | Command |
 | --- | --- |

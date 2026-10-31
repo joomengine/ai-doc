@@ -1,6 +1,6 @@
 # Architecture reference and task routing
 
-This directory connects operational tasks in `ai-doc` to the broader [Joomla Component Builder: Contextual Compilation Architecture](https://architecture.joomlacomponentbuilder.com/) publication. It is a source map, not a replacement edition of the white paper. JCB includes structured definitions, repository exchange, compilation, generated applications, recovery, and regeneration. Super Powers is one part of that lifecycle.
+This directory connects operational tasks in `skills` to the broader [Joomla Component Builder: Contextual Compilation Architecture](https://architecture.joomlacomponentbuilder.com/) publication. It is a source map, not a replacement edition of the white paper. JCB includes structured definitions, repository exchange, compilation, generated applications, recovery, and regeneration. Super Powers is one part of that lifecycle.
 
 **Verified publication:** edition 1.0.0, 16 September 2026; repository revision [`7ac0ba83361e4b1d5181d2a441989ab17d50d63f`](https://github.com/joomengine/architecture/tree/7ac0ba83361e4b1d5181d2a441989ab17d50d63f), inspected 31 October 2026. The live article manifest reported the same source revision and 62 articles. Publication edition numbers are not JCB or Joomla software versions.
 
@@ -50,7 +50,7 @@ Super Powers contain reusable class definitions. Joomla Powers contain platform-
 
 ## Adding the next operational module
 
-Follow [the module authoring standard](../standards/module-authoring.md). Select the architecture articles relevant to the new module, inspect its real handlers and specimens, and author its own contract and workflows. Do not duplicate the entire architecture publication or mechanically rename the Super Powers files. Add the new module to the root routing and module registry only with an accurate coverage status. This architecture map is a reference bridge; it does not claim that every topic above already has a complete operational module in `ai-doc`.
+Follow [the module authoring standard](../standards/module-authoring.md). Select the architecture articles relevant to the new module, inspect its real handlers and specimens, and author its own contract and workflows. Do not duplicate the entire architecture publication or mechanically rename the Super Powers files. Add the new module to the root routing and module registry only with an accurate coverage status. This architecture map is a reference bridge; it does not claim that every topic above already has a complete operational module in `skills`.
 
 ## Updating this map
 
