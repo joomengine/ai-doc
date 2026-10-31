@@ -24,6 +24,14 @@ Operational documentation for agents working across the **Joomla Component Build
 
 Reuse is a design decision, not a requirement to inherit from an unsuitable class. Preserve cohesive responsibilities, dependency injection, established public contracts, and portable Power metadata. Shared foundational changes require review of their consumers.
 
+## Official core entity catalogues
+
+[`joomengine/joomla-fieldtypes`](https://github.com/joomengine/joomla-fieldtypes) is the official core Field Types repository. [`joomengine/snippets`](https://github.com/joomengine/snippets) is the official core Snippets repository. Additional repositories can extend those catalogues or intentionally override the same existing items.
+
+Every repository must account for its domain's current core catalogue when allocating a new GUID, as well as additional configured catalogues and local unpublished records. Preserve the original GUID when improving or overriding the same item; generate a fresh collision-checked identity for a distinct new item. Retain source provenance and effective repository order so intentional overrides are visible rather than silently replacing unrelated definitions.
+
+These are different entity formats. A Field Type describes the foundation and configurable properties of concrete fields; a Snippet supplies reusable source content. Use the relevant module's contract instead of copying Super Power file layouts or settings into them.
+
 ## How to use the documentation efficiently
 
 Read the module entry point, the contract sections relevant to the change, and its workflow. Follow source links when a claim depends on version-specific behaviour or when evidence has changed. Use examples to understand the format; do not copy their identities into new powers.
