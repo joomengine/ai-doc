@@ -16,6 +16,7 @@ The implementation baseline is the inspected JCB `6.x` revision, with a comparis
 | Create a repository from nothing | [Create a repository](workflows/create-repository.md) |
 | Add a new class, interface, trait, or abstraction | [Create a power](workflows/create-power.md) |
 | Fix, extend, or debug an existing power | [Maintain and debug](workflows/maintain-and-debug.md) |
+| Improve performance or grow a Power subsystem | [Scaling and performance](workflows/maintain-and-debug.md#scaling-and-performance), then [shared-contract evolution](workflows/evolve-shared-contracts.md) |
 | Change a shared interface or foundational class | [Evolve shared contracts](workflows/evolve-shared-contracts.md) |
 | Verify a change from metadata through JCB | [Validation and integration](workflows/validate-and-integrate.md) |
 | Choose an existing dependency | [Reuse and dependency policy](reuse-and-dependencies.md) |

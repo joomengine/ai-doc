@@ -1,0 +1,99 @@
+{
+  "version": 1,
+  "purpose": "Discovery and mandatory collision-check baseline for Super Power maintenance. This is not a complete universe of all JCB Power repositories.",
+  "ordering": "Listed in the order supplied by the project owner. Runtime resolution must use the consuming JCB installation's configured order, including authorized additional repositories.",
+  "identity_policy": "Preserve existing GUIDs. For a genuinely new power, generate UUIDv4 with a cryptographically secure generator and check current registered indexes, task-specific indexes, and local uncommitted additions. Example identities are reserved fixtures and must not be reused.",
+  "repositories": [
+    {
+      "id": "joomengine/super-powers",
+      "url": "https://github.com/joomengine/super-powers.git",
+      "branch": "master",
+      "index": "super-powers.json",
+      "role": "shared-foundation",
+      "description": "Central shared foundation and reference standard for JCB-owned reusable classes, interfaces, abstractions, utilities and service providers. Search this after Joomla core/framework and before specialist implementations.",
+      "inspection": {
+        "checked_at": "2026-10-31",
+        "commit": "9cd980492bed4c8177a6e32b703641950ec93604",
+        "index_count": 187
+      }
+    },
+    {
+      "id": "joomengine/search",
+      "url": "https://github.com/joomengine/search.git",
+      "branch": "master",
+      "index": "super-powers.json",
+      "role": "specialist",
+      "description": "Search and replacement infrastructure expressed as Super Powers.",
+      "inspection": {
+        "checked_at": "2026-10-31",
+        "commit": "b1335ddfd6149c95f6037d3d64459334cd0f5bd7",
+        "index_count": 24
+      }
+    },
+    {
+      "id": "joomengine/psr",
+      "url": "https://github.com/joomengine/psr.git",
+      "branch": "master",
+      "index": "super-powers.json",
+      "role": "standards-adaptation",
+      "description": "PSR-related contracts represented as Super Powers; preserve upstream attribution and semantics.",
+      "inspection": {
+        "checked_at": "2026-10-31",
+        "commit": "451da5e55ec5ea3a26b7ec44cfe2ec141cc42fd8",
+        "index_count": 1
+      }
+    },
+    {
+      "id": "joomengine/phpseclib",
+      "url": "https://github.com/joomengine/phpseclib.git",
+      "branch": "master",
+      "index": "super-powers.json",
+      "role": "specialist",
+      "description": "Cryptography and file-transfer integration, including Composer-backed phpseclib wrappers.",
+      "inspection": {
+        "checked_at": "2026-10-31",
+        "commit": "77dce1558dbb8b003629d06b7ebb0950f386e2e0",
+        "index_count": 14
+      }
+    },
+    {
+      "id": "joomengine/openai",
+      "url": "https://github.com/joomengine/openai.git",
+      "branch": "master",
+      "index": "super-powers.json",
+      "role": "specialist",
+      "description": "OpenAI client, service providers, endpoint classes and utilities. Existing specimens demonstrate structure, not endorsement of current API coverage.",
+      "inspection": {
+        "checked_at": "2026-10-31",
+        "commit": "96e575e55fd66d8d190c65e6e1de1e7c4577d29d",
+        "index_count": 17
+      }
+    },
+    {
+      "id": "joomengine/gitea",
+      "url": "https://github.com/joomengine/gitea.git",
+      "branch": "master",
+      "index": "super-powers.json",
+      "role": "specialist",
+      "description": "Gitea client, endpoint classes, service providers and utilities.",
+      "inspection": {
+        "checked_at": "2026-10-31",
+        "commit": "6f94a230be9c7ce93f773bb6d1de9dbf147fba5a",
+        "index_count": 114
+      }
+    },
+    {
+      "id": "joomengine/minify",
+      "url": "https://github.com/joomengine/minify.git",
+      "branch": "master",
+      "index": "super-powers.json",
+      "role": "upstream-adaptation",
+      "description": "Minification and path-conversion powers adapted from upstream projects; preserve their licensing and compatibility.",
+      "inspection": {
+        "checked_at": "2026-10-31",
+        "commit": "8c33c85f6fa22eceb4a1ed0990fa63769fe8ec08",
+        "index_count": 9
+      }
+    }
+  ]
+}
