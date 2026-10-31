@@ -1,0 +1,13 @@
+{
+    "25a2c706-36eb-49ec-bbbb-be8218b101e1": {
+        "name": "IntegerInterval",
+        "type": "final class",
+        "namespace": "VDM\\Joomla\\AiDocExample",
+        "code": "src/25a2c706-36eb-49ec-bbbb-be8218b101e1/code.php",
+        "power": "src/25a2c706-36eb-49ec-bbbb-be8218b101e1/code.power",
+        "settings": "src/25a2c706-36eb-49ec-bbbb-be8218b101e1/settings.json",
+        "path": "src/25a2c706-36eb-49ec-bbbb-be8218b101e1",
+        "spk": "Super---25a2c706_36eb_49ec_bbbb_be8218b101e1---Power",
+        "guid": "25a2c706-36eb-49ec-bbbb-be8218b101e1"
+    }
+}
