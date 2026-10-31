@@ -1,0 +1,9 @@
+{
+  "58d75b15-b4d8-4192-a8a7-19fac5881b0b": {
+    "name": "Previewedtext@",
+    "path": "src/58d75b15-b4d8-4192-a8a7-19fac5881b0b",
+    "settings": "src/58d75b15-b4d8-4192-a8a7-19fac5881b0b/item.json",
+    "guid": "58d75b15-b4d8-4192-a8a7-19fac5881b0b",
+    "desc": "Fixture: reuse Joomla TextField and append an escaped preview."
+  }
+}
