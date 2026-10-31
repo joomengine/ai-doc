@@ -18,7 +18,7 @@ The agent also prepared an intentional same-item override of an existing core sn
 
 ## Repeatable checks
 
-The final local run passed 34 existing Power regression checks plus 41 Field Type/Snippet checks (**75 total**), documentation/registry checks and ShellCheck. The independent review's 22-case negative matrix also passed after its two findings were corrected. All 393 current core snippet/type records passed the static authoring profile, with the two external library GUIDs explicitly reported as unverified. The PHP-enabled combined run used PHP 8.3.6; no snippet runtime is inferred from that environment.
+The final local run passed 34 existing Power regression checks plus 41 Field Type/Snippet checks (**75 total**), documentation/registry checks and ShellCheck. The combined checks passed with both jq 1.7 and 1.8.1 after correcting a Snippet filter binding exposed by CI. The independent review's 22-case negative matrix also passed after its two findings were corrected. All 393 current core snippet/type records passed the static authoring profile, with the two external library GUIDs explicitly reported as unverified. The PHP-enabled combined run used PHP 8.3.6; no snippet runtime is inferred from that environment.
 
 From the documentation repository root:
 
