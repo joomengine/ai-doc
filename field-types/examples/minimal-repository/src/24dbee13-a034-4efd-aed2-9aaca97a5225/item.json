@@ -1,0 +1,105 @@
+{
+  "name": "Text",
+  "store": 0,
+  "null_switch": "NOT NULL",
+  "indexes": "0",
+  "datadefault_other": "",
+  "datadefault": "",
+  "short_description": "Fixture: a researched text-field catalogue profile.",
+  "datatype": "VARCHAR",
+  "has_defaults": 1,
+  "properties": {
+    "properties0": {
+      "name": "type",
+      "example": "text",
+      "mandatory": "1",
+      "description": "Use the Joomla core text field; this profile does not install a new PHP class."
+    },
+    "properties1": {
+      "name": "name",
+      "example": "sample_title",
+      "adjustable": "1",
+      "mandatory": "1",
+      "description": "Choose the concrete field name for this use."
+    },
+    "properties2": {
+      "name": "label",
+      "example": "Example title",
+      "adjustable": "1",
+      "mandatory": "1",
+      "translatable": "1",
+      "description": "Display label; JCB can create the corresponding component language string."
+    },
+    "properties3": {
+      "name": "description",
+      "example": "Enter a short title for this example.",
+      "adjustable": "1",
+      "translatable": "1",
+      "description": "Optional help text for the concrete field."
+    },
+    "properties4": {
+      "name": "size",
+      "example": "30",
+      "adjustable": "1",
+      "description": "Suggested visible size; neither a storage length nor a Joomla default."
+    },
+    "properties5": {
+      "name": "maxlength",
+      "example": "120",
+      "adjustable": "1",
+      "description": "Suggested browser input length; verify independent server validation and SQL capacity."
+    },
+    "properties6": {
+      "name": "charcounter",
+      "example": "true",
+      "adjustable": "1",
+      "description": "Enable the Joomla 6.2.0 text-layout counter; false is the omitted core setting."
+    },
+    "properties7": {
+      "name": "default",
+      "example": "",
+      "adjustable": "1",
+      "description": "Optional initial form value, distinct from the database default."
+    },
+    "properties8": {
+      "name": "required",
+      "example": "true",
+      "adjustable": "1",
+      "description": "A suggested concrete field requirement, not a mandatory setting for all text fields."
+    },
+    "properties9": {
+      "name": "readonly",
+      "example": "false",
+      "adjustable": "1",
+      "description": "Controls editing; it does not force the default value to replace bound data."
+    },
+    "properties10": {
+      "name": "disabled",
+      "example": "false",
+      "adjustable": "1",
+      "description": "Controls disabled rendering; disabled browser inputs are not submitted."
+    },
+    "properties11": {
+      "name": "class",
+      "example": "",
+      "adjustable": "1",
+      "description": "Optional additional classes; the Joomla 6.2.0 default text layout itself supplies form-control."
+    },
+    "properties12": {
+      "name": "autocomplete",
+      "example": "off",
+      "adjustable": "1",
+      "description": "An explicit field choice; omission leaves no autocomplete attribute after ordinary setup and rendering."
+    },
+    "properties13": {
+      "name": "filter",
+      "example": "STRING",
+      "adjustable": "1",
+      "description": "Explicit server filtering choice. Confirm required semantics with the target Joomla filter implementation."
+    }
+  },
+  "description": "Original documentation fixture showing a complete Field Type repository item and selected, researched Joomla text attributes. The profile examples are authoring suggestions. They are not claims about Joomla defaults or a universal storage policy. Reuse the official Text identity for real same-item improvements.",
+  "datalenght": "Other",
+  "datalenght_other": "128",
+  "guid": "24dbee13-a034-4efd-aed2-9aaca97a5225"
+}

@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "purpose": "Discovery and mandatory identity-check baseline for JCB Field Type repositories. The official core catalogue must always participate when allocating a new Field Type GUID.",
+  "ordering": "The default baseline lists the official core repository. For lookup, preserve the consuming JCB installation's configured order, including authorized forks and additional catalogues. Earlier occurrences can shadow the same GUID in later repositories. Collision checks inspect every occurrence regardless of lookup order.",
+  "identity_policy": "Preserve GUIDs when improving or intentionally overriding the same Field Type. Allocate a cryptographically generated UUIDv4 only for a genuinely new definition; check the current official core index, every task-specific catalogue, and local additions. Fixture identifiers must never be reused in production.",
+  "repositories": [
+    {
+      "id": "joomengine/joomla-fieldtypes",
+      "url": "https://github.com/joomengine/joomla-fieldtypes.git",
+      "branch": "master",
+      "index": "index.json",
+      "role": "official-core-field-types",
+      "core": true,
+      "required_for_collision_check": true,
+      "description": "Official JCB core Field Type catalogue. Consult it before adding a type, retain existing identities for same-item improvements, and include its current index in every new-identity check. Additional repositories can extend or intentionally override this catalogue without replacing its baseline role.",
+      "inspection": {
+        "checked_at": "2026-10-31",
+        "commit": "3be64d59378b5650825b97b44dbd58f2cdb82fcb",
+        "index_count": 49
+      }
+    }
+  ]
+}

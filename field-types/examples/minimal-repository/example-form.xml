@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="example">
+		<field
+			name="sample_title"
+			type="text"
+			label="Example title"
+			description="Enter a short title for this example."
+			size="30"
+			maxlength="120"
+			charcounter="true"
+			required="true"
+			readonly="false"
+			disabled="false"
+			autocomplete="off"
+			filter="STRING"
+		/>
+	</fieldset>
+</form>
