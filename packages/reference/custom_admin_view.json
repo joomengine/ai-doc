@@ -1,0 +1,3590 @@
+{
+    "entity": "custom_admin_view",
+    "kind": "database",
+    "config_sources": [
+        {
+            "class": "CustomAdminView",
+            "path": "libraries/vendor_jcb/VDM.Joomla/src/Componentbuilder/Package/CustomAdminView/Remote/Config.php",
+            "url": "https://github.com/vdm-io/Joomla-Component-Builder/blob/408703a857ad937479b1e28de7f693af178dcc83/libraries/vendor_jcb/VDM.Joomla/src/Componentbuilder/Package/CustomAdminView/Remote/Config.php",
+            "sha256": "06fc1b69178d8526500838dfa1aee6f7d7ecb3e7e849dfabf53891b8a69cca5b"
+        }
+    ],
+    "config": {
+        "area": "Custom Admin View",
+        "prefix_key": "",
+        "suffix_key": "",
+        "main_readme_path": "README_CUSTOM_ADMIN_VIEWS.md",
+        "item_readme_name": "README.md",
+        "index_path": "index/custom-admin-view.json",
+        "src_path": "src/custom_admin_view",
+        "settings_name": "item.json",
+        "guid_field": "guid",
+        "guid_helper_field": null,
+        "ignore": [
+            "access"
+        ],
+        "files": [
+            "icon"
+        ],
+        "folders": [],
+        "map": [],
+        "children": [],
+        "index_map": {
+            "name": "index_map_IndexName",
+            "desc": "index_map_ShortDescription",
+            "path": "index_map_IndexPath",
+            "settings": "index_map_IndexSettingsPath",
+            "guid": "index_map_IndexGUID"
+        },
+        "index_header": [
+            "name",
+            "desc",
+            "path",
+            "settings",
+            "guid",
+            "local"
+        ],
+        "placeholders": [],
+        "table": "custom_admin_view"
+    },
+    "identity_kind": "guid",
+    "table_source": {
+        "path": "libraries/vendor_jcb/VDM.Joomla/src/Componentbuilder/Table.php",
+        "url": "https://github.com/vdm-io/Joomla-Component-Builder/blob/408703a857ad937479b1e28de7f693af178dcc83/libraries/vendor_jcb/VDM.Joomla/src/Componentbuilder/Table.php",
+        "sha256": "630abb56cb664be947f45f08f8812af136402d50bcc2c0feec5702b9e870b573"
+    },
+    "form_source": {
+        "path": "admin/forms/custom_admin_view.xml",
+        "url": "https://github.com/vdm-io/Joomla-Component-Builder/blob/408703a857ad937479b1e28de7f693af178dcc83/admin/forms/custom_admin_view.xml",
+        "sha256": "ae11483af1855446b837abbcd047d8fa37908db32a453797a5baa79e85c1957a"
+    },
+    "fields": {
+        "system_name": {
+            "table_metadata": {
+                "name": "system_name",
+                "guid": "acfe906b-6e61-4f94-ae66-359e4bc3e4cc",
+                "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_SYSTEM_NAME_LABEL",
+                "type": "text",
+                "title": false,
+                "list": "custom_admin_views",
+                "store": null,
+                "tab_name": "Details",
+                "db": {
+                    "type": "VARCHAR(255)",
+                    "default": "",
+                    "GUID": "acfe906b-6e61-4f94-ae66-359e4bc3e4cc",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "system_name",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "text",
+                        "name": "system_name",
+                        "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_SYSTEM_NAME_LABEL",
+                        "size": "10",
+                        "maxlength": "50",
+                        "default": "",
+                        "description": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_SYSTEM_NAME_DESCRIPTION",
+                        "class": "text_area",
+                        "filter": "STRING",
+                        "message": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_SYSTEM_NAME_MESSAGE",
+                        "hint": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_SYSTEM_NAME_HINT"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "name": {
+            "table_metadata": {
+                "name": "name",
+                "guid": "5d3d34dd-4876-4c6a-86ab-b4e162f22c08",
+                "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_NAME_LABEL",
+                "type": "text",
+                "title": true,
+                "list": "custom_admin_views",
+                "store": null,
+                "tab_name": "Details",
+                "db": {
+                    "type": "VARCHAR(255)",
+                    "default": "",
+                    "GUID": "5d3d34dd-4876-4c6a-86ab-b4e162f22c08",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": null
+            },
+            "config_map_target": "name",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "text",
+                        "name": "name",
+                        "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_NAME_LABEL",
+                        "size": "40",
+                        "maxlength": "150",
+                        "description": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_NAME_DESCRIPTION",
+                        "class": "text_area",
+                        "readonly": "false",
+                        "disabled": "false",
+                        "required": "true",
+                        "filter": "STRING",
+                        "message": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_NAME_MESSAGE",
+                        "hint": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_NAME_HINT"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "description": {
+            "table_metadata": {
+                "name": "description",
+                "guid": "a5ef0756-5ecd-49ae-a36c-058b90758988",
+                "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_DESCRIPTION_LABEL",
+                "type": "text",
+                "title": false,
+                "list": "custom_admin_views",
+                "store": null,
+                "tab_name": "Details",
+                "db": {
+                    "type": "VARCHAR(255)",
+                    "default": "",
+                    "GUID": "a5ef0756-5ecd-49ae-a36c-058b90758988",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "description",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "text",
+                        "name": "description",
+                        "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_DESCRIPTION_LABEL",
+                        "size": "80",
+                        "maxlength": "150",
+                        "description": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_DESCRIPTION_DESCRIPTION",
+                        "class": "text_area",
+                        "readonly": "false",
+                        "disabled": "false",
+                        "required": "true",
+                        "filter": "STRING",
+                        "message": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_DESCRIPTION_MESSAGE",
+                        "hint": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_DESCRIPTION_HINT"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "main_get": {
+            "table_metadata": {
+                "name": "main_get",
+                "guid": "18b26be8-1651-4ac3-b8a0-6598e302b192",
+                "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_MAIN_GET_LABEL",
+                "type": "ModalSelect",
+                "title": false,
+                "list": "custom_admin_views",
+                "store": null,
+                "tab_name": "Details",
+                "db": {
+                    "type": "VARCHAR(36)",
+                    "default": "",
+                    "GUID": "18b26be8-1651-4ac3-b8a0-6598e302b192",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": {
+                    "type": 1,
+                    "table": "#__componentbuilder_dynamic_get",
+                    "component": "com_componentbuilder",
+                    "entity": "dynamic_get",
+                    "value": "name",
+                    "key": "guid"
+                }
+            },
+            "config_map_target": "main_get",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "ModalSelect",
+                        "name": "main_get",
+                        "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_MAIN_GET_LABEL",
+                        "sql_title_table": "#__componentbuilder_dynamic_get",
+                        "sql_title_column": "name",
+                        "data-key-name": "guid",
+                        "sql_title_key": "guid",
+                        "urlSelect": "index.php?option=com_componentbuilder&view=dynamic_gets&layout=modal&tmpl=component&titleKey=guid&filter[getgroup]=main",
+                        "urlNew": "index.php?option=com_componentbuilder&task=dynamic_get.add&layout=modal&tmpl=component",
+                        "urlEdit": "index.php?option=com_componentbuilder&task=dynamic_get.edit&guid={id}&layout=modal&tmpl=component&titleKey=guid",
+                        "titleSelect": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_MAIN_GET_TITLESELECT",
+                        "titleEdit": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_MAIN_GET_TITLEEDIT",
+                        "iconSelect": "icon-copy",
+                        "select": "true",
+                        "new": "false",
+                        "edit": "true",
+                        "clear": "true",
+                        "required": "true",
+                        "class": "input-large",
+                        "description": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_MAIN_GET_DESCRIPTION"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "add_php_view": {
+            "table_metadata": {
+                "name": "add_php_view",
+                "guid": "8b09aaf9-546c-4f03-8b1f-3170ba4b5491",
+                "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_ADD_PHP_VIEW_LABEL",
+                "type": "radio",
+                "title": false,
+                "list": "custom_admin_views",
+                "store": null,
+                "tab_name": "PHP",
+                "db": {
+                    "type": "TINYINT(1)",
+                    "default": "0",
+                    "GUID": "8b09aaf9-546c-4f03-8b1f-3170ba4b5491",
+                    "null_switch": "NOT NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": null
+            },
+            "config_map_target": "add_php_view",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "radio",
+                        "name": "add_php_view",
+                        "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_ADD_PHP_VIEW_LABEL",
+                        "class": "btn-group btn-group-yesno",
+                        "default": "0",
+                        "required": "true"
+                    },
+                    "options": [
+                        {
+                            "attributes": {
+                                "value": "1"
+                            },
+                            "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_YES"
+                        },
+                        {
+                            "attributes": {
+                                "value": "0"
+                            },
+                            "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_NO"
+                        }
+                    ],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "javascript_file": {
+            "table_metadata": {
+                "name": "javascript_file",
+                "guid": "25c87995-f58f-4f6a-8f6b-2e462545bdd6",
+                "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_JAVASCRIPT_FILE_LABEL",
+                "type": "editor",
+                "title": false,
+                "list": "custom_admin_views",
+                "store": "base64",
+                "tab_name": "JavaScript & CSS",
+                "db": {
+                    "type": "TEXT",
+                    "default": "EMPTY",
+                    "GUID": "25c87995-f58f-4f6a-8f6b-2e462545bdd6",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "javascript_file",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "editor",
+                        "name": "javascript_file",
+                        "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_JAVASCRIPT_FILE_LABEL",
+                        "description": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_JAVASCRIPT_FILE_DESCRIPTION",
+                        "width": "100%",
+                        "height": "450px",
+                        "cols": "15",
+                        "rows": "30",
+                        "buttons": "no",
+                        "syntax": "javascript",
+                        "editor": "codemirror|none",
+                        "filter": "raw",
+                        "validate": "code"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "css_document": {
+            "table_metadata": {
+                "name": "css_document",
+                "guid": "fd03122f-8c74-468a-8f8c-704e927c3b65",
+                "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_CSS_DOCUMENT_LABEL",
+                "type": "editor",
+                "title": false,
+                "list": "custom_admin_views",
+                "store": "base64",
+                "tab_name": "JavaScript & CSS",
+                "db": {
+                    "type": "TEXT",
+                    "default": "EMPTY",
+                    "GUID": "fd03122f-8c74-468a-8f8c-704e927c3b65",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "css_document",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "editor",
+                        "name": "css_document",
+                        "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_CSS_DOCUMENT_LABEL",
+                        "description": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_CSS_DOCUMENT_DESCRIPTION",
+                        "width": "100%",
+                        "height": "450px",
+                        "cols": "15",
+                        "rows": "30",
+                        "buttons": "no",
+                        "syntax": "css",
+                        "editor": "codemirror|none",
+                        "filter": "raw",
+                        "validate": "code"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "view_toolbar": {
+            "table_metadata": {
+                "name": "view_toolbar",
+                "guid": "6049b666-d62b-4791-acd2-4ef414bf29f1",
+                "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_VIEW_TOOLBAR_LABEL",
+                "type": "editor",
+                "title": false,
+                "list": "custom_admin_views",
+                "store": "base64",
+                "tab_name": "Toolbar",
+                "db": {
+                    "type": "MEDIUMTEXT",
+                    "default": "EMPTY",
+                    "GUID": "6049b666-d62b-4791-acd2-4ef414bf29f1",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "view_toolbar",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "editor",
+                        "name": "view_toolbar",
+                        "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_VIEW_TOOLBAR_LABEL",
+                        "description": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_VIEW_TOOLBAR_DESCRIPTION",
+                        "width": "100%",
+                        "height": "450px",
+                        "cols": "15",
+                        "rows": "30",
+                        "buttons": "no",
+                        "syntax": "php",
+                        "editor": "codemirror|none",
+                        "filter": "raw",
+                        "validate": "code",
+                        "showon": "add_view_toolbar:1"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "js_document": {
+            "table_metadata": {
+                "name": "js_document",
+                "guid": "ccb3cb86-8403-4494-a284-ce1fb782f0af",
+                "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_JS_DOCUMENT_LABEL",
+                "type": "editor",
+                "title": false,
+                "list": "custom_admin_views",
+                "store": "base64",
+                "tab_name": "JavaScript & CSS",
+                "db": {
+                    "type": "TEXT",
+                    "default": "EMPTY",
+                    "GUID": "ccb3cb86-8403-4494-a284-ce1fb782f0af",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "js_document",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "editor",
+                        "name": "js_document",
+                        "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_JS_DOCUMENT_LABEL",
+                        "description": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_JS_DOCUMENT_DESCRIPTION",
+                        "width": "100%",
+                        "height": "450px",
+                        "cols": "15",
+                        "rows": "30",
+                        "buttons": "no",
+                        "syntax": "javascript",
+                        "editor": "codemirror|none",
+                        "filter": "raw",
+                        "validate": "code"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "default": {
+            "table_metadata": {
+                "name": "default",
+                "guid": "6e214a72-6c96-40c0-abf3-5f09116d3018",
+                "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_DEFAULT_LABEL",
+                "type": "editor",
+                "title": false,
+                "list": "custom_admin_views",
+                "store": "base64",
+                "tab_name": "Details",
+                "db": {
+                    "type": "MEDIUMTEXT",
+                    "default": "EMPTY",
+                    "GUID": "6e214a72-6c96-40c0-abf3-5f09116d3018",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "default",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "editor",
+                        "name": "default",
+                        "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_DEFAULT_LABEL",
+                        "description": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_DEFAULT_DESCRIPTION",
+                        "width": "100%",
+                        "height": "500px",
+                        "cols": "15",
+                        "rows": "30",
+                        "buttons": "no",
+                        "syntax": "html",
+                        "editor": "codemirror|none",
+                        "filter": "raw",
+                        "validate": "code"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "snippet": {
+            "table_metadata": {
+                "name": "snippet",
+                "guid": "fc4bc2f3-1a12-4484-88dc-273199fe3b63",
+                "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_SNIPPET_LABEL",
+                "type": "snippets",
+                "title": false,
+                "list": "custom_admin_views",
+                "store": null,
+                "tab_name": "Details",
+                "db": {
+                    "type": "VARCHAR(36)",
+                    "default": "",
+                    "GUID": "fc4bc2f3-1a12-4484-88dc-273199fe3b63",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": {
+                    "type": 1,
+                    "table": "#__componentbuilder_snippet",
+                    "component": "com_componentbuilder",
+                    "entity": "snippet",
+                    "value": "name",
+                    "key": "guid"
+                }
+            },
+            "config_map_target": "snippet",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "snippets",
+                        "name": "snippet",
+                        "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_SNIPPET_LABEL",
+                        "description": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_SNIPPET_DESCRIPTION",
+                        "class": "list_class",
+                        "layout": "joomla.form.field.list-fancy-select",
+                        "multiple": "false",
+                        "required": "false",
+                        "button": "true"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "icon": {
+            "table_metadata": {
+                "name": "icon",
+                "guid": "3b731d0a-3205-4409-a9fd-e74d1db25055",
+                "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_ICON_LABEL",
+                "type": "media",
+                "title": false,
+                "list": "custom_admin_views",
+                "store": null,
+                "tab_name": "Details",
+                "db": {
+                    "type": "VARCHAR(255)",
+                    "default": "",
+                    "GUID": "3b731d0a-3205-4409-a9fd-e74d1db25055",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "icon",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "media",
+                        "name": "icon",
+                        "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_ICON_LABEL",
+                        "description": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_ICON_DESCRIPTION"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "add_php_jview_display": {
+            "table_metadata": {
+                "name": "add_php_jview_display",
+                "guid": "32564da8-5599-4577-bd93-fd425179612f",
+                "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_ADD_PHP_JVIEW_DISPLAY_LABEL",
+                "type": "radio",
+                "title": false,
+                "list": "custom_admin_views",
+                "store": null,
+                "tab_name": "PHP",
+                "db": {
+                    "type": "TINYINT(1)",
+                    "default": "0",
+                    "GUID": "32564da8-5599-4577-bd93-fd425179612f",
+                    "null_switch": "NOT NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": null
+            },
+            "config_map_target": "add_php_jview_display",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "radio",
+                        "name": "add_php_jview_display",
+                        "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_ADD_PHP_JVIEW_DISPLAY_LABEL",
+                        "class": "btn-group btn-group-yesno",
+                        "default": "0",
+                        "required": "true"
+                    },
+                    "options": [
+                        {
+                            "attributes": {
+                                "value": "1"
+                            },
+                            "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_YES"
+                        },
+                        {
+                            "attributes": {
+                                "value": "0"
+                            },
+                            "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_NO"
+                        }
+                    ],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "context": {
+            "table_metadata": {
+                "name": "context",
+                "guid": "c7b20fcd-0849-49cc-84c2-0dbb73a19fda",
+                "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_CONTEXT_LABEL",
+                "type": "text",
+                "title": false,
+                "list": "custom_admin_views",
+                "store": null,
+                "tab_name": "Details",
+                "db": {
+                    "type": "VARCHAR(255)",
+                    "default": "",
+                    "GUID": "c7b20fcd-0849-49cc-84c2-0dbb73a19fda",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": null
+            },
+            "config_map_target": "context",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "text",
+                        "name": "context",
+                        "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_CONTEXT_LABEL",
+                        "size": "40",
+                        "maxlength": "50",
+                        "description": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_CONTEXT_DESCRIPTION",
+                        "class": "text_area",
+                        "filter": "WORD",
+                        "message": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_CONTEXT_MESSAGE",
+                        "hint": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_CONTEXT_HINT"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "add_php_jview": {
+            "table_metadata": {
+                "name": "add_php_jview",
+                "guid": "6ce6e81e-5cdf-4ea2-83b5-acde779f4297",
+                "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_ADD_PHP_JVIEW_LABEL",
+                "type": "radio",
+                "title": false,
+                "list": "custom_admin_views",
+                "store": null,
+                "tab_name": "PHP",
+                "db": {
+                    "type": "TINYINT(1)",
+                    "default": "0",
+                    "GUID": "6ce6e81e-5cdf-4ea2-83b5-acde779f4297",
+                    "null_switch": "NOT NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": null
+            },
+            "config_map_target": "add_php_jview",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "radio",
+                        "name": "add_php_jview",
+                        "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_ADD_PHP_JVIEW_LABEL",
+                        "class": "btn-group btn-group-yesno",
+                        "default": "0",
+                        "required": "true"
+                    },
+                    "options": [
+                        {
+                            "attributes": {
+                                "value": "1"
+                            },
+                            "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_YES"
+                        },
+                        {
+                            "attributes": {
+                                "value": "0"
+                            },
+                            "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_NO"
+                        }
+                    ],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "codename": {
+            "table_metadata": {
+                "name": "codename",
+                "guid": "83871f4f-e406-416a-845e-a8257a4a34d3",
+                "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_CODENAME_LABEL",
+                "type": "text",
+                "title": false,
+                "list": "custom_admin_views",
+                "store": null,
+                "tab_name": "Details",
+                "db": {
+                    "type": "VARCHAR(255)",
+                    "default": "",
+                    "GUID": "83871f4f-e406-416a-845e-a8257a4a34d3",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": null
+            },
+            "config_map_target": "codename",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "text",
+                        "name": "codename",
+                        "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_CODENAME_LABEL",
+                        "size": "80",
+                        "maxlength": "150",
+                        "default": "",
+                        "description": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_CODENAME_DESCRIPTION",
+                        "class": "text_area",
+                        "filter": "CMD",
+                        "message": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_CODENAME_MESSAGE",
+                        "hint": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_CODENAME_HINT"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "custom_get": {
+            "table_metadata": {
+                "name": "custom_get",
+                "guid": "bed7693b-ccd1-4803-b065-5e20fac13881",
+                "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_CUSTOM_GET_LABEL",
+                "type": "customgets",
+                "title": false,
+                "list": "custom_admin_views",
+                "store": "json",
+                "tab_name": "Details",
+                "db": {
+                    "type": "TEXT",
+                    "default": "EMPTY",
+                    "GUID": "bed7693b-ccd1-4803-b065-5e20fac13881",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": {
+                    "type": 1,
+                    "table": "#__componentbuilder_dynamic_get",
+                    "component": "com_componentbuilder",
+                    "entity": "dynamic_get",
+                    "value": "name",
+                    "key": "guid"
+                }
+            },
+            "config_map_target": "custom_get",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "customgets",
+                        "name": "custom_get",
+                        "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_CUSTOM_GET_LABEL",
+                        "description": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_CUSTOM_GET_DESCRIPTION",
+                        "layout": "joomla.form.field.list-fancy-select",
+                        "multiple": "true"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "object",
+                "array",
+                "string",
+                "number",
+                "boolean"
+            ]
+        },
+        "add_js_document": {
+            "table_metadata": {
+                "name": "add_js_document",
+                "guid": "f76ffc06-f4c9-417e-8584-bc2f65184d18",
+                "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_ADD_JS_DOCUMENT_LABEL",
+                "type": "radio",
+                "title": false,
+                "list": "custom_admin_views",
+                "store": null,
+                "tab_name": "JavaScript & CSS",
+                "db": {
+                    "type": "TINYINT(1)",
+                    "default": "0",
+                    "GUID": "f76ffc06-f4c9-417e-8584-bc2f65184d18",
+                    "null_switch": "NOT NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": null
+            },
+            "config_map_target": "add_js_document",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "radio",
+                        "name": "add_js_document",
+                        "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_ADD_JS_DOCUMENT_LABEL",
+                        "class": "btn-group btn-group-yesno",
+                        "default": "0",
+                        "required": "true"
+                    },
+                    "options": [
+                        {
+                            "attributes": {
+                                "value": "1"
+                            },
+                            "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_YES"
+                        },
+                        {
+                            "attributes": {
+                                "value": "0"
+                            },
+                            "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_NO"
+                        }
+                    ],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "css": {
+            "table_metadata": {
+                "name": "css",
+                "guid": "7d733ad8-a5bf-4e2f-859d-be1251b7d0f1",
+                "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_CSS_LABEL",
+                "type": "editor",
+                "title": false,
+                "list": "custom_admin_views",
+                "store": "base64",
+                "tab_name": "JavaScript & CSS",
+                "db": {
+                    "type": "TEXT",
+                    "default": "EMPTY",
+                    "GUID": "7d733ad8-a5bf-4e2f-859d-be1251b7d0f1",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "css",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "editor",
+                        "name": "css",
+                        "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_CSS_LABEL",
+                        "description": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_CSS_DESCRIPTION",
+                        "width": "100%",
+                        "height": "450px",
+                        "cols": "15",
+                        "rows": "30",
+                        "buttons": "no",
+                        "syntax": "css",
+                        "editor": "codemirror|none",
+                        "filter": "raw",
+                        "validate": "code"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "add_javascript_file": {
+            "table_metadata": {
+                "name": "add_javascript_file",
+                "guid": "075b5082-3fb1-46f1-a838-da558b3afb54",
+                "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_ADD_JAVASCRIPT_FILE_LABEL",
+                "type": "radio",
+                "title": false,
+                "list": "custom_admin_views",
+                "store": null,
+                "tab_name": "JavaScript & CSS",
+                "db": {
+                    "type": "TINYINT(1)",
+                    "default": "0",
+                    "GUID": "075b5082-3fb1-46f1-a838-da558b3afb54",
+                    "null_switch": "NOT NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": null
+            },
+            "config_map_target": "add_javascript_file",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "radio",
+                        "name": "add_javascript_file",
+                        "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_ADD_JAVASCRIPT_FILE_LABEL",
+                        "description": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_ADD_JAVASCRIPT_FILE_DESCRIPTION",
+                        "class": "btn-group btn-group-yesno",
+                        "default": "0",
+                        "required": "true"
+                    },
+                    "options": [
+                        {
+                            "attributes": {
+                                "value": "1"
+                            },
+                            "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_YES"
+                        },
+                        {
+                            "attributes": {
+                                "value": "0"
+                            },
+                            "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_NO"
+                        }
+                    ],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "php_ajaxmethod": {
+            "table_metadata": {
+                "name": "php_ajaxmethod",
+                "guid": "c731b5f5-5bd3-4ad3-ac3e-9e0281104121",
+                "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_PHP_AJAXMETHOD_LABEL",
+                "type": "editor",
+                "title": false,
+                "list": "custom_admin_views",
+                "store": "base64",
+                "tab_name": "PHP",
+                "db": {
+                    "type": "MEDIUMTEXT",
+                    "default": "EMPTY",
+                    "GUID": "c731b5f5-5bd3-4ad3-ac3e-9e0281104121",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "php_ajaxmethod",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "editor",
+                        "name": "php_ajaxmethod",
+                        "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_PHP_AJAXMETHOD_LABEL",
+                        "description": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_PHP_AJAXMETHOD_DESCRIPTION",
+                        "width": "100%",
+                        "height": "450px",
+                        "cols": "15",
+                        "rows": "30",
+                        "buttons": "no",
+                        "syntax": "php",
+                        "editor": "codemirror|none",
+                        "filter": "raw",
+                        "validate": "code"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "add_css_document": {
+            "table_metadata": {
+                "name": "add_css_document",
+                "guid": "4a8003fa-7458-405e-90d3-7728b1af9e86",
+                "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_ADD_CSS_DOCUMENT_LABEL",
+                "type": "radio",
+                "title": false,
+                "list": "custom_admin_views",
+                "store": null,
+                "tab_name": "JavaScript & CSS",
+                "db": {
+                    "type": "TINYINT(1)",
+                    "default": "0",
+                    "GUID": "4a8003fa-7458-405e-90d3-7728b1af9e86",
+                    "null_switch": "NOT NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": null
+            },
+            "config_map_target": "add_css_document",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "radio",
+                        "name": "add_css_document",
+                        "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_ADD_CSS_DOCUMENT_LABEL",
+                        "class": "btn-group btn-group-yesno",
+                        "default": "0",
+                        "required": "true"
+                    },
+                    "options": [
+                        {
+                            "attributes": {
+                                "value": "1"
+                            },
+                            "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_YES"
+                        },
+                        {
+                            "attributes": {
+                                "value": "0"
+                            },
+                            "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_NO"
+                        }
+                    ],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "add_php_document": {
+            "table_metadata": {
+                "name": "add_php_document",
+                "guid": "46fa9c1e-5aa3-41ff-8f02-e9a80252ad9f",
+                "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_ADD_PHP_DOCUMENT_LABEL",
+                "type": "radio",
+                "title": false,
+                "list": "custom_admin_views",
+                "store": null,
+                "tab_name": "PHP",
+                "db": {
+                    "type": "TINYINT(1)",
+                    "default": "0",
+                    "GUID": "46fa9c1e-5aa3-41ff-8f02-e9a80252ad9f",
+                    "null_switch": "NOT NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": null
+            },
+            "config_map_target": "add_php_document",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "radio",
+                        "name": "add_php_document",
+                        "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_ADD_PHP_DOCUMENT_LABEL",
+                        "class": "btn-group btn-group-yesno",
+                        "default": "0",
+                        "required": "true"
+                    },
+                    "options": [
+                        {
+                            "attributes": {
+                                "value": "1"
+                            },
+                            "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_YES"
+                        },
+                        {
+                            "attributes": {
+                                "value": "0"
+                            },
+                            "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_NO"
+                        }
+                    ],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "add_css": {
+            "table_metadata": {
+                "name": "add_css",
+                "guid": "14c857e3-e684-49a3-8b34-1cf7448ed0c4",
+                "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_ADD_CSS_LABEL",
+                "type": "radio",
+                "title": false,
+                "list": "custom_admin_views",
+                "store": null,
+                "tab_name": "JavaScript & CSS",
+                "db": {
+                    "type": "TINYINT(1)",
+                    "default": "0",
+                    "GUID": "14c857e3-e684-49a3-8b34-1cf7448ed0c4",
+                    "null_switch": "NOT NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": null
+            },
+            "config_map_target": "add_css",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "radio",
+                        "name": "add_css",
+                        "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_ADD_CSS_LABEL",
+                        "class": "btn-group btn-group-yesno",
+                        "default": "0",
+                        "required": "true"
+                    },
+                    "options": [
+                        {
+                            "attributes": {
+                                "value": "1"
+                            },
+                            "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_YES"
+                        },
+                        {
+                            "attributes": {
+                                "value": "0"
+                            },
+                            "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_NO"
+                        }
+                    ],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "libraries": {
+            "table_metadata": {
+                "name": "libraries",
+                "guid": "f17742b9-0096-4b03-b981-f0dcd3f7e8c1",
+                "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_LIBRARIES_LABEL",
+                "type": "libraries",
+                "title": false,
+                "list": "custom_admin_views",
+                "store": "json",
+                "tab_name": "Details",
+                "db": {
+                    "type": "TEXT",
+                    "default": "EMPTY",
+                    "GUID": "f17742b9-0096-4b03-b981-f0dcd3f7e8c1",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": {
+                    "type": 1,
+                    "table": "#__componentbuilder_library",
+                    "component": "com_componentbuilder",
+                    "entity": "library",
+                    "value": "name",
+                    "key": "guid"
+                }
+            },
+            "config_map_target": "libraries",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "libraries",
+                        "name": "libraries",
+                        "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_LIBRARIES_LABEL",
+                        "description": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_LIBRARIES_DESCRIPTION",
+                        "class": "list_class",
+                        "layout": "joomla.form.field.list-fancy-select",
+                        "multiple": "true",
+                        "default": "0",
+                        "required": "false",
+                        "button": "true"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "object",
+                "array",
+                "string",
+                "number",
+                "boolean"
+            ]
+        },
+        "add_php_ajax": {
+            "table_metadata": {
+                "name": "add_php_ajax",
+                "guid": "625b65cb-7569-437a-a6dd-b3290c662e18",
+                "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_ADD_PHP_AJAX_LABEL",
+                "type": "radio",
+                "title": false,
+                "list": "custom_admin_views",
+                "store": null,
+                "tab_name": "PHP",
+                "db": {
+                    "type": "TINYINT(1)",
+                    "default": "0",
+                    "GUID": "625b65cb-7569-437a-a6dd-b3290c662e18",
+                    "null_switch": "NOT NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": null
+            },
+            "config_map_target": "add_php_ajax",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "radio",
+                        "name": "add_php_ajax",
+                        "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_ADD_PHP_AJAX_LABEL",
+                        "class": "btn-group btn-group-yesno",
+                        "default": "0",
+                        "required": "true"
+                    },
+                    "options": [
+                        {
+                            "attributes": {
+                                "value": "1"
+                            },
+                            "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_YES"
+                        },
+                        {
+                            "attributes": {
+                                "value": "0"
+                            },
+                            "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_NO"
+                        }
+                    ],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "dynamic_get": {
+            "table_metadata": {
+                "name": "dynamic_get",
+                "guid": "c37aa662-719c-4ed5-bbf2-e36672a3ce33",
+                "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_DYNAMIC_GET_LABEL",
+                "type": "dynamicgets",
+                "title": false,
+                "list": "custom_admin_views",
+                "store": null,
+                "tab_name": "Details",
+                "db": {
+                    "type": "VARCHAR(36)",
+                    "default": "",
+                    "GUID": "c37aa662-719c-4ed5-bbf2-e36672a3ce33",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": {
+                    "type": 1,
+                    "table": "#__componentbuilder_dynamic_get",
+                    "component": "com_componentbuilder",
+                    "entity": "dynamic_get",
+                    "value": "name",
+                    "key": "guid"
+                }
+            },
+            "config_map_target": "dynamic_get",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "dynamicgets",
+                        "name": "dynamic_get",
+                        "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_DYNAMIC_GET_LABEL",
+                        "description": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_DYNAMIC_GET_DESCRIPTION",
+                        "layout": "joomla.form.field.list-fancy-select",
+                        "multiple": "false",
+                        "required": "false"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "ajax_input": {
+            "table_metadata": {
+                "name": "ajax_input",
+                "guid": "e407f6f1-e4e9-4f23-a8c7-8ad75e14a820",
+                "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_AJAX_INPUT_LABEL",
+                "type": "subform",
+                "title": false,
+                "list": "custom_admin_views",
+                "store": "json",
+                "tab_name": "PHP",
+                "db": {
+                    "type": "TEXT",
+                    "default": "EMPTY",
+                    "GUID": "e407f6f1-e4e9-4f23-a8c7-8ad75e14a820",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null,
+                "fields": {
+                    "value_name": {
+                        "name": "value_name",
+                        "type": "text",
+                        "link": null
+                    },
+                    "task_name": {
+                        "name": "task_name",
+                        "type": "text",
+                        "link": null
+                    },
+                    "input_default": {
+                        "name": "input_default",
+                        "type": "text",
+                        "link": null
+                    },
+                    "input_filter": {
+                        "name": "input_filter",
+                        "type": "list",
+                        "link": null
+                    },
+                    "method_name": {
+                        "name": "method_name",
+                        "type": "text",
+                        "link": null
+                    },
+                    "allow_zero": {
+                        "name": "allow_zero",
+                        "type": "checkbox",
+                        "link": null
+                    },
+                    "user_check": {
+                        "name": "user_check",
+                        "type": "checkbox",
+                        "link": null
+                    }
+                }
+            },
+            "config_map_target": "ajax_input",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "subform",
+                        "name": "ajax_input",
+                        "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_AJAX_INPUT_LABEL",
+                        "layout": "joomla.form.field.subform.repeatable-table",
+                        "multiple": "true",
+                        "icon": "list"
+                    },
+                    "options": [],
+                    "nested_fields": [
+                        {
+                            "attributes": {
+                                "type": "text",
+                                "name": "value_name",
+                                "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_VALUE_NAME_LABEL",
+                                "size": "40",
+                                "maxlength": "150",
+                                "description": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_VALUE_NAME_DESCRIPTION",
+                                "class": "text_area",
+                                "readonly": "false",
+                                "disabled": "false",
+                                "required": "true",
+                                "filter": "STRING",
+                                "message": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_VALUE_NAME_MESSAGE",
+                                "hint": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_VALUE_NAME_HINT"
+                            },
+                            "options": [],
+                            "nested_fields": []
+                        },
+                        {
+                            "attributes": {
+                                "type": "text",
+                                "name": "task_name",
+                                "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_TASK_NAME_LABEL",
+                                "size": "40",
+                                "maxlength": "150",
+                                "description": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_TASK_NAME_DESCRIPTION",
+                                "class": "text_area",
+                                "readonly": "false",
+                                "disabled": "false",
+                                "required": "true",
+                                "filter": "WORD",
+                                "message": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_TASK_NAME_MESSAGE",
+                                "hint": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_TASK_NAME_HINT"
+                            },
+                            "options": [],
+                            "nested_fields": []
+                        },
+                        {
+                            "attributes": {
+                                "type": "text",
+                                "name": "input_default",
+                                "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_INPUT_DEFAULT_LABEL",
+                                "size": "40",
+                                "maxlength": "150",
+                                "default": "NULL",
+                                "description": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_INPUT_DEFAULT_DESCRIPTION",
+                                "class": "text_area",
+                                "readonly": "false",
+                                "disabled": "false",
+                                "required": "true",
+                                "filter": "STRING",
+                                "message": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_INPUT_DEFAULT_MESSAGE",
+                                "hint": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_INPUT_DEFAULT_HINT"
+                            },
+                            "options": [],
+                            "nested_fields": []
+                        },
+                        {
+                            "attributes": {
+                                "type": "list",
+                                "name": "input_filter",
+                                "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_INPUT_FILTER_LABEL",
+                                "description": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_INPUT_FILTER_DESCRIPTION",
+                                "class": "list_class",
+                                "multiple": "false",
+                                "filter": "ALNUM",
+                                "required": "true",
+                                "default": "INT"
+                            },
+                            "options": [
+                                {
+                                    "attributes": {
+                                        "value": "INT"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_INT"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "UINT"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_UINT"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "FLOAT"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_FLOAT"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "BOOLEAN"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_BOOLEAN"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "WORD"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_WORD"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "ALNUM"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_ALNUM"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "CMD"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_CMD"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "BASE64"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_BASE64"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "STRING"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_STRING"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "HTML"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_HTML"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "ARRAY"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_ARRAY"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "PATH"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_PATH"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "USERNAME"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_USERNAME"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "RAW"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_RAW"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "unknown"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_UNKNOWN"
+                                }
+                            ],
+                            "nested_fields": []
+                        },
+                        {
+                            "attributes": {
+                                "type": "text",
+                                "name": "method_name",
+                                "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_METHOD_NAME_LABEL",
+                                "size": "40",
+                                "maxlength": "150",
+                                "default": "getValueNow",
+                                "description": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_METHOD_NAME_DESCRIPTION",
+                                "class": "text_area",
+                                "readonly": "false",
+                                "disabled": "false",
+                                "required": "true",
+                                "filter": "WORD",
+                                "message": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_METHOD_NAME_MESSAGE",
+                                "hint": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_METHOD_NAME_HINT"
+                            },
+                            "options": [],
+                            "nested_fields": []
+                        },
+                        {
+                            "attributes": {
+                                "type": "checkbox",
+                                "name": "allow_zero",
+                                "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_ALLOW_ZERO_LABEL",
+                                "value": "1",
+                                "description": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_ALLOW_ZERO_DESCRIPTION",
+                                "class": "inputbox"
+                            },
+                            "options": [],
+                            "nested_fields": []
+                        },
+                        {
+                            "attributes": {
+                                "type": "checkbox",
+                                "name": "user_check",
+                                "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_USER_CHECK_LABEL",
+                                "value": "1",
+                                "default": "1",
+                                "description": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_USER_CHECK_DESCRIPTION",
+                                "class": "inputbox"
+                            },
+                            "options": [],
+                            "nested_fields": []
+                        }
+                    ]
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "object",
+                "array",
+                "string"
+            ]
+        },
+        "php_document": {
+            "table_metadata": {
+                "name": "php_document",
+                "guid": "e4d3c22b-1297-450b-8108-c389f834e354",
+                "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_PHP_DOCUMENT_LABEL",
+                "type": "editor",
+                "title": false,
+                "list": "custom_admin_views",
+                "store": "base64",
+                "tab_name": "PHP",
+                "db": {
+                    "type": "MEDIUMTEXT",
+                    "default": "EMPTY",
+                    "GUID": "e4d3c22b-1297-450b-8108-c389f834e354",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "php_document",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "editor",
+                        "name": "php_document",
+                        "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_PHP_DOCUMENT_LABEL",
+                        "description": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_PHP_DOCUMENT_DESCRIPTION",
+                        "width": "100%",
+                        "height": "450px",
+                        "cols": "15",
+                        "rows": "50",
+                        "buttons": "no",
+                        "syntax": "php",
+                        "editor": "codemirror|none",
+                        "filter": "raw",
+                        "validate": "code"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "add_custom_button": {
+            "table_metadata": {
+                "name": "add_custom_button",
+                "guid": "ab222d85-e408-44de-a513-d6aeda48b286",
+                "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_ADD_CUSTOM_BUTTON_LABEL",
+                "type": "radio",
+                "title": false,
+                "list": "custom_admin_views",
+                "store": null,
+                "tab_name": "Toolbar",
+                "db": {
+                    "type": "INT(1)",
+                    "default": "0",
+                    "GUID": "ab222d85-e408-44de-a513-d6aeda48b286",
+                    "null_switch": "NOT NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": null
+            },
+            "config_map_target": "add_custom_button",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "radio",
+                        "name": "add_custom_button",
+                        "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_ADD_CUSTOM_BUTTON_LABEL",
+                        "class": "btn-group btn-group-yesno",
+                        "default": "0",
+                        "required": "true"
+                    },
+                    "options": [
+                        {
+                            "attributes": {
+                                "value": "1"
+                            },
+                            "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_YES"
+                        },
+                        {
+                            "attributes": {
+                                "value": "0"
+                            },
+                            "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_NO"
+                        }
+                    ],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "php_view": {
+            "table_metadata": {
+                "name": "php_view",
+                "guid": "e27df414-cf8a-45c3-bc38-cc48e6146fef",
+                "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_PHP_VIEW_LABEL",
+                "type": "editor",
+                "title": false,
+                "list": "custom_admin_views",
+                "store": "base64",
+                "tab_name": "PHP",
+                "db": {
+                    "type": "MEDIUMTEXT",
+                    "default": "EMPTY",
+                    "GUID": "e27df414-cf8a-45c3-bc38-cc48e6146fef",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "php_view",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "editor",
+                        "name": "php_view",
+                        "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_PHP_VIEW_LABEL",
+                        "description": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_PHP_VIEW_DESCRIPTION",
+                        "width": "100%",
+                        "height": "450px",
+                        "cols": "15",
+                        "rows": "30",
+                        "buttons": "no",
+                        "syntax": "php",
+                        "editor": "codemirror|none",
+                        "filter": "raw",
+                        "validate": "code"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "custom_button": {
+            "table_metadata": {
+                "name": "custom_button",
+                "guid": "f962e778-623e-40a8-b7db-88df71fdac51",
+                "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_CUSTOM_BUTTON_LABEL",
+                "type": "subform",
+                "title": false,
+                "list": "custom_admin_views",
+                "store": "json",
+                "tab_name": "Toolbar",
+                "db": {
+                    "type": "TEXT",
+                    "default": "EMPTY",
+                    "GUID": "f962e778-623e-40a8-b7db-88df71fdac51",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null,
+                "fields": {
+                    "icomoon": {
+                        "name": "icomoon",
+                        "type": "list",
+                        "link": null
+                    },
+                    "name": {
+                        "name": "name",
+                        "type": "text",
+                        "link": null
+                    },
+                    "method": {
+                        "name": "method",
+                        "type": "text",
+                        "link": null
+                    },
+                    "target": {
+                        "name": "target",
+                        "type": "list",
+                        "link": null
+                    },
+                    "type": {
+                        "name": "type",
+                        "type": "list",
+                        "link": null
+                    }
+                }
+            },
+            "config_map_target": "custom_button",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "subform",
+                        "name": "custom_button",
+                        "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_CUSTOM_BUTTON_LABEL",
+                        "layout": "joomla.form.field.subform.repeatable-table",
+                        "multiple": "true",
+                        "icon": "list",
+                        "max": "20"
+                    },
+                    "options": [],
+                    "nested_fields": [
+                        {
+                            "attributes": {
+                                "type": "list",
+                                "name": "icomoon",
+                                "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_ICOMOON_LABEL",
+                                "description": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_ICOMOON_DESCRIPTION",
+                                "class": "icomoon342",
+                                "layout": "joomla.form.field.list-fancy-select",
+                                "multiple": "false",
+                                "onchange": "getIconImage(this);"
+                            },
+                            "options": [
+                                {
+                                    "attributes": {
+                                        "value": "joomla"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_JOOMLA"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "address"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_ADDRESS"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "pencil"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_PENCIL"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "archive"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_ARCHIVE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "arrow-down-2"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_ARROW_DOWN_2"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "arrow-down-3"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_ARROW_DOWN_3"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "arrow-down-4"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_ARROW_DOWN_4"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "arrow-first"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_ARROW_FIRST"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "arrow-last"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_ARROW_LAST"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "arrow-left-2"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_ARROW_LEFT_2"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "arrow-left-3"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_ARROW_LEFT_3"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "arrow-left-4"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_ARROW_LEFT_4"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "arrow-right-2"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_ARROW_RIGHT_2"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "arrow-right-3"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_ARROW_RIGHT_3"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "arrow-right-4"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_ARROW_RIGHT_4"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "arrow-up-2"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_ARROW_UP_2"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "arrow-up-3"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_ARROW_UP_3"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "arrow-up-4"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_ARROW_UP_4"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "attachment"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_ATTACHMENT"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "reply"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_REPLY"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "backward-circle"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_BACKWARD_CIRCLE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "ban-circle"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_BAN_CIRCLE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "bars"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_BARS"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "basket"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_BASKET"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "book"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_BOOK"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "bookmark"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_BOOKMARK"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "bookmark-2"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_BOOKMARK_2"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "box-add"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_BOX_ADD"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "box-remove"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_BOX_REMOVE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "briefcase"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_BRIEFCASE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "wifi"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_WIFI"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "brush"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_BRUSH"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "calendar"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_CALENDAR"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "calendar-2"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_CALENDAR_2"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "calendar-3"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_CALENDAR_3"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "camera"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_CAMERA"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "camera-2 / video"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_CAMERA_2_VIDEO"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "cancel-circle"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_CANCEL_CIRCLE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "cart"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_CART"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "chart"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_CHART"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "checkbox-partial"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_CHECKBOX_PARTIAL"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "checkbox-unchecked"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_CHECKBOX_UNCHECKED"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "lock"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_LOCK"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "checkbox"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_CHECKBOX"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "checkmark-2"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_CHECKMARK_2"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "checkmark-circle"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_CHECKMARK_CIRCLE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "arrow-down"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_ARROW_DOWN"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "arrow-left"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_ARROW_LEFT"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "arrow-right"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_ARROW_RIGHT"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "arrow-up"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_ARROW_UP"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "circle"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_CIRCLE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "clock"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_CLOCK"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "cogs"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_COGS"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "comment"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_COMMENT"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "comments-2"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_COMMENTS_2"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "compass"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_COMPASS"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "contract"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_CONTRACT"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "contract-2"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_CONTRACT_2"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "credit"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_CREDIT"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "credit-2"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_CREDIT_2"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "cube"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_CUBE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "dashboard"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_DASHBOARD"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "database"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_DATABASE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "delete"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_DELETE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "download"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_DOWNLOAD"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "enter"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_ENTER"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "envelope"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_ENVELOPE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "envelope-opened"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_ENVELOPE_OPENED"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "equalizer"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_EQUALIZER"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "exit"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_EXIT"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "expand"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_EXPAND"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "expand-2"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_EXPAND_2"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "expired"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_EXPIRED"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "eye-close"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_EYE_CLOSE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "eye-open"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_EYE_OPEN"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "featured"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_FEATURED"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "feed"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_FEED"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "file"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_FILE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "file-2"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_FILE_2"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "file-add"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_FILE_ADD"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "file-check"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_FILE_CHECK"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "file-minus"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_FILE_MINUS"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "file-remove"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_FILE_REMOVE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "filter"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_FILTER"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "first"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_FIRST"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "flag"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_FLAG"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "flag-3"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_FLAG_3"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "folder-3"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_FOLDER_3"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "folder-close"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_FOLDER_CLOSE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "folder-minus"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_FOLDER_MINUS"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "folder-open"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_FOLDER_OPEN"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "folder-plus"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_FOLDER_PLUS"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "folder-plus-2"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_FOLDER_PLUS_2"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "folder-remove"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_FOLDER_REMOVE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "forward-2"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_FORWARD_2"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "forward-circle"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_FORWARD_CIRCLE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "grid"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_GRID"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "grid-2"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_GRID_2"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "health"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_HEALTH"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "heart"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_HEART"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "heart-2"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_HEART_2"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "home"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_HOME"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "home-2"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_HOME_2"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "info"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_INFO"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "info-circle"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_INFO_CIRCLE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "key"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_KEY"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "lamp"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_LAMP"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "last"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_LAST"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "flash"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_FLASH"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "link"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_LINK"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "list"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_LIST"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "list-2"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_LIST_2"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "location"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_LOCATION"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "loop"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_LOOP"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "menu"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_MENU"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "menu-2"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_MENU_2"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "menu-3"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_MENU_3"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "minus"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_MINUS"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "minus-sign"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_MINUS_SIGN"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "mobile"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_MOBILE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "move"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_MOVE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "music"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_MUSIC"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "plus"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_PLUS"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "next"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_NEXT"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "notification"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_NOTIFICATION"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "notification-circle"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_NOTIFICATION_CIRCLE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "cog"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_COG"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "new-tab"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_NEW_TAB"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "new-tab-2"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_NEW_TAB_2"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "palette"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_PALETTE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "paragraph-center"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_PARAGRAPH_CENTER"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "paragraph-justify"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_PARAGRAPH_JUSTIFY"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "paragraph-left"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_PARAGRAPH_LEFT"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "paragraph-right"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_PARAGRAPH_RIGHT"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "pause"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_PAUSE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "pause-circle"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_PAUSE_CIRCLE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "pencil-2"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_PENCIL_2"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "warning"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_WARNING"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "phone"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_PHONE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "phone-2"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_PHONE_2"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "image"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_IMAGE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "images"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_IMAGES"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "pie"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_PIE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "pin"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_PIN"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "play"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_PLAY"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "youtube"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_YOUTUBE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "play-circle"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_PLAY_CIRCLE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "plus-circle"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_PLUS_CIRCLE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "power-cord"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_POWER_CORD"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "previous"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_PREVIOUS"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "print"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_PRINT"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "publish"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_PUBLISH"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "purge"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_PURGE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "puzzle"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_PUZZLE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "question"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_QUESTION"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "question-2"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_QUESTION_2"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "quotes-left"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_QUOTES_LEFT"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "quotes-right"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_QUOTES_RIGHT"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "bubble-quote"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_BUBBLE_QUOTE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "generic"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_GENERIC"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "radio-unchecked"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_RADIO_UNCHECKED"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "save-copy"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_SAVE_COPY"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "save-new"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_SAVE_NEW"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "scissors"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_SCISSORS"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "screen"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_SCREEN"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "screwdriver"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_SCREWDRIVER"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "search"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_SEARCH"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "share"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_SHARE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "share-alt"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_SHARE_ALT"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "shield"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_SHIELD"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "shuffle"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_SHUFFLE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "signup"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_SIGNUP"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "smiley"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_SMILEY"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "smiley-2"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_SMILEY_2"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "smiley-neutral"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_SMILEY_NEUTRAL"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "smiley-neutral-2"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_SMILEY_NEUTRAL_2"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "smiley-sad"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_SMILEY_SAD"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "smiley-sad-2"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_SMILEY_SAD_2"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "square"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_SQUARE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "stack"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_STACK"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "star-2"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_STAR_2"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "stop"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_STOP"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "stop-circle"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_STOP_CIRCLE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "support"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_SUPPORT"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "switch"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_SWITCH"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "tablet"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_TABLET"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "tag"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_TAG"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "tag-2"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_TAG_2"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "tags"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_TAGS"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "tags-2"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_TAGS_2"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "thumbs-down"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_THUMBS_DOWN"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "thumbs-up"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_THUMBS_UP"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "tree"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_TREE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "tree-2"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_TREE_2"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "unarchive"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_UNARCHIVE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "unblock"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_UNBLOCK"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "undo"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_UNDO"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "undo-2"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_UNDO_2"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "unfeatured"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_UNFEATURED"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "unlock"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_UNLOCK"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "unpublish"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_UNPUBLISH"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "upload"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_UPLOAD"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "user"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_USER"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "users"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_USERS"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "vcard"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_VCARD"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "wand"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_WAND"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "warning-circle"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_WARNING_CIRCLE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "wrench"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_WRENCH"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "zoom-in"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_ZOOM_IN"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "zoom-out"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_ZOOM_OUT"
+                                }
+                            ],
+                            "nested_fields": []
+                        },
+                        {
+                            "attributes": {
+                                "type": "text",
+                                "name": "name",
+                                "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_NAME_LABEL",
+                                "size": "40",
+                                "maxlength": "150",
+                                "description": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_NAME_DESCRIPTION",
+                                "class": "text_area",
+                                "readonly": "false",
+                                "disabled": "false",
+                                "required": "true",
+                                "filter": "STRING",
+                                "message": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_NAME_MESSAGE",
+                                "hint": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_NAME_HINT"
+                            },
+                            "options": [],
+                            "nested_fields": []
+                        },
+                        {
+                            "attributes": {
+                                "type": "text",
+                                "name": "method",
+                                "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_METHOD_LABEL",
+                                "size": "40",
+                                "maxlength": "50",
+                                "default": "",
+                                "description": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_METHOD_DESCRIPTION",
+                                "class": "text_area",
+                                "required": "false",
+                                "filter": "CMD",
+                                "message": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_METHOD_MESSAGE",
+                                "hint": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_METHOD_HINT"
+                            },
+                            "options": [],
+                            "nested_fields": []
+                        },
+                        {
+                            "attributes": {
+                                "type": "list",
+                                "name": "target",
+                                "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_TARGET_LABEL",
+                                "description": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_TARGET_DESCRIPTION",
+                                "class": "list_class fieldMedium",
+                                "filter": "INT",
+                                "default": "1"
+                            },
+                            "options": [
+                                {
+                                    "attributes": {
+                                        "value": "1"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_SINGLE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "2"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_LIST"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "3"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_BOTH"
+                                }
+                            ],
+                            "nested_fields": []
+                        },
+                        {
+                            "attributes": {
+                                "type": "list",
+                                "name": "type",
+                                "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_TYPE_LABEL",
+                                "description": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_TYPE_DESCRIPTION",
+                                "class": "list_class",
+                                "multiple": "false",
+                                "default": "0"
+                            },
+                            "options": [
+                                {
+                                    "attributes": {
+                                        "value": "0"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_DEFAULT"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "1"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_SELECTION"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "2"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_ONLY_FUNCTION"
+                                }
+                            ],
+                            "nested_fields": []
+                        }
+                    ]
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "object",
+                "array",
+                "string"
+            ]
+        },
+        "php_jview_display": {
+            "table_metadata": {
+                "name": "php_jview_display",
+                "guid": "96963615-e3bb-4d37-83df-4ad3fca74536",
+                "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_PHP_JVIEW_DISPLAY_LABEL",
+                "type": "editor",
+                "title": false,
+                "list": "custom_admin_views",
+                "store": "base64",
+                "tab_name": "PHP",
+                "db": {
+                    "type": "MEDIUMTEXT",
+                    "default": "EMPTY",
+                    "GUID": "96963615-e3bb-4d37-83df-4ad3fca74536",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "php_jview_display",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "editor",
+                        "name": "php_jview_display",
+                        "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_PHP_JVIEW_DISPLAY_LABEL",
+                        "description": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_PHP_JVIEW_DISPLAY_DESCRIPTION",
+                        "width": "100%",
+                        "height": "450px",
+                        "cols": "15",
+                        "rows": "30",
+                        "buttons": "no",
+                        "syntax": "php",
+                        "editor": "codemirror|none",
+                        "filter": "raw",
+                        "validate": "code"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "php_controller": {
+            "table_metadata": {
+                "name": "php_controller",
+                "guid": "e268c7be-dc34-40d9-bf2c-5f1897a09f7c",
+                "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_PHP_CONTROLLER_LABEL",
+                "type": "editor",
+                "title": false,
+                "list": "custom_admin_views",
+                "store": "base64",
+                "tab_name": "Toolbar",
+                "db": {
+                    "type": "MEDIUMTEXT",
+                    "default": "EMPTY",
+                    "GUID": "e268c7be-dc34-40d9-bf2c-5f1897a09f7c",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "php_controller",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "editor",
+                        "name": "php_controller",
+                        "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_PHP_CONTROLLER_LABEL",
+                        "description": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_PHP_CONTROLLER_DESCRIPTION",
+                        "width": "100%",
+                        "height": "450px",
+                        "cols": "15",
+                        "rows": "30",
+                        "buttons": "no",
+                        "syntax": "php",
+                        "editor": "codemirror|none",
+                        "filter": "raw",
+                        "validate": "code"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "php_jview": {
+            "table_metadata": {
+                "name": "php_jview",
+                "guid": "ffecfa82-c326-4703-9cc3-69d6f313bd32",
+                "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_PHP_JVIEW_LABEL",
+                "type": "editor",
+                "title": false,
+                "list": "custom_admin_views",
+                "store": "base64",
+                "tab_name": "PHP",
+                "db": {
+                    "type": "MEDIUMTEXT",
+                    "default": "EMPTY",
+                    "GUID": "ffecfa82-c326-4703-9cc3-69d6f313bd32",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "php_jview",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "editor",
+                        "name": "php_jview",
+                        "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_PHP_JVIEW_LABEL",
+                        "description": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_PHP_JVIEW_DESCRIPTION",
+                        "width": "100%",
+                        "height": "450px",
+                        "cols": "15",
+                        "rows": "30",
+                        "buttons": "no",
+                        "syntax": "php",
+                        "editor": "codemirror|none",
+                        "filter": "raw",
+                        "validate": "code"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "php_model": {
+            "table_metadata": {
+                "name": "php_model",
+                "guid": "5e831983-665b-43f2-9786-5e7c9cbb9e96",
+                "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_PHP_MODEL_LABEL",
+                "type": "editor",
+                "title": false,
+                "list": "custom_admin_views",
+                "store": "base64",
+                "tab_name": "Toolbar",
+                "db": {
+                    "type": "MEDIUMTEXT",
+                    "default": "EMPTY",
+                    "GUID": "5e831983-665b-43f2-9786-5e7c9cbb9e96",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "php_model",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "editor",
+                        "name": "php_model",
+                        "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_PHP_MODEL_LABEL",
+                        "description": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_PHP_MODEL_DESCRIPTION",
+                        "width": "100%",
+                        "height": "450px",
+                        "cols": "15",
+                        "rows": "30",
+                        "buttons": "no",
+                        "syntax": "php",
+                        "editor": "codemirror|none",
+                        "filter": "raw",
+                        "validate": "code"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "guid": {
+            "table_metadata": {
+                "name": "guid",
+                "guid": "5aa57bbe-7b19-4db9-915c-561863458d2b",
+                "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_GUID_LABEL",
+                "type": "text",
+                "title": false,
+                "list": "custom_admin_views",
+                "store": null,
+                "tab_name": "publishing",
+                "db": {
+                    "type": "VARCHAR(36)",
+                    "default": "",
+                    "GUID": "5aa57bbe-7b19-4db9-915c-561863458d2b",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": null
+            },
+            "config_map_target": "guid",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "text",
+                        "name": "guid",
+                        "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_GUID_LABEL",
+                        "size": "40",
+                        "maxlength": "40",
+                        "description": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_GUID_DESCRIPTION",
+                        "class": "text_area",
+                        "readonly": "true",
+                        "filter": "CMD",
+                        "validate": "guid",
+                        "hint": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_GUID_HINT"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "add_view_toolbar": {
+            "table_metadata": {
+                "name": "add_view_toolbar",
+                "guid": "be1b2132-37bc-4605-93d8-8b0b56b2df9f",
+                "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_ADD_VIEW_TOOLBAR_LABEL",
+                "type": "radio",
+                "title": false,
+                "list": "custom_admin_views",
+                "store": null,
+                "tab_name": "Toolbar",
+                "db": {
+                    "type": "TINYINT(1)",
+                    "default": "0",
+                    "GUID": "be1b2132-37bc-4605-93d8-8b0b56b2df9f",
+                    "null_switch": "NOT NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": null
+            },
+            "config_map_target": "add_view_toolbar",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "radio",
+                        "name": "add_view_toolbar",
+                        "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_ADD_VIEW_TOOLBAR_LABEL",
+                        "class": "btn-group btn-group-yesno",
+                        "default": "0",
+                        "required": "true"
+                    },
+                    "options": [
+                        {
+                            "attributes": {
+                                "value": "1"
+                            },
+                            "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_YES"
+                        },
+                        {
+                            "attributes": {
+                                "value": "0"
+                            },
+                            "label": "COM_COMPONENTBUILDER_CUSTOM_ADMIN_VIEW_NO"
+                        }
+                    ],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string",
+                "number"
+            ]
+        }
+    },
+    "source_license": {
+        "header": "GNU General Public License version 2 or later; see LICENSE.txt",
+        "spdx": "GPL-2.0-or-later",
+        "copyright": "Copyright (C) 2015 Vast Development Method. All rights reserved.",
+        "file": "LICENSE.txt",
+        "sha256": "2332109384fc0476519a1d02e1f050dd05ea2251fa66c06f9c5239585147828c",
+        "url": "https://github.com/vdm-io/Joomla-Component-Builder/blob/408703a857ad937479b1e28de7f693af178dcc83/LICENSE.txt"
+    }
+}

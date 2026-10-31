@@ -1,0 +1,1621 @@
+{
+    "entity": "component_custom_admin_views",
+    "kind": "database",
+    "config_sources": [
+        {
+            "class": "ComponentCustomAdminViews",
+            "path": "libraries/vendor_jcb/VDM.Joomla/src/Componentbuilder/Package/ComponentCustomAdminViews/Remote/Config.php",
+            "url": "https://github.com/vdm-io/Joomla-Component-Builder/blob/408703a857ad937479b1e28de7f693af178dcc83/libraries/vendor_jcb/VDM.Joomla/src/Componentbuilder/Package/ComponentCustomAdminViews/Remote/Config.php",
+            "sha256": "509979dc88c9be384d34bc0baf98846dc88fae980dce881ed5c041afefd7d5c1"
+        }
+    ],
+    "config": {
+        "area": "Component Custom Admin Views",
+        "prefix_key": "",
+        "suffix_key": "",
+        "main_readme_path": "",
+        "item_readme_name": "",
+        "index_path": "index/component-custom-admin-views.json",
+        "src_path": "src/joomla_component/children",
+        "settings_name": "component-custom-admin-views.json",
+        "guid_field": "joomla_component",
+        "guid_helper_field": null,
+        "ignore": [
+            "access"
+        ],
+        "files": [],
+        "folders": [],
+        "map": [],
+        "children": [],
+        "index_map": {
+            "name": "index_map_IndexName",
+            "path": "index_map_IndexPath",
+            "settings": "index_map_IndexSettingsPath",
+            "guid": "index_map_IndexGUID"
+        },
+        "index_header": [
+            "name",
+            "path",
+            "settings",
+            "guid",
+            "local"
+        ],
+        "placeholders": [],
+        "table": "component_custom_admin_views"
+    },
+    "identity_kind": "parent_guid",
+    "table_source": {
+        "path": "libraries/vendor_jcb/VDM.Joomla/src/Componentbuilder/Table.php",
+        "url": "https://github.com/vdm-io/Joomla-Component-Builder/blob/408703a857ad937479b1e28de7f693af178dcc83/libraries/vendor_jcb/VDM.Joomla/src/Componentbuilder/Table.php",
+        "sha256": "630abb56cb664be947f45f08f8812af136402d50bcc2c0feec5702b9e870b573"
+    },
+    "form_source": {
+        "path": "admin/forms/component_custom_admin_views.xml",
+        "url": "https://github.com/vdm-io/Joomla-Component-Builder/blob/408703a857ad937479b1e28de7f693af178dcc83/admin/forms/component_custom_admin_views.xml",
+        "sha256": "7bcb822aeba20040becf3740d94127f7d19c844d2ced29f415b2cde7e2a38a2a"
+    },
+    "fields": {
+        "joomla_component": {
+            "table_metadata": {
+                "name": "joomla_component",
+                "guid": "591df1a2-b685-4378-845a-f8a1d1985548",
+                "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_JOOMLA_COMPONENT_LABEL",
+                "type": "joomlacomponents",
+                "title": true,
+                "list": "components_custom_admin_views",
+                "store": null,
+                "tab_name": "Views",
+                "db": {
+                    "type": "VARCHAR(36)",
+                    "default": "",
+                    "GUID": "591df1a2-b685-4378-845a-f8a1d1985548",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": {
+                    "type": 1,
+                    "table": "#__componentbuilder_joomla_component",
+                    "component": "com_componentbuilder",
+                    "entity": "joomla_component",
+                    "value": "system_name",
+                    "key": "guid"
+                }
+            },
+            "config_map_target": "joomla_component",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "joomlacomponents",
+                        "name": "joomla_component",
+                        "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_JOOMLA_COMPONENT_LABEL",
+                        "description": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_JOOMLA_COMPONENT_DESCRIPTION",
+                        "class": "list_class",
+                        "multiple": "false",
+                        "required": "true",
+                        "readonly": "true",
+                        "button": "false"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "addcustom_admin_views": {
+            "table_metadata": {
+                "name": "addcustom_admin_views",
+                "guid": "b2423282-c8a8-400e-9ded-fe61cea433f4",
+                "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_ADDCUSTOM_ADMIN_VIEWS_LABEL",
+                "type": "subform",
+                "title": false,
+                "list": "components_custom_admin_views",
+                "store": "json",
+                "tab_name": "Views",
+                "db": {
+                    "type": "TEXT",
+                    "default": "EMPTY",
+                    "GUID": "b2423282-c8a8-400e-9ded-fe61cea433f4",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null,
+                "fields": {
+                    "customadminview": {
+                        "name": "customadminview",
+                        "type": "ModalSelect",
+                        "link": {
+                            "type": 1,
+                            "table": "#__componentbuilder_custom_admin_view",
+                            "component": "com_componentbuilder",
+                            "entity": "custom_admin_view",
+                            "value": "system_name",
+                            "key": "guid"
+                        }
+                    },
+                    "icomoon": {
+                        "name": "icomoon",
+                        "type": "list",
+                        "link": null
+                    },
+                    "mainmenu": {
+                        "name": "mainmenu",
+                        "type": "checkbox",
+                        "link": null
+                    },
+                    "dashboard_list": {
+                        "name": "dashboard_list",
+                        "type": "checkbox",
+                        "link": null
+                    },
+                    "submenu": {
+                        "name": "submenu",
+                        "type": "checkbox",
+                        "link": null
+                    },
+                    "metadata": {
+                        "name": "metadata",
+                        "type": "checkbox",
+                        "link": null
+                    },
+                    "access": {
+                        "name": "access",
+                        "type": "checkbox",
+                        "link": null
+                    },
+                    "adminviews": {
+                        "name": "adminviews",
+                        "type": "adminsviews",
+                        "link": {
+                            "type": 1,
+                            "table": "#__componentbuilder_admin_view",
+                            "component": "com_componentbuilder",
+                            "entity": "admin_view",
+                            "value": "system_name",
+                            "key": "guid"
+                        }
+                    },
+                    "before": {
+                        "name": "before",
+                        "type": "componentadminmenus",
+                        "link": {
+                            "type": 1,
+                            "table": "#__componentbuilder_admin_view",
+                            "component": "com_componentbuilder",
+                            "entity": "admin_view",
+                            "value": "system_name",
+                            "key": "guid"
+                        }
+                    }
+                }
+            },
+            "config_map_target": "addcustom_admin_views",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "subform",
+                        "name": "addcustom_admin_views",
+                        "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_ADDCUSTOM_ADMIN_VIEWS_LABEL",
+                        "layout": "repeatablejcb",
+                        "multiple": "true",
+                        "default": "",
+                        "icon": "list"
+                    },
+                    "options": [],
+                    "nested_fields": [
+                        {
+                            "attributes": {
+                                "type": "ModalSelect",
+                                "name": "customadminview",
+                                "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_CUSTOMADMINVIEW_LABEL",
+                                "sql_title_table": "#__componentbuilder_custom_admin_view",
+                                "sql_title_column": "system_name",
+                                "data-key-name": "guid",
+                                "sql_title_key": "guid",
+                                "urlSelect": "index.php?option=com_componentbuilder&view=custom_admin_views&layout=modal&tmpl=component&titleKey=guid",
+                                "urlNew": "index.php?option=com_componentbuilder&task=custom_admin_view.add&layout=modal&tmpl=component",
+                                "urlEdit": "index.php?option=com_componentbuilder&task=custom_admin_view.edit&guid={id}&layout=modal&tmpl=component&titleKey=guid",
+                                "titleSelect": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_CUSTOMADMINVIEW_TITLESELECT",
+                                "iconSelect": "icon-screen",
+                                "select": "true",
+                                "new": "true",
+                                "edit": "true",
+                                "clear": "true",
+                                "required": "true",
+                                "class": "input-large",
+                                "description": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_CUSTOMADMINVIEW_DESCRIPTION",
+                                "hint": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_CUSTOMADMINVIEW_HINT"
+                            },
+                            "options": [],
+                            "nested_fields": []
+                        },
+                        {
+                            "attributes": {
+                                "type": "list",
+                                "name": "icomoon",
+                                "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_ICOMOON_LABEL",
+                                "description": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_ICOMOON_DESCRIPTION",
+                                "class": "icomoon342",
+                                "layout": "joomla.form.field.list-fancy-select",
+                                "multiple": "false",
+                                "onchange": "getIconImage(this);"
+                            },
+                            "options": [
+                                {
+                                    "attributes": {
+                                        "value": "joomla"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_JOOMLA"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "address"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_ADDRESS"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "pencil"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_PENCIL"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "archive"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_ARCHIVE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "arrow-down-2"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_ARROW_DOWN_2"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "arrow-down-3"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_ARROW_DOWN_3"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "arrow-down-4"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_ARROW_DOWN_4"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "arrow-first"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_ARROW_FIRST"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "arrow-last"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_ARROW_LAST"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "arrow-left-2"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_ARROW_LEFT_2"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "arrow-left-3"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_ARROW_LEFT_3"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "arrow-left-4"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_ARROW_LEFT_4"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "arrow-right-2"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_ARROW_RIGHT_2"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "arrow-right-3"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_ARROW_RIGHT_3"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "arrow-right-4"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_ARROW_RIGHT_4"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "arrow-up-2"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_ARROW_UP_2"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "arrow-up-3"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_ARROW_UP_3"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "arrow-up-4"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_ARROW_UP_4"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "attachment"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_ATTACHMENT"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "reply"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_REPLY"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "backward-circle"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_BACKWARD_CIRCLE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "ban-circle"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_BAN_CIRCLE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "bars"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_BARS"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "basket"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_BASKET"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "book"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_BOOK"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "bookmark"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_BOOKMARK"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "bookmark-2"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_BOOKMARK_2"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "box-add"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_BOX_ADD"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "box-remove"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_BOX_REMOVE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "briefcase"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_BRIEFCASE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "wifi"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_WIFI"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "brush"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_BRUSH"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "calendar"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_CALENDAR"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "calendar-2"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_CALENDAR_2"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "calendar-3"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_CALENDAR_3"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "camera"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_CAMERA"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "camera-2 / video"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_CAMERA_2_VIDEO"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "cancel-circle"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_CANCEL_CIRCLE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "cart"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_CART"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "chart"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_CHART"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "checkbox-partial"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_CHECKBOX_PARTIAL"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "checkbox-unchecked"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_CHECKBOX_UNCHECKED"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "lock"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_LOCK"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "checkbox"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_CHECKBOX"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "checkmark-2"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_CHECKMARK_2"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "checkmark-circle"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_CHECKMARK_CIRCLE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "arrow-down"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_ARROW_DOWN"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "arrow-left"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_ARROW_LEFT"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "arrow-right"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_ARROW_RIGHT"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "arrow-up"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_ARROW_UP"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "circle"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_CIRCLE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "clock"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_CLOCK"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "cogs"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_COGS"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "comment"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_COMMENT"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "comments-2"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_COMMENTS_2"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "compass"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_COMPASS"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "contract"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_CONTRACT"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "contract-2"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_CONTRACT_2"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "credit"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_CREDIT"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "credit-2"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_CREDIT_2"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "cube"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_CUBE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "dashboard"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_DASHBOARD"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "database"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_DATABASE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "delete"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_DELETE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "download"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_DOWNLOAD"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "enter"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_ENTER"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "envelope"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_ENVELOPE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "envelope-opened"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_ENVELOPE_OPENED"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "equalizer"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_EQUALIZER"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "exit"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_EXIT"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "expand"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_EXPAND"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "expand-2"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_EXPAND_2"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "expired"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_EXPIRED"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "eye-close"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_EYE_CLOSE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "eye-open"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_EYE_OPEN"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "featured"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_FEATURED"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "feed"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_FEED"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "file"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_FILE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "file-2"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_FILE_2"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "file-add"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_FILE_ADD"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "file-check"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_FILE_CHECK"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "file-minus"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_FILE_MINUS"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "file-remove"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_FILE_REMOVE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "filter"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_FILTER"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "first"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_FIRST"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "flag"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_FLAG"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "flag-3"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_FLAG_3"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "folder-3"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_FOLDER_3"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "folder-close"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_FOLDER_CLOSE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "folder-minus"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_FOLDER_MINUS"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "folder-open"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_FOLDER_OPEN"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "folder-plus"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_FOLDER_PLUS"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "folder-plus-2"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_FOLDER_PLUS_2"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "folder-remove"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_FOLDER_REMOVE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "forward-2"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_FORWARD_2"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "forward-circle"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_FORWARD_CIRCLE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "grid"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_GRID"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "grid-2"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_GRID_2"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "health"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_HEALTH"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "heart"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_HEART"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "heart-2"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_HEART_2"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "home"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_HOME"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "home-2"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_HOME_2"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "info"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_INFO"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "info-circle"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_INFO_CIRCLE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "key"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_KEY"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "lamp"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_LAMP"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "last"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_LAST"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "flash"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_FLASH"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "link"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_LINK"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "list"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_LIST"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "list-2"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_LIST_2"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "location"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_LOCATION"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "loop"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_LOOP"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "menu"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_MENU"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "menu-2"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_MENU_2"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "menu-3"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_MENU_3"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "minus"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_MINUS"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "minus-sign"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_MINUS_SIGN"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "mobile"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_MOBILE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "move"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_MOVE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "music"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_MUSIC"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "plus"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_PLUS"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "next"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_NEXT"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "notification"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_NOTIFICATION"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "notification-circle"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_NOTIFICATION_CIRCLE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "cog"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_COG"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "new-tab"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_NEW_TAB"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "new-tab-2"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_NEW_TAB_2"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "palette"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_PALETTE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "paragraph-center"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_PARAGRAPH_CENTER"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "paragraph-justify"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_PARAGRAPH_JUSTIFY"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "paragraph-left"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_PARAGRAPH_LEFT"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "paragraph-right"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_PARAGRAPH_RIGHT"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "pause"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_PAUSE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "pause-circle"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_PAUSE_CIRCLE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "pencil-2"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_PENCIL_2"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "warning"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_WARNING"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "phone"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_PHONE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "phone-2"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_PHONE_2"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "image"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_IMAGE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "images"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_IMAGES"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "pie"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_PIE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "pin"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_PIN"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "play"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_PLAY"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "youtube"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_YOUTUBE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "play-circle"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_PLAY_CIRCLE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "plus-circle"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_PLUS_CIRCLE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "power-cord"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_POWER_CORD"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "previous"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_PREVIOUS"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "print"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_PRINT"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "publish"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_PUBLISH"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "purge"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_PURGE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "puzzle"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_PUZZLE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "question"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_QUESTION"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "question-2"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_QUESTION_2"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "quotes-left"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_QUOTES_LEFT"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "quotes-right"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_QUOTES_RIGHT"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "bubble-quote"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_BUBBLE_QUOTE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "generic"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_GENERIC"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "radio-unchecked"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_RADIO_UNCHECKED"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "save-copy"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_SAVE_COPY"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "save-new"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_SAVE_NEW"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "scissors"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_SCISSORS"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "screen"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_SCREEN"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "screwdriver"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_SCREWDRIVER"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "search"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_SEARCH"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "share"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_SHARE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "share-alt"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_SHARE_ALT"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "shield"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_SHIELD"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "shuffle"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_SHUFFLE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "signup"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_SIGNUP"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "smiley"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_SMILEY"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "smiley-2"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_SMILEY_2"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "smiley-neutral"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_SMILEY_NEUTRAL"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "smiley-neutral-2"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_SMILEY_NEUTRAL_2"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "smiley-sad"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_SMILEY_SAD"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "smiley-sad-2"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_SMILEY_SAD_2"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "square"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_SQUARE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "stack"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_STACK"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "star-2"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_STAR_2"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "stop"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_STOP"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "stop-circle"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_STOP_CIRCLE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "support"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_SUPPORT"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "switch"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_SWITCH"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "tablet"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_TABLET"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "tag"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_TAG"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "tag-2"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_TAG_2"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "tags"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_TAGS"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "tags-2"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_TAGS_2"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "thumbs-down"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_THUMBS_DOWN"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "thumbs-up"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_THUMBS_UP"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "tree"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_TREE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "tree-2"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_TREE_2"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "unarchive"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_UNARCHIVE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "unblock"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_UNBLOCK"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "undo"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_UNDO"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "undo-2"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_UNDO_2"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "unfeatured"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_UNFEATURED"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "unlock"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_UNLOCK"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "unpublish"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_UNPUBLISH"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "upload"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_UPLOAD"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "user"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_USER"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "users"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_USERS"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "vcard"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_VCARD"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "wand"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_WAND"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "warning-circle"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_WARNING_CIRCLE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "wrench"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_WRENCH"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "zoom-in"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_ZOOM_IN"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "zoom-out"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_ZOOM_OUT"
+                                }
+                            ],
+                            "nested_fields": []
+                        },
+                        {
+                            "attributes": {
+                                "type": "checkbox",
+                                "name": "mainmenu",
+                                "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_MAINMENU_LABEL",
+                                "value": "1",
+                                "default": "1",
+                                "description": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_MAINMENU_DESCRIPTION",
+                                "class": "inputbox"
+                            },
+                            "options": [],
+                            "nested_fields": []
+                        },
+                        {
+                            "attributes": {
+                                "type": "checkbox",
+                                "name": "dashboard_list",
+                                "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_DASHBOARD_LIST_LABEL",
+                                "value": "1",
+                                "default": "1",
+                                "description": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_DASHBOARD_LIST_DESCRIPTION",
+                                "class": "inputbox"
+                            },
+                            "options": [],
+                            "nested_fields": []
+                        },
+                        {
+                            "attributes": {
+                                "type": "checkbox",
+                                "name": "submenu",
+                                "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_SUBMENU_LABEL",
+                                "value": "1",
+                                "default": "1",
+                                "description": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_SUBMENU_DESCRIPTION",
+                                "class": "inputbox"
+                            },
+                            "options": [],
+                            "nested_fields": []
+                        },
+                        {
+                            "attributes": {
+                                "type": "checkbox",
+                                "name": "metadata",
+                                "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_METADATA_LABEL",
+                                "value": "1",
+                                "default": "1",
+                                "description": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_METADATA_DESCRIPTION",
+                                "class": "inputbox"
+                            },
+                            "options": [],
+                            "nested_fields": []
+                        },
+                        {
+                            "attributes": {
+                                "type": "checkbox",
+                                "name": "access",
+                                "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_ACCESS_LABEL",
+                                "value": "1",
+                                "default": "1",
+                                "description": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_ACCESS_DESCRIPTION",
+                                "class": "inputbox"
+                            },
+                            "options": [],
+                            "nested_fields": []
+                        },
+                        {
+                            "attributes": {
+                                "type": "adminsviews",
+                                "name": "adminviews",
+                                "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_ADMINVIEWS_LABEL",
+                                "description": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_ADMINVIEWS_DESCRIPTION",
+                                "layout": "joomla.form.field.list-fancy-select",
+                                "multiple": "true",
+                                "button": "false"
+                            },
+                            "options": [],
+                            "nested_fields": []
+                        },
+                        {
+                            "attributes": {
+                                "type": "componentadminmenus",
+                                "name": "before",
+                                "label": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_BEFORE_LABEL",
+                                "description": "COM_COMPONENTBUILDER_COMPONENT_CUSTOM_ADMIN_VIEWS_BEFORE_DESCRIPTION",
+                                "layout": "joomla.form.field.list-fancy-select",
+                                "multiple": "false",
+                                "button": "false"
+                            },
+                            "options": [],
+                            "nested_fields": []
+                        }
+                    ]
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "object",
+                "array",
+                "string"
+            ]
+        }
+    },
+    "source_license": {
+        "header": "GNU General Public License version 2 or later; see LICENSE.txt",
+        "spdx": "GPL-2.0-or-later",
+        "copyright": "Copyright (C) 2015 Vast Development Method. All rights reserved.",
+        "file": "LICENSE.txt",
+        "sha256": "2332109384fc0476519a1d02e1f050dd05ea2251fa66c06f9c5239585147828c",
+        "url": "https://github.com/vdm-io/Joomla-Component-Builder/blob/408703a857ad937479b1e28de7f693af178dcc83/LICENSE.txt"
+    }
+}

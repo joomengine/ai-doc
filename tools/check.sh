@@ -42,6 +42,12 @@ for domain in field-types snippets; do
 	entity_domain "$domain"
 	validate_entity_registry "$root/registries/$ENTITY_REGISTRY"
 done
+bash "$TOOLS_DIR/check-skills.sh"
+if [[ -f $root/packages/model-contracts.json ]]; then
+	jq -e '.version==1 and (.entities|type=="array") and ([.entities[].entity]|length==(unique|length)) and .counts.logical_entities==(.entities|length) and .counts.database_entities==([.entities[]|select(.kind=="database")]|length) and .counts.serialized_top_level_fields==([.entities[].field_count]|add)' "$root/packages/model-contracts.json" >/dev/null || fail 'Invalid package inventory'
+	while IFS= read -r destination; do safe_file "$root/packages" "$destination" >/dev/null; done < <(jq -r '.entities[]|.reference,.guide,.schema' "$root/packages/model-contracts.json")
+fi
 bash "$root/tests/run-tests.sh"
 bash "$root/tests/run-entity-tests.sh"
+bash "$root/tests/run-package-tests.sh"
 printf 'PASS: offline documentation and tooling checks.\n'

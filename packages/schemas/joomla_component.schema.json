@@ -1,0 +1,679 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "joomla_component package serialized envelope",
+    "description": "Generated from pinned Table and Remote Config. Bounds known JSON types only, not conditional forms, SQL defaults, compiler behavior or semantic closure. Filesystem payloads are raw files; their Config map is only transport metadata.",
+    "type": "object",
+    "properties": {
+        "system_name": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/joomla_component.json for exact metadata, conditions and subfields."
+        },
+        "name_code": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/joomla_component.json for exact metadata, conditions and subfields."
+        },
+        "short_description": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/joomla_component.json for exact metadata, conditions and subfields."
+        },
+        "companyname": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/joomla_component.json for exact metadata, conditions and subfields."
+        },
+        "buildcompsql": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/joomla_component.json for exact metadata, conditions and subfields."
+        },
+        "jcb_powers_path": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/joomla_component.json for exact metadata, conditions and subfields."
+        },
+        "add_update_server": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/joomla_component.json for exact metadata, conditions and subfields."
+        },
+        "add_sql": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/joomla_component.json for exact metadata, conditions and subfields."
+        },
+        "add_php_postflight_install": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/joomla_component.json for exact metadata, conditions and subfields."
+        },
+        "mvc_versiondate": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/joomla_component.json for exact metadata, conditions and subfields."
+        },
+        "remove_line_breaks": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/joomla_component.json for exact metadata, conditions and subfields."
+        },
+        "add_placeholders": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/joomla_component.json for exact metadata, conditions and subfields."
+        },
+        "debug_linenr": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/joomla_component.json for exact metadata, conditions and subfields."
+        },
+        "add_php_preflight_install": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/joomla_component.json for exact metadata, conditions and subfields."
+        },
+        "description": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/joomla_component.json for exact metadata, conditions and subfields."
+        },
+        "add_php_method_uninstall": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/joomla_component.json for exact metadata, conditions and subfields."
+        },
+        "author": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/joomla_component.json for exact metadata, conditions and subfields."
+        },
+        "assets_table_fix": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/joomla_component.json for exact metadata, conditions and subfields."
+        },
+        "email": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/joomla_component.json for exact metadata, conditions and subfields."
+        },
+        "website": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/joomla_component.json for exact metadata, conditions and subfields."
+        },
+        "add_git_folder_path": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/joomla_component.json for exact metadata, conditions and subfields."
+        },
+        "license": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/joomla_component.json for exact metadata, conditions and subfields."
+        },
+        "add_css_admin": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/joomla_component.json for exact metadata, conditions and subfields."
+        },
+        "dashboard_type": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/joomla_component.json for exact metadata, conditions and subfields."
+        },
+        "bom": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/joomla_component.json for exact metadata, conditions and subfields."
+        },
+        "component_version": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/joomla_component.json for exact metadata, conditions and subfields."
+        },
+        "add_css_site": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/joomla_component.json for exact metadata, conditions and subfields."
+        },
+        "image": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/joomla_component.json for exact metadata, conditions and subfields."
+        },
+        "dashboard": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/joomla_component.json for exact metadata, conditions and subfields."
+        },
+        "copyright": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/joomla_component.json for exact metadata, conditions and subfields."
+        },
+        "add_php_preflight_update": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/joomla_component.json for exact metadata, conditions and subfields."
+        },
+        "preferred_joomla_version": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/joomla_component.json for exact metadata, conditions and subfields."
+        },
+        "add_php_postflight_update": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/joomla_component.json for exact metadata, conditions and subfields."
+        },
+        "add_powers": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/joomla_component.json for exact metadata, conditions and subfields."
+        },
+        "add_php_method_install": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/joomla_component.json for exact metadata, conditions and subfields."
+        },
+        "add_sql_uninstall": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/joomla_component.json for exact metadata, conditions and subfields."
+        },
+        "readme": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/joomla_component.json for exact metadata, conditions and subfields."
+        },
+        "update_server_target": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/joomla_component.json for exact metadata, conditions and subfields."
+        },
+        "git_folder_path": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/joomla_component.json for exact metadata, conditions and subfields."
+        },
+        "changelog_server_url": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/joomla_component.json for exact metadata, conditions and subfields."
+        },
+        "add_namespace_prefix": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/joomla_component.json for exact metadata, conditions and subfields."
+        },
+        "namespace_prefix": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/joomla_component.json for exact metadata, conditions and subfields."
+        },
+        "javascript": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/joomla_component.json for exact metadata, conditions and subfields."
+        },
+        "css_admin": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/joomla_component.json for exact metadata, conditions and subfields."
+        },
+        "add_menu_prefix": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/joomla_component.json for exact metadata, conditions and subfields."
+        },
+        "css_site": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/joomla_component.json for exact metadata, conditions and subfields."
+        },
+        "menu_prefix": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/joomla_component.json for exact metadata, conditions and subfields."
+        },
+        "php_preflight_install": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/joomla_component.json for exact metadata, conditions and subfields."
+        },
+        "toignore": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/joomla_component.json for exact metadata, conditions and subfields."
+        },
+        "php_preflight_update": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/joomla_component.json for exact metadata, conditions and subfields."
+        },
+        "php_postflight_install": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/joomla_component.json for exact metadata, conditions and subfields."
+        },
+        "php_postflight_update": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/joomla_component.json for exact metadata, conditions and subfields."
+        },
+        "addcontributors": {
+            "type": [
+                "null",
+                "object",
+                "array",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/joomla_component.json for exact metadata, conditions and subfields."
+        },
+        "php_method_uninstall": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/joomla_component.json for exact metadata, conditions and subfields."
+        },
+        "emptycontributors": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/joomla_component.json for exact metadata, conditions and subfields."
+        },
+        "php_method_install": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/joomla_component.json for exact metadata, conditions and subfields."
+        },
+        "number": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/joomla_component.json for exact metadata, conditions and subfields."
+        },
+        "sql": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/joomla_component.json for exact metadata, conditions and subfields."
+        },
+        "sql_uninstall": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/joomla_component.json for exact metadata, conditions and subfields."
+        },
+        "addreadme": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/joomla_component.json for exact metadata, conditions and subfields."
+        },
+        "update_server_url": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/joomla_component.json for exact metadata, conditions and subfields."
+        },
+        "creatuserhelper": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/joomla_component.json for exact metadata, conditions and subfields."
+        },
+        "adduikit": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/joomla_component.json for exact metadata, conditions and subfields."
+        },
+        "add_backup_folder_path": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/joomla_component.json for exact metadata, conditions and subfields."
+        },
+        "addfootable": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/joomla_component.json for exact metadata, conditions and subfields."
+        },
+        "backup_folder_path": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/joomla_component.json for exact metadata, conditions and subfields."
+        },
+        "add_email_helper": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/joomla_component.json for exact metadata, conditions and subfields."
+        },
+        "add_php_helper_both": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/joomla_component.json for exact metadata, conditions and subfields."
+        },
+        "add_jcb_powers_path": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/joomla_component.json for exact metadata, conditions and subfields."
+        },
+        "php_helper_both": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/joomla_component.json for exact metadata, conditions and subfields."
+        },
+        "add_changelog_server": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/joomla_component.json for exact metadata, conditions and subfields."
+        },
+        "add_php_helper_admin": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/joomla_component.json for exact metadata, conditions and subfields."
+        },
+        "changelog_server_target": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/joomla_component.json for exact metadata, conditions and subfields."
+        },
+        "php_helper_admin": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/joomla_component.json for exact metadata, conditions and subfields."
+        },
+        "add_admin_event": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/joomla_component.json for exact metadata, conditions and subfields."
+        },
+        "changelog_server": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/joomla_component.json for exact metadata, conditions and subfields."
+        },
+        "php_admin_event": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/joomla_component.json for exact metadata, conditions and subfields."
+        },
+        "add_php_helper_site": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/joomla_component.json for exact metadata, conditions and subfields."
+        },
+        "php_helper_site": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/joomla_component.json for exact metadata, conditions and subfields."
+        },
+        "add_site_event": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/joomla_component.json for exact metadata, conditions and subfields."
+        },
+        "buildcomp": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/joomla_component.json for exact metadata, conditions and subfields."
+        },
+        "php_site_event": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/joomla_component.json for exact metadata, conditions and subfields."
+        },
+        "guid": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/joomla_component.json for exact metadata, conditions and subfields."
+        },
+        "add_javascript": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/joomla_component.json for exact metadata, conditions and subfields."
+        },
+        "name": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/joomla_component.json for exact metadata, conditions and subfields."
+        },
+        "metakey": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/joomla_component.json for exact metadata, conditions and subfields."
+        },
+        "metadesc": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/joomla_component.json for exact metadata, conditions and subfields."
+        },
+        "metadata": {
+            "type": [
+                "null",
+                "object",
+                "array",
+                "string",
+                "number",
+                "boolean"
+            ],
+            "description": "Source-derived envelope; see reference/joomla_component.json for exact metadata, conditions and subfields."
+        },
+        "@dependencies": {
+            "$ref": "dependencies.schema.json"
+        }
+    },
+    "additionalProperties": false,
+    "required": [
+        "guid"
+    ]
+}

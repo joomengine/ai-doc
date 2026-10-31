@@ -1,0 +1,193 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "field package serialized envelope",
+    "description": "Generated from pinned Table and Remote Config. Bounds known JSON types only, not conditional forms, SQL defaults, compiler behavior or semantic closure. Filesystem payloads are raw files; their Config map is only transport metadata.",
+    "type": "object",
+    "properties": {
+        "name": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/field.json for exact metadata, conditions and subfields."
+        },
+        "fieldtype": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/field.json for exact metadata, conditions and subfields."
+        },
+        "datatype": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/field.json for exact metadata, conditions and subfields."
+        },
+        "indexes": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/field.json for exact metadata, conditions and subfields."
+        },
+        "null_switch": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/field.json for exact metadata, conditions and subfields."
+        },
+        "store": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/field.json for exact metadata, conditions and subfields."
+        },
+        "on_get_model_field": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/field.json for exact metadata, conditions and subfields."
+        },
+        "on_save_model_field": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/field.json for exact metadata, conditions and subfields."
+        },
+        "initiator_on_get_model": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/field.json for exact metadata, conditions and subfields."
+        },
+        "xml": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/field.json for exact metadata, conditions and subfields."
+        },
+        "datalenght": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/field.json for exact metadata, conditions and subfields."
+        },
+        "javascript_view_footer": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/field.json for exact metadata, conditions and subfields."
+        },
+        "css_views": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/field.json for exact metadata, conditions and subfields."
+        },
+        "css_view": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/field.json for exact metadata, conditions and subfields."
+        },
+        "datadefault_other": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/field.json for exact metadata, conditions and subfields."
+        },
+        "datadefault": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/field.json for exact metadata, conditions and subfields."
+        },
+        "datalenght_other": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/field.json for exact metadata, conditions and subfields."
+        },
+        "javascript_views_footer": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/field.json for exact metadata, conditions and subfields."
+        },
+        "add_css_view": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/field.json for exact metadata, conditions and subfields."
+        },
+        "add_css_views": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/field.json for exact metadata, conditions and subfields."
+        },
+        "add_javascript_view_footer": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/field.json for exact metadata, conditions and subfields."
+        },
+        "add_javascript_views_footer": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/field.json for exact metadata, conditions and subfields."
+        },
+        "initiator_on_save_model": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/field.json for exact metadata, conditions and subfields."
+        },
+        "guid": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/field.json for exact metadata, conditions and subfields."
+        },
+        "@dependencies": {
+            "$ref": "dependencies.schema.json"
+        }
+    },
+    "additionalProperties": false,
+    "required": [
+        "guid"
+    ]
+}

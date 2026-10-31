@@ -1,0 +1,4120 @@
+{
+    "entity": "dynamic_get",
+    "kind": "database",
+    "config_sources": [
+        {
+            "class": "DynamicGet",
+            "path": "libraries/vendor_jcb/VDM.Joomla/src/Componentbuilder/Package/DynamicGet/Remote/Config.php",
+            "url": "https://github.com/vdm-io/Joomla-Component-Builder/blob/408703a857ad937479b1e28de7f693af178dcc83/libraries/vendor_jcb/VDM.Joomla/src/Componentbuilder/Package/DynamicGet/Remote/Config.php",
+            "sha256": "9011e3e8fb295424dfdc4916c8079dd00d41ce4154786d3a17c0753dc91b51a6"
+        }
+    ],
+    "config": {
+        "area": "Dynamic Get",
+        "prefix_key": "",
+        "suffix_key": "",
+        "main_readme_path": "README_DYNAMIC_GETS.md",
+        "item_readme_name": "README.md",
+        "index_path": "index/dynamic-get.json",
+        "src_path": "src/dynamic_get",
+        "settings_name": "item.json",
+        "guid_field": "guid",
+        "guid_helper_field": null,
+        "ignore": [
+            "access"
+        ],
+        "files": [],
+        "folders": [],
+        "map": [],
+        "children": [],
+        "index_map": {
+            "name": "index_map_IndexName",
+            "path": "index_map_IndexPath",
+            "settings": "index_map_IndexSettingsPath",
+            "guid": "index_map_IndexGUID"
+        },
+        "index_header": [
+            "name",
+            "path",
+            "settings",
+            "guid",
+            "local"
+        ],
+        "placeholders": [],
+        "table": "dynamic_get"
+    },
+    "identity_kind": "guid",
+    "table_source": {
+        "path": "libraries/vendor_jcb/VDM.Joomla/src/Componentbuilder/Table.php",
+        "url": "https://github.com/vdm-io/Joomla-Component-Builder/blob/408703a857ad937479b1e28de7f693af178dcc83/libraries/vendor_jcb/VDM.Joomla/src/Componentbuilder/Table.php",
+        "sha256": "630abb56cb664be947f45f08f8812af136402d50bcc2c0feec5702b9e870b573"
+    },
+    "form_source": {
+        "path": "admin/forms/dynamic_get.xml",
+        "url": "https://github.com/vdm-io/Joomla-Component-Builder/blob/408703a857ad937479b1e28de7f693af178dcc83/admin/forms/dynamic_get.xml",
+        "sha256": "fa9f905f7cd55fdede0c7231371658cba6788d7c5e35e9af12fea47f1b460c5c"
+    },
+    "fields": {
+        "name": {
+            "table_metadata": {
+                "name": "name",
+                "guid": "5d3d34dd-4876-4c6a-86ab-b4e162f22c08",
+                "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_NAME_LABEL",
+                "type": "text",
+                "title": true,
+                "list": "dynamic_gets",
+                "store": null,
+                "tab_name": "Main",
+                "db": {
+                    "type": "VARCHAR(255)",
+                    "default": "",
+                    "GUID": "5d3d34dd-4876-4c6a-86ab-b4e162f22c08",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": null
+            },
+            "config_map_target": "name",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "text",
+                        "name": "name",
+                        "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_NAME_LABEL",
+                        "size": "40",
+                        "maxlength": "150",
+                        "description": "COM_COMPONENTBUILDER_DYNAMIC_GET_NAME_DESCRIPTION",
+                        "class": "text_area",
+                        "readonly": "false",
+                        "disabled": "false",
+                        "required": "true",
+                        "filter": "STRING",
+                        "message": "COM_COMPONENTBUILDER_DYNAMIC_GET_NAME_MESSAGE",
+                        "hint": "COM_COMPONENTBUILDER_DYNAMIC_GET_NAME_HINT"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "main_source": {
+            "table_metadata": {
+                "name": "main_source",
+                "guid": "1709c1a3-b26a-4e78-82f9-ff05a08738c9",
+                "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_MAIN_SOURCE_LABEL",
+                "type": "list",
+                "title": false,
+                "list": "dynamic_gets",
+                "store": null,
+                "tab_name": "Main",
+                "db": {
+                    "type": "TINYINT(1)",
+                    "default": "0",
+                    "GUID": "1709c1a3-b26a-4e78-82f9-ff05a08738c9",
+                    "null_switch": "NOT NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": null
+            },
+            "config_map_target": "main_source",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "list",
+                        "name": "main_source",
+                        "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_MAIN_SOURCE_LABEL",
+                        "description": "COM_COMPONENTBUILDER_DYNAMIC_GET_MAIN_SOURCE_DESCRIPTION",
+                        "class": "list_class",
+                        "layout": "joomla.form.field.list-fancy-select",
+                        "multiple": "false",
+                        "filter": "INT",
+                        "required": "true",
+                        "default": ""
+                    },
+                    "options": [
+                        {
+                            "attributes": {
+                                "value": ""
+                            },
+                            "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_PLEASE_SELECT"
+                        },
+                        {
+                            "attributes": {
+                                "value": "1"
+                            },
+                            "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_BACKEND_VIEW"
+                        },
+                        {
+                            "attributes": {
+                                "value": "2"
+                            },
+                            "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_JOOMLA_DATABASE"
+                        },
+                        {
+                            "attributes": {
+                                "value": "3"
+                            },
+                            "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_CUSTOM"
+                        }
+                    ],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "gettype": {
+            "table_metadata": {
+                "name": "gettype",
+                "guid": "5377a931-8a17-4eed-92dd-8a8808408a5a",
+                "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_GETTYPE_LABEL",
+                "type": "list",
+                "title": false,
+                "list": "dynamic_gets",
+                "store": null,
+                "tab_name": "Main",
+                "db": {
+                    "type": "TINYINT(1)",
+                    "default": "0",
+                    "GUID": "5377a931-8a17-4eed-92dd-8a8808408a5a",
+                    "null_switch": "NOT NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": null
+            },
+            "config_map_target": "gettype",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "list",
+                        "name": "gettype",
+                        "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_GETTYPE_LABEL",
+                        "description": "COM_COMPONENTBUILDER_DYNAMIC_GET_GETTYPE_DESCRIPTION",
+                        "class": "list_class",
+                        "layout": "joomla.form.field.list-fancy-select",
+                        "multiple": "false",
+                        "filter": "INT",
+                        "required": "true",
+                        "default": "1"
+                    },
+                    "options": [
+                        {
+                            "attributes": {
+                                "value": "1"
+                            },
+                            "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_GETITEM"
+                        },
+                        {
+                            "attributes": {
+                                "value": "2"
+                            },
+                            "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_GETLISTQUERY"
+                        },
+                        {
+                            "attributes": {
+                                "value": "3"
+                            },
+                            "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_GETCUSTOM"
+                        },
+                        {
+                            "attributes": {
+                                "value": "4"
+                            },
+                            "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_GETCUSTOMS"
+                        }
+                    ],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "php_calculation": {
+            "table_metadata": {
+                "name": "php_calculation",
+                "guid": "9b6768ae-8d6a-461e-9b41-61d49431a401",
+                "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_PHP_CALCULATION_LABEL",
+                "type": "editor",
+                "title": false,
+                "list": "dynamic_gets",
+                "store": "base64",
+                "tab_name": "Abacus",
+                "db": {
+                    "type": "MEDIUMTEXT",
+                    "default": "EMPTY",
+                    "GUID": "9b6768ae-8d6a-461e-9b41-61d49431a401",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "php_calculation",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "editor",
+                        "name": "php_calculation",
+                        "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_PHP_CALCULATION_LABEL",
+                        "description": "COM_COMPONENTBUILDER_DYNAMIC_GET_PHP_CALCULATION_DESCRIPTION",
+                        "width": "100%",
+                        "height": "450px",
+                        "cols": "15",
+                        "rows": "30",
+                        "buttons": "no",
+                        "syntax": "php",
+                        "editor": "codemirror|none",
+                        "filter": "raw",
+                        "validate": "code"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "php_router_parse": {
+            "table_metadata": {
+                "name": "php_router_parse",
+                "guid": "88ffbef3-064c-4f87-997a-30af1c88f2ec",
+                "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_PHP_ROUTER_PARSE_LABEL",
+                "type": "textarea",
+                "title": false,
+                "list": "dynamic_gets",
+                "store": "base64",
+                "tab_name": "Custom Script",
+                "db": {
+                    "type": "MEDIUMTEXT",
+                    "default": "EMPTY",
+                    "GUID": "88ffbef3-064c-4f87-997a-30af1c88f2ec",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "php_router_parse",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "textarea",
+                        "name": "php_router_parse",
+                        "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_PHP_ROUTER_PARSE_LABEL",
+                        "rows": "30",
+                        "cols": "15",
+                        "description": "COM_COMPONENTBUILDER_DYNAMIC_GET_PHP_ROUTER_PARSE_DESCRIPTION",
+                        "class": "text_area span12",
+                        "filter": "raw",
+                        "hint": "COM_COMPONENTBUILDER_DYNAMIC_GET_PHP_ROUTER_PARSE_HINT",
+                        "required": "true"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "add_php_after_getitems": {
+            "table_metadata": {
+                "name": "add_php_after_getitems",
+                "guid": "01ae4944-ceba-4c21-a02d-38222e1a3733",
+                "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_ADD_PHP_AFTER_GETITEMS_LABEL",
+                "type": "radio",
+                "title": false,
+                "list": "dynamic_gets",
+                "store": null,
+                "tab_name": "Custom Script",
+                "db": {
+                    "type": "TINYINT(1)",
+                    "default": "0",
+                    "GUID": "01ae4944-ceba-4c21-a02d-38222e1a3733",
+                    "null_switch": "NOT NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": null
+            },
+            "config_map_target": "add_php_after_getitems",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "radio",
+                        "name": "add_php_after_getitems",
+                        "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_ADD_PHP_AFTER_GETITEMS_LABEL",
+                        "class": "btn-group btn-group-yesno",
+                        "default": "0",
+                        "required": "true"
+                    },
+                    "options": [
+                        {
+                            "attributes": {
+                                "value": "1"
+                            },
+                            "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_YES"
+                        },
+                        {
+                            "attributes": {
+                                "value": "0"
+                            },
+                            "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_NO"
+                        }
+                    ],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "add_php_router_parse": {
+            "table_metadata": {
+                "name": "add_php_router_parse",
+                "guid": "d4b30bcc-414d-403b-9627-037bcbbd1c6b",
+                "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_ADD_PHP_ROUTER_PARSE_LABEL",
+                "type": "radio",
+                "title": false,
+                "list": "dynamic_gets",
+                "store": null,
+                "tab_name": "Custom Script",
+                "db": {
+                    "type": "TINYINT(1)",
+                    "default": "0",
+                    "GUID": "d4b30bcc-414d-403b-9627-037bcbbd1c6b",
+                    "null_switch": "NOT NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": null
+            },
+            "config_map_target": "add_php_router_parse",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "radio",
+                        "name": "add_php_router_parse",
+                        "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_ADD_PHP_ROUTER_PARSE_LABEL",
+                        "description": "COM_COMPONENTBUILDER_DYNAMIC_GET_ADD_PHP_ROUTER_PARSE_DESCRIPTION",
+                        "class": "btn-group btn-group-yesno",
+                        "default": "0",
+                        "required": "true"
+                    },
+                    "options": [
+                        {
+                            "attributes": {
+                                "value": "1"
+                            },
+                            "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_YES"
+                        },
+                        {
+                            "attributes": {
+                                "value": "0"
+                            },
+                            "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_NO"
+                        }
+                    ],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "view_selection": {
+            "table_metadata": {
+                "name": "view_selection",
+                "guid": "14f4d49c-7e54-494e-b103-eaccb6428ee8",
+                "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_VIEW_SELECTION_LABEL",
+                "type": "textarea",
+                "title": false,
+                "list": "dynamic_gets",
+                "store": null,
+                "tab_name": "Main",
+                "db": {
+                    "type": "TEXT",
+                    "default": "EMPTY",
+                    "GUID": "14f4d49c-7e54-494e-b103-eaccb6428ee8",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "view_selection",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "textarea",
+                        "name": "view_selection",
+                        "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_VIEW_SELECTION_LABEL",
+                        "rows": "22",
+                        "cols": "30",
+                        "description": "COM_COMPONENTBUILDER_DYNAMIC_GET_VIEW_SELECTION_DESCRIPTION",
+                        "class": "text_area span12",
+                        "filter": "HTML",
+                        "hint": "COM_COMPONENTBUILDER_DYNAMIC_GET_VIEW_SELECTION_HINT",
+                        "required": "true"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "add_php_before_getitems": {
+            "table_metadata": {
+                "name": "add_php_before_getitems",
+                "guid": "b7aaa1d0-4577-46eb-9d09-b4c1104a02a8",
+                "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_ADD_PHP_BEFORE_GETITEMS_LABEL",
+                "type": "radio",
+                "title": false,
+                "list": "dynamic_gets",
+                "store": null,
+                "tab_name": "Custom Script",
+                "db": {
+                    "type": "TINYINT(1)",
+                    "default": "0",
+                    "GUID": "b7aaa1d0-4577-46eb-9d09-b4c1104a02a8",
+                    "null_switch": "NOT NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": null
+            },
+            "config_map_target": "add_php_before_getitems",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "radio",
+                        "name": "add_php_before_getitems",
+                        "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_ADD_PHP_BEFORE_GETITEMS_LABEL",
+                        "class": "btn-group btn-group-yesno",
+                        "default": "0",
+                        "required": "true"
+                    },
+                    "options": [
+                        {
+                            "attributes": {
+                                "value": "1"
+                            },
+                            "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_YES"
+                        },
+                        {
+                            "attributes": {
+                                "value": "0"
+                            },
+                            "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_NO"
+                        }
+                    ],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "add_php_before_getitem": {
+            "table_metadata": {
+                "name": "add_php_before_getitem",
+                "guid": "bd40a792-2b63-446a-af75-0510f8c7cc2c",
+                "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_ADD_PHP_BEFORE_GETITEM_LABEL",
+                "type": "radio",
+                "title": false,
+                "list": "dynamic_gets",
+                "store": null,
+                "tab_name": "Custom Script",
+                "db": {
+                    "type": "TINYINT(1)",
+                    "default": "0",
+                    "GUID": "bd40a792-2b63-446a-af75-0510f8c7cc2c",
+                    "null_switch": "NOT NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": null
+            },
+            "config_map_target": "add_php_before_getitem",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "radio",
+                        "name": "add_php_before_getitem",
+                        "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_ADD_PHP_BEFORE_GETITEM_LABEL",
+                        "class": "btn-group btn-group-yesno",
+                        "default": "0",
+                        "required": "true"
+                    },
+                    "options": [
+                        {
+                            "attributes": {
+                                "value": "1"
+                            },
+                            "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_YES"
+                        },
+                        {
+                            "attributes": {
+                                "value": "0"
+                            },
+                            "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_NO"
+                        }
+                    ],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "add_php_after_getitem": {
+            "table_metadata": {
+                "name": "add_php_after_getitem",
+                "guid": "c1754272-da91-4a17-9567-c2566552cdc9",
+                "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_ADD_PHP_AFTER_GETITEM_LABEL",
+                "type": "radio",
+                "title": false,
+                "list": "dynamic_gets",
+                "store": null,
+                "tab_name": "Custom Script",
+                "db": {
+                    "type": "TINYINT(1)",
+                    "default": "0",
+                    "GUID": "c1754272-da91-4a17-9567-c2566552cdc9",
+                    "null_switch": "NOT NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": null
+            },
+            "config_map_target": "add_php_after_getitem",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "radio",
+                        "name": "add_php_after_getitem",
+                        "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_ADD_PHP_AFTER_GETITEM_LABEL",
+                        "class": "btn-group btn-group-yesno",
+                        "default": "0",
+                        "required": "true"
+                    },
+                    "options": [
+                        {
+                            "attributes": {
+                                "value": "1"
+                            },
+                            "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_YES"
+                        },
+                        {
+                            "attributes": {
+                                "value": "0"
+                            },
+                            "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_NO"
+                        }
+                    ],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "db_table_main": {
+            "table_metadata": {
+                "name": "db_table_main",
+                "guid": "4c744096-3d1c-406d-87f4-71169002e85f",
+                "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_DB_TABLE_MAIN_LABEL",
+                "type": "dbtables",
+                "title": false,
+                "list": "dynamic_gets",
+                "store": null,
+                "tab_name": "Main",
+                "db": {
+                    "type": "VARCHAR(255)",
+                    "default": "",
+                    "GUID": "4c744096-3d1c-406d-87f4-71169002e85f",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": {
+                    "type": 2,
+                    "table": "",
+                    "component": "",
+                    "entity": "",
+                    "value": "",
+                    "key": ""
+                }
+            },
+            "config_map_target": "db_table_main",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "dbtables",
+                        "name": "db_table_main",
+                        "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_DB_TABLE_MAIN_LABEL",
+                        "description": "COM_COMPONENTBUILDER_DYNAMIC_GET_DB_TABLE_MAIN_DESCRIPTION",
+                        "class": "list_class",
+                        "layout": "joomla.form.field.list-fancy-select",
+                        "multiple": "false",
+                        "required": "true",
+                        "button": "false"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "php_custom_get": {
+            "table_metadata": {
+                "name": "php_custom_get",
+                "guid": "8aba2f06-8fd1-4256-add5-1e233e581315",
+                "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_PHP_CUSTOM_GET_LABEL",
+                "type": "editor",
+                "title": false,
+                "list": "dynamic_gets",
+                "store": "base64",
+                "tab_name": "Main",
+                "db": {
+                    "type": "MEDIUMTEXT",
+                    "default": "EMPTY",
+                    "GUID": "8aba2f06-8fd1-4256-add5-1e233e581315",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "php_custom_get",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "editor",
+                        "name": "php_custom_get",
+                        "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_PHP_CUSTOM_GET_LABEL",
+                        "description": "COM_COMPONENTBUILDER_DYNAMIC_GET_PHP_CUSTOM_GET_DESCRIPTION",
+                        "width": "100%",
+                        "height": "450px",
+                        "cols": "15",
+                        "rows": "30",
+                        "buttons": "no",
+                        "syntax": "php",
+                        "editor": "codemirror|none",
+                        "filter": "raw",
+                        "validate": "code"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "plugin_events": {
+            "table_metadata": {
+                "name": "plugin_events",
+                "guid": "13637273-b286-42f5-b092-90e507484751",
+                "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_PLUGIN_EVENTS_LABEL",
+                "type": "list",
+                "title": false,
+                "list": "dynamic_gets",
+                "store": "json",
+                "tab_name": "Main",
+                "db": {
+                    "type": "VARCHAR(255)",
+                    "default": "",
+                    "GUID": "13637273-b286-42f5-b092-90e507484751",
+                    "null_switch": "NOT NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "plugin_events",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "list",
+                        "name": "plugin_events",
+                        "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_PLUGIN_EVENTS_LABEL",
+                        "description": "COM_COMPONENTBUILDER_DYNAMIC_GET_PLUGIN_EVENTS_DESCRIPTION",
+                        "class": "list_class",
+                        "layout": "joomla.form.field.list-fancy-select",
+                        "multiple": "true"
+                    },
+                    "options": [
+                        {
+                            "attributes": {
+                                "value": "onContentAfterTitle"
+                            },
+                            "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_ONCONTENTAFTERTITLE"
+                        },
+                        {
+                            "attributes": {
+                                "value": "onContentBeforeDisplay"
+                            },
+                            "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_ONCONTENTBEFOREDISPLAY"
+                        },
+                        {
+                            "attributes": {
+                                "value": "onContentAfterDisplay"
+                            },
+                            "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_ONCONTENTAFTERDISPLAY"
+                        }
+                    ],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "object",
+                "array",
+                "string",
+                "number",
+                "boolean"
+            ]
+        },
+        "db_selection": {
+            "table_metadata": {
+                "name": "db_selection",
+                "guid": "661c16f9-71be-41e2-8428-efd5509e6291",
+                "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_DB_SELECTION_LABEL",
+                "type": "textarea",
+                "title": false,
+                "list": "dynamic_gets",
+                "store": null,
+                "tab_name": "Main",
+                "db": {
+                    "type": "TEXT",
+                    "default": "EMPTY",
+                    "GUID": "661c16f9-71be-41e2-8428-efd5509e6291",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "db_selection",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "textarea",
+                        "name": "db_selection",
+                        "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_DB_SELECTION_LABEL",
+                        "rows": "22",
+                        "cols": "30",
+                        "description": "COM_COMPONENTBUILDER_DYNAMIC_GET_DB_SELECTION_DESCRIPTION",
+                        "class": "text_area span12",
+                        "filter": "HTML",
+                        "hint": "COM_COMPONENTBUILDER_DYNAMIC_GET_DB_SELECTION_HINT",
+                        "required": "true"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "view_table_main": {
+            "table_metadata": {
+                "name": "view_table_main",
+                "guid": "1744d5fa-f0fd-4857-ab41-4e855fe7dc60",
+                "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_VIEW_TABLE_MAIN_LABEL",
+                "type": "ModalSelect",
+                "title": false,
+                "list": "dynamic_gets",
+                "store": null,
+                "tab_name": "Main",
+                "db": {
+                    "type": "VARCHAR(36)",
+                    "default": "",
+                    "GUID": "1744d5fa-f0fd-4857-ab41-4e855fe7dc60",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": {
+                    "type": 1,
+                    "table": "#__componentbuilder_admin_view",
+                    "component": "com_componentbuilder",
+                    "entity": "admin_view",
+                    "value": "system_name",
+                    "key": "guid"
+                }
+            },
+            "config_map_target": "view_table_main",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "ModalSelect",
+                        "name": "view_table_main",
+                        "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_VIEW_TABLE_MAIN_LABEL",
+                        "sql_title_table": "#__componentbuilder_admin_view",
+                        "sql_title_column": "system_name",
+                        "data-key-name": "guid",
+                        "sql_title_key": "guid",
+                        "urlSelect": "index.php?option=com_componentbuilder&view=admin_views&layout=modal&tmpl=component&titleKey=guid",
+                        "urlNew": "index.php?option=com_componentbuilder&task=admin_view.add&layout=modal&tmpl=component",
+                        "urlEdit": "index.php?option=com_componentbuilder&task=admin_view.edit&guid={id}&layout=modal&tmpl=component&titleKey=guid",
+                        "titleSelect": "COM_COMPONENTBUILDER_DYNAMIC_GET_VIEW_TABLE_MAIN_TITLESELECT",
+                        "titleNew": "COM_COMPONENTBUILDER_DYNAMIC_GET_VIEW_TABLE_MAIN_TITLENEW",
+                        "titleEdit": "COM_COMPONENTBUILDER_DYNAMIC_GET_VIEW_TABLE_MAIN_TITLEEDIT",
+                        "iconSelect": "icon-stack",
+                        "select": "true",
+                        "new": "true",
+                        "edit": "true",
+                        "clear": "true",
+                        "class": "input-large",
+                        "description": "COM_COMPONENTBUILDER_DYNAMIC_GET_VIEW_TABLE_MAIN_DESCRIPTION",
+                        "hint": "COM_COMPONENTBUILDER_DYNAMIC_GET_VIEW_TABLE_MAIN_HINT"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "add_php_getlistquery": {
+            "table_metadata": {
+                "name": "add_php_getlistquery",
+                "guid": "f2581140-5d9c-4c29-b511-e12a826d15da",
+                "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_ADD_PHP_GETLISTQUERY_LABEL",
+                "type": "radio",
+                "title": false,
+                "list": "dynamic_gets",
+                "store": null,
+                "tab_name": "Custom Script",
+                "db": {
+                    "type": "TINYINT(1)",
+                    "default": "0",
+                    "GUID": "f2581140-5d9c-4c29-b511-e12a826d15da",
+                    "null_switch": "NOT NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": null
+            },
+            "config_map_target": "add_php_getlistquery",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "radio",
+                        "name": "add_php_getlistquery",
+                        "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_ADD_PHP_GETLISTQUERY_LABEL",
+                        "class": "btn-group btn-group-yesno",
+                        "default": "0",
+                        "required": "true"
+                    },
+                    "options": [
+                        {
+                            "attributes": {
+                                "value": "1"
+                            },
+                            "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_YES"
+                        },
+                        {
+                            "attributes": {
+                                "value": "0"
+                            },
+                            "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_NO"
+                        }
+                    ],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "join_db_table": {
+            "table_metadata": {
+                "name": "join_db_table",
+                "guid": "6c75d3ff-93aa-493b-b25c-733e78408fa2",
+                "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_JOIN_DB_TABLE_LABEL",
+                "type": "subform",
+                "title": false,
+                "list": "dynamic_gets",
+                "store": "json",
+                "tab_name": "Joint",
+                "db": {
+                    "type": "TEXT",
+                    "default": "EMPTY",
+                    "GUID": "6c75d3ff-93aa-493b-b25c-733e78408fa2",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null,
+                "fields": {
+                    "db_table": {
+                        "name": "db_table",
+                        "type": "dbtables",
+                        "link": {
+                            "type": 2,
+                            "table": "",
+                            "component": "",
+                            "entity": "",
+                            "value": "",
+                            "key": ""
+                        }
+                    },
+                    "row_type": {
+                        "name": "row_type",
+                        "type": "list",
+                        "link": null
+                    },
+                    "as": {
+                        "name": "as",
+                        "type": "list",
+                        "link": null
+                    },
+                    "type": {
+                        "name": "type",
+                        "type": "list",
+                        "link": null
+                    },
+                    "on_field": {
+                        "name": "on_field",
+                        "type": "text",
+                        "link": null
+                    },
+                    "operator": {
+                        "name": "operator",
+                        "type": "list",
+                        "link": null
+                    },
+                    "join_field": {
+                        "name": "join_field",
+                        "type": "text",
+                        "link": null
+                    },
+                    "selection": {
+                        "name": "selection",
+                        "type": "textarea",
+                        "link": null
+                    }
+                }
+            },
+            "config_map_target": "join_db_table",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "subform",
+                        "name": "join_db_table",
+                        "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_JOIN_DB_TABLE_LABEL",
+                        "layout": "repeatablejcb",
+                        "multiple": "true",
+                        "description": "COM_COMPONENTBUILDER_DYNAMIC_GET_JOIN_DB_TABLE_DESCRIPTION",
+                        "icon": "list"
+                    },
+                    "options": [],
+                    "nested_fields": [
+                        {
+                            "attributes": {
+                                "type": "dbtables",
+                                "name": "db_table",
+                                "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_DB_TABLE_LABEL",
+                                "description": "COM_COMPONENTBUILDER_DYNAMIC_GET_DB_TABLE_DESCRIPTION",
+                                "class": "list_class",
+                                "multiple": "false",
+                                "required": "true",
+                                "button": "false"
+                            },
+                            "options": [],
+                            "nested_fields": []
+                        },
+                        {
+                            "attributes": {
+                                "type": "list",
+                                "name": "row_type",
+                                "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_ROW_TYPE_LABEL",
+                                "description": "COM_COMPONENTBUILDER_DYNAMIC_GET_ROW_TYPE_DESCRIPTION",
+                                "class": "list_class fieldLarge",
+                                "multiple": "false",
+                                "filter": "INT",
+                                "required": "true",
+                                "default": "1"
+                            },
+                            "options": [
+                                {
+                                    "attributes": {
+                                        "value": "1"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_SINGLE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "2"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_MULTIPLE"
+                                }
+                            ],
+                            "nested_fields": []
+                        },
+                        {
+                            "attributes": {
+                                "type": "list",
+                                "name": "as",
+                                "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_AS_LABEL",
+                                "class": "list_class fieldLarge",
+                                "multiple": "false",
+                                "filter": "WORD",
+                                "required": "true",
+                                "default": "b"
+                            },
+                            "options": [
+                                {
+                                    "attributes": {
+                                        "value": "b"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_B"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "c"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_C"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "d"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_D"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "e"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_E"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "f"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_F"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "g"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_G"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "h"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_H"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "i"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_I"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "j"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_J"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "k"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_K"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "l"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_L"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "m"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_M"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "n"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_N"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "o"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_O"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "p"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_P"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "q"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_Q"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "r"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_R"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "s"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_S"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "t"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_T"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "u"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_U"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "v"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_V"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "w"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_W"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "x"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_X"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "y"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_Y"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "z"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_Z"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "aa"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_AA"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "bb"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_BB"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "cc"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_CC"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "dd"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_DD"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "ee"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_EE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "ff"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_FF"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "gg"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_GG"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "hh"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_HH"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "ii"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_II"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "jj"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_JJ"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "kk"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_KK"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "ll"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_LL"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "mm"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_MM"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "nn"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_NN"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "oo"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_OO"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "pp"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_PP"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "qq"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_QQ"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "rr"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_RR"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "ss"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_SS"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "tt"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_TT"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "uu"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_UU"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "vv"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_VV"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "ww"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_WW"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "xx"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_XX"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "yy"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_YY"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "zz"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_ZZ"
+                                }
+                            ],
+                            "nested_fields": []
+                        },
+                        {
+                            "attributes": {
+                                "type": "list",
+                                "name": "type",
+                                "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_TYPE_LABEL",
+                                "class": "list_class fieldLarge",
+                                "multiple": "false",
+                                "filter": "INT",
+                                "required": "true",
+                                "default": "1"
+                            },
+                            "options": [
+                                {
+                                    "attributes": {
+                                        "value": "1"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_JOIN_LEFT"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "2"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_JOIN_LEFT_OUTER"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "3"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_JOIN_INNER"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "4"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_JOIN_RIGHT"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "5"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_JOIN_RIGHT_OUTER"
+                                }
+                            ],
+                            "nested_fields": []
+                        },
+                        {
+                            "attributes": {
+                                "type": "text",
+                                "name": "on_field",
+                                "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_ON_FIELD_LABEL",
+                                "size": "40",
+                                "maxlength": "150",
+                                "description": "COM_COMPONENTBUILDER_DYNAMIC_GET_ON_FIELD_DESCRIPTION",
+                                "class": "text_area fieldLarge",
+                                "readonly": "false",
+                                "disabled": "false",
+                                "required": "true",
+                                "filter": "CMD",
+                                "message": "COM_COMPONENTBUILDER_DYNAMIC_GET_ON_FIELD_MESSAGE",
+                                "hint": "COM_COMPONENTBUILDER_DYNAMIC_GET_ON_FIELD_HINT"
+                            },
+                            "options": [],
+                            "nested_fields": []
+                        },
+                        {
+                            "attributes": {
+                                "type": "list",
+                                "name": "operator",
+                                "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_OPERATOR_LABEL",
+                                "description": "COM_COMPONENTBUILDER_DYNAMIC_GET_OPERATOR_DESCRIPTION",
+                                "class": "list_class fieldLarge",
+                                "multiple": "false",
+                                "filter": "INT",
+                                "required": "true",
+                                "default": "1"
+                            },
+                            "options": [
+                                {
+                                    "attributes": {
+                                        "value": "1"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_EQUAL_"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "2"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_NOT_EQUAL_NE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "3"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_NOT_EQUAL_ALT_LTGT"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "4"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_GREATER_THAN_GT"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "5"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_LESS_THAN_LT"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "6"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_GREATER_THAN_OR_EQUAL_GE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "7"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_LESS_THAN_OR_EQUAL_LE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "8"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_NOT_LESS_THAN_LT"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "9"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_NOT_GREATER_THAN_GT"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "10"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_IN"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "11"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_NOT_IN"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "12"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_LIKE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "13"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_NOT_LIKE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "14"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_IS_NULL"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "15"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_IS_NOT_NULL"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "16"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_BETWEEN"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "17"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_NOT_BETWEEN"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "18"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_EXISTS"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "19"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_NOT_EXISTS"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "20"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_REGEXP"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "21"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_NOT_REGEXP"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "22"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_SOUNDS_LIKE"
+                                }
+                            ],
+                            "nested_fields": []
+                        },
+                        {
+                            "attributes": {
+                                "type": "text",
+                                "name": "join_field",
+                                "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_JOIN_FIELD_LABEL",
+                                "size": "40",
+                                "maxlength": "150",
+                                "description": "COM_COMPONENTBUILDER_DYNAMIC_GET_JOIN_FIELD_DESCRIPTION",
+                                "class": "text_area fieldLarge",
+                                "readonly": "false",
+                                "disabled": "false",
+                                "required": "true",
+                                "filter": "CMD",
+                                "message": "COM_COMPONENTBUILDER_DYNAMIC_GET_JOIN_FIELD_MESSAGE",
+                                "hint": "COM_COMPONENTBUILDER_DYNAMIC_GET_JOIN_FIELD_HINT"
+                            },
+                            "options": [],
+                            "nested_fields": []
+                        },
+                        {
+                            "attributes": {
+                                "type": "textarea",
+                                "name": "selection",
+                                "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_SELECTION_LABEL",
+                                "rows": "22",
+                                "cols": "30",
+                                "description": "COM_COMPONENTBUILDER_DYNAMIC_GET_SELECTION_DESCRIPTION",
+                                "class": "text_area span12",
+                                "filter": "HTML",
+                                "hint": "COM_COMPONENTBUILDER_DYNAMIC_GET_SELECTION_HINT",
+                                "required": "true"
+                            },
+                            "options": [],
+                            "nested_fields": []
+                        }
+                    ]
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "object",
+                "array",
+                "string"
+            ]
+        },
+        "select_all": {
+            "table_metadata": {
+                "name": "select_all",
+                "guid": "fbb918ff-70bf-41ee-b1fd-110e38cbdba0",
+                "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_SELECT_ALL_LABEL",
+                "type": "radio",
+                "title": false,
+                "list": "dynamic_gets",
+                "store": null,
+                "tab_name": "Main",
+                "db": {
+                    "type": "TINYINT(1)",
+                    "default": "0",
+                    "GUID": "fbb918ff-70bf-41ee-b1fd-110e38cbdba0",
+                    "null_switch": "NOT NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": null
+            },
+            "config_map_target": "select_all",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "radio",
+                        "name": "select_all",
+                        "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_SELECT_ALL_LABEL",
+                        "description": "COM_COMPONENTBUILDER_DYNAMIC_GET_SELECT_ALL_DESCRIPTION",
+                        "class": "btn-group btn-group-yesno",
+                        "default": "0"
+                    },
+                    "options": [
+                        {
+                            "attributes": {
+                                "value": "1"
+                            },
+                            "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_YES"
+                        },
+                        {
+                            "attributes": {
+                                "value": "0"
+                            },
+                            "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_NO"
+                        }
+                    ],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "php_before_getitem": {
+            "table_metadata": {
+                "name": "php_before_getitem",
+                "guid": "c3bb9074-505a-4085-878b-f7ad3d5522a6",
+                "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_PHP_BEFORE_GETITEM_LABEL",
+                "type": "editor",
+                "title": false,
+                "list": "dynamic_gets",
+                "store": "base64",
+                "tab_name": "Custom Script",
+                "db": {
+                    "type": "MEDIUMTEXT",
+                    "default": "EMPTY",
+                    "GUID": "c3bb9074-505a-4085-878b-f7ad3d5522a6",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "php_before_getitem",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "editor",
+                        "name": "php_before_getitem",
+                        "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_PHP_BEFORE_GETITEM_LABEL",
+                        "description": "COM_COMPONENTBUILDER_DYNAMIC_GET_PHP_BEFORE_GETITEM_DESCRIPTION",
+                        "width": "100%",
+                        "height": "450px",
+                        "cols": "15",
+                        "rows": "30",
+                        "buttons": "no",
+                        "syntax": "php",
+                        "editor": "codemirror|none",
+                        "filter": "raw",
+                        "validate": "code"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "getcustom": {
+            "table_metadata": {
+                "name": "getcustom",
+                "guid": "6c486f71-abfd-49c7-91e2-165f594fa658",
+                "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_GETCUSTOM_LABEL",
+                "type": "text",
+                "title": false,
+                "list": "dynamic_gets",
+                "store": null,
+                "tab_name": "Main",
+                "db": {
+                    "type": "VARCHAR(255)",
+                    "default": "",
+                    "GUID": "6c486f71-abfd-49c7-91e2-165f594fa658",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": null
+            },
+            "config_map_target": "getcustom",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "text",
+                        "name": "getcustom",
+                        "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_GETCUSTOM_LABEL",
+                        "size": "40",
+                        "maxlength": "150",
+                        "description": "COM_COMPONENTBUILDER_DYNAMIC_GET_GETCUSTOM_DESCRIPTION",
+                        "class": "text_area",
+                        "readonly": "false",
+                        "disabled": "false",
+                        "required": "true",
+                        "filter": "WORD",
+                        "message": "COM_COMPONENTBUILDER_DYNAMIC_GET_GETCUSTOM_MESSAGE",
+                        "hint": "COM_COMPONENTBUILDER_DYNAMIC_GET_GETCUSTOM_HINT"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "php_after_getitem": {
+            "table_metadata": {
+                "name": "php_after_getitem",
+                "guid": "fc0dcf64-f6a8-48d7-8ed7-6ecea942cf21",
+                "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_PHP_AFTER_GETITEM_LABEL",
+                "type": "editor",
+                "title": false,
+                "list": "dynamic_gets",
+                "store": "base64",
+                "tab_name": "Custom Script",
+                "db": {
+                    "type": "MEDIUMTEXT",
+                    "default": "EMPTY",
+                    "GUID": "fc0dcf64-f6a8-48d7-8ed7-6ecea942cf21",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "php_after_getitem",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "editor",
+                        "name": "php_after_getitem",
+                        "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_PHP_AFTER_GETITEM_LABEL",
+                        "description": "COM_COMPONENTBUILDER_DYNAMIC_GET_PHP_AFTER_GETITEM_DESCRIPTION",
+                        "width": "100%",
+                        "height": "450px",
+                        "cols": "15",
+                        "rows": "30",
+                        "buttons": "no",
+                        "syntax": "php",
+                        "editor": "codemirror|none",
+                        "filter": "raw",
+                        "validate": "code"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "pagination": {
+            "table_metadata": {
+                "name": "pagination",
+                "guid": "b99a8df9-27ce-4502-9f44-863799cd2cc9",
+                "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_PAGINATION_LABEL",
+                "type": "radio",
+                "title": false,
+                "list": "dynamic_gets",
+                "store": null,
+                "tab_name": "Main",
+                "db": {
+                    "type": "TINYINT(1)",
+                    "default": "1",
+                    "GUID": "b99a8df9-27ce-4502-9f44-863799cd2cc9",
+                    "null_switch": "NOT NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": null
+            },
+            "config_map_target": "pagination",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "radio",
+                        "name": "pagination",
+                        "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_PAGINATION_LABEL",
+                        "description": "COM_COMPONENTBUILDER_DYNAMIC_GET_PAGINATION_DESCRIPTION",
+                        "class": "btn-group btn-group-yesno",
+                        "default": "1",
+                        "required": "true"
+                    },
+                    "options": [
+                        {
+                            "attributes": {
+                                "value": "1"
+                            },
+                            "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_YES"
+                        },
+                        {
+                            "attributes": {
+                                "value": "0"
+                            },
+                            "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_NO"
+                        }
+                    ],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "php_getlistquery": {
+            "table_metadata": {
+                "name": "php_getlistquery",
+                "guid": "b9c064cb-4266-4217-95b7-d2956e6bfefb",
+                "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_PHP_GETLISTQUERY_LABEL",
+                "type": "editor",
+                "title": false,
+                "list": "dynamic_gets",
+                "store": "base64",
+                "tab_name": "Custom Script",
+                "db": {
+                    "type": "MEDIUMTEXT",
+                    "default": "EMPTY",
+                    "GUID": "b9c064cb-4266-4217-95b7-d2956e6bfefb",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "php_getlistquery",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "editor",
+                        "name": "php_getlistquery",
+                        "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_PHP_GETLISTQUERY_LABEL",
+                        "description": "COM_COMPONENTBUILDER_DYNAMIC_GET_PHP_GETLISTQUERY_DESCRIPTION",
+                        "width": "100%",
+                        "height": "450px",
+                        "cols": "15",
+                        "rows": "30",
+                        "buttons": "no",
+                        "syntax": "php",
+                        "editor": "codemirror|none",
+                        "filter": "raw",
+                        "validate": "code"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "php_before_getitems": {
+            "table_metadata": {
+                "name": "php_before_getitems",
+                "guid": "71680787-5da5-4ab8-afdf-1e109556743b",
+                "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_PHP_BEFORE_GETITEMS_LABEL",
+                "type": "editor",
+                "title": false,
+                "list": "dynamic_gets",
+                "store": "base64",
+                "tab_name": "Custom Script",
+                "db": {
+                    "type": "MEDIUMTEXT",
+                    "default": "EMPTY",
+                    "GUID": "71680787-5da5-4ab8-afdf-1e109556743b",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "php_before_getitems",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "editor",
+                        "name": "php_before_getitems",
+                        "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_PHP_BEFORE_GETITEMS_LABEL",
+                        "description": "COM_COMPONENTBUILDER_DYNAMIC_GET_PHP_BEFORE_GETITEMS_DESCRIPTION",
+                        "width": "100%",
+                        "height": "450px",
+                        "cols": "15",
+                        "rows": "30",
+                        "buttons": "no",
+                        "syntax": "php",
+                        "editor": "codemirror|none",
+                        "filter": "raw",
+                        "validate": "code"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "filter": {
+            "table_metadata": {
+                "name": "filter",
+                "guid": "bf2293c7-5c8b-4b77-a880-c63ca4777e3e",
+                "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_FILTER_LABEL",
+                "type": "subform",
+                "title": false,
+                "list": "dynamic_gets",
+                "store": "json",
+                "tab_name": "Tweak",
+                "db": {
+                    "type": "TEXT",
+                    "default": "EMPTY",
+                    "GUID": "bf2293c7-5c8b-4b77-a880-c63ca4777e3e",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null,
+                "fields": {
+                    "filter_type": {
+                        "name": "filter_type",
+                        "type": "list",
+                        "link": null
+                    },
+                    "state_key": {
+                        "name": "state_key",
+                        "type": "text",
+                        "link": null
+                    },
+                    "operator": {
+                        "name": "operator",
+                        "type": "list",
+                        "link": null
+                    },
+                    "table_key": {
+                        "name": "table_key",
+                        "type": "text",
+                        "link": null
+                    },
+                    "empty": {
+                        "name": "empty",
+                        "type": "checkbox",
+                        "link": null
+                    }
+                }
+            },
+            "config_map_target": "filter",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "subform",
+                        "name": "filter",
+                        "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_FILTER_LABEL",
+                        "layout": "joomla.form.field.subform.repeatable-table",
+                        "multiple": "true",
+                        "description": "COM_COMPONENTBUILDER_DYNAMIC_GET_FILTER_DESCRIPTION",
+                        "icon": "list"
+                    },
+                    "options": [],
+                    "nested_fields": [
+                        {
+                            "attributes": {
+                                "type": "list",
+                                "name": "filter_type",
+                                "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_FILTER_TYPE_LABEL",
+                                "description": "COM_COMPONENTBUILDER_DYNAMIC_GET_FILTER_TYPE_DESCRIPTION",
+                                "class": "list_class",
+                                "multiple": "false",
+                                "filter": "INT",
+                                "required": "true",
+                                "default": "1"
+                            },
+                            "options": [
+                                {
+                                    "attributes": {
+                                        "value": "1"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_ID"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "2"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_USER"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "3"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_ACCESS_LEVEL"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "4"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_USER_GROUPS"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "5"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_CATEGORIES"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "6"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_TAGS"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "7"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_DATE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "8"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_FUNCTIONVAR"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "9"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_ARRAY_VALUE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "10"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_REPEATABLE_VALUE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "11"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_OTHER"
+                                }
+                            ],
+                            "nested_fields": []
+                        },
+                        {
+                            "attributes": {
+                                "type": "text",
+                                "name": "state_key",
+                                "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_STATE_KEY_LABEL",
+                                "size": "35",
+                                "maxlength": "150",
+                                "description": "COM_COMPONENTBUILDER_DYNAMIC_GET_STATE_KEY_DESCRIPTION",
+                                "class": "text_area",
+                                "readonly": "false",
+                                "disabled": "false",
+                                "required": "true",
+                                "filter": "STRING",
+                                "message": "COM_COMPONENTBUILDER_DYNAMIC_GET_STATE_KEY_MESSAGE",
+                                "hint": "COM_COMPONENTBUILDER_DYNAMIC_GET_STATE_KEY_HINT"
+                            },
+                            "options": [],
+                            "nested_fields": []
+                        },
+                        {
+                            "attributes": {
+                                "type": "list",
+                                "name": "operator",
+                                "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_OPERATOR_LABEL",
+                                "description": "COM_COMPONENTBUILDER_DYNAMIC_GET_OPERATOR_DESCRIPTION",
+                                "class": "list_class fieldLarge",
+                                "multiple": "false",
+                                "filter": "INT",
+                                "required": "true",
+                                "default": "1"
+                            },
+                            "options": [
+                                {
+                                    "attributes": {
+                                        "value": "1"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_EQUAL_"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "2"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_NOT_EQUAL_NE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "3"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_NOT_EQUAL_ALT_LTGT"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "4"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_GREATER_THAN_GT"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "5"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_LESS_THAN_LT"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "6"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_GREATER_THAN_OR_EQUAL_GE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "7"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_LESS_THAN_OR_EQUAL_LE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "8"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_NOT_LESS_THAN_LT"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "9"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_NOT_GREATER_THAN_GT"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "10"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_IN"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "11"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_NOT_IN"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "12"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_LIKE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "13"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_NOT_LIKE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "14"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_IS_NULL"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "15"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_IS_NOT_NULL"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "16"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_BETWEEN"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "17"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_NOT_BETWEEN"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "18"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_EXISTS"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "19"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_NOT_EXISTS"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "20"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_REGEXP"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "21"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_NOT_REGEXP"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "22"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_SOUNDS_LIKE"
+                                }
+                            ],
+                            "nested_fields": []
+                        },
+                        {
+                            "attributes": {
+                                "type": "text",
+                                "name": "table_key",
+                                "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_TABLE_KEY_LABEL",
+                                "size": "35",
+                                "maxlength": "150",
+                                "description": "COM_COMPONENTBUILDER_DYNAMIC_GET_TABLE_KEY_DESCRIPTION",
+                                "class": "text_area",
+                                "readonly": "false",
+                                "disabled": "false",
+                                "required": "true",
+                                "filter": "CMD",
+                                "message": "COM_COMPONENTBUILDER_DYNAMIC_GET_TABLE_KEY_MESSAGE",
+                                "hint": "COM_COMPONENTBUILDER_DYNAMIC_GET_TABLE_KEY_HINT"
+                            },
+                            "options": [],
+                            "nested_fields": []
+                        },
+                        {
+                            "attributes": {
+                                "type": "checkbox",
+                                "name": "empty",
+                                "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_EMPTY_LABEL",
+                                "value": "1",
+                                "description": "COM_COMPONENTBUILDER_DYNAMIC_GET_EMPTY_DESCRIPTION",
+                                "class": "inputbox"
+                            },
+                            "options": [],
+                            "nested_fields": []
+                        }
+                    ]
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "object",
+                "array",
+                "string"
+            ]
+        },
+        "php_after_getitems": {
+            "table_metadata": {
+                "name": "php_after_getitems",
+                "guid": "1ae39469-cd74-4d82-84af-fec8af28be61",
+                "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_PHP_AFTER_GETITEMS_LABEL",
+                "type": "editor",
+                "title": false,
+                "list": "dynamic_gets",
+                "store": "base64",
+                "tab_name": "Custom Script",
+                "db": {
+                    "type": "MEDIUMTEXT",
+                    "default": "EMPTY",
+                    "GUID": "1ae39469-cd74-4d82-84af-fec8af28be61",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "php_after_getitems",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "editor",
+                        "name": "php_after_getitems",
+                        "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_PHP_AFTER_GETITEMS_LABEL",
+                        "description": "COM_COMPONENTBUILDER_DYNAMIC_GET_PHP_AFTER_GETITEMS_DESCRIPTION",
+                        "width": "100%",
+                        "height": "450px",
+                        "cols": "15",
+                        "rows": "30",
+                        "buttons": "no",
+                        "syntax": "php",
+                        "editor": "codemirror|none",
+                        "filter": "raw",
+                        "validate": "code"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "where": {
+            "table_metadata": {
+                "name": "where",
+                "guid": "81466df0-3571-45cf-b520-cee2a9f5e03b",
+                "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_WHERE_LABEL",
+                "type": "subform",
+                "title": false,
+                "list": "dynamic_gets",
+                "store": "json",
+                "tab_name": "Tweak",
+                "db": {
+                    "type": "TEXT",
+                    "default": "EMPTY",
+                    "GUID": "81466df0-3571-45cf-b520-cee2a9f5e03b",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null,
+                "fields": {
+                    "table_key": {
+                        "name": "table_key",
+                        "type": "text",
+                        "link": null
+                    },
+                    "operator": {
+                        "name": "operator",
+                        "type": "list",
+                        "link": null
+                    },
+                    "value_key": {
+                        "name": "value_key",
+                        "type": "text",
+                        "link": null
+                    }
+                }
+            },
+            "config_map_target": "where",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "subform",
+                        "name": "where",
+                        "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_WHERE_LABEL",
+                        "layout": "joomla.form.field.subform.repeatable-table",
+                        "multiple": "true",
+                        "description": "COM_COMPONENTBUILDER_DYNAMIC_GET_WHERE_DESCRIPTION",
+                        "icon": "list"
+                    },
+                    "options": [],
+                    "nested_fields": [
+                        {
+                            "attributes": {
+                                "type": "text",
+                                "name": "table_key",
+                                "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_TABLE_KEY_LABEL",
+                                "size": "35",
+                                "maxlength": "150",
+                                "description": "COM_COMPONENTBUILDER_DYNAMIC_GET_TABLE_KEY_DESCRIPTION",
+                                "class": "text_area",
+                                "readonly": "false",
+                                "disabled": "false",
+                                "required": "true",
+                                "filter": "CMD",
+                                "message": "COM_COMPONENTBUILDER_DYNAMIC_GET_TABLE_KEY_MESSAGE",
+                                "hint": "COM_COMPONENTBUILDER_DYNAMIC_GET_TABLE_KEY_HINT"
+                            },
+                            "options": [],
+                            "nested_fields": []
+                        },
+                        {
+                            "attributes": {
+                                "type": "list",
+                                "name": "operator",
+                                "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_OPERATOR_LABEL",
+                                "description": "COM_COMPONENTBUILDER_DYNAMIC_GET_OPERATOR_DESCRIPTION",
+                                "class": "list_class fieldLarge",
+                                "multiple": "false",
+                                "filter": "INT",
+                                "required": "true",
+                                "default": "1"
+                            },
+                            "options": [
+                                {
+                                    "attributes": {
+                                        "value": "1"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_EQUAL_"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "2"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_NOT_EQUAL_NE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "3"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_NOT_EQUAL_ALT_LTGT"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "4"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_GREATER_THAN_GT"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "5"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_LESS_THAN_LT"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "6"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_GREATER_THAN_OR_EQUAL_GE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "7"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_LESS_THAN_OR_EQUAL_LE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "8"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_NOT_LESS_THAN_LT"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "9"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_NOT_GREATER_THAN_GT"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "10"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_IN"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "11"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_NOT_IN"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "12"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_LIKE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "13"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_NOT_LIKE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "14"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_IS_NULL"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "15"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_IS_NOT_NULL"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "16"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_BETWEEN"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "17"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_NOT_BETWEEN"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "18"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_EXISTS"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "19"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_NOT_EXISTS"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "20"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_REGEXP"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "21"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_NOT_REGEXP"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "22"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_SOUNDS_LIKE"
+                                }
+                            ],
+                            "nested_fields": []
+                        },
+                        {
+                            "attributes": {
+                                "type": "text",
+                                "name": "value_key",
+                                "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_VALUE_KEY_LABEL",
+                                "size": "40",
+                                "maxlength": "150",
+                                "description": "COM_COMPONENTBUILDER_DYNAMIC_GET_VALUE_KEY_DESCRIPTION",
+                                "class": "text_area",
+                                "readonly": "false",
+                                "disabled": "false",
+                                "required": "true",
+                                "filter": "STRING",
+                                "message": "COM_COMPONENTBUILDER_DYNAMIC_GET_VALUE_KEY_MESSAGE",
+                                "hint": "COM_COMPONENTBUILDER_DYNAMIC_GET_VALUE_KEY_HINT"
+                            },
+                            "options": [],
+                            "nested_fields": []
+                        }
+                    ]
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "object",
+                "array",
+                "string"
+            ]
+        },
+        "order": {
+            "table_metadata": {
+                "name": "order",
+                "guid": "007dc9f8-9b06-4211-83c9-4134b23d6561",
+                "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_ORDER_LABEL",
+                "type": "subform",
+                "title": false,
+                "list": "dynamic_gets",
+                "store": "json",
+                "tab_name": "Tweak",
+                "db": {
+                    "type": "TEXT",
+                    "default": "EMPTY",
+                    "GUID": "007dc9f8-9b06-4211-83c9-4134b23d6561",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null,
+                "fields": {
+                    "table_key": {
+                        "name": "table_key",
+                        "type": "text",
+                        "link": null
+                    },
+                    "direction": {
+                        "name": "direction",
+                        "type": "list",
+                        "link": null
+                    }
+                }
+            },
+            "config_map_target": "order",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "subform",
+                        "name": "order",
+                        "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_ORDER_LABEL",
+                        "layout": "joomla.form.field.subform.repeatable-table",
+                        "multiple": "true",
+                        "description": "COM_COMPONENTBUILDER_DYNAMIC_GET_ORDER_DESCRIPTION",
+                        "icon": "list"
+                    },
+                    "options": [],
+                    "nested_fields": [
+                        {
+                            "attributes": {
+                                "type": "text",
+                                "name": "table_key",
+                                "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_TABLE_KEY_LABEL",
+                                "size": "35",
+                                "maxlength": "150",
+                                "description": "COM_COMPONENTBUILDER_DYNAMIC_GET_TABLE_KEY_DESCRIPTION",
+                                "class": "text_area",
+                                "readonly": "false",
+                                "disabled": "false",
+                                "required": "true",
+                                "filter": "CMD",
+                                "message": "COM_COMPONENTBUILDER_DYNAMIC_GET_TABLE_KEY_MESSAGE",
+                                "hint": "COM_COMPONENTBUILDER_DYNAMIC_GET_TABLE_KEY_HINT"
+                            },
+                            "options": [],
+                            "nested_fields": []
+                        },
+                        {
+                            "attributes": {
+                                "type": "list",
+                                "name": "direction",
+                                "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_DIRECTION_LABEL",
+                                "class": "list_class",
+                                "multiple": "false",
+                                "filter": "WORD",
+                                "required": "true"
+                            },
+                            "options": [
+                                {
+                                    "attributes": {
+                                        "value": "ASC"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_ASCENDING"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "DESC"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_DESCENDING"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "RAND"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_RANDOM"
+                                }
+                            ],
+                            "nested_fields": []
+                        }
+                    ]
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "object",
+                "array",
+                "string"
+            ]
+        },
+        "addcalculation": {
+            "table_metadata": {
+                "name": "addcalculation",
+                "guid": "6e7bb46d-fda5-46b8-b08e-31a2e6884e24",
+                "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_ADDCALCULATION_LABEL",
+                "type": "radio",
+                "title": false,
+                "list": "dynamic_gets",
+                "store": null,
+                "tab_name": "Abacus",
+                "db": {
+                    "type": "TINYINT(1)",
+                    "default": "0",
+                    "GUID": "6e7bb46d-fda5-46b8-b08e-31a2e6884e24",
+                    "null_switch": "NOT NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "addcalculation",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "radio",
+                        "name": "addcalculation",
+                        "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_ADDCALCULATION_LABEL",
+                        "description": "COM_COMPONENTBUILDER_DYNAMIC_GET_ADDCALCULATION_DESCRIPTION",
+                        "class": "btn-group btn-group-yesno",
+                        "default": "0",
+                        "required": "true"
+                    },
+                    "options": [
+                        {
+                            "attributes": {
+                                "value": "1"
+                            },
+                            "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_YES"
+                        },
+                        {
+                            "attributes": {
+                                "value": "0"
+                            },
+                            "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_NO"
+                        }
+                    ],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "group": {
+            "table_metadata": {
+                "name": "group",
+                "guid": "f37d69ac-ba75-4b2f-8793-91b77b86751f",
+                "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_GROUP_LABEL",
+                "type": "subform",
+                "title": false,
+                "list": "dynamic_gets",
+                "store": "json",
+                "tab_name": "Tweak",
+                "db": {
+                    "type": "TEXT",
+                    "default": "EMPTY",
+                    "GUID": "f37d69ac-ba75-4b2f-8793-91b77b86751f",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null,
+                "fields": {
+                    "table_key": {
+                        "name": "table_key",
+                        "type": "text",
+                        "link": null
+                    }
+                }
+            },
+            "config_map_target": "group",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "subform",
+                        "name": "group",
+                        "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_GROUP_LABEL",
+                        "layout": "joomla.form.field.subform.repeatable-table",
+                        "multiple": "true",
+                        "description": "COM_COMPONENTBUILDER_DYNAMIC_GET_GROUP_DESCRIPTION",
+                        "icon": "list"
+                    },
+                    "options": [],
+                    "nested_fields": [
+                        {
+                            "attributes": {
+                                "type": "text",
+                                "name": "table_key",
+                                "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_TABLE_KEY_LABEL",
+                                "size": "35",
+                                "maxlength": "150",
+                                "description": "COM_COMPONENTBUILDER_DYNAMIC_GET_TABLE_KEY_DESCRIPTION",
+                                "class": "text_area",
+                                "readonly": "false",
+                                "disabled": "false",
+                                "required": "true",
+                                "filter": "CMD",
+                                "message": "COM_COMPONENTBUILDER_DYNAMIC_GET_TABLE_KEY_MESSAGE",
+                                "hint": "COM_COMPONENTBUILDER_DYNAMIC_GET_TABLE_KEY_HINT"
+                            },
+                            "options": [],
+                            "nested_fields": []
+                        }
+                    ]
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "object",
+                "array",
+                "string"
+            ]
+        },
+        "global": {
+            "table_metadata": {
+                "name": "global",
+                "guid": "fa2f73d6-8427-47de-abd8-4290da426b49",
+                "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_GLOBAL_LABEL",
+                "type": "subform",
+                "title": false,
+                "list": "dynamic_gets",
+                "store": "json",
+                "tab_name": "Tweak",
+                "db": {
+                    "type": "TEXT",
+                    "default": "EMPTY",
+                    "GUID": "fa2f73d6-8427-47de-abd8-4290da426b49",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null,
+                "fields": {
+                    "name": {
+                        "name": "name",
+                        "type": "text",
+                        "link": null
+                    },
+                    "key": {
+                        "name": "key",
+                        "type": "text",
+                        "link": null
+                    },
+                    "as": {
+                        "name": "as",
+                        "type": "list",
+                        "link": null
+                    },
+                    "type": {
+                        "name": "type",
+                        "type": "radio",
+                        "link": null
+                    }
+                }
+            },
+            "config_map_target": "global",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "subform",
+                        "name": "global",
+                        "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_GLOBAL_LABEL",
+                        "layout": "joomla.form.field.subform.repeatable-table",
+                        "multiple": "true",
+                        "description": "COM_COMPONENTBUILDER_DYNAMIC_GET_GLOBAL_DESCRIPTION",
+                        "icon": "list"
+                    },
+                    "options": [],
+                    "nested_fields": [
+                        {
+                            "attributes": {
+                                "type": "text",
+                                "name": "name",
+                                "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_NAME_LABEL",
+                                "size": "40",
+                                "maxlength": "150",
+                                "description": "COM_COMPONENTBUILDER_DYNAMIC_GET_NAME_DESCRIPTION",
+                                "class": "text_area",
+                                "readonly": "false",
+                                "disabled": "false",
+                                "required": "true",
+                                "filter": "CMD",
+                                "message": "COM_COMPONENTBUILDER_DYNAMIC_GET_NAME_MESSAGE",
+                                "hint": "COM_COMPONENTBUILDER_DYNAMIC_GET_NAME_HINT"
+                            },
+                            "options": [],
+                            "nested_fields": []
+                        },
+                        {
+                            "attributes": {
+                                "type": "text",
+                                "name": "key",
+                                "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_KEY_LABEL",
+                                "size": "40",
+                                "maxlength": "150",
+                                "description": "COM_COMPONENTBUILDER_DYNAMIC_GET_KEY_DESCRIPTION",
+                                "class": "text_area",
+                                "readonly": "false",
+                                "disabled": "false",
+                                "required": "true",
+                                "filter": "STRING",
+                                "message": "COM_COMPONENTBUILDER_DYNAMIC_GET_KEY_MESSAGE",
+                                "hint": "COM_COMPONENTBUILDER_DYNAMIC_GET_KEY_HINT"
+                            },
+                            "options": [],
+                            "nested_fields": []
+                        },
+                        {
+                            "attributes": {
+                                "type": "list",
+                                "name": "as",
+                                "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_AS_LABEL",
+                                "class": "list_class fieldSmall",
+                                "multiple": "false",
+                                "filter": "WORD",
+                                "required": "true",
+                                "default": "a"
+                            },
+                            "options": [
+                                {
+                                    "attributes": {
+                                        "value": "a"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_A"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "b"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_B"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "c"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_C"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "d"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_D"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "e"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_E"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "f"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_F"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "g"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_G"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "h"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_H"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "i"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_I"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "j"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_J"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "k"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_K"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "l"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_L"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "m"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_M"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "n"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_N"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "o"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_O"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "p"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_P"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "q"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_Q"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "r"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_R"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "s"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_S"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "t"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_T"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "u"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_U"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "v"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_V"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "w"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_W"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "x"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_X"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "y"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_Y"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "z"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_Z"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "aa"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_AA"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "bb"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_BB"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "cc"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_CC"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "dd"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_DD"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "ee"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_EE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "ff"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_FF"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "gg"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_GG"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "hh"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_HH"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "ii"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_II"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "jj"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_JJ"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "kk"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_KK"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "ll"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_LL"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "mm"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_MM"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "nn"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_NN"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "oo"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_OO"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "pp"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_PP"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "qq"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_QQ"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "rr"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_RR"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "ss"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_SS"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "tt"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_TT"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "uu"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_UU"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "vv"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_VV"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "ww"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_WW"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "xx"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_XX"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "yy"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_YY"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "zz"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_ZZ"
+                                }
+                            ],
+                            "nested_fields": []
+                        },
+                        {
+                            "attributes": {
+                                "type": "radio",
+                                "name": "type",
+                                "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_TYPE_LABEL",
+                                "default": "2",
+                                "required": "true"
+                            },
+                            "options": [
+                                {
+                                    "attributes": {
+                                        "value": "1"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_STATE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "2"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_THIS"
+                                }
+                            ],
+                            "nested_fields": []
+                        }
+                    ]
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "object",
+                "array",
+                "string"
+            ]
+        },
+        "guid": {
+            "table_metadata": {
+                "name": "guid",
+                "guid": "5aa57bbe-7b19-4db9-915c-561863458d2b",
+                "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_GUID_LABEL",
+                "type": "text",
+                "title": false,
+                "list": "dynamic_gets",
+                "store": null,
+                "tab_name": "publishing",
+                "db": {
+                    "type": "VARCHAR(36)",
+                    "default": "",
+                    "GUID": "5aa57bbe-7b19-4db9-915c-561863458d2b",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": null
+            },
+            "config_map_target": "guid",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "text",
+                        "name": "guid",
+                        "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_GUID_LABEL",
+                        "size": "40",
+                        "maxlength": "40",
+                        "description": "COM_COMPONENTBUILDER_DYNAMIC_GET_GUID_DESCRIPTION",
+                        "class": "text_area",
+                        "readonly": "true",
+                        "filter": "CMD",
+                        "validate": "guid",
+                        "hint": "COM_COMPONENTBUILDER_DYNAMIC_GET_GUID_HINT"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "join_view_table": {
+            "table_metadata": {
+                "name": "join_view_table",
+                "guid": "f73e8499-6914-4b4b-9289-68deddea38b1",
+                "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_JOIN_VIEW_TABLE_LABEL",
+                "type": "subform",
+                "title": false,
+                "list": "dynamic_gets",
+                "store": "json",
+                "tab_name": "Joint",
+                "db": {
+                    "type": "TEXT",
+                    "default": "EMPTY",
+                    "GUID": "f73e8499-6914-4b4b-9289-68deddea38b1",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null,
+                "fields": {
+                    "view_table": {
+                        "name": "view_table",
+                        "type": "ModalSelect",
+                        "link": {
+                            "type": 1,
+                            "table": "#__componentbuilder_admin_view",
+                            "component": "com_componentbuilder",
+                            "entity": "admin_view",
+                            "value": "system_name",
+                            "key": "guid"
+                        }
+                    },
+                    "row_type": {
+                        "name": "row_type",
+                        "type": "list",
+                        "link": null
+                    },
+                    "as": {
+                        "name": "as",
+                        "type": "list",
+                        "link": null
+                    },
+                    "type": {
+                        "name": "type",
+                        "type": "list",
+                        "link": null
+                    },
+                    "on_field": {
+                        "name": "on_field",
+                        "type": "text",
+                        "link": null
+                    },
+                    "operator": {
+                        "name": "operator",
+                        "type": "list",
+                        "link": null
+                    },
+                    "join_field": {
+                        "name": "join_field",
+                        "type": "text",
+                        "link": null
+                    },
+                    "selection": {
+                        "name": "selection",
+                        "type": "textarea",
+                        "link": null
+                    }
+                }
+            },
+            "config_map_target": "join_view_table",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "subform",
+                        "name": "join_view_table",
+                        "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_JOIN_VIEW_TABLE_LABEL",
+                        "layout": "repeatablejcb",
+                        "multiple": "true",
+                        "description": "COM_COMPONENTBUILDER_DYNAMIC_GET_JOIN_VIEW_TABLE_DESCRIPTION",
+                        "icon": "list"
+                    },
+                    "options": [],
+                    "nested_fields": [
+                        {
+                            "attributes": {
+                                "type": "ModalSelect",
+                                "name": "view_table",
+                                "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_VIEW_TABLE_LABEL",
+                                "sql_title_table": "#__componentbuilder_admin_view",
+                                "sql_title_column": "system_name",
+                                "data-key-name": "guid",
+                                "sql_title_key": "guid",
+                                "urlSelect": "index.php?option=com_componentbuilder&view=admin_views&layout=modal&tmpl=component&titleKey=guid",
+                                "urlEdit": "index.php?option=com_componentbuilder&task=admin_view.edit&guid={id}&layout=modal&tmpl=component&titleKey=guid",
+                                "titleSelect": "COM_COMPONENTBUILDER_DYNAMIC_GET_VIEW_TABLE_TITLESELECT",
+                                "titleEdit": "COM_COMPONENTBUILDER_DYNAMIC_GET_VIEW_TABLE_TITLEEDIT",
+                                "iconSelect": "icon-stack",
+                                "select": "true",
+                                "new": "false",
+                                "edit": "true",
+                                "clear": "true",
+                                "required": "true",
+                                "class": "input-large",
+                                "description": "COM_COMPONENTBUILDER_DYNAMIC_GET_VIEW_TABLE_DESCRIPTION",
+                                "hint": "COM_COMPONENTBUILDER_DYNAMIC_GET_VIEW_TABLE_HINT"
+                            },
+                            "options": [],
+                            "nested_fields": []
+                        },
+                        {
+                            "attributes": {
+                                "type": "list",
+                                "name": "row_type",
+                                "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_ROW_TYPE_LABEL",
+                                "description": "COM_COMPONENTBUILDER_DYNAMIC_GET_ROW_TYPE_DESCRIPTION",
+                                "class": "list_class fieldLarge",
+                                "multiple": "false",
+                                "filter": "INT",
+                                "required": "true",
+                                "default": "1"
+                            },
+                            "options": [
+                                {
+                                    "attributes": {
+                                        "value": "1"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_SINGLE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "2"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_MULTIPLE"
+                                }
+                            ],
+                            "nested_fields": []
+                        },
+                        {
+                            "attributes": {
+                                "type": "list",
+                                "name": "as",
+                                "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_AS_LABEL",
+                                "class": "list_class fieldLarge",
+                                "multiple": "false",
+                                "filter": "WORD",
+                                "required": "true",
+                                "default": "b"
+                            },
+                            "options": [
+                                {
+                                    "attributes": {
+                                        "value": "b"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_B"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "c"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_C"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "d"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_D"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "e"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_E"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "f"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_F"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "g"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_G"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "h"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_H"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "i"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_I"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "j"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_J"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "k"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_K"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "l"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_L"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "m"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_M"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "n"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_N"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "o"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_O"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "p"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_P"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "q"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_Q"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "r"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_R"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "s"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_S"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "t"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_T"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "u"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_U"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "v"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_V"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "w"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_W"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "x"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_X"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "y"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_Y"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "z"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_Z"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "aa"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_AA"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "bb"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_BB"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "cc"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_CC"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "dd"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_DD"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "ee"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_EE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "ff"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_FF"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "gg"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_GG"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "hh"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_HH"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "ii"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_II"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "jj"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_JJ"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "kk"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_KK"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "ll"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_LL"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "mm"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_MM"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "nn"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_NN"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "oo"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_OO"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "pp"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_PP"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "qq"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_QQ"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "rr"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_RR"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "ss"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_SS"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "tt"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_TT"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "uu"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_UU"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "vv"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_VV"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "ww"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_WW"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "xx"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_XX"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "yy"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_YY"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "zz"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_ZZ"
+                                }
+                            ],
+                            "nested_fields": []
+                        },
+                        {
+                            "attributes": {
+                                "type": "list",
+                                "name": "type",
+                                "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_TYPE_LABEL",
+                                "class": "list_class fieldLarge",
+                                "multiple": "false",
+                                "filter": "INT",
+                                "required": "true",
+                                "default": "1"
+                            },
+                            "options": [
+                                {
+                                    "attributes": {
+                                        "value": "1"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_JOIN_LEFT"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "2"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_JOIN_LEFT_OUTER"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "3"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_JOIN_INNER"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "4"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_JOIN_RIGHT"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "5"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_JOIN_RIGHT_OUTER"
+                                }
+                            ],
+                            "nested_fields": []
+                        },
+                        {
+                            "attributes": {
+                                "type": "text",
+                                "name": "on_field",
+                                "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_ON_FIELD_LABEL",
+                                "size": "40",
+                                "maxlength": "150",
+                                "description": "COM_COMPONENTBUILDER_DYNAMIC_GET_ON_FIELD_DESCRIPTION",
+                                "class": "text_area fieldLarge",
+                                "readonly": "false",
+                                "disabled": "false",
+                                "required": "true",
+                                "filter": "CMD",
+                                "message": "COM_COMPONENTBUILDER_DYNAMIC_GET_ON_FIELD_MESSAGE",
+                                "hint": "COM_COMPONENTBUILDER_DYNAMIC_GET_ON_FIELD_HINT"
+                            },
+                            "options": [],
+                            "nested_fields": []
+                        },
+                        {
+                            "attributes": {
+                                "type": "list",
+                                "name": "operator",
+                                "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_OPERATOR_LABEL",
+                                "description": "COM_COMPONENTBUILDER_DYNAMIC_GET_OPERATOR_DESCRIPTION",
+                                "class": "list_class fieldLarge",
+                                "multiple": "false",
+                                "filter": "INT",
+                                "required": "true",
+                                "default": "1"
+                            },
+                            "options": [
+                                {
+                                    "attributes": {
+                                        "value": "1"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_EQUAL_"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "2"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_NOT_EQUAL_NE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "3"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_NOT_EQUAL_ALT_LTGT"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "4"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_GREATER_THAN_GT"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "5"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_LESS_THAN_LT"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "6"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_GREATER_THAN_OR_EQUAL_GE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "7"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_LESS_THAN_OR_EQUAL_LE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "8"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_NOT_LESS_THAN_LT"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "9"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_NOT_GREATER_THAN_GT"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "10"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_IN"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "11"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_NOT_IN"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "12"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_LIKE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "13"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_NOT_LIKE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "14"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_IS_NULL"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "15"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_IS_NOT_NULL"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "16"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_BETWEEN"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "17"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_NOT_BETWEEN"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "18"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_EXISTS"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "19"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_NOT_EXISTS"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "20"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_REGEXP"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "21"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_NOT_REGEXP"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "22"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_SOUNDS_LIKE"
+                                }
+                            ],
+                            "nested_fields": []
+                        },
+                        {
+                            "attributes": {
+                                "type": "text",
+                                "name": "join_field",
+                                "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_JOIN_FIELD_LABEL",
+                                "size": "40",
+                                "maxlength": "150",
+                                "description": "COM_COMPONENTBUILDER_DYNAMIC_GET_JOIN_FIELD_DESCRIPTION",
+                                "class": "text_area fieldLarge",
+                                "readonly": "false",
+                                "disabled": "false",
+                                "required": "true",
+                                "filter": "CMD",
+                                "message": "COM_COMPONENTBUILDER_DYNAMIC_GET_JOIN_FIELD_MESSAGE",
+                                "hint": "COM_COMPONENTBUILDER_DYNAMIC_GET_JOIN_FIELD_HINT"
+                            },
+                            "options": [],
+                            "nested_fields": []
+                        },
+                        {
+                            "attributes": {
+                                "type": "textarea",
+                                "name": "selection",
+                                "label": "COM_COMPONENTBUILDER_DYNAMIC_GET_SELECTION_LABEL",
+                                "rows": "22",
+                                "cols": "30",
+                                "description": "COM_COMPONENTBUILDER_DYNAMIC_GET_SELECTION_DESCRIPTION",
+                                "class": "text_area span12",
+                                "filter": "HTML",
+                                "hint": "COM_COMPONENTBUILDER_DYNAMIC_GET_SELECTION_HINT",
+                                "required": "true"
+                            },
+                            "options": [],
+                            "nested_fields": []
+                        }
+                    ]
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "object",
+                "array",
+                "string"
+            ]
+        }
+    },
+    "source_license": {
+        "header": "GNU General Public License version 2 or later; see LICENSE.txt",
+        "spdx": "GPL-2.0-or-later",
+        "copyright": "Copyright (C) 2015 Vast Development Method. All rights reserved.",
+        "file": "LICENSE.txt",
+        "sha256": "2332109384fc0476519a1d02e1f050dd05ea2251fa66c06f9c5239585147828c",
+        "url": "https://github.com/vdm-io/Joomla-Component-Builder/blob/408703a857ad937479b1e28de7f693af178dcc83/LICENSE.txt"
+    }
+}

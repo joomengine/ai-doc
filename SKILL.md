@@ -1,6 +1,6 @@
 ---
 name: joomengine-jcb
-description: Create, extend, maintain, debug and validate Joomla Component Builder repositories and blueprints. Use for JCB Super Powers, Field Types, Snippets, package model research, repository identity and dependency resolution, and Playground integration testing. Route to the relevant model contract and task workflow before editing source.
+description: "Create, extend, maintain, debug and validate Joomla Component Builder repositories and blueprints that generate Joomla components, modules and plugins. Use for JCB Super Powers, Field Types, Snippets, Packages, their sub-models, repository identity/dependency resolution, and Playground authoring, export and integration testing. Select the relevant model skill and contract before editing source."
 ---
 
 # JoomEngine JCB skills
@@ -9,11 +9,13 @@ Read [AGENTS.md](AGENTS.md) for the operating contract. Identify the requested a
 
 | Task | Entry point |
 | --- | --- |
-| Author or maintain reusable PHP Powers | [Super Powers](super-powers/README.md) |
-| Define field metadata, properties and defaults | [Field Types](field-types/README.md) |
-| Maintain reusable view source and its classifications | [Snippets](snippets/README.md) |
+| Author or maintain reusable PHP Powers | [Super Powers skill](super-powers/SKILL.md) |
+| Define field metadata, properties and defaults | [Field Types skill](field-types/SKILL.md) |
+| Maintain reusable view source and its classifications | [Snippets skill](snippets/SKILL.md) |
+| Build or maintain a component, module or plugin blueprint and its records | [Packages skill](packages/SKILL.md) |
+| Find one package sub-model or serialized field | [Model routing](packages/models/README.md), [contract inventory](packages/model-contracts.json) |
 | Locate wider JCB blueprint concepts | [Architecture map](architecture/README.md) |
-| Test in a browser-hosted JCB instance | [Playground](testing/playground/README.md) |
+| Author, test or export in browser-hosted JCB | [Playground skill](testing/playground/SKILL.md) |
 | Select environment versions and deployment parameters | [Playground configuration](testing/playground/configuration.md) |
 | Run static checks | [Tools](tools/README.md) |
 | Introduce another model or sub-model | [Module authoring standard](standards/module-authoring.md) |
@@ -24,4 +26,4 @@ Preserve the identity of existing items; allocate new identities under the selec
 
 Keep source changes and evidence reviewable on the requested branch. Report actual checks and remaining limits. Prepare JCB issue reproductions for [human submission](testing/reporting-issues.md); do not submit under this project's human-led policy.
 
-This entry point is portable repository guidance. Supply its URL or checkout to the agent; a repository rename or a Markdown file alone does not install a tool, provide credentials or make an external agent discover the guide automatically.
+Keep the complete distribution under `joomengine-jcb` when registering it as an Agent Skill; follow [loading and distribution](standards/skill-loading.md). Nested model entries rely on shared resources in this distribution. Skill loading does not supply browser tools, credentials or authorization, and automatic discovery depends on the actual client.

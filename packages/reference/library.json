@@ -1,0 +1,751 @@
+{
+    "entity": "library",
+    "kind": "database",
+    "config_sources": [
+        {
+            "class": "Library",
+            "path": "libraries/vendor_jcb/VDM.Joomla/src/Componentbuilder/Package/Library/Remote/Config.php",
+            "url": "https://github.com/vdm-io/Joomla-Component-Builder/blob/408703a857ad937479b1e28de7f693af178dcc83/libraries/vendor_jcb/VDM.Joomla/src/Componentbuilder/Package/Library/Remote/Config.php",
+            "sha256": "12c427d5a3e89830b809cc49c66f51ef0a37683abf978d4ff55378e8c2cb6e4f"
+        }
+    ],
+    "config": {
+        "area": "Library",
+        "prefix_key": "",
+        "suffix_key": "",
+        "main_readme_path": "README_LIBRARIES.md",
+        "item_readme_name": "README.md",
+        "index_path": "index/library.json",
+        "src_path": "src/library",
+        "settings_name": "item.json",
+        "guid_field": "guid",
+        "guid_helper_field": null,
+        "ignore": [
+            "access"
+        ],
+        "files": [],
+        "folders": [],
+        "map": [],
+        "children": [
+            "library_config",
+            "library_files_folders_urls"
+        ],
+        "index_map": {
+            "name": "index_map_IndexName",
+            "desc": "index_map_ShortDescription",
+            "path": "index_map_IndexPath",
+            "settings": "index_map_IndexSettingsPath",
+            "guid": "index_map_IndexGUID"
+        },
+        "index_header": [
+            "name",
+            "desc",
+            "path",
+            "settings",
+            "guid",
+            "local"
+        ],
+        "placeholders": [],
+        "table": "library"
+    },
+    "identity_kind": "guid",
+    "table_source": {
+        "path": "libraries/vendor_jcb/VDM.Joomla/src/Componentbuilder/Table.php",
+        "url": "https://github.com/vdm-io/Joomla-Component-Builder/blob/408703a857ad937479b1e28de7f693af178dcc83/libraries/vendor_jcb/VDM.Joomla/src/Componentbuilder/Table.php",
+        "sha256": "630abb56cb664be947f45f08f8812af136402d50bcc2c0feec5702b9e870b573"
+    },
+    "form_source": {
+        "path": "admin/forms/library.xml",
+        "url": "https://github.com/vdm-io/Joomla-Component-Builder/blob/408703a857ad937479b1e28de7f693af178dcc83/admin/forms/library.xml",
+        "sha256": "6ca083b5c2a988e499163a5c5e54929e19e6798de15ebe5f088f85be82ff1e60"
+    },
+    "fields": {
+        "name": {
+            "table_metadata": {
+                "name": "name",
+                "guid": "5d3d34dd-4876-4c6a-86ab-b4e162f22c08",
+                "label": "COM_COMPONENTBUILDER_LIBRARY_NAME_LABEL",
+                "type": "text",
+                "title": true,
+                "list": "libraries",
+                "store": null,
+                "tab_name": "Behaviour",
+                "db": {
+                    "type": "VARCHAR(255)",
+                    "default": "",
+                    "GUID": "5d3d34dd-4876-4c6a-86ab-b4e162f22c08",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": null
+            },
+            "config_map_target": "name",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "text",
+                        "name": "name",
+                        "label": "COM_COMPONENTBUILDER_LIBRARY_NAME_LABEL",
+                        "size": "40",
+                        "maxlength": "150",
+                        "description": "COM_COMPONENTBUILDER_LIBRARY_NAME_DESCRIPTION",
+                        "class": "text_area",
+                        "readonly": "false",
+                        "disabled": "false",
+                        "required": "true",
+                        "filter": "STRING",
+                        "message": "COM_COMPONENTBUILDER_LIBRARY_NAME_MESSAGE",
+                        "hint": "COM_COMPONENTBUILDER_LIBRARY_NAME_HINT"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "target": {
+            "table_metadata": {
+                "name": "target",
+                "guid": "07c71471-04cd-4217-a63e-4ca97d880950",
+                "label": "COM_COMPONENTBUILDER_LIBRARY_TARGET_LABEL",
+                "type": "radio",
+                "title": false,
+                "list": "libraries",
+                "store": null,
+                "tab_name": "Behaviour",
+                "db": {
+                    "type": "TINYINT(1)",
+                    "default": "1",
+                    "GUID": "07c71471-04cd-4217-a63e-4ca97d880950",
+                    "null_switch": "NOT NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "target",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "radio",
+                        "name": "target",
+                        "label": "COM_COMPONENTBUILDER_LIBRARY_TARGET_LABEL",
+                        "description": "COM_COMPONENTBUILDER_LIBRARY_TARGET_DESCRIPTION",
+                        "class": "btn-group btn-group-yesno",
+                        "default": "1",
+                        "required": "true"
+                    },
+                    "options": [
+                        {
+                            "attributes": {
+                                "value": "1"
+                            },
+                            "label": "COM_COMPONENTBUILDER_LIBRARY_MEDIA"
+                        },
+                        {
+                            "attributes": {
+                                "value": "2"
+                            },
+                            "label": "COM_COMPONENTBUILDER_LIBRARY_LIBRARIES"
+                        }
+                    ],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "how": {
+            "table_metadata": {
+                "name": "how",
+                "guid": "0051004f-b0ec-47c4-bfdb-0d8e76adbbb8",
+                "label": "COM_COMPONENTBUILDER_LIBRARY_HOW_LABEL",
+                "type": "filebehaviour",
+                "title": false,
+                "list": "libraries",
+                "store": null,
+                "tab_name": "Behaviour",
+                "db": {
+                    "type": "TINYINT(1)",
+                    "default": "1",
+                    "GUID": "0051004f-b0ec-47c4-bfdb-0d8e76adbbb8",
+                    "null_switch": "NOT NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": {
+                    "type": 2,
+                    "table": "",
+                    "component": "",
+                    "entity": "",
+                    "value": "",
+                    "key": ""
+                }
+            },
+            "config_map_target": "how",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "filebehaviour",
+                        "name": "how",
+                        "label": "COM_COMPONENTBUILDER_LIBRARY_HOW_LABEL",
+                        "description": "COM_COMPONENTBUILDER_LIBRARY_HOW_DESCRIPTION",
+                        "class": "list_class",
+                        "layout": "joomla.form.field.list-fancy-select",
+                        "multiple": "false",
+                        "default": "1",
+                        "required": "true",
+                        "button": "false"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "type": {
+            "table_metadata": {
+                "name": "type",
+                "guid": "f2940a48-f104-4c11-86ef-ed6456a1211c",
+                "label": "COM_COMPONENTBUILDER_LIBRARY_TYPE_LABEL",
+                "type": "radio",
+                "title": false,
+                "list": "libraries",
+                "store": null,
+                "tab_name": "Behaviour",
+                "db": {
+                    "type": "TINYINT(1)",
+                    "default": "0",
+                    "GUID": "f2940a48-f104-4c11-86ef-ed6456a1211c",
+                    "null_switch": "NOT NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "type",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "radio",
+                        "name": "type",
+                        "label": "COM_COMPONENTBUILDER_LIBRARY_TYPE_LABEL",
+                        "description": "COM_COMPONENTBUILDER_LIBRARY_TYPE_DESCRIPTION",
+                        "class": "btn-group btn-group-yesno",
+                        "default": "1",
+                        "required": "true"
+                    },
+                    "options": [
+                        {
+                            "attributes": {
+                                "value": "1"
+                            },
+                            "label": "COM_COMPONENTBUILDER_LIBRARY_MAIN"
+                        },
+                        {
+                            "attributes": {
+                                "value": "2"
+                            },
+                            "label": "COM_COMPONENTBUILDER_LIBRARY_BUNDLE"
+                        }
+                    ],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "description": {
+            "table_metadata": {
+                "name": "description",
+                "guid": "09b25ca3-6c9f-4b6d-ad80-e0989c221289",
+                "label": "COM_COMPONENTBUILDER_LIBRARY_DESCRIPTION_LABEL",
+                "type": "text",
+                "title": false,
+                "list": "libraries",
+                "store": null,
+                "tab_name": "Behaviour",
+                "db": {
+                    "type": "VARCHAR(255)",
+                    "default": "",
+                    "GUID": "09b25ca3-6c9f-4b6d-ad80-e0989c221289",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "description",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "text",
+                        "name": "description",
+                        "label": "COM_COMPONENTBUILDER_LIBRARY_DESCRIPTION_LABEL",
+                        "size": "80",
+                        "maxlength": "150",
+                        "description": "COM_COMPONENTBUILDER_LIBRARY_DESCRIPTION_DESCRIPTION",
+                        "class": "text_area",
+                        "readonly": "false",
+                        "disabled": "false",
+                        "required": "false",
+                        "filter": "STRING",
+                        "message": "COM_COMPONENTBUILDER_LIBRARY_DESCRIPTION_MESSAGE",
+                        "hint": "COM_COMPONENTBUILDER_LIBRARY_DESCRIPTION_HINT"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "libraries": {
+            "table_metadata": {
+                "name": "libraries",
+                "guid": "7e1418d5-5515-49f6-99ed-166365b9b963",
+                "label": "COM_COMPONENTBUILDER_LIBRARY_LIBRARIES_LABEL",
+                "type": "librariesx",
+                "title": false,
+                "list": "libraries",
+                "store": "json",
+                "tab_name": "Behaviour",
+                "db": {
+                    "type": "TEXT",
+                    "default": "EMPTY",
+                    "GUID": "7e1418d5-5515-49f6-99ed-166365b9b963",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": {
+                    "type": 1,
+                    "table": "#__componentbuilder_library",
+                    "component": "com_componentbuilder",
+                    "entity": "library",
+                    "value": "name",
+                    "key": "guid"
+                }
+            },
+            "config_map_target": "libraries",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "librariesx",
+                        "name": "libraries",
+                        "label": "COM_COMPONENTBUILDER_LIBRARY_LIBRARIES_LABEL",
+                        "description": "COM_COMPONENTBUILDER_LIBRARY_LIBRARIES_DESCRIPTION",
+                        "class": "list_class",
+                        "layout": "joomla.form.field.list-fancy-select",
+                        "multiple": "true",
+                        "default": "0",
+                        "required": "false",
+                        "button": "true"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "object",
+                "array",
+                "string",
+                "number",
+                "boolean"
+            ]
+        },
+        "php_setdocument": {
+            "table_metadata": {
+                "name": "php_setdocument",
+                "guid": "b70529a1-30bb-42c0-822f-802c23bd616b",
+                "label": "COM_COMPONENTBUILDER_LIBRARY_PHP_SETDOCUMENT_LABEL",
+                "type": "textarea",
+                "title": false,
+                "list": "libraries",
+                "store": "base64",
+                "tab_name": "Behaviour",
+                "db": {
+                    "type": "MEDIUMTEXT",
+                    "default": "EMPTY",
+                    "GUID": "b70529a1-30bb-42c0-822f-802c23bd616b",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "php_setdocument",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "textarea",
+                        "name": "php_setdocument",
+                        "label": "COM_COMPONENTBUILDER_LIBRARY_PHP_SETDOCUMENT_LABEL",
+                        "rows": "30",
+                        "cols": "15",
+                        "description": "COM_COMPONENTBUILDER_LIBRARY_PHP_SETDOCUMENT_DESCRIPTION",
+                        "class": "text_area span12",
+                        "filter": "raw",
+                        "hint": "COM_COMPONENTBUILDER_LIBRARY_PHP_SETDOCUMENT_HINT",
+                        "required": "true"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "addconditions": {
+            "table_metadata": {
+                "name": "addconditions",
+                "guid": "48d69b71-6eba-480a-b17b-c67243f02d06",
+                "label": "COM_COMPONENTBUILDER_LIBRARY_ADDCONDITIONS_LABEL",
+                "type": "subform",
+                "title": false,
+                "list": "libraries",
+                "store": "json",
+                "tab_name": "Behaviour",
+                "db": {
+                    "type": "MEDIUMTEXT",
+                    "default": "EMPTY",
+                    "GUID": "48d69b71-6eba-480a-b17b-c67243f02d06",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null,
+                "fields": {
+                    "file": {
+                        "name": "file",
+                        "type": "libraryfiles",
+                        "link": {
+                            "type": 2,
+                            "table": "",
+                            "component": "",
+                            "entity": "",
+                            "value": "",
+                            "key": ""
+                        }
+                    },
+                    "target_behavior": {
+                        "name": "target_behavior",
+                        "type": "list",
+                        "link": null
+                    },
+                    "target_relation": {
+                        "name": "target_relation",
+                        "type": "list",
+                        "link": null
+                    },
+                    "option_field": {
+                        "name": "option_field",
+                        "type": "libconfigfield",
+                        "link": {
+                            "type": 1,
+                            "table": "#__componentbuilder_field",
+                            "component": "com_componentbuilder",
+                            "entity": "field",
+                            "value": "name",
+                            "key": "guid"
+                        }
+                    },
+                    "option_behaviour": {
+                        "name": "option_behaviour",
+                        "type": "list",
+                        "link": null
+                    },
+                    "field_options": {
+                        "name": "field_options",
+                        "type": "textarea",
+                        "link": null
+                    }
+                }
+            },
+            "config_map_target": "addconditions",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "subform",
+                        "name": "addconditions",
+                        "label": "COM_COMPONENTBUILDER_LIBRARY_ADDCONDITIONS_LABEL",
+                        "layout": "repeatablejcb",
+                        "multiple": "true",
+                        "description": "COM_COMPONENTBUILDER_LIBRARY_ADDCONDITIONS_DESCRIPTION",
+                        "default": "",
+                        "icon": "list"
+                    },
+                    "options": [],
+                    "nested_fields": [
+                        {
+                            "attributes": {
+                                "type": "libraryfiles",
+                                "name": "file",
+                                "label": "COM_COMPONENTBUILDER_LIBRARY_FILE_LABEL",
+                                "description": "COM_COMPONENTBUILDER_LIBRARY_FILE_DESCRIPTION",
+                                "class": "list_class fieldLarge",
+                                "multiple": "true",
+                                "default": "0",
+                                "required": "true",
+                                "button": "false"
+                            },
+                            "options": [],
+                            "nested_fields": []
+                        },
+                        {
+                            "attributes": {
+                                "type": "list",
+                                "name": "target_behavior",
+                                "label": "COM_COMPONENTBUILDER_LIBRARY_TARGET_BEHAVIOR_LABEL",
+                                "description": "COM_COMPONENTBUILDER_LIBRARY_TARGET_BEHAVIOR_DESCRIPTION",
+                                "layout": "joomla.form.field.list-fancy-select",
+                                "multiple": "false",
+                                "filter": "INT",
+                                "required": "true",
+                                "default": "1"
+                            },
+                            "options": [
+                                {
+                                    "attributes": {
+                                        "value": "1"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_LIBRARY_INCLUDE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "2"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_LIBRARY_EXCLUDE"
+                                }
+                            ],
+                            "nested_fields": []
+                        },
+                        {
+                            "attributes": {
+                                "type": "list",
+                                "name": "target_relation",
+                                "label": "COM_COMPONENTBUILDER_LIBRARY_TARGET_RELATION_LABEL",
+                                "description": "COM_COMPONENTBUILDER_LIBRARY_TARGET_RELATION_DESCRIPTION",
+                                "layout": "joomla.form.field.list-fancy-select",
+                                "multiple": "false",
+                                "filter": "INT",
+                                "required": "true",
+                                "default": "0"
+                            },
+                            "options": [
+                                {
+                                    "attributes": {
+                                        "value": "0"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_LIBRARY_ISOLATE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "1"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_LIBRARY_CHAIN"
+                                }
+                            ],
+                            "nested_fields": []
+                        },
+                        {
+                            "attributes": {
+                                "type": "libconfigfield",
+                                "name": "option_field",
+                                "label": "COM_COMPONENTBUILDER_LIBRARY_OPTION_FIELD_LABEL",
+                                "description": "COM_COMPONENTBUILDER_LIBRARY_OPTION_FIELD_DESCRIPTION",
+                                "class": "list_class fieldLarge",
+                                "multiple": "false",
+                                "required": "true",
+                                "button": "false"
+                            },
+                            "options": [],
+                            "nested_fields": []
+                        },
+                        {
+                            "attributes": {
+                                "type": "list",
+                                "name": "option_behaviour",
+                                "label": "COM_COMPONENTBUILDER_LIBRARY_OPTION_BEHAVIOUR_LABEL",
+                                "description": "COM_COMPONENTBUILDER_LIBRARY_OPTION_BEHAVIOUR_DESCRIPTION",
+                                "class": "list_class fieldLarge",
+                                "multiple": "false",
+                                "filter": "INT",
+                                "required": "true",
+                                "default": "1"
+                            },
+                            "options": [
+                                {
+                                    "attributes": {
+                                        "value": "1"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_LIBRARY_IS_ONLY_4_LISTRADIOCHECKBOXES"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "2"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_LIBRARY_IS_NOT_ONLY_4_LISTRADIOCHECKBOXES"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "3"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_LIBRARY_ANY_SELECTION_ONLY_4_LISTRADIOCHECKBOXESDYNAMIC_LIST"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "4"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_LIBRARY_ACTIVE_ONLY_4_TEXT_FIELD"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "5"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_LIBRARY_UNACTIVE_ONLY_4_TEXT_FIELD"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "6"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_LIBRARY_KEY_WORD_ALL_CASESENSITIVE_ONLY_4_TEXT_FIELD"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "7"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_LIBRARY_KEY_WORD_ANY_CASESENSITIVE_ONLY_4_TEXT_FIELD"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "8"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_LIBRARY_KEY_WORD_ALL_CASEINSENSITIVE_ONLY_4_TEXT_FIELD"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "9"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_LIBRARY_KEY_WORD_ANY_CASEINSENSITIVE_ONLY_4_TEXT_FIELD"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "10"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_LIBRARY_MIN_LENGTH_ONLY_4_TEXT_FIELD"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "11"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_LIBRARY_MAX_LENGTH_ONLY_4_TEXT_FIELD"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "12"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_LIBRARY_EXACT_LENGTH_ONLY_4_TEXT_FIELD"
+                                }
+                            ],
+                            "nested_fields": []
+                        },
+                        {
+                            "attributes": {
+                                "type": "textarea",
+                                "name": "field_options",
+                                "label": "COM_COMPONENTBUILDER_LIBRARY_FIELD_OPTIONS_LABEL",
+                                "rows": "10",
+                                "cols": "5",
+                                "class": "text_area",
+                                "filter": "STRING",
+                                "hint": "COM_COMPONENTBUILDER_LIBRARY_FIELD_OPTIONS_HINT",
+                                "required": "true"
+                            },
+                            "options": [],
+                            "nested_fields": []
+                        }
+                    ]
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "object",
+                "array",
+                "string"
+            ]
+        },
+        "guid": {
+            "table_metadata": {
+                "name": "guid",
+                "guid": "5aa57bbe-7b19-4db9-915c-561863458d2b",
+                "label": "COM_COMPONENTBUILDER_LIBRARY_GUID_LABEL",
+                "type": "text",
+                "title": false,
+                "list": "libraries",
+                "store": null,
+                "tab_name": "publishing",
+                "db": {
+                    "type": "VARCHAR(36)",
+                    "default": "",
+                    "GUID": "5aa57bbe-7b19-4db9-915c-561863458d2b",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": null
+            },
+            "config_map_target": "guid",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "text",
+                        "name": "guid",
+                        "label": "COM_COMPONENTBUILDER_LIBRARY_GUID_LABEL",
+                        "size": "40",
+                        "maxlength": "40",
+                        "description": "COM_COMPONENTBUILDER_LIBRARY_GUID_DESCRIPTION",
+                        "class": "text_area",
+                        "readonly": "true",
+                        "filter": "CMD",
+                        "validate": "guid",
+                        "hint": "COM_COMPONENTBUILDER_LIBRARY_GUID_HINT"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        }
+    },
+    "source_license": {
+        "header": "GNU General Public License version 2 or later; see LICENSE.txt",
+        "spdx": "GPL-2.0-or-later",
+        "copyright": "Copyright (C) 2015 Vast Development Method. All rights reserved.",
+        "file": "LICENSE.txt",
+        "sha256": "2332109384fc0476519a1d02e1f050dd05ea2251fa66c06f9c5239585147828c",
+        "url": "https://github.com/vdm-io/Joomla-Component-Builder/blob/408703a857ad937479b1e28de7f693af178dcc83/LICENSE.txt"
+    }
+}

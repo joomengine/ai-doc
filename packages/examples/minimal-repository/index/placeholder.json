@@ -1,0 +1,8 @@
+{
+	"[[[aidoc_package_label]]]": {
+		"name": "[[[aidoc_package_label]]]",
+		"path": "src/placeholder/[[[aidoc_package_label]]]",
+		"settings": "src/placeholder/[[[aidoc_package_label]]]/item.json",
+		"guid": "[[[aidoc_package_label]]]"
+	}
+}

@@ -1,0 +1,677 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "admin_view package serialized envelope",
+    "description": "Generated from pinned Table and Remote Config. Bounds known JSON types only, not conditional forms, SQL defaults, compiler behavior or semantic closure. Filesystem payloads are raw files; their Config map is only transport metadata.",
+    "type": "object",
+    "properties": {
+        "system_name": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/admin_view.json for exact metadata, conditions and subfields."
+        },
+        "name_single": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/admin_view.json for exact metadata, conditions and subfields."
+        },
+        "short_description": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/admin_view.json for exact metadata, conditions and subfields."
+        },
+        "php_postsavehook": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/admin_view.json for exact metadata, conditions and subfields."
+        },
+        "php_before_save": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/admin_view.json for exact metadata, conditions and subfields."
+        },
+        "php_getlistquery": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/admin_view.json for exact metadata, conditions and subfields."
+        },
+        "php_getitems": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/admin_view.json for exact metadata, conditions and subfields."
+        },
+        "ajax_input": {
+            "type": [
+                "null",
+                "object",
+                "array",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/admin_view.json for exact metadata, conditions and subfields."
+        },
+        "source": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/admin_view.json for exact metadata, conditions and subfields."
+        },
+        "icon": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/admin_view.json for exact metadata, conditions and subfields."
+        },
+        "php_batchmove": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/admin_view.json for exact metadata, conditions and subfields."
+        },
+        "add_fadein": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/admin_view.json for exact metadata, conditions and subfields."
+        },
+        "description": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/admin_view.json for exact metadata, conditions and subfields."
+        },
+        "icon_category": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/admin_view.json for exact metadata, conditions and subfields."
+        },
+        "icon_add": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/admin_view.json for exact metadata, conditions and subfields."
+        },
+        "php_allowedit": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/admin_view.json for exact metadata, conditions and subfields."
+        },
+        "php_after_delete": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/admin_view.json for exact metadata, conditions and subfields."
+        },
+        "php_after_cancel": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/admin_view.json for exact metadata, conditions and subfields."
+        },
+        "type": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/admin_view.json for exact metadata, conditions and subfields."
+        },
+        "php_after_publish": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/admin_view.json for exact metadata, conditions and subfields."
+        },
+        "mysql_table_charset": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/admin_view.json for exact metadata, conditions and subfields."
+        },
+        "name_list": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/admin_view.json for exact metadata, conditions and subfields."
+        },
+        "addpermissions": {
+            "type": [
+                "null",
+                "object",
+                "array",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/admin_view.json for exact metadata, conditions and subfields."
+        },
+        "php_getitem": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/admin_view.json for exact metadata, conditions and subfields."
+        },
+        "php_getitems_after_all": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/admin_view.json for exact metadata, conditions and subfields."
+        },
+        "addtabs": {
+            "type": [
+                "null",
+                "object",
+                "array",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/admin_view.json for exact metadata, conditions and subfields."
+        },
+        "php_getform": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/admin_view.json for exact metadata, conditions and subfields."
+        },
+        "php_save": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/admin_view.json for exact metadata, conditions and subfields."
+        },
+        "php_allowadd": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/admin_view.json for exact metadata, conditions and subfields."
+        },
+        "addlinked_views": {
+            "type": [
+                "null",
+                "object",
+                "array",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/admin_view.json for exact metadata, conditions and subfields."
+        },
+        "php_before_cancel": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/admin_view.json for exact metadata, conditions and subfields."
+        },
+        "php_batchcopy": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/admin_view.json for exact metadata, conditions and subfields."
+        },
+        "alias_builder_type": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/admin_view.json for exact metadata, conditions and subfields."
+        },
+        "php_before_publish": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/admin_view.json for exact metadata, conditions and subfields."
+        },
+        "php_before_delete": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/admin_view.json for exact metadata, conditions and subfields."
+        },
+        "php_document": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/admin_view.json for exact metadata, conditions and subfields."
+        },
+        "alias_builder": {
+            "type": [
+                "null",
+                "object",
+                "array",
+                "string",
+                "number",
+                "boolean"
+            ],
+            "description": "Source-derived envelope; see reference/admin_view.json for exact metadata, conditions and subfields."
+        },
+        "mysql_table_row_format": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/admin_view.json for exact metadata, conditions and subfields."
+        },
+        "sql": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/admin_view.json for exact metadata, conditions and subfields."
+        },
+        "add_category_submenu": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/admin_view.json for exact metadata, conditions and subfields."
+        },
+        "php_ajaxmethod": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/admin_view.json for exact metadata, conditions and subfields."
+        },
+        "add_php_getitem": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/admin_view.json for exact metadata, conditions and subfields."
+        },
+        "add_php_getitems": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/admin_view.json for exact metadata, conditions and subfields."
+        },
+        "add_css_view": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/admin_view.json for exact metadata, conditions and subfields."
+        },
+        "add_php_getitems_after_all": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/admin_view.json for exact metadata, conditions and subfields."
+        },
+        "css_view": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/admin_view.json for exact metadata, conditions and subfields."
+        },
+        "add_php_getlistquery": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/admin_view.json for exact metadata, conditions and subfields."
+        },
+        "add_css_views": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/admin_view.json for exact metadata, conditions and subfields."
+        },
+        "add_php_getform": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/admin_view.json for exact metadata, conditions and subfields."
+        },
+        "css_views": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/admin_view.json for exact metadata, conditions and subfields."
+        },
+        "add_php_before_save": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/admin_view.json for exact metadata, conditions and subfields."
+        },
+        "add_javascript_view_file": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/admin_view.json for exact metadata, conditions and subfields."
+        },
+        "add_php_save": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/admin_view.json for exact metadata, conditions and subfields."
+        },
+        "javascript_view_file": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/admin_view.json for exact metadata, conditions and subfields."
+        },
+        "add_php_postsavehook": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/admin_view.json for exact metadata, conditions and subfields."
+        },
+        "add_javascript_view_footer": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/admin_view.json for exact metadata, conditions and subfields."
+        },
+        "add_php_allowadd": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/admin_view.json for exact metadata, conditions and subfields."
+        },
+        "javascript_view_footer": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/admin_view.json for exact metadata, conditions and subfields."
+        },
+        "add_php_allowedit": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/admin_view.json for exact metadata, conditions and subfields."
+        },
+        "add_javascript_views_file": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/admin_view.json for exact metadata, conditions and subfields."
+        },
+        "add_php_before_cancel": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/admin_view.json for exact metadata, conditions and subfields."
+        },
+        "javascript_views_file": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/admin_view.json for exact metadata, conditions and subfields."
+        },
+        "add_php_after_cancel": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/admin_view.json for exact metadata, conditions and subfields."
+        },
+        "add_javascript_views_footer": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/admin_view.json for exact metadata, conditions and subfields."
+        },
+        "add_php_batchcopy": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/admin_view.json for exact metadata, conditions and subfields."
+        },
+        "javascript_views_footer": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/admin_view.json for exact metadata, conditions and subfields."
+        },
+        "add_php_batchmove": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/admin_view.json for exact metadata, conditions and subfields."
+        },
+        "add_custom_button": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/admin_view.json for exact metadata, conditions and subfields."
+        },
+        "add_php_before_publish": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/admin_view.json for exact metadata, conditions and subfields."
+        },
+        "custom_button": {
+            "type": [
+                "null",
+                "object",
+                "array",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/admin_view.json for exact metadata, conditions and subfields."
+        },
+        "add_php_after_publish": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/admin_view.json for exact metadata, conditions and subfields."
+        },
+        "php_controller": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/admin_view.json for exact metadata, conditions and subfields."
+        },
+        "add_php_before_delete": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/admin_view.json for exact metadata, conditions and subfields."
+        },
+        "php_model": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/admin_view.json for exact metadata, conditions and subfields."
+        },
+        "add_php_after_delete": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/admin_view.json for exact metadata, conditions and subfields."
+        },
+        "php_controller_list": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/admin_view.json for exact metadata, conditions and subfields."
+        },
+        "add_php_document": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/admin_view.json for exact metadata, conditions and subfields."
+        },
+        "php_model_list": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/admin_view.json for exact metadata, conditions and subfields."
+        },
+        "mysql_table_engine": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/admin_view.json for exact metadata, conditions and subfields."
+        },
+        "add_view_toolbar": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/admin_view.json for exact metadata, conditions and subfields."
+        },
+        "mysql_table_collate": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/admin_view.json for exact metadata, conditions and subfields."
+        },
+        "view_toolbar": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/admin_view.json for exact metadata, conditions and subfields."
+        },
+        "add_sql": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/admin_view.json for exact metadata, conditions and subfields."
+        },
+        "add_views_toolbar": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/admin_view.json for exact metadata, conditions and subfields."
+        },
+        "views_toolbar": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/admin_view.json for exact metadata, conditions and subfields."
+        },
+        "guid": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/admin_view.json for exact metadata, conditions and subfields."
+        },
+        "add_php_ajax": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ],
+            "description": "Source-derived envelope; see reference/admin_view.json for exact metadata, conditions and subfields."
+        },
+        "@dependencies": {
+            "$ref": "dependencies.schema.json"
+        }
+    },
+    "additionalProperties": false,
+    "required": [
+        "guid"
+    ]
+}

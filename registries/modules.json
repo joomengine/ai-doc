@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "purpose": "Task routing and evidence status for JCB agent documentation modules, not a JCB runtime configuration.",
+  "purpose": "Task routing and evidence status for JoomEngine JCB skills and operational modules; not a JCB runtime configuration.",
   "modules": [
     {
       "id": "super-powers",
@@ -13,7 +13,8 @@
       "verification": {
         "static": "Local documentation checks, 34 regression checks, PHP 8.3.6 smoke test, ShellCheck and independent fresh-agent creation exercise passed; see super-powers/verification.md.",
         "integration": "Live Playground import and reopened-record inspection passed for the existing official Regex Power on Joomla/JCB 6.2.0 and PHP 8.4.1. Candidate staging-branch refresh, documentation fixtures, compilation and runtime execution were not tested; see testing/playground/verification.md."
-      }
+      },
+      "skill_entrypoint": "super-powers/SKILL.md"
     },
     {
       "id": "field-types",
@@ -26,7 +27,8 @@
       "verification": {
         "static": "Source review, current core 49-record validation, both complete fixtures, fresh-agent creation/override exercise, 22 independent negative probes and combined 75-regression check passed; see field-types/verification.md.",
         "integration": "Playground is available as the default browser integration route. Field Type import/refresh, generated forms and consumer runtime checks have not been run; the shared Power smoke test does not validate this module."
-      }
+      },
+      "skill_entrypoint": "field-types/SKILL.md"
     },
     {
       "id": "snippets",
@@ -39,6 +41,21 @@
       "verification": {
         "static": "Source review, current core 353-snippet/40-type validation, complete fixture, fresh-agent creation/override exercise, 22 independent negative probes and combined 75-regression check passed; external libraries remain unverified; see snippets/verification.md.",
         "integration": "Playground is available as the default browser integration route. Snippet import/refresh, editor insertion, compiled view and browser checks have not been run; the shared Power smoke test does not validate this module."
+      },
+      "skill_entrypoint": "snippets/SKILL.md"
+    },
+    {
+      "id": "packages",
+      "path": "packages",
+      "entrypoint": "packages/README.md",
+      "skill_entrypoint": "packages/SKILL.md",
+      "status": "documented",
+      "scope": "Author, maintain, debug and validate JCB package blueprint repositories for components, modules and plugins, including all source-supported package entities, nested settings, dependency graphs and raw assets.",
+      "source_baseline": "packages/sources.md",
+      "test_workflow": "packages/workflows/validate-and-integrate.md",
+      "verification": {
+        "static": "Pinned 41-contract inventory, all 83 source-file hashes, model routing, six skill entrypoints, deterministic regeneration, ShellCheck and combined 108 regressions passed. Hello World and the original fixture pass the bounded profile with external Field Types. Two larger catalogues hit the strict empty-child authoring gate; see packages/verification.md.",
+        "integration": "Playground repository creation and Hello World source/branch selection were observed on Joomla/JCB 6.2.0 and PHP 8.4.1. Catalogue loading produced no visible item list or JCB error; cause unresolved. No package import, refresh, export, compile, install or runtime pass; see packages/verification.md."
       }
     }
   ]

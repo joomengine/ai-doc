@@ -2,15 +2,18 @@
 
 The official [JoomEngine skills repository](https://github.com/joomengine/skills) provides operational guidance for agents working across the **Joomla Component Builder (JCB) ecosystem**. Use [SKILL.md](SKILL.md) as the concise task router, then load only the relevant module, reference and workflow. This repository explains how to locate authoritative sources, make consistent changes and verify the result; it complements JCB source code and its [architecture publication](https://architecture.joomlacomponentbuilder.com/).
 
-**Start with [AGENTS.md](AGENTS.md), then follow the relevant task below.** Operational modules cover Super Powers, Field Types, and Snippets. Consult the [module registry](registries/modules.json) for each module's coverage and verification status. Other subjects remain routed to the architecture publication until their own modules meet the same acceptance standard.
+**Start with [SKILL.md](SKILL.md) and [AGENTS.md](AGENTS.md), then follow the relevant task below.** Focused skill entry points cover Super Powers, Field Types, Snippets, Packages and shared Playground integration. Consult the [skill registry](registries/skills.json) for entry points and the [module registry](registries/modules.json) for scope and verification status. Follow the [loading guide](standards/skill-loading.md) to supply a complete portable distribution to an agent.
 
 ## Choose the task
 
 | Task | Read next |
 | --- | --- |
-| Understand, create, extend, maintain, or debug a Super Power repository | [Super Powers](super-powers/README.md) |
-| Create or maintain Field Types, research Joomla properties/defaults, or override a core definition | [Field Types](field-types/README.md) |
-| Create or maintain reusable view snippets and their classifications | [Snippets](snippets/README.md) |
+| Understand, create, extend, maintain, or debug a Super Power repository | [Super Powers skill](super-powers/SKILL.md) |
+| Create or maintain Field Types, research Joomla properties/defaults, or override a core definition | [Field Types skill](field-types/SKILL.md) |
+| Create or maintain reusable view snippets and their classifications | [Snippets skill](snippets/SKILL.md) |
+| Create or maintain component, module or plugin blueprint repositories | [Packages skill](packages/SKILL.md) |
+| Find a package sub-model or exact serialized field | [Model router](packages/models/README.md), [contract inventory](packages/model-contracts.json) |
+| Build a package in JCB's GUI and Push its source to an authorized branch | [Playground authoring and export](packages/workflows/author-in-playground.md) |
 | Test an implementation in browser-hosted JCB, compile it and inspect its output | [Playground integration workflow](testing/playground/README.md) |
 | Choose Joomla/PHP versions, deployment and initial URL path | [Playground configuration](testing/playground/configuration.md) |
 | Prepare a JCB bug report for human submission | [Issue reporting](testing/reporting-issues.md) |
@@ -43,7 +46,7 @@ These are different entity formats. A Field Type describes the foundation and co
 
 [JoomEngine Playground](https://playground.joomengine.org/) is the default integration route for agents with browser access working on executable JCB changes. It runs Joomla, PHP and MariaDB in the browser and supplies a JCB deployment, so an agent can configure a repository's target and read branch, import candidate definitions, inspect their local records, compile a real consumer and exercise the generated extension. Respect user opt-outs and declared target versions. Static checks still run; an unavailable browser or unsupported target must be recorded as an unrun integration stage.
 
-Start with the [shared workflow](testing/playground/README.md), then the relevant module's acceptance procedure. Powers require a real class reference and caller; Field Types require concrete Fields and generated form/storage checks; Snippets require copied view content, assets and rendered behaviour. The [observed verification record](testing/playground/verification.md) distinguishes a successful live Power import from the remaining unexecuted stages. The [configuration reference](testing/playground/configuration.md) documents current version choices, URL parameters, editor/AI access and platform limits; future Joomla or development releases become test targets only when the actual Playground supports them.
+Start with the [Playground skill](testing/playground/SKILL.md), then the relevant module's acceptance procedure. Powers require a real class reference and caller; Field Types require concrete Fields and generated form/storage checks; Snippets require copied view content, assets and rendered behaviour; Packages require the root's actual component/module/plugin graph and generated consumers. The [shared receipt](testing/playground/verification.md) and each module's verification record distinguish completed stages from remaining checks. The [configuration reference](testing/playground/configuration.md) documents current version choices, URL parameters and platform limits; future Joomla or development releases become test targets only when the actual Playground supports them.
 
 These operational modules document parts of JCB's blueprint and compilation lifecycle. Import success proves one part of that lifecycle. The intended end-to-end test follows the maintained definition through compilation into an installed, exercised extension, with a separate result for each stage.
 
@@ -53,6 +56,6 @@ Read the module entry point, the contract sections relevant to the change, and i
 
 The documentation distinguishes project policy, implementation behaviour verified at a recorded revision, observed examples, and known gaps. Static validation, JCB import/compilation, and application runtime checks are separate levels of evidence. A check at one level never silently certifies the others.
 
-For an agent working in another repository, explicitly supply this repository URL and the relevant module path, or place a short local `AGENTS.md` reference there. An agent will not necessarily discover these instructions automatically.
+For an agent working in another repository, follow the [loading and distribution guide](standards/skill-loading.md). Keep shared tools and references with the model entry points; register the complete distribution when the client supports skills, or supply its path/URL explicitly. An agent will not necessarily discover these instructions automatically. The repository name change does not install capabilities or grant publication access.
 
 This repository's original CC0 [license](LICENSE) is retained. Source examples retain their original attribution and licensing; the repository license does not relicense third-party material.

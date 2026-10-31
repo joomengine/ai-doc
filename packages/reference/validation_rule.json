@@ -1,0 +1,248 @@
+{
+    "entity": "validation_rule",
+    "kind": "database",
+    "config_sources": [
+        {
+            "class": "ValidationRule",
+            "path": "libraries/vendor_jcb/VDM.Joomla/src/Componentbuilder/Package/ValidationRule/Remote/Config.php",
+            "url": "https://github.com/vdm-io/Joomla-Component-Builder/blob/408703a857ad937479b1e28de7f693af178dcc83/libraries/vendor_jcb/VDM.Joomla/src/Componentbuilder/Package/ValidationRule/Remote/Config.php",
+            "sha256": "24e7143bfa8f6518d9c3eea6f9b2b7aff48fffccd13cec2aa36d2ba0d89da48b"
+        }
+    ],
+    "config": {
+        "area": "ValidationRule",
+        "prefix_key": "",
+        "suffix_key": "",
+        "main_readme_path": "README_VALIDATION_RULE.md",
+        "item_readme_name": "README.md",
+        "index_path": "index/validation_rule.json",
+        "src_path": "src/validation_rule",
+        "settings_name": "item.json",
+        "guid_field": "name",
+        "guid_helper_field": null,
+        "ignore": [
+            "access"
+        ],
+        "files": [],
+        "folders": [],
+        "map": [],
+        "children": [],
+        "index_map": {
+            "name": "index_map_IndexName",
+            "path": "index_map_IndexPath",
+            "settings": "index_map_IndexSettingsPath",
+            "guid": "index_map_IndexGUID"
+        },
+        "index_header": [
+            "name",
+            "path",
+            "settings",
+            "guid",
+            "local"
+        ],
+        "placeholders": [],
+        "table": "validation_rule"
+    },
+    "identity_kind": "natural_key",
+    "table_source": {
+        "path": "libraries/vendor_jcb/VDM.Joomla/src/Componentbuilder/Table.php",
+        "url": "https://github.com/vdm-io/Joomla-Component-Builder/blob/408703a857ad937479b1e28de7f693af178dcc83/libraries/vendor_jcb/VDM.Joomla/src/Componentbuilder/Table.php",
+        "sha256": "630abb56cb664be947f45f08f8812af136402d50bcc2c0feec5702b9e870b573"
+    },
+    "form_source": {
+        "path": "admin/forms/validation_rule.xml",
+        "url": "https://github.com/vdm-io/Joomla-Component-Builder/blob/408703a857ad937479b1e28de7f693af178dcc83/admin/forms/validation_rule.xml",
+        "sha256": "8653993965a89dfeb4f0f30cefec7d9abe4d0836bc00dac147ab437aa1f5dc6a"
+    },
+    "fields": {
+        "name": {
+            "table_metadata": {
+                "name": "name",
+                "guid": "9a98c57f-bf01-49b0-91e3-e72e1b9551f1",
+                "label": "COM_COMPONENTBUILDER_VALIDATION_RULE_NAME_LABEL",
+                "type": "text",
+                "title": true,
+                "list": "validation_rules",
+                "store": null,
+                "tab_name": "Extends FormRule",
+                "db": {
+                    "type": "VARCHAR(255)",
+                    "default": "",
+                    "GUID": "9a98c57f-bf01-49b0-91e3-e72e1b9551f1",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": null
+            },
+            "config_map_target": "name",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "text",
+                        "name": "name",
+                        "label": "COM_COMPONENTBUILDER_VALIDATION_RULE_NAME_LABEL",
+                        "size": "40",
+                        "description": "COM_COMPONENTBUILDER_VALIDATION_RULE_NAME_DESCRIPTION",
+                        "class": "input-large-text",
+                        "required": "true"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "short_description": {
+            "table_metadata": {
+                "name": "short_description",
+                "guid": "46503007-43d9-485f-8cd0-8427a6a8bef2",
+                "label": "COM_COMPONENTBUILDER_VALIDATION_RULE_SHORT_DESCRIPTION_LABEL",
+                "type": "text",
+                "title": false,
+                "list": "validation_rules",
+                "store": null,
+                "tab_name": "Extends FormRule",
+                "db": {
+                    "type": "VARCHAR(255)",
+                    "default": "",
+                    "GUID": "46503007-43d9-485f-8cd0-8427a6a8bef2",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "short_description",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "text",
+                        "name": "short_description",
+                        "label": "COM_COMPONENTBUILDER_VALIDATION_RULE_SHORT_DESCRIPTION_LABEL",
+                        "size": "40",
+                        "maxlength": "150",
+                        "description": "COM_COMPONENTBUILDER_VALIDATION_RULE_SHORT_DESCRIPTION_DESCRIPTION",
+                        "class": "text_area",
+                        "required": "true",
+                        "filter": "HTML",
+                        "message": "COM_COMPONENTBUILDER_VALIDATION_RULE_SHORT_DESCRIPTION_MESSAGE",
+                        "hint": "COM_COMPONENTBUILDER_VALIDATION_RULE_SHORT_DESCRIPTION_HINT"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "inherit": {
+            "table_metadata": {
+                "name": "inherit",
+                "guid": "419fa655-e64a-4e39-b124-29eeb3198bc7",
+                "label": "COM_COMPONENTBUILDER_VALIDATION_RULE_INHERIT_LABEL",
+                "type": "existingvalidationrules",
+                "title": false,
+                "list": "validation_rules",
+                "store": null,
+                "tab_name": "Extends FormRule",
+                "db": {
+                    "type": "CHAR(64)",
+                    "default": "",
+                    "GUID": "419fa655-e64a-4e39-b124-29eeb3198bc7",
+                    "null_switch": "NOT NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": {
+                    "type": 1,
+                    "table": "#__componentbuilder_validation_rule",
+                    "component": "com_componentbuilder",
+                    "entity": "validation_rule",
+                    "value": "name",
+                    "key": "id"
+                }
+            },
+            "config_map_target": "inherit",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "existingvalidationrules",
+                        "name": "inherit",
+                        "label": "COM_COMPONENTBUILDER_VALIDATION_RULE_INHERIT_LABEL",
+                        "description": "COM_COMPONENTBUILDER_VALIDATION_RULE_INHERIT_DESCRIPTION",
+                        "class": "list_class",
+                        "layout": "joomla.form.field.list-fancy-select",
+                        "multiple": "false",
+                        "default": "0",
+                        "required": "false",
+                        "button": "false"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "php": {
+            "table_metadata": {
+                "name": "php",
+                "guid": "24ed6b0e-c86c-4131-91a7-5205ac931ad5",
+                "label": "COM_COMPONENTBUILDER_VALIDATION_RULE_PHP_LABEL",
+                "type": "textarea",
+                "title": false,
+                "list": "validation_rules",
+                "store": "base64",
+                "tab_name": "Extends FormRule",
+                "db": {
+                    "type": "MEDIUMTEXT",
+                    "default": "EMPTY",
+                    "GUID": "24ed6b0e-c86c-4131-91a7-5205ac931ad5",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "php",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "textarea",
+                        "name": "php",
+                        "label": "COM_COMPONENTBUILDER_VALIDATION_RULE_PHP_LABEL",
+                        "rows": "30",
+                        "cols": "15",
+                        "description": "COM_COMPONENTBUILDER_VALIDATION_RULE_PHP_DESCRIPTION",
+                        "class": "text_area span12",
+                        "filter": "raw",
+                        "hint": "COM_COMPONENTBUILDER_VALIDATION_RULE_PHP_HINT",
+                        "required": "true"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        }
+    },
+    "source_license": {
+        "header": "GNU General Public License version 2 or later; see LICENSE.txt",
+        "spdx": "GPL-2.0-or-later",
+        "copyright": "Copyright (C) 2015 Vast Development Method. All rights reserved.",
+        "file": "LICENSE.txt",
+        "sha256": "2332109384fc0476519a1d02e1f050dd05ea2251fa66c06f9c5239585147828c",
+        "url": "https://github.com/vdm-io/Joomla-Component-Builder/blob/408703a857ad937479b1e28de7f693af178dcc83/LICENSE.txt"
+    }
+}

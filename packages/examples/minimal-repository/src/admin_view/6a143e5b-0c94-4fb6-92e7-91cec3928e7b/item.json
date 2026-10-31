@@ -1,0 +1,49 @@
+{
+	"system_name": "Package Exercise Notes",
+	"name_single": "Note",
+	"name_list": "Notes",
+	"short_description": "Original fixture notes.",
+	"description": "Each note has a title.",
+	"type": 1,
+	"source": 0,
+	"icon": "",
+	"icon_add": "",
+	"icon_category": "",
+	"addtabs": {
+		"addtabs0": {
+			"name": "Details"
+		}
+	},
+	"addpermissions": null,
+	"addlinked_views": null,
+	"alias_builder_type": 1,
+	"alias_builder": {
+		"0": ""
+	},
+	"mysql_table_engine": "InnoDB",
+	"mysql_table_charset": "utf8mb4",
+	"mysql_table_collate": "utf8mb4_unicode_ci",
+	"mysql_table_row_format": "DYNAMIC",
+	"add_fadein": 0,
+	"add_category_submenu": 0,
+	"add_sql": 0,
+	"sql": "",
+	"add_php_ajax": 0,
+	"ajax_input": null,
+	"add_custom_button": 0,
+	"custom_button": null,
+	"add_view_toolbar": 0,
+	"view_toolbar": "",
+	"add_views_toolbar": 0,
+	"views_toolbar": "",
+	"guid": "6a143e5b-0c94-4fb6-92e7-91cec3928e7b",
+	"@dependencies": [
+		{
+			"key": "admin_view",
+			"value": "6a143e5b-0c94-4fb6-92e7-91cec3928e7b",
+			"entity": "admin_fields",
+			"table": "#__componentbuilder_admin_fields",
+			"direction": "in"
+		}
+	]
+}

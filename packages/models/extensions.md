@@ -1,0 +1,56 @@
+# Build modules, plugins and reusable class definitions
+
+[`joomla_module`](../reference/joomla_module.md) and [`joomla_plugin`](../reference/joomla_plugin.md) are independent GUID-keyed authoring records. Their update/assets records are children keyed by the parent GUID. [`component_modules`](../reference/component_modules.md) and [`component_plugins`](../reference/component_plugins.md) attach them to a component build; storing an extension in the repository pool does not attach it to every component.
+
+Use the exact target's compiler branch. The behaviour below was inspected in JCB `408703a857ad937479b1e28de7f693af178dcc83`, principally the `JoomlaSix` consumers. A Joomla 3/4/5 class-body specimen is not proof that its events, namespaces, service provider or assets work unchanged in Joomla 6.
+
+## Attach an extension deliberately
+
+Each component child holds a collection of module/plugin GUID references with a `target`: `0` compile and export, `1` compile only, `2` export only. The compiler's attachment models skip compilation for `target=2`. These build choices are distinct from a module's site/administrator target and from repository read/write branches. See [Joomlamodules](https://github.com/vdm-io/Joomla-Component-Builder/blob/408703a857ad937479b1e28de7f693af178dcc83/libraries/vendor_jcb/VDM.Joomla/src/Componentbuilder/Compiler/Model/Joomlamodules.php) and [Joomlaplugins](https://github.com/vdm-io/Joomla-Component-Builder/blob/408703a857ad937479b1e28de7f693af178dcc83/libraries/vendor_jcb/VDM.Joomla/src/Componentbuilder/Compiler/Model/Joomlaplugins.php). Do not infer a single repository destination from these flags; package Push scope follows the [repository workflow](../workflows/create-repository.md).
+
+Retain an extension's GUID when changing the same shared module/plugin. Create a new checked GUID for an independent extension, then update its child parent keys and component attachments. Changing name, group, namespace or client can change its install identity; plan installed-site migration instead of assuming a GUID preserves Joomla's extension registration.
+
+## Modules: entry point, helper and presentation
+
+`target=1` is site and `target=2` administrator in the Module form. Set `name`, `system_name` and `module_version` deliberately. `mod_code` supplies module entry logic; `default` supplies the default template. `layout_data` and `custom_get` provide the corresponding data/custom query inputs. Keep output escaping, authorized data access and parameter handling appropriate to the module context.
+
+`add_class_helper=0` disables a helper, `1` requests a class and `2` an abstract class. The inspected compiler requires both an enabled helper mode and nonempty `class_helper_code`; otherwise it clears helper output. `add_class_helper_header` controls its separate header. Likewise, `add_default_header` gates `default_header`. A method body, class-member body, header and template are distinct insertion contexts. Do not paste a complete PHP class into a slot whose compiler already supplies the declaration.
+
+An empty `mod_code` has a compiler fallback that loads the module/default layout, but that is not a substitute for deliberately specifying required data initialization. Inspect the actual generated entry point and helper before treating the fallback as sufficient. Source: [JoomlaSix Module/Data](https://github.com/vdm-io/Joomla-Component-Builder/blob/408703a857ad937479b1e28de7f693af178dcc83/libraries/vendor_jcb/VDM.Joomla/src/Componentbuilder/Compiler/Joomlamodule/JoomlaSix/Data.php).
+
+## Plugins: group, base class and actual class body
+
+The plugin selects a [`joomla_plugin_group`](../reference/joomla_plugin_group.md) and [`class_extends`](../reference/class_extends.md) GUID. The group has a name and class relationship; the base-class record carries `name`, `extension_type`, `head` and `comment`. Choose a compatible group/base/event contract for the installed Joomla target. The compiler resolves those records, derives plugin names/namespace/folder metadata and builds from `main_class_code`.
+
+`add_head`/`head` controls a plugin-specific header; the inspected consumer can use the base class's header when the own-header path is not enabled. Keep imports, interfaces and event subscriptions consistent with the actual main class body. The fact that a class extends a named Joomla class does not automatically add its required event methods or service registration.
+
+[`class_method`](../reference/class_method.md) and [`class_property`](../reference/class_property.md) are reusable GUID-keyed definitions. Methods hold `name`, visibility, arguments, comment and code; properties hold `name`, visibility, default and comment. `extension_type` and the plugin-group relationship establish selection context. Use the exact form's visibility/static values. The plugin's `method_selection` and `property_selection` record chosen members, but the editor also copies fetched member code into `main_class_code`. Selecting member GUIDs in hand-written JSON alone is not demonstrated to synthesize a complete class body during compilation. Keep selected members and the actual persisted body consistent and inspect the output.
+
+Evidence: [plugin editor code insertion](https://github.com/vdm-io/Joomla-Component-Builder/blob/408703a857ad937479b1e28de7f693af178dcc83/media/js/admin/joomla_plugin.js), [JoomlaSix Plugin/Data](https://github.com/vdm-io/Joomla-Component-Builder/blob/408703a857ad937479b1e28de7f693af178dcc83/libraries/vendor_jcb/VDM.Joomla/src/Componentbuilder/Compiler/Joomlaplugin/JoomlaSix/Data.php). The compiler has a narrowly defined [privacy-plugin migration](https://github.com/vdm-io/Joomla-Component-Builder/blob/408703a857ad937479b1e28de7f693af178dcc83/libraries/vendor_jcb/VDM.Joomla/src/Componentbuilder/Compiler/Architecture/JoomlaSix/Plugin/Privacy.php) for specific method identities and recognized original bodies. This is not a general promise to migrate arbitrary legacy events or edited methods. Test the real event dispatch and dependencies on the target runtime.
+
+## Configuration and additional forms
+
+Both extension roots contain a nested `fields` collection; those rows are not separate package entities. Each row groups Field references by `fields_name`, `fieldset`, label and file, with optional `custom_value` overrides. For modules, `module=1` places the group in module configuration; an absent/non-1 value produces a separate form-file group. Plugins use the corresponding `plugin` switch. Deliberately set the intended choice rather than relying on a checkbox's UI state.
+
+`fields_rules_paths` chooses component (`1`), the module/plugin (`2`) or other (`3`) paths. For other paths, inspect the nested `addrulepath` and `addfieldpath` values and generated XML. A custom rule/Field class must be installed and discoverable at that location; its existence in JCB's package pool is insufficient. `custom_value` changes the generated Field default for this attachment rather than changing the shared Field's intended global default. Test values containing quotes/XML-sensitive characters after actual editor/import processing.
+
+Use [Fields and relationships](fields-and-relationships.md) for Field Type resolution, validation, storage and nested Subforms. In an extension parameter form, a Field's database datatype does not independently create an application table. Inspect generated configuration/form XML, custom classes and save/reopen behaviour in the actual module/plugin manager.
+
+## Installer code, SQL, updates and assets
+
+Module/plugin roots expose installer-constructor code; preflight install/update/uninstall hooks; postflight install/update hooks; an uninstall-method hook; SQL switches/bodies; README settings; and update/distribution fields. Consult the exact [Module](../reference/joomla_module.json) or [Plugin](../reference/joomla_plugin.json) reference for every enable/body pair. Do not invent a matching slot for every lifecycle phase: these roots do not expose the same hook set as every other JCB model. A stored code body with a disabled switch may not be emitted; a preflight failure and an uninstall hook have different consequences. Keep migrations repeatable where appropriate and make failure behaviour explicit.
+
+[`joomla_module_updates`](../reference/joomla_module_updates.md) and [`joomla_plugin_updates`](../reference/joomla_plugin_updates.md) carry `version_update` rows with version, SQL and URL data. The child identity is the parent extension GUID, not a newly allocated update GUID. Coordinate root version, generated manifest/update metadata and database migrations. Test fresh install and upgrade from a real prior release; importing authoring records does not establish installed upgrade history.
+
+[`joomla_module_files_folders_urls`](../reference/joomla_module_files_folders_urls.md) and [`joomla_plugin_files_folders_urls`](../reference/joomla_plugin_files_folders_urls.md) attach regular/full-path files and folders plus URLs. Their parent keys are `joomla_module` and `joomla_plugin`. Follow [asset source, destination and processing rules](libraries-and-assets.md); a module/plugin installer archive must contain the resulting files and manifest entries, not just the original authoring paths.
+
+## Author, integrate and debug
+
+1. Define extension type, Joomla client or plugin group, runtime versions, install identity, public entry/events and external dependencies. Research Joomla core and shared Powers before duplicating logic.
+2. Create/reuse the extension and any group/base/member records. Save complete authoritative code in its actual slot; set enable flags and preserve identities intentionally.
+3. Add configuration/form groups, Field dependencies, assets, installer code and update rows required by this extension. Modules expose a `libraries` selection; the inspected plugin root does not, so supply a plugin's resource-loading implementation through its actual code/assets contract. Do not add empty scaffolding merely to fill every available field.
+4. Attach it to a consuming component with the intended compile/export target. This guide's verified compilation path is the component attachment; a separate standalone compiler selector is not established here. Resolve the graph and separately initialize external catalogues when needed.
+5. Compile and inspect archive/manifest, entry point or plugin class/service provider, helper/template, forms, assets and installer/update scripts. Confirm the generated names/paths agree with installed identity and Joomla's loader.
+6. Install, enable/publish in the correct context, configure and exercise the real module output or plugin event. Test permissions, empty/error inputs and the relevant upgrade/uninstall path in an authorized disposable target. Follow [integration validation](../workflows/validate-and-integrate.md).
+
+If no extension artifact appears, inspect its component attachment and `target` before debugging class code. If a member is missing, compare the saved body with editor selection metadata. If an event never fires, inspect group, enabled state, subscription/method signature and service provider for the exact Joomla version. If parameters fail, inspect generated grouping and Field/rule registration. Carry any generated-output repair back to the original blueprint and compile again.

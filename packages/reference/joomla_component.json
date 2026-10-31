@@ -1,0 +1,4675 @@
+{
+    "entity": "joomla_component",
+    "kind": "database",
+    "config_sources": [
+        {
+            "class": "Component",
+            "path": "libraries/vendor_jcb/VDM.Joomla/src/Componentbuilder/Package/Component/Remote/Config.php",
+            "url": "https://github.com/vdm-io/Joomla-Component-Builder/blob/408703a857ad937479b1e28de7f693af178dcc83/libraries/vendor_jcb/VDM.Joomla/src/Componentbuilder/Package/Component/Remote/Config.php",
+            "sha256": "21b5e2eda165e2fc7c79b2d46f2c2740d9b3e0a7f5bb4d7a520184f58f093058"
+        }
+    ],
+    "config": {
+        "area": "Joomla Component",
+        "prefix_key": "",
+        "suffix_key": "",
+        "main_readme_path": "README.md",
+        "item_readme_name": "README.md",
+        "index_path": "index/joomla-component.json",
+        "src_path": "src/joomla_component",
+        "settings_name": "item.json",
+        "guid_field": "guid",
+        "guid_helper_field": null,
+        "ignore": [
+            "access",
+            "export_key",
+            "joomla_source_link",
+            "export_buy_link",
+            "update_server",
+            "add_sales_server",
+            "sales_server",
+            "translation_tool",
+            "crowdin_project_identifier",
+            "crowdin_project_api_key",
+            "crowdin_username",
+            "crowdin_account_api_key",
+            "created",
+            "modified"
+        ],
+        "files": {
+            "image": "images",
+            "bom": "compiler"
+        },
+        "folders": [],
+        "map": [],
+        "children": [
+            "component_admin_views",
+            "component_custom_admin_views",
+            "component_site_views",
+            "component_router",
+            "component_config",
+            "component_placeholders",
+            "component_updates",
+            "component_files_folders",
+            "component_custom_admin_menus",
+            "component_dashboard",
+            "component_modules",
+            "component_plugins"
+        ],
+        "index_map": {
+            "name": "index_map_IndexName",
+            "path": "index_map_IndexPath",
+            "settings": "index_map_IndexSettingsPath",
+            "guid": "index_map_IndexGUID",
+            "desc": "index_map_ShortDescription"
+        },
+        "index_header": [
+            "name",
+            "desc",
+            "path",
+            "settings",
+            "guid",
+            "local"
+        ],
+        "placeholders": [],
+        "table": "joomla_component"
+    },
+    "identity_kind": "guid",
+    "table_source": {
+        "path": "libraries/vendor_jcb/VDM.Joomla/src/Componentbuilder/Table.php",
+        "url": "https://github.com/vdm-io/Joomla-Component-Builder/blob/408703a857ad937479b1e28de7f693af178dcc83/libraries/vendor_jcb/VDM.Joomla/src/Componentbuilder/Table.php",
+        "sha256": "630abb56cb664be947f45f08f8812af136402d50bcc2c0feec5702b9e870b573"
+    },
+    "form_source": {
+        "path": "admin/forms/joomla_component.xml",
+        "url": "https://github.com/vdm-io/Joomla-Component-Builder/blob/408703a857ad937479b1e28de7f693af178dcc83/admin/forms/joomla_component.xml",
+        "sha256": "738205468a1faac7621fcfb1fb739f86694715ef734299d8a0e4b94e1628eb2c"
+    },
+    "fields": {
+        "system_name": {
+            "table_metadata": {
+                "name": "system_name",
+                "guid": "acfe906b-6e61-4f94-ae66-359e4bc3e4cc",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_SYSTEM_NAME_LABEL",
+                "type": "text",
+                "title": true,
+                "list": "joomla_components",
+                "store": null,
+                "tab_name": "Details",
+                "db": {
+                    "type": "VARCHAR(255)",
+                    "default": "",
+                    "GUID": "acfe906b-6e61-4f94-ae66-359e4bc3e4cc",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": null
+            },
+            "config_map_target": "system_name",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "text",
+                        "name": "system_name",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_SYSTEM_NAME_LABEL",
+                        "size": "10",
+                        "maxlength": "50",
+                        "default": "",
+                        "description": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_SYSTEM_NAME_DESCRIPTION",
+                        "class": "text_area",
+                        "filter": "STRING",
+                        "message": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_SYSTEM_NAME_MESSAGE",
+                        "hint": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_SYSTEM_NAME_HINT"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "name_code": {
+            "table_metadata": {
+                "name": "name_code",
+                "guid": "af7b6b08-e8c5-4551-b6e6-cde297e78e40",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_NAME_CODE_LABEL",
+                "type": "text",
+                "title": false,
+                "list": "joomla_components",
+                "store": null,
+                "tab_name": "Details",
+                "db": {
+                    "type": "VARCHAR(255)",
+                    "default": "",
+                    "GUID": "af7b6b08-e8c5-4551-b6e6-cde297e78e40",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": null
+            },
+            "config_map_target": "name_code",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "text",
+                        "name": "name_code",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_NAME_CODE_LABEL",
+                        "size": "40",
+                        "maxlength": "50",
+                        "default": "",
+                        "description": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_NAME_CODE_DESCRIPTION",
+                        "class": "text_area",
+                        "required": "true",
+                        "filter": "CMD",
+                        "message": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_NAME_CODE_MESSAGE",
+                        "hint": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_NAME_CODE_HINT"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "short_description": {
+            "table_metadata": {
+                "name": "short_description",
+                "guid": "46503007-43d9-485f-8cd0-8427a6a8bef2",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_SHORT_DESCRIPTION_LABEL",
+                "type": "text",
+                "title": false,
+                "list": "joomla_components",
+                "store": null,
+                "tab_name": "Details",
+                "db": {
+                    "type": "VARCHAR(255)",
+                    "default": "",
+                    "GUID": "46503007-43d9-485f-8cd0-8427a6a8bef2",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "short_description",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "text",
+                        "name": "short_description",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_SHORT_DESCRIPTION_LABEL",
+                        "size": "40",
+                        "maxlength": "150",
+                        "description": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_SHORT_DESCRIPTION_DESCRIPTION",
+                        "class": "text_area",
+                        "required": "true",
+                        "filter": "HTML",
+                        "message": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_SHORT_DESCRIPTION_MESSAGE",
+                        "hint": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_SHORT_DESCRIPTION_HINT"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "companyname": {
+            "table_metadata": {
+                "name": "companyname",
+                "guid": "f8c2c432-b756-4c67-bfa5-0871e58e55e3",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_COMPANYNAME_LABEL",
+                "type": "text",
+                "title": false,
+                "list": "joomla_components",
+                "store": null,
+                "tab_name": "Details",
+                "db": {
+                    "type": "CHAR(64)",
+                    "default": "",
+                    "GUID": "f8c2c432-b756-4c67-bfa5-0871e58e55e3",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "companyname",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "text",
+                        "name": "companyname",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_COMPANYNAME_LABEL",
+                        "size": "40",
+                        "maxlength": "150",
+                        "description": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_COMPANYNAME_DESCRIPTION",
+                        "class": "text_area",
+                        "readonly": "false",
+                        "disabled": "false",
+                        "required": "true",
+                        "filter": "STRING",
+                        "message": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_COMPANYNAME_MESSAGE",
+                        "hint": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_COMPANYNAME_HINT"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "buildcompsql": {
+            "table_metadata": {
+                "name": "buildcompsql",
+                "guid": "98ad53ca-0da2-4aab-9a3c-1c7e1ee0a24e",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_BUILDCOMPSQL_LABEL",
+                "type": "textarea",
+                "title": false,
+                "list": "joomla_components",
+                "store": "base64",
+                "tab_name": "Dynamic Build",
+                "db": {
+                    "type": "MEDIUMTEXT",
+                    "default": "EMPTY",
+                    "GUID": "98ad53ca-0da2-4aab-9a3c-1c7e1ee0a24e",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "buildcompsql",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "textarea",
+                        "name": "buildcompsql",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_BUILDCOMPSQL_LABEL",
+                        "rows": "30",
+                        "cols": "15",
+                        "description": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_BUILDCOMPSQL_DESCRIPTION",
+                        "class": "text_area span12",
+                        "filter": "raw",
+                        "hint": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_BUILDCOMPSQL_HINT",
+                        "required": "true"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "jcb_powers_path": {
+            "table_metadata": {
+                "name": "jcb_powers_path",
+                "guid": "763e5bdf-d4d3-449b-bb36-de2623d81540",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_JCB_POWERS_PATH_LABEL",
+                "type": "text",
+                "title": false,
+                "list": "joomla_components",
+                "store": null,
+                "tab_name": "Dynamic Integration",
+                "db": {
+                    "type": "VARCHAR(255)",
+                    "default": "",
+                    "GUID": "763e5bdf-d4d3-449b-bb36-de2623d81540",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "jcb_powers_path",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "text",
+                        "name": "jcb_powers_path",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_JCB_POWERS_PATH_LABEL",
+                        "size": "70",
+                        "maxlength": "150",
+                        "description": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_JCB_POWERS_PATH_DESCRIPTION",
+                        "class": "text_area",
+                        "filter": "PATH",
+                        "message": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_JCB_POWERS_PATH_MESSAGE",
+                        "hint": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_JCB_POWERS_PATH_HINT",
+                        "autocomplete": "on",
+                        "showon": "add_jcb_powers_path:1"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "add_update_server": {
+            "table_metadata": {
+                "name": "add_update_server",
+                "guid": "db2835aa-b0c3-4c9a-abe6-5b09568fffda",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_ADD_UPDATE_SERVER_LABEL",
+                "type": "radio",
+                "title": false,
+                "list": "joomla_components",
+                "store": null,
+                "tab_name": "Dynamic Integration",
+                "db": {
+                    "type": "TINYINT(1)",
+                    "default": "0",
+                    "GUID": "db2835aa-b0c3-4c9a-abe6-5b09568fffda",
+                    "null_switch": "NOT NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": null
+            },
+            "config_map_target": "add_update_server",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "radio",
+                        "name": "add_update_server",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_ADD_UPDATE_SERVER_LABEL",
+                        "class": "btn-group btn-group-yesno",
+                        "default": "0",
+                        "required": "true"
+                    },
+                    "options": [
+                        {
+                            "attributes": {
+                                "value": "1"
+                            },
+                            "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_YES"
+                        },
+                        {
+                            "attributes": {
+                                "value": "0"
+                            },
+                            "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_NO"
+                        }
+                    ],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "add_sql": {
+            "table_metadata": {
+                "name": "add_sql",
+                "guid": "7c652c71-e00e-45ff-8acb-e1bc0344e4c0",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_ADD_SQL_LABEL",
+                "type": "radio",
+                "title": false,
+                "list": "joomla_components",
+                "store": null,
+                "tab_name": "MySQL",
+                "db": {
+                    "type": "TINYINT(1)",
+                    "default": "0",
+                    "GUID": "7c652c71-e00e-45ff-8acb-e1bc0344e4c0",
+                    "null_switch": "NOT NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": null
+            },
+            "config_map_target": "add_sql",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "radio",
+                        "name": "add_sql",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_ADD_SQL_LABEL",
+                        "class": "btn-group btn-group-yesno",
+                        "default": "0",
+                        "required": "true"
+                    },
+                    "options": [
+                        {
+                            "attributes": {
+                                "value": "1"
+                            },
+                            "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_YES"
+                        },
+                        {
+                            "attributes": {
+                                "value": "0"
+                            },
+                            "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_NO"
+                        }
+                    ],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "add_php_postflight_install": {
+            "table_metadata": {
+                "name": "add_php_postflight_install",
+                "guid": "3c1db8b4-65f2-4f6f-8391-5883f564eabe",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_ADD_PHP_POSTFLIGHT_INSTALL_LABEL",
+                "type": "radio",
+                "title": false,
+                "list": "joomla_components",
+                "store": null,
+                "tab_name": "Dash & Install",
+                "db": {
+                    "type": "TINYINT(1)",
+                    "default": "0",
+                    "GUID": "3c1db8b4-65f2-4f6f-8391-5883f564eabe",
+                    "null_switch": "NOT NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": null
+            },
+            "config_map_target": "add_php_postflight_install",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "radio",
+                        "name": "add_php_postflight_install",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_ADD_PHP_POSTFLIGHT_INSTALL_LABEL",
+                        "class": "btn-group btn-group-yesno",
+                        "default": "0",
+                        "required": "true"
+                    },
+                    "options": [
+                        {
+                            "attributes": {
+                                "value": "1"
+                            },
+                            "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_YES"
+                        },
+                        {
+                            "attributes": {
+                                "value": "0"
+                            },
+                            "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_NO"
+                        }
+                    ],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "mvc_versiondate": {
+            "table_metadata": {
+                "name": "mvc_versiondate",
+                "guid": "508b5e78-c91a-4aaa-b587-000759130d4e",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_MVC_VERSIONDATE_LABEL",
+                "type": "list",
+                "title": false,
+                "list": "joomla_components",
+                "store": null,
+                "tab_name": "Details",
+                "db": {
+                    "type": "TINYINT(1)",
+                    "default": "0",
+                    "GUID": "508b5e78-c91a-4aaa-b587-000759130d4e",
+                    "null_switch": "NOT NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": null
+            },
+            "config_map_target": "mvc_versiondate",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "list",
+                        "name": "mvc_versiondate",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_MVC_VERSIONDATE_LABEL",
+                        "description": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_MVC_VERSIONDATE_DESCRIPTION",
+                        "class": "list_class",
+                        "layout": "joomla.form.field.list-fancy-select",
+                        "multiple": "false",
+                        "filter": "int",
+                        "required": "true",
+                        "default": "0"
+                    },
+                    "options": [
+                        {
+                            "attributes": {
+                                "value": "0"
+                            },
+                            "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_USE_GLOBAL_VERSION"
+                        },
+                        {
+                            "attributes": {
+                                "value": "1"
+                            },
+                            "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_USE_VIEW_VERSION_DATE"
+                        },
+                        {
+                            "attributes": {
+                                "value": "2"
+                            },
+                            "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_USE_ONLY_FIRST_2_NUMBER_OF_GLOBAL_VERSION_10X"
+                        },
+                        {
+                            "attributes": {
+                                "value": "3"
+                            },
+                            "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_USE_ONLY_FIRST_NUMBER_OF_GLOBAL_VERSION_1XX"
+                        }
+                    ],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "remove_line_breaks": {
+            "table_metadata": {
+                "name": "remove_line_breaks",
+                "guid": "2089f202-667a-4fbd-881c-cc0fe1343ce4",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_REMOVE_LINE_BREAKS_LABEL",
+                "type": "radio",
+                "title": false,
+                "list": "joomla_components",
+                "store": null,
+                "tab_name": "Details",
+                "db": {
+                    "type": "TINYINT(1)",
+                    "default": "1",
+                    "GUID": "2089f202-667a-4fbd-881c-cc0fe1343ce4",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": null
+            },
+            "config_map_target": "remove_line_breaks",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "radio",
+                        "name": "remove_line_breaks",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_REMOVE_LINE_BREAKS_LABEL",
+                        "description": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_REMOVE_LINE_BREAKS_DESCRIPTION",
+                        "class": "btn-group btn-group-yesno",
+                        "default": "1",
+                        "required": "true"
+                    },
+                    "options": [
+                        {
+                            "attributes": {
+                                "value": "1"
+                            },
+                            "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_YES"
+                        },
+                        {
+                            "attributes": {
+                                "value": "0"
+                            },
+                            "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_NO"
+                        }
+                    ],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "add_placeholders": {
+            "table_metadata": {
+                "name": "add_placeholders",
+                "guid": "991ec7f9-257a-486c-9453-c6b1c3fd5bf0",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_ADD_PLACEHOLDERS_LABEL",
+                "type": "radio",
+                "title": false,
+                "list": "joomla_components",
+                "store": null,
+                "tab_name": "Details",
+                "db": {
+                    "type": "TINYINT(1)",
+                    "default": "0",
+                    "GUID": "991ec7f9-257a-486c-9453-c6b1c3fd5bf0",
+                    "null_switch": "NOT NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": null
+            },
+            "config_map_target": "add_placeholders",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "radio",
+                        "name": "add_placeholders",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_ADD_PLACEHOLDERS_LABEL",
+                        "description": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_ADD_PLACEHOLDERS_DESCRIPTION",
+                        "class": "btn-group btn-group-yesno",
+                        "default": "1",
+                        "required": "true"
+                    },
+                    "options": [
+                        {
+                            "attributes": {
+                                "value": "1"
+                            },
+                            "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_YES"
+                        },
+                        {
+                            "attributes": {
+                                "value": "0"
+                            },
+                            "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_NO"
+                        }
+                    ],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "debug_linenr": {
+            "table_metadata": {
+                "name": "debug_linenr",
+                "guid": "f5e0c377-6689-4f79-9a35-41a1bfc58ba5",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_DEBUG_LINENR_LABEL",
+                "type": "radio",
+                "title": false,
+                "list": "joomla_components",
+                "store": null,
+                "tab_name": "Details",
+                "db": {
+                    "type": "TINYINT(1)",
+                    "default": "0",
+                    "GUID": "f5e0c377-6689-4f79-9a35-41a1bfc58ba5",
+                    "null_switch": "NOT NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": null
+            },
+            "config_map_target": "debug_linenr",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "radio",
+                        "name": "debug_linenr",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_DEBUG_LINENR_LABEL",
+                        "description": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_DEBUG_LINENR_DESCRIPTION",
+                        "class": "btn-group btn-group-yesno",
+                        "default": "0",
+                        "required": "true"
+                    },
+                    "options": [
+                        {
+                            "attributes": {
+                                "value": "1"
+                            },
+                            "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_YES"
+                        },
+                        {
+                            "attributes": {
+                                "value": "0"
+                            },
+                            "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_NO"
+                        }
+                    ],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "add_php_preflight_install": {
+            "table_metadata": {
+                "name": "add_php_preflight_install",
+                "guid": "d5d03647-f29e-44a4-9e63-5feb9f4adbae",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_ADD_PHP_PREFLIGHT_INSTALL_LABEL",
+                "type": "radio",
+                "title": false,
+                "list": "joomla_components",
+                "store": null,
+                "tab_name": "Dash & Install",
+                "db": {
+                    "type": "TINYINT(1)",
+                    "default": "0",
+                    "GUID": "d5d03647-f29e-44a4-9e63-5feb9f4adbae",
+                    "null_switch": "NOT NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": null
+            },
+            "config_map_target": "add_php_preflight_install",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "radio",
+                        "name": "add_php_preflight_install",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_ADD_PHP_PREFLIGHT_INSTALL_LABEL",
+                        "class": "btn-group btn-group-yesno",
+                        "default": "0",
+                        "required": "true"
+                    },
+                    "options": [
+                        {
+                            "attributes": {
+                                "value": "1"
+                            },
+                            "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_YES"
+                        },
+                        {
+                            "attributes": {
+                                "value": "0"
+                            },
+                            "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_NO"
+                        }
+                    ],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "description": {
+            "table_metadata": {
+                "name": "description",
+                "guid": "749a9917-90c3-49c4-9e72-aa33b0683a87",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_DESCRIPTION_LABEL",
+                "type": "textarea",
+                "title": false,
+                "list": "joomla_components",
+                "store": null,
+                "tab_name": "Details",
+                "db": {
+                    "type": "TEXT",
+                    "default": "EMPTY",
+                    "GUID": "749a9917-90c3-49c4-9e72-aa33b0683a87",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "description",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "textarea",
+                        "name": "description",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_DESCRIPTION_LABEL",
+                        "rows": "11",
+                        "cols": "10",
+                        "description": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_DESCRIPTION_DESCRIPTION",
+                        "class": "text_area span12",
+                        "filter": "HTML",
+                        "hint": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_DESCRIPTION_HINT"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "add_php_method_uninstall": {
+            "table_metadata": {
+                "name": "add_php_method_uninstall",
+                "guid": "70a2d820-64af-4f51-8b1a-522aed9572bf",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_ADD_PHP_METHOD_UNINSTALL_LABEL",
+                "type": "radio",
+                "title": false,
+                "list": "joomla_components",
+                "store": null,
+                "tab_name": "Dash & Install",
+                "db": {
+                    "type": "TINYINT(1)",
+                    "default": "0",
+                    "GUID": "70a2d820-64af-4f51-8b1a-522aed9572bf",
+                    "null_switch": "NOT NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": null
+            },
+            "config_map_target": "add_php_method_uninstall",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "radio",
+                        "name": "add_php_method_uninstall",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_ADD_PHP_METHOD_UNINSTALL_LABEL",
+                        "class": "btn-group btn-group-yesno",
+                        "default": "0",
+                        "required": "true"
+                    },
+                    "options": [
+                        {
+                            "attributes": {
+                                "value": "1"
+                            },
+                            "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_YES"
+                        },
+                        {
+                            "attributes": {
+                                "value": "0"
+                            },
+                            "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_NO"
+                        }
+                    ],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "author": {
+            "table_metadata": {
+                "name": "author",
+                "guid": "d4a595fb-2264-4e18-8b80-7affee1a6abf",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_AUTHOR_LABEL",
+                "type": "text",
+                "title": false,
+                "list": "joomla_components",
+                "store": null,
+                "tab_name": "Details",
+                "db": {
+                    "type": "VARCHAR(255)",
+                    "default": "",
+                    "GUID": "d4a595fb-2264-4e18-8b80-7affee1a6abf",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "author",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "text",
+                        "name": "author",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_AUTHOR_LABEL",
+                        "size": "10",
+                        "maxlength": "120",
+                        "description": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_AUTHOR_DESCRIPTION",
+                        "class": "text_area",
+                        "readonly": "false",
+                        "disabled": "false",
+                        "required": "true",
+                        "filter": "HTML",
+                        "message": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_AUTHOR_MESSAGE",
+                        "hint": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_AUTHOR_HINT"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "assets_table_fix": {
+            "table_metadata": {
+                "name": "assets_table_fix",
+                "guid": "1831e024-aa0c-4fc7-b1e6-77ce4dd4c562",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_ASSETS_TABLE_FIX_LABEL",
+                "type": "list",
+                "title": false,
+                "list": "joomla_components",
+                "store": null,
+                "tab_name": "MySQL",
+                "db": {
+                    "type": "TINYINT(1)",
+                    "default": "3",
+                    "GUID": "1831e024-aa0c-4fc7-b1e6-77ce4dd4c562",
+                    "null_switch": "NOT NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": null
+            },
+            "config_map_target": "assets_table_fix",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "list",
+                        "name": "assets_table_fix",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_ASSETS_TABLE_FIX_LABEL",
+                        "description": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_ASSETS_TABLE_FIX_DESCRIPTION",
+                        "class": "list_class",
+                        "layout": "joomla.form.field.list-fancy-select",
+                        "multiple": "false",
+                        "default": "3"
+                    },
+                    "options": [
+                        {
+                            "attributes": {
+                                "value": "3"
+                            },
+                            "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_USE_GLOBAL"
+                        },
+                        {
+                            "attributes": {
+                                "value": "0"
+                            },
+                            "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_DO_NOT_ADD_FIX_EVER"
+                        },
+                        {
+                            "attributes": {
+                                "value": "1"
+                            },
+                            "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_SQL_ADDREMOVE"
+                        },
+                        {
+                            "attributes": {
+                                "value": "2"
+                            },
+                            "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_INTELLIGENT_ADDREMOVEIF"
+                        }
+                    ],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "email": {
+            "table_metadata": {
+                "name": "email",
+                "guid": "2a9d2cda-1be7-4ae7-b672-9139a8a62d14",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_EMAIL_LABEL",
+                "type": "text",
+                "title": false,
+                "list": "joomla_components",
+                "store": null,
+                "tab_name": "Details",
+                "db": {
+                    "type": "VARCHAR(255)",
+                    "default": "",
+                    "GUID": "2a9d2cda-1be7-4ae7-b672-9139a8a62d14",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "email",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "text",
+                        "name": "email",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_EMAIL_LABEL",
+                        "size": "40",
+                        "maxlength": "150",
+                        "description": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_EMAIL_DESCRIPTION",
+                        "class": "text_area",
+                        "required": "true",
+                        "filter": "STRING",
+                        "validate": "email",
+                        "message": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_EMAIL_MESSAGE",
+                        "hint": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_EMAIL_HINT"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "website": {
+            "table_metadata": {
+                "name": "website",
+                "guid": "9f474240-eb27-40d7-9512-fbb3acf370d5",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_WEBSITE_LABEL",
+                "type": "url",
+                "title": false,
+                "list": "joomla_components",
+                "store": null,
+                "tab_name": "Details",
+                "db": {
+                    "type": "CHAR(255)",
+                    "default": "",
+                    "GUID": "9f474240-eb27-40d7-9512-fbb3acf370d5",
+                    "null_switch": "NOT NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "website",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "url",
+                        "name": "website",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_WEBSITE_LABEL",
+                        "size": "60",
+                        "maxlength": "150",
+                        "default": "",
+                        "description": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_WEBSITE_DESCRIPTION",
+                        "class": "text_area",
+                        "required": "true",
+                        "filter": "url",
+                        "validated": "url",
+                        "message": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_WEBSITE_MESSAGE",
+                        "hint": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_WEBSITE_HINT"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "add_git_folder_path": {
+            "table_metadata": {
+                "name": "add_git_folder_path",
+                "guid": "eac7c528-4764-45e8-8304-4b8701e10915",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_ADD_GIT_FOLDER_PATH_LABEL",
+                "type": "radio",
+                "title": false,
+                "list": "joomla_components",
+                "store": null,
+                "tab_name": "Dynamic Integration",
+                "db": {
+                    "type": "CHAR(1)",
+                    "default": "",
+                    "GUID": "eac7c528-4764-45e8-8304-4b8701e10915",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": null
+            },
+            "config_map_target": "add_git_folder_path",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "radio",
+                        "name": "add_git_folder_path",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_ADD_GIT_FOLDER_PATH_LABEL",
+                        "description": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_ADD_GIT_FOLDER_PATH_DESCRIPTION",
+                        "class": "btn-group btn-group-yesno",
+                        "default": ""
+                    },
+                    "options": [
+                        {
+                            "attributes": {
+                                "value": ""
+                            },
+                            "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_GLOBAL"
+                        },
+                        {
+                            "attributes": {
+                                "value": "1"
+                            },
+                            "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_OVERRIDE"
+                        }
+                    ],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "license": {
+            "table_metadata": {
+                "name": "license",
+                "guid": "e5346711-63a0-45b8-a093-06486959a1d0",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_LICENSE_LABEL",
+                "type": "textarea",
+                "title": false,
+                "list": "joomla_components",
+                "store": null,
+                "tab_name": "Details",
+                "db": {
+                    "type": "VARCHAR(255)",
+                    "default": "",
+                    "GUID": "e5346711-63a0-45b8-a093-06486959a1d0",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "license",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "textarea",
+                        "name": "license",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_LICENSE_LABEL",
+                        "rows": "7",
+                        "cols": "10",
+                        "default": "GNU/GPL Version 2 or later - http://www.gnu.org/licenses/gpl-2.0.html",
+                        "description": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_LICENSE_DESCRIPTION",
+                        "class": "text_area span12",
+                        "filter": "HTML",
+                        "hint": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_LICENSE_HINT",
+                        "required": "true"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "add_css_admin": {
+            "table_metadata": {
+                "name": "add_css_admin",
+                "guid": "c2afae90-c059-4efb-9705-b7cf161b0c2a",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_ADD_CSS_ADMIN_LABEL",
+                "type": "radio",
+                "title": false,
+                "list": "joomla_components",
+                "store": null,
+                "tab_name": "Libs & Helpers",
+                "db": {
+                    "type": "TINYINT(1)",
+                    "default": "0",
+                    "GUID": "c2afae90-c059-4efb-9705-b7cf161b0c2a",
+                    "null_switch": "NOT NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": null
+            },
+            "config_map_target": "add_css_admin",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "radio",
+                        "name": "add_css_admin",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_ADD_CSS_ADMIN_LABEL",
+                        "class": "btn-group btn-group-yesno",
+                        "default": "0",
+                        "required": "true"
+                    },
+                    "options": [
+                        {
+                            "attributes": {
+                                "value": "1"
+                            },
+                            "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_YES"
+                        },
+                        {
+                            "attributes": {
+                                "value": "0"
+                            },
+                            "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_NO"
+                        }
+                    ],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "dashboard_type": {
+            "table_metadata": {
+                "name": "dashboard_type",
+                "guid": "36fc971f-a446-49ae-94d0-2f270e60bd0b",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_DASHBOARD_TYPE_LABEL",
+                "type": "radio",
+                "title": false,
+                "list": "joomla_components",
+                "store": null,
+                "tab_name": "Dash & Install",
+                "db": {
+                    "type": "TINYINT(1)",
+                    "default": "1",
+                    "GUID": "36fc971f-a446-49ae-94d0-2f270e60bd0b",
+                    "null_switch": "NOT NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "dashboard_type",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "radio",
+                        "name": "dashboard_type",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_DASHBOARD_TYPE_LABEL",
+                        "description": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_DASHBOARD_TYPE_DESCRIPTION",
+                        "class": "btn-group btn-group-yesno",
+                        "default": "1",
+                        "required": "true"
+                    },
+                    "options": [
+                        {
+                            "attributes": {
+                                "value": "1"
+                            },
+                            "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_DEFAULT"
+                        },
+                        {
+                            "attributes": {
+                                "value": "2"
+                            },
+                            "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_DYNAMIC"
+                        }
+                    ],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "bom": {
+            "table_metadata": {
+                "name": "bom",
+                "guid": "b659c01d-accd-4049-bd4c-083000740d5a",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_BOM_LABEL",
+                "type": "filelist",
+                "title": false,
+                "list": "joomla_components",
+                "store": null,
+                "tab_name": "Details",
+                "db": {
+                    "type": "CHAR(64)",
+                    "default": "",
+                    "GUID": "b659c01d-accd-4049-bd4c-083000740d5a",
+                    "null_switch": "NOT NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "bom",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "filelist",
+                        "name": "bom",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_BOM_LABEL",
+                        "directory": "administrator/components/com_componentbuilder/compiler",
+                        "default": "default.txt",
+                        "description": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_BOM_DESCRIPTION",
+                        "filter": "\\.txt",
+                        "hide_none": "true",
+                        "hide_default": "true"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "component_version": {
+            "table_metadata": {
+                "name": "component_version",
+                "guid": "dde96c4d-1528-402a-bdea-96ec481a11ef",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_COMPONENT_VERSION_LABEL",
+                "type": "text",
+                "title": false,
+                "list": "joomla_components",
+                "store": null,
+                "tab_name": "Details",
+                "db": {
+                    "type": "CHAR(64)",
+                    "default": "",
+                    "GUID": "dde96c4d-1528-402a-bdea-96ec481a11ef",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "component_version",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "text",
+                        "name": "component_version",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_COMPONENT_VERSION_LABEL",
+                        "size": "40",
+                        "maxlength": "50",
+                        "default": "1.0.0",
+                        "description": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_COMPONENT_VERSION_DESCRIPTION",
+                        "class": "text_area",
+                        "required": "true",
+                        "filter": "CMD",
+                        "message": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_COMPONENT_VERSION_MESSAGE",
+                        "hint": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_COMPONENT_VERSION_HINT"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "add_css_site": {
+            "table_metadata": {
+                "name": "add_css_site",
+                "guid": "c5cbf873-d13a-4930-9c99-c8b1f03e1a06",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_ADD_CSS_SITE_LABEL",
+                "type": "radio",
+                "title": false,
+                "list": "joomla_components",
+                "store": null,
+                "tab_name": "Libs & Helpers",
+                "db": {
+                    "type": "TINYINT(1)",
+                    "default": "0",
+                    "GUID": "c5cbf873-d13a-4930-9c99-c8b1f03e1a06",
+                    "null_switch": "NOT NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": null
+            },
+            "config_map_target": "add_css_site",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "radio",
+                        "name": "add_css_site",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_ADD_CSS_SITE_LABEL",
+                        "class": "btn-group btn-group-yesno",
+                        "default": "0",
+                        "required": "true"
+                    },
+                    "options": [
+                        {
+                            "attributes": {
+                                "value": "1"
+                            },
+                            "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_YES"
+                        },
+                        {
+                            "attributes": {
+                                "value": "0"
+                            },
+                            "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_NO"
+                        }
+                    ],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "image": {
+            "table_metadata": {
+                "name": "image",
+                "guid": "4003ab3f-70d8-4092-a11b-b23215844ffa",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_IMAGE_LABEL",
+                "type": "media",
+                "title": false,
+                "list": "joomla_components",
+                "store": null,
+                "tab_name": "Details",
+                "db": {
+                    "type": "VARCHAR(255)",
+                    "default": "",
+                    "GUID": "4003ab3f-70d8-4092-a11b-b23215844ffa",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "image",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "media",
+                        "name": "image",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_IMAGE_LABEL",
+                        "description": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_IMAGE_DESCRIPTION"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "dashboard": {
+            "table_metadata": {
+                "name": "dashboard",
+                "guid": "b12fadb6-2825-465e-a1e7-1dde507ffde5",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_DASHBOARD_LABEL",
+                "type": "dynamicdashboard",
+                "title": false,
+                "list": "joomla_components",
+                "store": null,
+                "tab_name": "Dash & Install",
+                "db": {
+                    "type": "VARCHAR(64)",
+                    "default": "",
+                    "GUID": "b12fadb6-2825-465e-a1e7-1dde507ffde5",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": {
+                    "type": 1,
+                    "table": "#__componentbuilder_custom_admin_view",
+                    "component": "com_componentbuilder",
+                    "entity": "custom_admin_view",
+                    "value": "system_name",
+                    "key": ""
+                }
+            },
+            "config_map_target": "dashboard",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "dynamicdashboard",
+                        "name": "dashboard",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_DASHBOARD_LABEL",
+                        "description": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_DASHBOARD_DESCRIPTION",
+                        "class": "fieldMedium",
+                        "layout": "joomla.form.field.list-fancy-select",
+                        "multiple": "false"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "copyright": {
+            "table_metadata": {
+                "name": "copyright",
+                "guid": "d4241cde-3446-4318-9269-905b7ea929f4",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_COPYRIGHT_LABEL",
+                "type": "textarea",
+                "title": false,
+                "list": "joomla_components",
+                "store": null,
+                "tab_name": "Details",
+                "db": {
+                    "type": "VARCHAR(255)",
+                    "default": "",
+                    "GUID": "d4241cde-3446-4318-9269-905b7ea929f4",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "copyright",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "textarea",
+                        "name": "copyright",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_COPYRIGHT_LABEL",
+                        "rows": "7",
+                        "cols": "10",
+                        "default": "Copyright (C) 2015. All Rights Reserved",
+                        "description": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_COPYRIGHT_DESCRIPTION",
+                        "class": "text_area span12",
+                        "filter": "SAFEHTML",
+                        "hint": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_COPYRIGHT_HINT",
+                        "required": "true"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "add_php_preflight_update": {
+            "table_metadata": {
+                "name": "add_php_preflight_update",
+                "guid": "365d08ee-fe6e-47c4-b567-a001212f2cb6",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_ADD_PHP_PREFLIGHT_UPDATE_LABEL",
+                "type": "radio",
+                "title": false,
+                "list": "joomla_components",
+                "store": null,
+                "tab_name": "Dash & Install",
+                "db": {
+                    "type": "TINYINT(1)",
+                    "default": "0",
+                    "GUID": "365d08ee-fe6e-47c4-b567-a001212f2cb6",
+                    "null_switch": "NOT NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": null
+            },
+            "config_map_target": "add_php_preflight_update",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "radio",
+                        "name": "add_php_preflight_update",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_ADD_PHP_PREFLIGHT_UPDATE_LABEL",
+                        "class": "btn-group btn-group-yesno",
+                        "default": "0",
+                        "required": "true"
+                    },
+                    "options": [
+                        {
+                            "attributes": {
+                                "value": "1"
+                            },
+                            "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_YES"
+                        },
+                        {
+                            "attributes": {
+                                "value": "0"
+                            },
+                            "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_NO"
+                        }
+                    ],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "preferred_joomla_version": {
+            "table_metadata": {
+                "name": "preferred_joomla_version",
+                "guid": "e30ca545-0ccd-4925-b34d-96bc27d6a27c",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_PREFERRED_JOOMLA_VERSION_LABEL",
+                "type": "number",
+                "title": false,
+                "list": "joomla_components",
+                "store": null,
+                "tab_name": "Details",
+                "db": {
+                    "type": "INT(11)",
+                    "default": "3",
+                    "GUID": "e30ca545-0ccd-4925-b34d-96bc27d6a27c",
+                    "null_switch": "NOT NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "preferred_joomla_version",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "number",
+                        "name": "preferred_joomla_version",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_PREFERRED_JOOMLA_VERSION_LABEL",
+                        "default": "6",
+                        "class": "text_area",
+                        "min": "3",
+                        "max": "6",
+                        "step": "1"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "add_php_postflight_update": {
+            "table_metadata": {
+                "name": "add_php_postflight_update",
+                "guid": "22a668bc-d169-4346-9929-3819673c67ac",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_ADD_PHP_POSTFLIGHT_UPDATE_LABEL",
+                "type": "radio",
+                "title": false,
+                "list": "joomla_components",
+                "store": null,
+                "tab_name": "Dash & Install",
+                "db": {
+                    "type": "TINYINT(1)",
+                    "default": "0",
+                    "GUID": "22a668bc-d169-4346-9929-3819673c67ac",
+                    "null_switch": "NOT NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": null
+            },
+            "config_map_target": "add_php_postflight_update",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "radio",
+                        "name": "add_php_postflight_update",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_ADD_PHP_POSTFLIGHT_UPDATE_LABEL",
+                        "class": "btn-group btn-group-yesno",
+                        "default": "0",
+                        "required": "true"
+                    },
+                    "options": [
+                        {
+                            "attributes": {
+                                "value": "1"
+                            },
+                            "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_YES"
+                        },
+                        {
+                            "attributes": {
+                                "value": "0"
+                            },
+                            "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_NO"
+                        }
+                    ],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "add_powers": {
+            "table_metadata": {
+                "name": "add_powers",
+                "guid": "9ae98a1d-cc61-49d4-8f80-b4e1257fce24",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_ADD_POWERS_LABEL",
+                "type": "radio",
+                "title": false,
+                "list": "joomla_components",
+                "store": null,
+                "tab_name": "Details",
+                "db": {
+                    "type": "TINYINT(1)",
+                    "default": "1",
+                    "GUID": "9ae98a1d-cc61-49d4-8f80-b4e1257fce24",
+                    "null_switch": "NOT NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": null
+            },
+            "config_map_target": "add_powers",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "radio",
+                        "name": "add_powers",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_ADD_POWERS_LABEL",
+                        "description": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_ADD_POWERS_DESCRIPTION",
+                        "class": "btn-group btn-group-yesno",
+                        "default": "1",
+                        "required": "true"
+                    },
+                    "options": [
+                        {
+                            "attributes": {
+                                "value": "1"
+                            },
+                            "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_YES"
+                        },
+                        {
+                            "attributes": {
+                                "value": "0"
+                            },
+                            "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_NO"
+                        }
+                    ],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "add_php_method_install": {
+            "table_metadata": {
+                "name": "add_php_method_install",
+                "guid": "9a825342-c423-42d2-85ad-f74ce9625f99",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_ADD_PHP_METHOD_INSTALL_LABEL",
+                "type": "radio",
+                "title": false,
+                "list": "joomla_components",
+                "store": null,
+                "tab_name": "Dash & Install",
+                "db": {
+                    "type": "TINYINT(1)",
+                    "default": "0",
+                    "GUID": "9a825342-c423-42d2-85ad-f74ce9625f99",
+                    "null_switch": "NOT NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": null
+            },
+            "config_map_target": "add_php_method_install",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "radio",
+                        "name": "add_php_method_install",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_ADD_PHP_METHOD_INSTALL_LABEL",
+                        "class": "btn-group btn-group-yesno",
+                        "default": "0",
+                        "required": "true"
+                    },
+                    "options": [
+                        {
+                            "attributes": {
+                                "value": "1"
+                            },
+                            "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_YES"
+                        },
+                        {
+                            "attributes": {
+                                "value": "0"
+                            },
+                            "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_NO"
+                        }
+                    ],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "add_sql_uninstall": {
+            "table_metadata": {
+                "name": "add_sql_uninstall",
+                "guid": "f22fd59e-4d06-4578-b0bb-a624b8efd145",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_ADD_SQL_UNINSTALL_LABEL",
+                "type": "radio",
+                "title": false,
+                "list": "joomla_components",
+                "store": null,
+                "tab_name": "MySQL",
+                "db": {
+                    "type": "TINYINT(1)",
+                    "default": "0",
+                    "GUID": "f22fd59e-4d06-4578-b0bb-a624b8efd145",
+                    "null_switch": "NOT NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": null
+            },
+            "config_map_target": "add_sql_uninstall",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "radio",
+                        "name": "add_sql_uninstall",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_ADD_SQL_UNINSTALL_LABEL",
+                        "class": "btn-group btn-group-yesno",
+                        "default": "0",
+                        "required": "true"
+                    },
+                    "options": [
+                        {
+                            "attributes": {
+                                "value": "1"
+                            },
+                            "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_YES"
+                        },
+                        {
+                            "attributes": {
+                                "value": "0"
+                            },
+                            "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_NO"
+                        }
+                    ],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "readme": {
+            "table_metadata": {
+                "name": "readme",
+                "guid": "87a4b892-c4cb-4032-8511-e18ba8c8c202",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_README_LABEL",
+                "type": "editor",
+                "title": false,
+                "list": "joomla_components",
+                "store": "base64",
+                "tab_name": "Readme",
+                "db": {
+                    "type": "TEXT",
+                    "default": "EMPTY",
+                    "GUID": "87a4b892-c4cb-4032-8511-e18ba8c8c202",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "readme",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "editor",
+                        "name": "readme",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_README_LABEL",
+                        "default": "You can use all the normal markdown, including the place-holders.",
+                        "width": "100%",
+                        "height": "1200px",
+                        "buttons": "false",
+                        "editor": "none",
+                        "filter": "raw",
+                        "showon": "addreadme:1"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "update_server_target": {
+            "table_metadata": {
+                "name": "update_server_target",
+                "guid": "b9f98c3d-a93a-4b19-b89e-4c62781f9b99",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_UPDATE_SERVER_TARGET_LABEL",
+                "type": "radio",
+                "title": false,
+                "list": "joomla_components",
+                "store": null,
+                "tab_name": "Dynamic Integration",
+                "db": {
+                    "type": "TINYINT(1)",
+                    "default": "0",
+                    "GUID": "b9f98c3d-a93a-4b19-b89e-4c62781f9b99",
+                    "null_switch": "NOT NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": null
+            },
+            "config_map_target": "update_server_target",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "radio",
+                        "name": "update_server_target",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_UPDATE_SERVER_TARGET_LABEL",
+                        "description": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_UPDATE_SERVER_TARGET_DESCRIPTION",
+                        "class": "btn-group btn-group-yesno",
+                        "default": "1",
+                        "required": "true"
+                    },
+                    "options": [
+                        {
+                            "attributes": {
+                                "value": "1"
+                            },
+                            "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_SERVER"
+                        },
+                        {
+                            "attributes": {
+                                "value": "2"
+                            },
+                            "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_ZIP"
+                        },
+                        {
+                            "attributes": {
+                                "value": "3"
+                            },
+                            "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_OTHER"
+                        }
+                    ],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "git_folder_path": {
+            "table_metadata": {
+                "name": "git_folder_path",
+                "guid": "7b181242-b4bc-4261-87cb-6210ec8b5af5",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_GIT_FOLDER_PATH_LABEL",
+                "type": "text",
+                "title": false,
+                "list": "joomla_components",
+                "store": null,
+                "tab_name": "Dynamic Integration",
+                "db": {
+                    "type": "VARCHAR(255)",
+                    "default": "",
+                    "GUID": "7b181242-b4bc-4261-87cb-6210ec8b5af5",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "git_folder_path",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "text",
+                        "name": "git_folder_path",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_GIT_FOLDER_PATH_LABEL",
+                        "size": "70",
+                        "maxlength": "150",
+                        "description": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_GIT_FOLDER_PATH_DESCRIPTION",
+                        "class": "text_area",
+                        "readonly": "false",
+                        "disabled": "false",
+                        "required": "false",
+                        "filter": "PATH",
+                        "message": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_GIT_FOLDER_PATH_MESSAGE",
+                        "hint": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_GIT_FOLDER_PATH_HINT",
+                        "autocomplete": "on",
+                        "showon": "add_git_folder_path:1"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "changelog_server_url": {
+            "table_metadata": {
+                "name": "changelog_server_url",
+                "guid": "637695d3-7754-492c-bbd0-cfdd7d00adad",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_CHANGELOG_SERVER_URL_LABEL",
+                "type": "url",
+                "title": false,
+                "list": "joomla_components",
+                "store": null,
+                "tab_name": "Dynamic Integration",
+                "db": {
+                    "type": "VARCHAR(255)",
+                    "default": "",
+                    "GUID": "637695d3-7754-492c-bbd0-cfdd7d00adad",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "changelog_server_url",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "url",
+                        "name": "changelog_server_url",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_CHANGELOG_SERVER_URL_LABEL",
+                        "size": "60",
+                        "maxlength": "150",
+                        "description": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_CHANGELOG_SERVER_URL_DESCRIPTION",
+                        "class": "text_area span12",
+                        "filter": "url",
+                        "validated": "url",
+                        "message": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_CHANGELOG_SERVER_URL_MESSAGE",
+                        "hint": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_CHANGELOG_SERVER_URL_HINT",
+                        "showon": "add_changelog_server:1"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "add_namespace_prefix": {
+            "table_metadata": {
+                "name": "add_namespace_prefix",
+                "guid": "50d55392-74b6-43e2-9b16-37c7f95a7402",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_ADD_NAMESPACE_PREFIX_LABEL",
+                "type": "radio",
+                "title": false,
+                "list": "joomla_components",
+                "store": null,
+                "tab_name": "Settings",
+                "db": {
+                    "type": "CHAR(1)",
+                    "default": "",
+                    "GUID": "50d55392-74b6-43e2-9b16-37c7f95a7402",
+                    "null_switch": "NOT NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": null
+            },
+            "config_map_target": "add_namespace_prefix",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "radio",
+                        "name": "add_namespace_prefix",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_ADD_NAMESPACE_PREFIX_LABEL",
+                        "description": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_ADD_NAMESPACE_PREFIX_DESCRIPTION",
+                        "class": "btn-group btn-group-yesno",
+                        "default": ""
+                    },
+                    "options": [
+                        {
+                            "attributes": {
+                                "value": ""
+                            },
+                            "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_USE_GLOBAL"
+                        },
+                        {
+                            "attributes": {
+                                "value": "1"
+                            },
+                            "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_OVERRIDE"
+                        }
+                    ],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "namespace_prefix": {
+            "table_metadata": {
+                "name": "namespace_prefix",
+                "guid": "b742dcb4-0d29-4a4a-88f9-eca218d79a19",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_NAMESPACE_PREFIX_LABEL",
+                "type": "text",
+                "title": false,
+                "list": "joomla_components",
+                "store": null,
+                "tab_name": "Settings",
+                "db": {
+                    "type": "VARCHAR(255)",
+                    "default": "",
+                    "GUID": "b742dcb4-0d29-4a4a-88f9-eca218d79a19",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": null
+            },
+            "config_map_target": "namespace_prefix",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "text",
+                        "name": "namespace_prefix",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_NAMESPACE_PREFIX_LABEL",
+                        "size": "250",
+                        "maxlength": "250",
+                        "default": "JCB",
+                        "description": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_NAMESPACE_PREFIX_DESCRIPTION",
+                        "class": "text_area",
+                        "required": "true",
+                        "filter": "WORD",
+                        "message": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_NAMESPACE_PREFIX_MESSAGE",
+                        "hint": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_NAMESPACE_PREFIX_HINT",
+                        "autocomplete": "on",
+                        "showon": "add_namespace_prefix:1"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "javascript": {
+            "table_metadata": {
+                "name": "javascript",
+                "guid": "3be0d9ca-afd6-47bc-87e5-8cb73e9f5e61",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_JAVASCRIPT_LABEL",
+                "type": "editor",
+                "title": false,
+                "list": "joomla_components",
+                "store": "base64",
+                "tab_name": "Libs & Helpers",
+                "db": {
+                    "type": "TEXT",
+                    "default": "EMPTY",
+                    "GUID": "3be0d9ca-afd6-47bc-87e5-8cb73e9f5e61",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "javascript",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "editor",
+                        "name": "javascript",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_JAVASCRIPT_LABEL",
+                        "description": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_JAVASCRIPT_DESCRIPTION",
+                        "width": "100%",
+                        "height": "450px",
+                        "cols": "15",
+                        "rows": "30",
+                        "buttons": "no",
+                        "syntax": "javascript",
+                        "editor": "codemirror|none",
+                        "filter": "raw",
+                        "validate": "code",
+                        "showon": "add_javascript:1"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "css_admin": {
+            "table_metadata": {
+                "name": "css_admin",
+                "guid": "33c588ca-83b2-419d-b87f-b9f4e5e4ea54",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_CSS_ADMIN_LABEL",
+                "type": "editor",
+                "title": false,
+                "list": "joomla_components",
+                "store": "base64",
+                "tab_name": "Libs & Helpers",
+                "db": {
+                    "type": "TEXT",
+                    "default": "EMPTY",
+                    "GUID": "33c588ca-83b2-419d-b87f-b9f4e5e4ea54",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "css_admin",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "editor",
+                        "name": "css_admin",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_CSS_ADMIN_LABEL",
+                        "description": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_CSS_ADMIN_DESCRIPTION",
+                        "width": "100%",
+                        "height": "450px",
+                        "cols": "15",
+                        "rows": "30",
+                        "buttons": "no",
+                        "syntax": "css",
+                        "editor": "codemirror|none",
+                        "filter": "raw",
+                        "validate": "code",
+                        "showon": "add_css_admin:1"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "add_menu_prefix": {
+            "table_metadata": {
+                "name": "add_menu_prefix",
+                "guid": "0e5f211c-d6d7-417a-af92-f3e956687f56",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_ADD_MENU_PREFIX_LABEL",
+                "type": "radio",
+                "title": false,
+                "list": "joomla_components",
+                "store": null,
+                "tab_name": "Settings",
+                "db": {
+                    "type": "CHAR(1)",
+                    "default": "",
+                    "GUID": "0e5f211c-d6d7-417a-af92-f3e956687f56",
+                    "null_switch": "NOT NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": null
+            },
+            "config_map_target": "add_menu_prefix",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "radio",
+                        "name": "add_menu_prefix",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_ADD_MENU_PREFIX_LABEL",
+                        "description": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_ADD_MENU_PREFIX_DESCRIPTION",
+                        "class": "btn-group btn-group-yesno",
+                        "default": ""
+                    },
+                    "options": [
+                        {
+                            "attributes": {
+                                "value": ""
+                            },
+                            "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_USE_GLOBAL"
+                        },
+                        {
+                            "attributes": {
+                                "value": "1"
+                            },
+                            "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_YES"
+                        },
+                        {
+                            "attributes": {
+                                "value": "0"
+                            },
+                            "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_NO"
+                        }
+                    ],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "css_site": {
+            "table_metadata": {
+                "name": "css_site",
+                "guid": "667a2147-05d1-4138-b666-e8a0ce54ffba",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_CSS_SITE_LABEL",
+                "type": "editor",
+                "title": false,
+                "list": "joomla_components",
+                "store": "base64",
+                "tab_name": "Libs & Helpers",
+                "db": {
+                    "type": "TEXT",
+                    "default": "EMPTY",
+                    "GUID": "667a2147-05d1-4138-b666-e8a0ce54ffba",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "css_site",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "editor",
+                        "name": "css_site",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_CSS_SITE_LABEL",
+                        "description": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_CSS_SITE_DESCRIPTION",
+                        "width": "100%",
+                        "height": "450px",
+                        "cols": "15",
+                        "rows": "30",
+                        "buttons": "no",
+                        "syntax": "css",
+                        "editor": "codemirror|none",
+                        "filter": "raw",
+                        "validate": "code",
+                        "showon": "add_css_site:1"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "menu_prefix": {
+            "table_metadata": {
+                "name": "menu_prefix",
+                "guid": "7971c559-0867-44a8-bfea-291881bad311",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_MENU_PREFIX_LABEL",
+                "type": "text",
+                "title": false,
+                "list": "joomla_components",
+                "store": null,
+                "tab_name": "Settings",
+                "db": {
+                    "type": "VARCHAR(100)",
+                    "default": "",
+                    "GUID": "7971c559-0867-44a8-bfea-291881bad311",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": null
+            },
+            "config_map_target": "menu_prefix",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "text",
+                        "name": "menu_prefix",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_MENU_PREFIX_LABEL",
+                        "size": "30",
+                        "maxlength": "30",
+                        "default": "",
+                        "description": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_MENU_PREFIX_DESCRIPTION",
+                        "class": "text_area",
+                        "filter": "SAFEHTML",
+                        "message": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_MENU_PREFIX_MESSAGE",
+                        "hint": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_MENU_PREFIX_HINT",
+                        "autocomplete": "on",
+                        "showon": "add_menu_prefix:1"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "php_preflight_install": {
+            "table_metadata": {
+                "name": "php_preflight_install",
+                "guid": "3ca01651-a5c3-46c3-b7a8-bfb0d9f6e105",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_PHP_PREFLIGHT_INSTALL_LABEL",
+                "type": "editor",
+                "title": false,
+                "list": "joomla_components",
+                "store": "base64",
+                "tab_name": "Dash & Install",
+                "db": {
+                    "type": "MEDIUMTEXT",
+                    "default": "EMPTY",
+                    "GUID": "3ca01651-a5c3-46c3-b7a8-bfb0d9f6e105",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "php_preflight_install",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "editor",
+                        "name": "php_preflight_install",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_PHP_PREFLIGHT_INSTALL_LABEL",
+                        "description": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_PHP_PREFLIGHT_INSTALL_DESCRIPTION",
+                        "width": "100%",
+                        "height": "450px",
+                        "cols": "15",
+                        "rows": "30",
+                        "buttons": "no",
+                        "syntax": "php",
+                        "editor": "codemirror|none",
+                        "filter": "raw",
+                        "validate": "code",
+                        "showon": "add_php_preflight_install:1"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "toignore": {
+            "table_metadata": {
+                "name": "toignore",
+                "guid": "cce91031-8bf4-435f-8b20-9224f230061a",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_TOIGNORE_LABEL",
+                "type": "text",
+                "title": false,
+                "list": "joomla_components",
+                "store": null,
+                "tab_name": "Settings",
+                "db": {
+                    "type": "TEXT",
+                    "default": "EMPTY",
+                    "GUID": "cce91031-8bf4-435f-8b20-9224f230061a",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "toignore",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "text",
+                        "name": "toignore",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_TOIGNORE_LABEL",
+                        "size": "10",
+                        "maxlength": "550",
+                        "default": ".git",
+                        "description": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_TOIGNORE_DESCRIPTION",
+                        "class": "text_area",
+                        "filter": "STRING",
+                        "hint": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_TOIGNORE_HINT",
+                        "autocomplete": "on"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "php_preflight_update": {
+            "table_metadata": {
+                "name": "php_preflight_update",
+                "guid": "9f9b030b-31ba-4ae9-88da-76efd8a140dc",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_PHP_PREFLIGHT_UPDATE_LABEL",
+                "type": "editor",
+                "title": false,
+                "list": "joomla_components",
+                "store": "base64",
+                "tab_name": "Dash & Install",
+                "db": {
+                    "type": "MEDIUMTEXT",
+                    "default": "EMPTY",
+                    "GUID": "9f9b030b-31ba-4ae9-88da-76efd8a140dc",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "php_preflight_update",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "editor",
+                        "name": "php_preflight_update",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_PHP_PREFLIGHT_UPDATE_LABEL",
+                        "description": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_PHP_PREFLIGHT_UPDATE_DESCRIPTION",
+                        "width": "100%",
+                        "height": "450px",
+                        "cols": "15",
+                        "rows": "30",
+                        "buttons": "no",
+                        "syntax": "php",
+                        "editor": "codemirror|none",
+                        "filter": "raw",
+                        "validate": "code",
+                        "showon": "add_php_preflight_update:1"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "php_postflight_install": {
+            "table_metadata": {
+                "name": "php_postflight_install",
+                "guid": "8d837989-4a21-4943-bb4c-4d4abb9a7a55",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_PHP_POSTFLIGHT_INSTALL_LABEL",
+                "type": "editor",
+                "title": false,
+                "list": "joomla_components",
+                "store": "base64",
+                "tab_name": "Dash & Install",
+                "db": {
+                    "type": "MEDIUMTEXT",
+                    "default": "EMPTY",
+                    "GUID": "8d837989-4a21-4943-bb4c-4d4abb9a7a55",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "php_postflight_install",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "editor",
+                        "name": "php_postflight_install",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_PHP_POSTFLIGHT_INSTALL_LABEL",
+                        "description": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_PHP_POSTFLIGHT_INSTALL_DESCRIPTION",
+                        "width": "100%",
+                        "height": "450px",
+                        "cols": "15",
+                        "rows": "30",
+                        "buttons": "no",
+                        "syntax": "php",
+                        "editor": "codemirror|none",
+                        "filter": "raw",
+                        "validate": "code",
+                        "showon": "add_php_postflight_install:1"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "php_postflight_update": {
+            "table_metadata": {
+                "name": "php_postflight_update",
+                "guid": "ade283c3-937e-4502-a040-c69d6ddb3c50",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_PHP_POSTFLIGHT_UPDATE_LABEL",
+                "type": "editor",
+                "title": false,
+                "list": "joomla_components",
+                "store": "base64",
+                "tab_name": "Dash & Install",
+                "db": {
+                    "type": "MEDIUMTEXT",
+                    "default": "EMPTY",
+                    "GUID": "ade283c3-937e-4502-a040-c69d6ddb3c50",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "php_postflight_update",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "editor",
+                        "name": "php_postflight_update",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_PHP_POSTFLIGHT_UPDATE_LABEL",
+                        "description": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_PHP_POSTFLIGHT_UPDATE_DESCRIPTION",
+                        "width": "100%",
+                        "height": "450px",
+                        "cols": "15",
+                        "rows": "30",
+                        "buttons": "no",
+                        "syntax": "php",
+                        "editor": "codemirror|none",
+                        "filter": "raw",
+                        "validate": "code",
+                        "showon": "add_php_postflight_update:1"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "addcontributors": {
+            "table_metadata": {
+                "name": "addcontributors",
+                "guid": "8e416ff9-3bd1-4115-a08b-06594978ace6",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_ADDCONTRIBUTORS_LABEL",
+                "type": "subform",
+                "title": false,
+                "list": "joomla_components",
+                "store": "json",
+                "tab_name": "Settings",
+                "db": {
+                    "type": "TEXT",
+                    "default": "EMPTY",
+                    "GUID": "8e416ff9-3bd1-4115-a08b-06594978ace6",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null,
+                "fields": {
+                    "name": {
+                        "name": "name",
+                        "type": "text",
+                        "link": null
+                    },
+                    "title": {
+                        "name": "title",
+                        "type": "text",
+                        "link": null
+                    },
+                    "email": {
+                        "name": "email",
+                        "type": "text",
+                        "link": null
+                    },
+                    "website": {
+                        "name": "website",
+                        "type": "url",
+                        "link": null
+                    },
+                    "use": {
+                        "name": "use",
+                        "type": "list",
+                        "link": null
+                    },
+                    "show": {
+                        "name": "show",
+                        "type": "list",
+                        "link": null
+                    }
+                }
+            },
+            "config_map_target": "addcontributors",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "subform",
+                        "name": "addcontributors",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_ADDCONTRIBUTORS_LABEL",
+                        "layout": "joomla.form.field.subform.repeatable-table",
+                        "multiple": "true",
+                        "description": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_ADDCONTRIBUTORS_DESCRIPTION",
+                        "default": "",
+                        "icon": "list"
+                    },
+                    "options": [],
+                    "nested_fields": [
+                        {
+                            "attributes": {
+                                "type": "text",
+                                "name": "name",
+                                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_NAME_LABEL",
+                                "size": "40",
+                                "maxlength": "150",
+                                "description": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_NAME_DESCRIPTION",
+                                "class": "text_area",
+                                "readonly": "false",
+                                "disabled": "false",
+                                "required": "true",
+                                "filter": "STRING",
+                                "message": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_NAME_MESSAGE",
+                                "hint": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_NAME_HINT"
+                            },
+                            "options": [],
+                            "nested_fields": []
+                        },
+                        {
+                            "attributes": {
+                                "type": "text",
+                                "name": "title",
+                                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_TITLE_LABEL",
+                                "size": "40",
+                                "maxlength": "150",
+                                "description": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_TITLE_DESCRIPTION",
+                                "class": "text_area",
+                                "readonly": "false",
+                                "disabled": "false",
+                                "required": "true",
+                                "filter": "STRING",
+                                "message": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_TITLE_MESSAGE",
+                                "hint": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_TITLE_HINT"
+                            },
+                            "options": [],
+                            "nested_fields": []
+                        },
+                        {
+                            "attributes": {
+                                "type": "text",
+                                "name": "email",
+                                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_EMAIL_LABEL",
+                                "size": "10",
+                                "maxlength": "50",
+                                "description": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_EMAIL_DESCRIPTION",
+                                "class": "text_area",
+                                "required": "true",
+                                "filter": "STRING",
+                                "validate": "email",
+                                "message": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_EMAIL_MESSAGE",
+                                "hint": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_EMAIL_HINT"
+                            },
+                            "options": [],
+                            "nested_fields": []
+                        },
+                        {
+                            "attributes": {
+                                "type": "url",
+                                "name": "website",
+                                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_WEBSITE_LABEL",
+                                "size": "60",
+                                "maxlength": "150",
+                                "description": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_WEBSITE_DESCRIPTION",
+                                "class": "text_area",
+                                "filter": "url",
+                                "validated": "url",
+                                "scheme": "http,https",
+                                "message": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_WEBSITE_MESSAGE",
+                                "hint": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_WEBSITE_HINT"
+                            },
+                            "options": [],
+                            "nested_fields": []
+                        },
+                        {
+                            "attributes": {
+                                "type": "list",
+                                "name": "use",
+                                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_USE_LABEL",
+                                "description": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_USE_DESCRIPTION",
+                                "class": "fieldMedium",
+                                "multiple": "false",
+                                "default": "2"
+                            },
+                            "options": [
+                                {
+                                    "attributes": {
+                                        "value": "0"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_NONE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "1"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_EMAIL"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "2"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_WEBSITE"
+                                }
+                            ],
+                            "nested_fields": []
+                        },
+                        {
+                            "attributes": {
+                                "type": "list",
+                                "name": "show",
+                                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_SHOW_LABEL",
+                                "description": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_SHOW_DESCRIPTION",
+                                "class": "fieldMedium",
+                                "multiple": "false",
+                                "default": "3"
+                            },
+                            "options": [
+                                {
+                                    "attributes": {
+                                        "value": "0"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_NONE"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "1"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_BACK"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "2"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_FRONT"
+                                },
+                                {
+                                    "attributes": {
+                                        "value": "3"
+                                    },
+                                    "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_BOTH"
+                                }
+                            ],
+                            "nested_fields": []
+                        }
+                    ]
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "object",
+                "array",
+                "string"
+            ]
+        },
+        "php_method_uninstall": {
+            "table_metadata": {
+                "name": "php_method_uninstall",
+                "guid": "e76cf555-112a-4021-9a1e-b4ee52d7be8a",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_PHP_METHOD_UNINSTALL_LABEL",
+                "type": "editor",
+                "title": false,
+                "list": "joomla_components",
+                "store": "base64",
+                "tab_name": "Dash & Install",
+                "db": {
+                    "type": "MEDIUMTEXT",
+                    "default": "EMPTY",
+                    "GUID": "e76cf555-112a-4021-9a1e-b4ee52d7be8a",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "php_method_uninstall",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "editor",
+                        "name": "php_method_uninstall",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_PHP_METHOD_UNINSTALL_LABEL",
+                        "description": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_PHP_METHOD_UNINSTALL_DESCRIPTION",
+                        "width": "100%",
+                        "height": "450px",
+                        "cols": "15",
+                        "rows": "30",
+                        "buttons": "no",
+                        "syntax": "php",
+                        "editor": "codemirror|none",
+                        "filter": "raw",
+                        "validate": "code",
+                        "showon": "add_php_method_uninstall:1"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "emptycontributors": {
+            "table_metadata": {
+                "name": "emptycontributors",
+                "guid": "05e16c3f-1f5e-4355-a948-5331546f218c",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_EMPTYCONTRIBUTORS_LABEL",
+                "type": "radio",
+                "title": false,
+                "list": "joomla_components",
+                "store": null,
+                "tab_name": "Settings",
+                "db": {
+                    "type": "TINYINT(1)",
+                    "default": "0",
+                    "GUID": "05e16c3f-1f5e-4355-a948-5331546f218c",
+                    "null_switch": "NOT NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": null
+            },
+            "config_map_target": "emptycontributors",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "radio",
+                        "name": "emptycontributors",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_EMPTYCONTRIBUTORS_LABEL",
+                        "description": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_EMPTYCONTRIBUTORS_DESCRIPTION",
+                        "class": "btn-group btn-group-yesno",
+                        "default": "0"
+                    },
+                    "options": [
+                        {
+                            "attributes": {
+                                "value": "1"
+                            },
+                            "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_YES"
+                        },
+                        {
+                            "attributes": {
+                                "value": "0"
+                            },
+                            "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_NO"
+                        }
+                    ],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "php_method_install": {
+            "table_metadata": {
+                "name": "php_method_install",
+                "guid": "8cb26845-73d8-438a-b28a-7a128a63a0d7",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_PHP_METHOD_INSTALL_LABEL",
+                "type": "editor",
+                "title": false,
+                "list": "joomla_components",
+                "store": "base64",
+                "tab_name": "Dash & Install",
+                "db": {
+                    "type": "MEDIUMTEXT",
+                    "default": "EMPTY",
+                    "GUID": "8cb26845-73d8-438a-b28a-7a128a63a0d7",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "php_method_install",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "editor",
+                        "name": "php_method_install",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_PHP_METHOD_INSTALL_LABEL",
+                        "description": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_PHP_METHOD_INSTALL_DESCRIPTION",
+                        "width": "100%",
+                        "height": "450px",
+                        "cols": "15",
+                        "rows": "30",
+                        "buttons": "no",
+                        "syntax": "php",
+                        "editor": "codemirror|none",
+                        "filter": "raw",
+                        "validate": "code",
+                        "showon": "add_php_method_install:1"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "number": {
+            "table_metadata": {
+                "name": "number",
+                "guid": "c2ce0b7e-e917-40c0-9c63-016425dd11fd",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_NUMBER_LABEL",
+                "type": "number",
+                "title": false,
+                "list": "joomla_components",
+                "store": null,
+                "tab_name": "Settings",
+                "db": {
+                    "type": "INT(11)",
+                    "default": "0",
+                    "GUID": "c2ce0b7e-e917-40c0-9c63-016425dd11fd",
+                    "null_switch": "NOT NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "number",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "number",
+                        "name": "number",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_NUMBER_LABEL",
+                        "default": "4",
+                        "class": "text_area",
+                        "min": "1",
+                        "max": "40",
+                        "step": "1"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "sql": {
+            "table_metadata": {
+                "name": "sql",
+                "guid": "5eb879c0-f6e3-45b6-b220-cb5131422a83",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_SQL_LABEL",
+                "type": "textarea",
+                "title": false,
+                "list": "joomla_components",
+                "store": "base64",
+                "tab_name": "MySQL",
+                "db": {
+                    "type": "MEDIUMTEXT",
+                    "default": "EMPTY",
+                    "GUID": "5eb879c0-f6e3-45b6-b220-cb5131422a83",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "sql",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "textarea",
+                        "name": "sql",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_SQL_LABEL",
+                        "rows": "30",
+                        "cols": "15",
+                        "description": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_SQL_DESCRIPTION",
+                        "class": "text_area span12",
+                        "filter": "raw",
+                        "hint": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_SQL_HINT",
+                        "showon": "add_sql:1"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "sql_uninstall": {
+            "table_metadata": {
+                "name": "sql_uninstall",
+                "guid": "b877b188-693c-43a3-9121-a37a3943d7c1",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_SQL_UNINSTALL_LABEL",
+                "type": "textarea",
+                "title": false,
+                "list": "joomla_components",
+                "store": "base64",
+                "tab_name": "MySQL",
+                "db": {
+                    "type": "MEDIUMTEXT",
+                    "default": "EMPTY",
+                    "GUID": "b877b188-693c-43a3-9121-a37a3943d7c1",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "sql_uninstall",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "textarea",
+                        "name": "sql_uninstall",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_SQL_UNINSTALL_LABEL",
+                        "rows": "30",
+                        "cols": "15",
+                        "description": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_SQL_UNINSTALL_DESCRIPTION",
+                        "class": "text_area span12",
+                        "filter": "raw",
+                        "hint": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_SQL_UNINSTALL_HINT",
+                        "showon": "add_sql_uninstall:1"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "addreadme": {
+            "table_metadata": {
+                "name": "addreadme",
+                "guid": "03de1a61-d639-4d48-8ce6-fcf16c8f6270",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_ADDREADME_LABEL",
+                "type": "radio",
+                "title": false,
+                "list": "joomla_components",
+                "store": null,
+                "tab_name": "Readme",
+                "db": {
+                    "type": "TINYINT(1)",
+                    "default": "0",
+                    "GUID": "03de1a61-d639-4d48-8ce6-fcf16c8f6270",
+                    "null_switch": "NOT NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": null
+            },
+            "config_map_target": "addreadme",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "radio",
+                        "name": "addreadme",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_ADDREADME_LABEL",
+                        "class": "btn-group btn-group-yesno",
+                        "default": "0",
+                        "required": "true"
+                    },
+                    "options": [
+                        {
+                            "attributes": {
+                                "value": "1"
+                            },
+                            "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_YES"
+                        },
+                        {
+                            "attributes": {
+                                "value": "0"
+                            },
+                            "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_NO"
+                        }
+                    ],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "update_server_url": {
+            "table_metadata": {
+                "name": "update_server_url",
+                "guid": "e6c263b1-da39-4a73-8585-637dc3a5b8eb",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_UPDATE_SERVER_URL_LABEL",
+                "type": "url",
+                "title": false,
+                "list": "joomla_components",
+                "store": null,
+                "tab_name": "Dynamic Integration",
+                "db": {
+                    "type": "VARCHAR(255)",
+                    "default": "",
+                    "GUID": "e6c263b1-da39-4a73-8585-637dc3a5b8eb",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "update_server_url",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "url",
+                        "name": "update_server_url",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_UPDATE_SERVER_URL_LABEL",
+                        "size": "60",
+                        "maxlength": "150",
+                        "description": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_UPDATE_SERVER_URL_DESCRIPTION",
+                        "class": "text_area span12",
+                        "filter": "url",
+                        "validated": "url",
+                        "message": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_UPDATE_SERVER_URL_MESSAGE",
+                        "hint": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_UPDATE_SERVER_URL_HINT",
+                        "showon": "add_update_server:1"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "creatuserhelper": {
+            "table_metadata": {
+                "name": "creatuserhelper",
+                "guid": "ec128453-f0a7-4b20-a109-56d85c6ce213",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_CREATUSERHELPER_LABEL",
+                "type": "radio",
+                "title": false,
+                "list": "joomla_components",
+                "store": null,
+                "tab_name": "Libs & Helpers",
+                "db": {
+                    "type": "TINYINT(1)",
+                    "default": "0",
+                    "GUID": "ec128453-f0a7-4b20-a109-56d85c6ce213",
+                    "null_switch": "NOT NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": null
+            },
+            "config_map_target": "creatuserhelper",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "radio",
+                        "name": "creatuserhelper",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_CREATUSERHELPER_LABEL",
+                        "class": "btn-group btn-group-yesno",
+                        "default": "0",
+                        "required": "true"
+                    },
+                    "options": [
+                        {
+                            "attributes": {
+                                "value": "1"
+                            },
+                            "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_YES"
+                        },
+                        {
+                            "attributes": {
+                                "value": "0"
+                            },
+                            "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_NO"
+                        }
+                    ],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "adduikit": {
+            "table_metadata": {
+                "name": "adduikit",
+                "guid": "627ec119-f50c-4afc-bfe7-8455a7ace163",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_ADDUIKIT_LABEL",
+                "type": "list",
+                "title": false,
+                "list": "joomla_components",
+                "store": null,
+                "tab_name": "Libs & Helpers",
+                "db": {
+                    "type": "TINYINT(1)",
+                    "default": "0",
+                    "GUID": "627ec119-f50c-4afc-bfe7-8455a7ace163",
+                    "null_switch": "NOT NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": null
+            },
+            "config_map_target": "adduikit",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "list",
+                        "name": "adduikit",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_ADDUIKIT_LABEL",
+                        "description": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_ADDUIKIT_DESCRIPTION",
+                        "class": "btn-group btn-group-yesno",
+                        "layout": "joomla.form.field.list-fancy-select",
+                        "default": "0"
+                    },
+                    "options": [
+                        {
+                            "attributes": {
+                                "value": "0"
+                            },
+                            "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_DYNAMIC"
+                        },
+                        {
+                            "attributes": {
+                                "value": "2"
+                            },
+                            "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_ADD_BOTH_V2_AMP_V3"
+                        },
+                        {
+                            "attributes": {
+                                "value": "1"
+                            },
+                            "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_ADD_UIKIT_V2"
+                        },
+                        {
+                            "attributes": {
+                                "value": "3"
+                            },
+                            "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_ADD_UIKIT_V3"
+                        }
+                    ],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "add_backup_folder_path": {
+            "table_metadata": {
+                "name": "add_backup_folder_path",
+                "guid": "46bd236f-7d43-4038-ac40-936dfd18e910",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_ADD_BACKUP_FOLDER_PATH_LABEL",
+                "type": "radio",
+                "title": false,
+                "list": "joomla_components",
+                "store": null,
+                "tab_name": "Dynamic Integration",
+                "db": {
+                    "type": "CHAR(1)",
+                    "default": "",
+                    "GUID": "46bd236f-7d43-4038-ac40-936dfd18e910",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": null
+            },
+            "config_map_target": "add_backup_folder_path",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "radio",
+                        "name": "add_backup_folder_path",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_ADD_BACKUP_FOLDER_PATH_LABEL",
+                        "description": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_ADD_BACKUP_FOLDER_PATH_DESCRIPTION",
+                        "class": "btn-group btn-group-yesno",
+                        "default": ""
+                    },
+                    "options": [
+                        {
+                            "attributes": {
+                                "value": ""
+                            },
+                            "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_GLOBAL"
+                        },
+                        {
+                            "attributes": {
+                                "value": "1"
+                            },
+                            "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_OVERRIDE"
+                        }
+                    ],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "addfootable": {
+            "table_metadata": {
+                "name": "addfootable",
+                "guid": "ecdc0281-fc1b-4643-b9d0-41bf95674959",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_ADDFOOTABLE_LABEL",
+                "type": "list",
+                "title": false,
+                "list": "joomla_components",
+                "store": null,
+                "tab_name": "Libs & Helpers",
+                "db": {
+                    "type": "TINYINT(1)",
+                    "default": "0",
+                    "GUID": "ecdc0281-fc1b-4643-b9d0-41bf95674959",
+                    "null_switch": "NOT NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": null
+            },
+            "config_map_target": "addfootable",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "list",
+                        "name": "addfootable",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_ADDFOOTABLE_LABEL",
+                        "class": "list_class",
+                        "layout": "joomla.form.field.list-fancy-select",
+                        "multiple": "false",
+                        "filter": "INT",
+                        "required": "true",
+                        "default": "0"
+                    },
+                    "options": [
+                        {
+                            "attributes": {
+                                "value": "0"
+                            },
+                            "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_DYNAMIC"
+                        },
+                        {
+                            "attributes": {
+                                "value": "3"
+                            },
+                            "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_ADD_FOOTABLE_V3"
+                        },
+                        {
+                            "attributes": {
+                                "value": "1"
+                            },
+                            "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_ADD_FOOTABLE_V2"
+                        }
+                    ],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "backup_folder_path": {
+            "table_metadata": {
+                "name": "backup_folder_path",
+                "guid": "58525d14-8cbf-49fc-8d8e-50a9ba0e846a",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_BACKUP_FOLDER_PATH_LABEL",
+                "type": "text",
+                "title": false,
+                "list": "joomla_components",
+                "store": null,
+                "tab_name": "Dynamic Integration",
+                "db": {
+                    "type": "VARCHAR(255)",
+                    "default": "",
+                    "GUID": "58525d14-8cbf-49fc-8d8e-50a9ba0e846a",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "backup_folder_path",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "text",
+                        "name": "backup_folder_path",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_BACKUP_FOLDER_PATH_LABEL",
+                        "size": "70",
+                        "maxlength": "150",
+                        "description": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_BACKUP_FOLDER_PATH_DESCRIPTION",
+                        "class": "text_area",
+                        "readonly": "false",
+                        "disabled": "false",
+                        "required": "false",
+                        "filter": "PATH",
+                        "message": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_BACKUP_FOLDER_PATH_MESSAGE",
+                        "hint": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_BACKUP_FOLDER_PATH_HINT",
+                        "autocomplete": "on",
+                        "showon": "add_backup_folder_path:1"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "add_email_helper": {
+            "table_metadata": {
+                "name": "add_email_helper",
+                "guid": "b4013eb9-0716-42a5-a479-6c4b53746cd6",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_ADD_EMAIL_HELPER_LABEL",
+                "type": "radio",
+                "title": false,
+                "list": "joomla_components",
+                "store": null,
+                "tab_name": "Libs & Helpers",
+                "db": {
+                    "type": "TINYINT(1)",
+                    "default": "0",
+                    "GUID": "b4013eb9-0716-42a5-a479-6c4b53746cd6",
+                    "null_switch": "NOT NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": null
+            },
+            "config_map_target": "add_email_helper",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "radio",
+                        "name": "add_email_helper",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_ADD_EMAIL_HELPER_LABEL",
+                        "description": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_ADD_EMAIL_HELPER_DESCRIPTION",
+                        "class": "btn-group btn-group-yesno",
+                        "default": "0",
+                        "required": "true"
+                    },
+                    "options": [
+                        {
+                            "attributes": {
+                                "value": "1"
+                            },
+                            "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_YES"
+                        },
+                        {
+                            "attributes": {
+                                "value": "0"
+                            },
+                            "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_NO"
+                        }
+                    ],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "add_php_helper_both": {
+            "table_metadata": {
+                "name": "add_php_helper_both",
+                "guid": "5dabe624-329e-48d6-82cf-1f417df55467",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_ADD_PHP_HELPER_BOTH_LABEL",
+                "type": "radio",
+                "title": false,
+                "list": "joomla_components",
+                "store": null,
+                "tab_name": "Libs & Helpers",
+                "db": {
+                    "type": "TINYINT(1)",
+                    "default": "0",
+                    "GUID": "5dabe624-329e-48d6-82cf-1f417df55467",
+                    "null_switch": "NOT NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": null
+            },
+            "config_map_target": "add_php_helper_both",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "radio",
+                        "name": "add_php_helper_both",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_ADD_PHP_HELPER_BOTH_LABEL",
+                        "class": "btn-group btn-group-yesno",
+                        "default": "0",
+                        "required": "true"
+                    },
+                    "options": [
+                        {
+                            "attributes": {
+                                "value": "1"
+                            },
+                            "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_YES"
+                        },
+                        {
+                            "attributes": {
+                                "value": "0"
+                            },
+                            "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_NO"
+                        }
+                    ],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "add_jcb_powers_path": {
+            "table_metadata": {
+                "name": "add_jcb_powers_path",
+                "guid": "a6c65a43-e305-42c1-bd9d-5db5e4920185",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_ADD_JCB_POWERS_PATH_LABEL",
+                "type": "radio",
+                "title": false,
+                "list": "joomla_components",
+                "store": null,
+                "tab_name": "Dynamic Integration",
+                "db": {
+                    "type": "CHAR(1)",
+                    "default": "",
+                    "GUID": "a6c65a43-e305-42c1-bd9d-5db5e4920185",
+                    "null_switch": "NOT NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": null
+            },
+            "config_map_target": "add_jcb_powers_path",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "radio",
+                        "name": "add_jcb_powers_path",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_ADD_JCB_POWERS_PATH_LABEL",
+                        "description": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_ADD_JCB_POWERS_PATH_DESCRIPTION",
+                        "class": "btn-group btn-group-yesno",
+                        "default": ""
+                    },
+                    "options": [
+                        {
+                            "attributes": {
+                                "value": ""
+                            },
+                            "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_GLOBAL"
+                        },
+                        {
+                            "attributes": {
+                                "value": "1"
+                            },
+                            "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_OVERRIDE"
+                        }
+                    ],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "php_helper_both": {
+            "table_metadata": {
+                "name": "php_helper_both",
+                "guid": "16ec7ebd-d07a-4134-8537-d7b65bcd8bac",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_PHP_HELPER_BOTH_LABEL",
+                "type": "editor",
+                "title": false,
+                "list": "joomla_components",
+                "store": "base64",
+                "tab_name": "Libs & Helpers",
+                "db": {
+                    "type": "MEDIUMTEXT",
+                    "default": "EMPTY",
+                    "GUID": "16ec7ebd-d07a-4134-8537-d7b65bcd8bac",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "php_helper_both",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "editor",
+                        "name": "php_helper_both",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_PHP_HELPER_BOTH_LABEL",
+                        "description": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_PHP_HELPER_BOTH_DESCRIPTION",
+                        "width": "100%",
+                        "height": "550px",
+                        "cols": "15",
+                        "rows": "80",
+                        "buttons": "no",
+                        "syntax": "php",
+                        "editor": "codemirror|none",
+                        "filter": "raw",
+                        "validate": "code",
+                        "showon": "add_php_helper_both:1"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "add_changelog_server": {
+            "table_metadata": {
+                "name": "add_changelog_server",
+                "guid": "ee10bcf8-50c6-489b-97f8-c0727e73d28b",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_ADD_CHANGELOG_SERVER_LABEL",
+                "type": "radio",
+                "title": false,
+                "list": "joomla_components",
+                "store": null,
+                "tab_name": "Dynamic Integration",
+                "db": {
+                    "type": "TINYINT(1)",
+                    "default": "0",
+                    "GUID": "ee10bcf8-50c6-489b-97f8-c0727e73d28b",
+                    "null_switch": "NOT NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": null
+            },
+            "config_map_target": "add_changelog_server",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "radio",
+                        "name": "add_changelog_server",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_ADD_CHANGELOG_SERVER_LABEL",
+                        "class": "btn-group btn-group-yesno",
+                        "default": "0",
+                        "required": "true"
+                    },
+                    "options": [
+                        {
+                            "attributes": {
+                                "value": "1"
+                            },
+                            "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_YES"
+                        },
+                        {
+                            "attributes": {
+                                "value": "0"
+                            },
+                            "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_NO"
+                        }
+                    ],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "add_php_helper_admin": {
+            "table_metadata": {
+                "name": "add_php_helper_admin",
+                "guid": "abc5e604-4a2b-4f4c-9add-9e371249adf8",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_ADD_PHP_HELPER_ADMIN_LABEL",
+                "type": "radio",
+                "title": false,
+                "list": "joomla_components",
+                "store": null,
+                "tab_name": "Libs & Helpers",
+                "db": {
+                    "type": "TINYINT(1)",
+                    "default": "0",
+                    "GUID": "abc5e604-4a2b-4f4c-9add-9e371249adf8",
+                    "null_switch": "NOT NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": null
+            },
+            "config_map_target": "add_php_helper_admin",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "radio",
+                        "name": "add_php_helper_admin",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_ADD_PHP_HELPER_ADMIN_LABEL",
+                        "class": "btn-group btn-group-yesno",
+                        "default": "0",
+                        "required": "true"
+                    },
+                    "options": [
+                        {
+                            "attributes": {
+                                "value": "1"
+                            },
+                            "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_YES"
+                        },
+                        {
+                            "attributes": {
+                                "value": "0"
+                            },
+                            "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_NO"
+                        }
+                    ],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "changelog_server_target": {
+            "table_metadata": {
+                "name": "changelog_server_target",
+                "guid": "8402731c-4432-4ac9-ab1d-d21611cb67a7",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_CHANGELOG_SERVER_TARGET_LABEL",
+                "type": "radio",
+                "title": false,
+                "list": "joomla_components",
+                "store": null,
+                "tab_name": "Dynamic Integration",
+                "db": {
+                    "type": "TINYINT(1)",
+                    "default": "0",
+                    "GUID": "8402731c-4432-4ac9-ab1d-d21611cb67a7",
+                    "null_switch": "NOT NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": null
+            },
+            "config_map_target": "changelog_server_target",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "radio",
+                        "name": "changelog_server_target",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_CHANGELOG_SERVER_TARGET_LABEL",
+                        "description": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_CHANGELOG_SERVER_TARGET_DESCRIPTION",
+                        "class": "btn-group btn-group-yesno",
+                        "default": "1",
+                        "required": "true"
+                    },
+                    "options": [
+                        {
+                            "attributes": {
+                                "value": "1"
+                            },
+                            "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_SERVER"
+                        },
+                        {
+                            "attributes": {
+                                "value": "2"
+                            },
+                            "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_ZIP"
+                        },
+                        {
+                            "attributes": {
+                                "value": "3"
+                            },
+                            "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_OTHER"
+                        }
+                    ],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "php_helper_admin": {
+            "table_metadata": {
+                "name": "php_helper_admin",
+                "guid": "16a76125-d200-4bbf-aa00-91da3513a8f8",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_PHP_HELPER_ADMIN_LABEL",
+                "type": "editor",
+                "title": false,
+                "list": "joomla_components",
+                "store": "base64",
+                "tab_name": "Libs & Helpers",
+                "db": {
+                    "type": "MEDIUMTEXT",
+                    "default": "EMPTY",
+                    "GUID": "16a76125-d200-4bbf-aa00-91da3513a8f8",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "php_helper_admin",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "editor",
+                        "name": "php_helper_admin",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_PHP_HELPER_ADMIN_LABEL",
+                        "description": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_PHP_HELPER_ADMIN_DESCRIPTION",
+                        "width": "100%",
+                        "height": "550px",
+                        "cols": "15",
+                        "rows": "80",
+                        "buttons": "no",
+                        "syntax": "php",
+                        "editor": "codemirror|none",
+                        "filter": "raw",
+                        "validate": "code",
+                        "showon": "add_php_helper_admin:1"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "add_admin_event": {
+            "table_metadata": {
+                "name": "add_admin_event",
+                "guid": "f114341a-d271-4917-a5eb-8d5acdf0232d",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_ADD_ADMIN_EVENT_LABEL",
+                "type": "radio",
+                "title": false,
+                "list": "joomla_components",
+                "store": null,
+                "tab_name": "Libs & Helpers",
+                "db": {
+                    "type": "TINYINT(1)",
+                    "default": "0",
+                    "GUID": "f114341a-d271-4917-a5eb-8d5acdf0232d",
+                    "null_switch": "NOT NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": null
+            },
+            "config_map_target": "add_admin_event",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "radio",
+                        "name": "add_admin_event",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_ADD_ADMIN_EVENT_LABEL",
+                        "class": "btn-group btn-group-yesno",
+                        "default": "0",
+                        "required": "true"
+                    },
+                    "options": [
+                        {
+                            "attributes": {
+                                "value": "1"
+                            },
+                            "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_YES"
+                        },
+                        {
+                            "attributes": {
+                                "value": "0"
+                            },
+                            "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_NO"
+                        }
+                    ],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "changelog_server": {
+            "table_metadata": {
+                "name": "changelog_server",
+                "guid": "e4a3a788-1c5d-4084-a452-d26ed38b2e15",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_CHANGELOG_SERVER_LABEL",
+                "type": "servers",
+                "title": false,
+                "list": "joomla_components",
+                "store": null,
+                "tab_name": "Dynamic Integration",
+                "db": {
+                    "type": "INT(11)",
+                    "default": "0",
+                    "GUID": "e4a3a788-1c5d-4084-a452-d26ed38b2e15",
+                    "null_switch": "NOT NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": {
+                    "type": 1,
+                    "table": "#__componentbuilder_server",
+                    "component": "com_componentbuilder",
+                    "entity": "server",
+                    "value": "name",
+                    "key": "id"
+                }
+            },
+            "config_map_target": "changelog_server",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "servers",
+                        "name": "changelog_server",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_CHANGELOG_SERVER_LABEL",
+                        "description": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_CHANGELOG_SERVER_DESCRIPTION",
+                        "class": "list_class",
+                        "layout": "joomla.form.field.list-fancy-select",
+                        "multiple": "false",
+                        "default": "0",
+                        "button": "true"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "php_admin_event": {
+            "table_metadata": {
+                "name": "php_admin_event",
+                "guid": "a8b0ea74-9315-4f24-be43-836f249645f3",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_PHP_ADMIN_EVENT_LABEL",
+                "type": "editor",
+                "title": false,
+                "list": "joomla_components",
+                "store": "base64",
+                "tab_name": "Libs & Helpers",
+                "db": {
+                    "type": "MEDIUMTEXT",
+                    "default": "EMPTY",
+                    "GUID": "a8b0ea74-9315-4f24-be43-836f249645f3",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "php_admin_event",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "editor",
+                        "name": "php_admin_event",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_PHP_ADMIN_EVENT_LABEL",
+                        "description": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_PHP_ADMIN_EVENT_DESCRIPTION",
+                        "width": "100%",
+                        "height": "450px",
+                        "cols": "15",
+                        "rows": "30",
+                        "buttons": "no",
+                        "syntax": "php",
+                        "editor": "codemirror|none",
+                        "filter": "raw",
+                        "validate": "code",
+                        "showon": "add_admin_event:1"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "add_php_helper_site": {
+            "table_metadata": {
+                "name": "add_php_helper_site",
+                "guid": "ff624860-89db-4465-97f1-962bf09dcc9f",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_ADD_PHP_HELPER_SITE_LABEL",
+                "type": "radio",
+                "title": false,
+                "list": "joomla_components",
+                "store": null,
+                "tab_name": "Libs & Helpers",
+                "db": {
+                    "type": "TINYINT(1)",
+                    "default": "0",
+                    "GUID": "ff624860-89db-4465-97f1-962bf09dcc9f",
+                    "null_switch": "NOT NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": null
+            },
+            "config_map_target": "add_php_helper_site",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "radio",
+                        "name": "add_php_helper_site",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_ADD_PHP_HELPER_SITE_LABEL",
+                        "class": "btn-group btn-group-yesno",
+                        "default": "0",
+                        "required": "true"
+                    },
+                    "options": [
+                        {
+                            "attributes": {
+                                "value": "1"
+                            },
+                            "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_YES"
+                        },
+                        {
+                            "attributes": {
+                                "value": "0"
+                            },
+                            "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_NO"
+                        }
+                    ],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "php_helper_site": {
+            "table_metadata": {
+                "name": "php_helper_site",
+                "guid": "f4134f92-7dc5-4729-9a16-bfaa51de27f9",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_PHP_HELPER_SITE_LABEL",
+                "type": "editor",
+                "title": false,
+                "list": "joomla_components",
+                "store": "base64",
+                "tab_name": "Libs & Helpers",
+                "db": {
+                    "type": "MEDIUMTEXT",
+                    "default": "EMPTY",
+                    "GUID": "f4134f92-7dc5-4729-9a16-bfaa51de27f9",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "php_helper_site",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "editor",
+                        "name": "php_helper_site",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_PHP_HELPER_SITE_LABEL",
+                        "description": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_PHP_HELPER_SITE_DESCRIPTION",
+                        "width": "100%",
+                        "height": "550px",
+                        "cols": "15",
+                        "rows": "80",
+                        "buttons": "no",
+                        "syntax": "php",
+                        "editor": "codemirror|none",
+                        "filter": "raw",
+                        "validate": "code",
+                        "showon": "add_php_helper_site:1"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "add_site_event": {
+            "table_metadata": {
+                "name": "add_site_event",
+                "guid": "8b68326a-0e09-4df9-807e-4c32c3c9600a",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_ADD_SITE_EVENT_LABEL",
+                "type": "radio",
+                "title": false,
+                "list": "joomla_components",
+                "store": null,
+                "tab_name": "Libs & Helpers",
+                "db": {
+                    "type": "TINYINT(1)",
+                    "default": "0",
+                    "GUID": "8b68326a-0e09-4df9-807e-4c32c3c9600a",
+                    "null_switch": "NOT NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": null
+            },
+            "config_map_target": "add_site_event",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "radio",
+                        "name": "add_site_event",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_ADD_SITE_EVENT_LABEL",
+                        "class": "btn-group btn-group-yesno",
+                        "default": "0",
+                        "required": "true"
+                    },
+                    "options": [
+                        {
+                            "attributes": {
+                                "value": "1"
+                            },
+                            "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_YES"
+                        },
+                        {
+                            "attributes": {
+                                "value": "0"
+                            },
+                            "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_NO"
+                        }
+                    ],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "buildcomp": {
+            "table_metadata": {
+                "name": "buildcomp",
+                "guid": "288e00d8-7ea3-4bfc-829c-3ab247ca9718",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_BUILDCOMP_LABEL",
+                "type": "radio",
+                "title": false,
+                "list": "joomla_components",
+                "store": null,
+                "tab_name": "Dynamic Build",
+                "db": {
+                    "type": "TINYINT(1)",
+                    "default": "0",
+                    "GUID": "288e00d8-7ea3-4bfc-829c-3ab247ca9718",
+                    "null_switch": "NOT NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "buildcomp",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "radio",
+                        "name": "buildcomp",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_BUILDCOMP_LABEL",
+                        "description": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_BUILDCOMP_DESCRIPTION",
+                        "class": "btn-group btn-group-yesno",
+                        "default": "0",
+                        "required": "true"
+                    },
+                    "options": [
+                        {
+                            "attributes": {
+                                "value": "1"
+                            },
+                            "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_YES"
+                        },
+                        {
+                            "attributes": {
+                                "value": "0"
+                            },
+                            "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_NO"
+                        }
+                    ],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "php_site_event": {
+            "table_metadata": {
+                "name": "php_site_event",
+                "guid": "a052df3d-54b4-4da7-a0f6-f18703d1047b",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_PHP_SITE_EVENT_LABEL",
+                "type": "editor",
+                "title": false,
+                "list": "joomla_components",
+                "store": "base64",
+                "tab_name": "Libs & Helpers",
+                "db": {
+                    "type": "MEDIUMTEXT",
+                    "default": "EMPTY",
+                    "GUID": "a052df3d-54b4-4da7-a0f6-f18703d1047b",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "php_site_event",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "editor",
+                        "name": "php_site_event",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_PHP_SITE_EVENT_LABEL",
+                        "description": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_PHP_SITE_EVENT_DESCRIPTION",
+                        "width": "100%",
+                        "height": "450px",
+                        "cols": "15",
+                        "rows": "30",
+                        "buttons": "no",
+                        "syntax": "php",
+                        "editor": "codemirror|none",
+                        "filter": "raw",
+                        "validate": "code",
+                        "showon": "add_site_event:1"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "guid": {
+            "table_metadata": {
+                "name": "guid",
+                "guid": "5aa57bbe-7b19-4db9-915c-561863458d2b",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_GUID_LABEL",
+                "type": "text",
+                "title": false,
+                "list": "joomla_components",
+                "store": null,
+                "tab_name": "publishing",
+                "db": {
+                    "type": "VARCHAR(36)",
+                    "default": "",
+                    "GUID": "5aa57bbe-7b19-4db9-915c-561863458d2b",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": null
+            },
+            "config_map_target": "guid",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "text",
+                        "name": "guid",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_GUID_LABEL",
+                        "size": "40",
+                        "maxlength": "40",
+                        "description": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_GUID_DESCRIPTION",
+                        "class": "text_area",
+                        "readonly": "true",
+                        "filter": "CMD",
+                        "validate": "guid",
+                        "hint": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_GUID_HINT"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "add_javascript": {
+            "table_metadata": {
+                "name": "add_javascript",
+                "guid": "7d31d363-03b6-4ca7-bbf4-df9a879e3006",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_ADD_JAVASCRIPT_LABEL",
+                "type": "radio",
+                "title": false,
+                "list": "joomla_components",
+                "store": null,
+                "tab_name": "Libs & Helpers",
+                "db": {
+                    "type": "TINYINT(1)",
+                    "default": "0",
+                    "GUID": "7d31d363-03b6-4ca7-bbf4-df9a879e3006",
+                    "null_switch": "NOT NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": null
+            },
+            "config_map_target": "add_javascript",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "radio",
+                        "name": "add_javascript",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_ADD_JAVASCRIPT_LABEL",
+                        "class": "btn-group btn-group-yesno",
+                        "default": "0",
+                        "required": "true"
+                    },
+                    "options": [
+                        {
+                            "attributes": {
+                                "value": "1"
+                            },
+                            "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_YES"
+                        },
+                        {
+                            "attributes": {
+                                "value": "0"
+                            },
+                            "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_NO"
+                        }
+                    ],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "name": {
+            "table_metadata": {
+                "name": "name",
+                "guid": "b607dfed-bb4a-463d-9e14-f1264c67279b",
+                "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_NAME_LABEL",
+                "type": "text",
+                "title": false,
+                "list": "joomla_components",
+                "store": null,
+                "tab_name": "Details",
+                "db": {
+                    "type": "CHAR(64)",
+                    "default": "",
+                    "GUID": "b607dfed-bb4a-463d-9e14-f1264c67279b",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "name",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "text",
+                        "name": "name",
+                        "label": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_NAME_LABEL",
+                        "size": "40",
+                        "maxlength": "150",
+                        "description": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_NAME_DESCRIPTION",
+                        "class": "text_area",
+                        "readonly": "false",
+                        "disabled": "false",
+                        "required": "true",
+                        "filter": "STRING",
+                        "message": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_NAME_MESSAGE",
+                        "hint": "COM_COMPONENTBUILDER_JOOMLA_COMPONENT_NAME_HINT"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "metakey": {
+            "table_metadata": {
+                "name": "metakey",
+                "label": "Meta Keywords",
+                "type": "textarea",
+                "title": false,
+                "store": null,
+                "tab_name": "publishing",
+                "db": {
+                    "type": "TEXT"
+                }
+            },
+            "config_map_target": "metakey",
+            "form": [
+                {
+                    "attributes": {
+                        "name": "metakey",
+                        "type": "textarea",
+                        "label": "JFIELD_META_KEYWORDS_LABEL",
+                        "description": "JFIELD_META_KEYWORDS_DESC",
+                        "rows": "3",
+                        "cols": "30"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "metadesc": {
+            "table_metadata": {
+                "name": "metadesc",
+                "label": "Meta Description",
+                "type": "textarea",
+                "title": false,
+                "store": null,
+                "tab_name": "publishing",
+                "db": {
+                    "type": "TEXT"
+                }
+            },
+            "config_map_target": "metadesc",
+            "form": [
+                {
+                    "attributes": {
+                        "name": "metadesc",
+                        "type": "textarea",
+                        "label": "JFIELD_META_DESCRIPTION_LABEL",
+                        "description": "JFIELD_META_DESCRIPTION_DESC",
+                        "rows": "3",
+                        "cols": "30"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "metadata": {
+            "table_metadata": {
+                "name": "metadata",
+                "label": "Meta Data",
+                "type": null,
+                "title": false,
+                "store": "json",
+                "tab_name": "publishing",
+                "db": {
+                    "type": "TEXT"
+                }
+            },
+            "config_map_target": "metadata",
+            "form": [],
+            "static_json_types": [
+                "null",
+                "object",
+                "array",
+                "string",
+                "number",
+                "boolean"
+            ]
+        }
+    },
+    "source_license": {
+        "header": "GNU General Public License version 2 or later; see LICENSE.txt",
+        "spdx": "GPL-2.0-or-later",
+        "copyright": "Copyright (C) 2015 Vast Development Method. All rights reserved.",
+        "file": "LICENSE.txt",
+        "sha256": "2332109384fc0476519a1d02e1f050dd05ea2251fa66c06f9c5239585147828c",
+        "url": "https://github.com/vdm-io/Joomla-Component-Builder/blob/408703a857ad937479b1e28de7f693af178dcc83/LICENSE.txt"
+    }
+}

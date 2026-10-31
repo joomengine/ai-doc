@@ -1,0 +1,9 @@
+{
+	"aidocPackageReadme": {
+		"name": "Package exercise README",
+		"path": "src/custom_code/aidocPackageReadme",
+		"settings": "src/custom_code/aidocPackageReadme/item.json",
+		"guid": "aidocPackageReadme",
+		"desc": "JCB (manual)"
+	}
+}

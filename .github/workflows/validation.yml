@@ -22,7 +22,7 @@ jobs:
       - name: Install validation dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install --yes jq php-cli shellcheck
+          sudo apt-get install --yes jq php-cli php-xml unzip shellcheck
       - name: Check shell scripts
         run: shellcheck -x -P tools tools/*.sh tools/lib/*.sh tests/*.sh
       - name: Validate documentation and regression fixtures

@@ -1,0 +1,276 @@
+{
+    "entity": "component_dashboard",
+    "kind": "database",
+    "config_sources": [
+        {
+            "class": "ComponentDashboard",
+            "path": "libraries/vendor_jcb/VDM.Joomla/src/Componentbuilder/Package/ComponentDashboard/Remote/Config.php",
+            "url": "https://github.com/vdm-io/Joomla-Component-Builder/blob/408703a857ad937479b1e28de7f693af178dcc83/libraries/vendor_jcb/VDM.Joomla/src/Componentbuilder/Package/ComponentDashboard/Remote/Config.php",
+            "sha256": "5bbd256b474811511322ea3b32c7ce4fd15a4fa1022950299fbde041a6935e12"
+        }
+    ],
+    "config": {
+        "area": "Component Dashboard",
+        "prefix_key": "",
+        "suffix_key": "",
+        "main_readme_path": "",
+        "item_readme_name": "",
+        "index_path": "index/component-dashboard.json",
+        "src_path": "src/joomla_component/children",
+        "settings_name": "component-dashboard.json",
+        "guid_field": "joomla_component",
+        "guid_helper_field": null,
+        "ignore": [
+            "access"
+        ],
+        "files": [],
+        "folders": [],
+        "map": [],
+        "children": [],
+        "index_map": {
+            "name": "index_map_IndexName",
+            "path": "index_map_IndexPath",
+            "settings": "index_map_IndexSettingsPath",
+            "guid": "index_map_IndexGUID"
+        },
+        "index_header": [
+            "name",
+            "path",
+            "settings",
+            "guid",
+            "local"
+        ],
+        "placeholders": [],
+        "table": "component_dashboard"
+    },
+    "identity_kind": "parent_guid",
+    "table_source": {
+        "path": "libraries/vendor_jcb/VDM.Joomla/src/Componentbuilder/Table.php",
+        "url": "https://github.com/vdm-io/Joomla-Component-Builder/blob/408703a857ad937479b1e28de7f693af178dcc83/libraries/vendor_jcb/VDM.Joomla/src/Componentbuilder/Table.php",
+        "sha256": "630abb56cb664be947f45f08f8812af136402d50bcc2c0feec5702b9e870b573"
+    },
+    "form_source": {
+        "path": "admin/forms/component_dashboard.xml",
+        "url": "https://github.com/vdm-io/Joomla-Component-Builder/blob/408703a857ad937479b1e28de7f693af178dcc83/admin/forms/component_dashboard.xml",
+        "sha256": "d6ac3dc180e6b24df47789a2e29b0c95b66f3e8533485c9e4ab5a113343da97b"
+    },
+    "fields": {
+        "joomla_component": {
+            "table_metadata": {
+                "name": "joomla_component",
+                "guid": "591df1a2-b685-4378-845a-f8a1d1985548",
+                "label": "COM_COMPONENTBUILDER_COMPONENT_DASHBOARD_JOOMLA_COMPONENT_LABEL",
+                "type": "joomlacomponents",
+                "title": true,
+                "list": "components_dashboard",
+                "store": null,
+                "tab_name": "Dashboard",
+                "db": {
+                    "type": "VARCHAR(36)",
+                    "default": "",
+                    "GUID": "591df1a2-b685-4378-845a-f8a1d1985548",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": true
+                },
+                "link": {
+                    "type": 1,
+                    "table": "#__componentbuilder_joomla_component",
+                    "component": "com_componentbuilder",
+                    "entity": "joomla_component",
+                    "value": "system_name",
+                    "key": "guid"
+                }
+            },
+            "config_map_target": "joomla_component",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "joomlacomponents",
+                        "name": "joomla_component",
+                        "label": "COM_COMPONENTBUILDER_COMPONENT_DASHBOARD_JOOMLA_COMPONENT_LABEL",
+                        "description": "COM_COMPONENTBUILDER_COMPONENT_DASHBOARD_JOOMLA_COMPONENT_DESCRIPTION",
+                        "class": "list_class",
+                        "multiple": "false",
+                        "required": "true",
+                        "readonly": "true",
+                        "button": "false"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        },
+        "dashboard_tab": {
+            "table_metadata": {
+                "name": "dashboard_tab",
+                "guid": "fd0cceef-975e-4daa-a529-2c98446b9df3",
+                "label": "COM_COMPONENTBUILDER_COMPONENT_DASHBOARD_DASHBOARD_TAB_LABEL",
+                "type": "subform",
+                "title": false,
+                "list": "components_dashboard",
+                "store": "json",
+                "tab_name": "Dashboard",
+                "db": {
+                    "type": "TEXT",
+                    "default": "EMPTY",
+                    "GUID": "fd0cceef-975e-4daa-a529-2c98446b9df3",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null,
+                "fields": {
+                    "name": {
+                        "name": "name",
+                        "type": "text",
+                        "link": null
+                    },
+                    "header": {
+                        "name": "header",
+                        "type": "text",
+                        "link": null
+                    },
+                    "html": {
+                        "name": "html",
+                        "type": "textarea",
+                        "link": null
+                    }
+                }
+            },
+            "config_map_target": "dashboard_tab",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "subform",
+                        "name": "dashboard_tab",
+                        "label": "COM_COMPONENTBUILDER_COMPONENT_DASHBOARD_DASHBOARD_TAB_LABEL",
+                        "layout": "repeatablejcb",
+                        "multiple": "true",
+                        "default": "",
+                        "icon": "list",
+                        "filter": "raw"
+                    },
+                    "options": [],
+                    "nested_fields": [
+                        {
+                            "attributes": {
+                                "type": "text",
+                                "name": "name",
+                                "label": "COM_COMPONENTBUILDER_COMPONENT_DASHBOARD_NAME_LABEL",
+                                "size": "40",
+                                "maxlength": "150",
+                                "description": "COM_COMPONENTBUILDER_COMPONENT_DASHBOARD_NAME_DESCRIPTION",
+                                "class": "text_area",
+                                "readonly": "false",
+                                "disabled": "false",
+                                "required": "true",
+                                "filter": "STRING",
+                                "message": "COM_COMPONENTBUILDER_COMPONENT_DASHBOARD_NAME_MESSAGE",
+                                "hint": "COM_COMPONENTBUILDER_COMPONENT_DASHBOARD_NAME_HINT"
+                            },
+                            "options": [],
+                            "nested_fields": []
+                        },
+                        {
+                            "attributes": {
+                                "type": "text",
+                                "name": "header",
+                                "label": "COM_COMPONENTBUILDER_COMPONENT_DASHBOARD_HEADER_LABEL",
+                                "size": "40",
+                                "maxlength": "150",
+                                "description": "COM_COMPONENTBUILDER_COMPONENT_DASHBOARD_HEADER_DESCRIPTION",
+                                "class": "text_area",
+                                "readonly": "false",
+                                "disabled": "false",
+                                "required": "true",
+                                "filter": "STRING",
+                                "message": "COM_COMPONENTBUILDER_COMPONENT_DASHBOARD_HEADER_MESSAGE",
+                                "hint": "COM_COMPONENTBUILDER_COMPONENT_DASHBOARD_HEADER_HINT"
+                            },
+                            "options": [],
+                            "nested_fields": []
+                        },
+                        {
+                            "attributes": {
+                                "type": "textarea",
+                                "name": "html",
+                                "label": "COM_COMPONENTBUILDER_COMPONENT_DASHBOARD_HTML_LABEL",
+                                "rows": "20",
+                                "cols": "30",
+                                "class": "text_area tab_html",
+                                "filter": "raw",
+                                "hint": "COM_COMPONENTBUILDER_COMPONENT_DASHBOARD_HTML_HINT",
+                                "required": "true"
+                            },
+                            "options": [],
+                            "nested_fields": []
+                        }
+                    ]
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "object",
+                "array",
+                "string"
+            ]
+        },
+        "php_dashboard_methods": {
+            "table_metadata": {
+                "name": "php_dashboard_methods",
+                "guid": "e6c421c3-2f37-429a-a8d9-b552bed392a5",
+                "label": "COM_COMPONENTBUILDER_COMPONENT_DASHBOARD_PHP_DASHBOARD_METHODS_LABEL",
+                "type": "textarea",
+                "title": false,
+                "list": "components_dashboard",
+                "store": "base64",
+                "tab_name": "Dashboard",
+                "db": {
+                    "type": "MEDIUMTEXT",
+                    "default": "EMPTY",
+                    "GUID": "e6c421c3-2f37-429a-a8d9-b552bed392a5",
+                    "null_switch": "NULL",
+                    "unique_key": false,
+                    "key": false
+                },
+                "link": null
+            },
+            "config_map_target": "php_dashboard_methods",
+            "form": [
+                {
+                    "attributes": {
+                        "type": "textarea",
+                        "name": "php_dashboard_methods",
+                        "label": "COM_COMPONENTBUILDER_COMPONENT_DASHBOARD_PHP_DASHBOARD_METHODS_LABEL",
+                        "rows": "17",
+                        "cols": "5",
+                        "description": "COM_COMPONENTBUILDER_COMPONENT_DASHBOARD_PHP_DASHBOARD_METHODS_DESCRIPTION",
+                        "class": "text_area span12",
+                        "filter": "raw",
+                        "hint": "COM_COMPONENTBUILDER_COMPONENT_DASHBOARD_PHP_DASHBOARD_METHODS_HINT",
+                        "required": "false"
+                    },
+                    "options": [],
+                    "nested_fields": []
+                }
+            ],
+            "static_json_types": [
+                "null",
+                "string"
+            ]
+        }
+    },
+    "source_license": {
+        "header": "GNU General Public License version 2 or later; see LICENSE.txt",
+        "spdx": "GPL-2.0-or-later",
+        "copyright": "Copyright (C) 2015 Vast Development Method. All rights reserved.",
+        "file": "LICENSE.txt",
+        "sha256": "2332109384fc0476519a1d02e1f050dd05ea2251fa66c06f9c5239585147828c",
+        "url": "https://github.com/vdm-io/Joomla-Component-Builder/blob/408703a857ad937479b1e28de7f693af178dcc83/LICENSE.txt"
+    }
+}

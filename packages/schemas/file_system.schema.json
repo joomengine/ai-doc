@@ -1,0 +1,33 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "file_system virtual Config map (not a repository JSON record)",
+    "description": "Generated from pinned Table and Remote Config. Bounds known JSON types only, not conditional forms, SQL defaults, compiler behavior or semantic closure. Filesystem payloads are raw files; their Config map is only transport metadata.",
+    "type": "object",
+    "properties": {
+        "key": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/file_system.json for exact metadata, conditions and subfields."
+        },
+        "value": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/file_system.json for exact metadata, conditions and subfields."
+        },
+        "target": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "description": "Source-derived envelope; see reference/file_system.json for exact metadata, conditions and subfields."
+        },
+        "@dependencies": {
+            "$ref": "dependencies.schema.json"
+        }
+    },
+    "additionalProperties": false
+}

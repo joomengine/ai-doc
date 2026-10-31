@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "format": "https://agentskills.io/specification",
+  "distribution_name": "joomengine-jcb",
+  "distribution_root": ".",
+  "installation": "Keep the complete repository together under joomengine-jcb. Nested skills are task entry points into that distribution, not independently self-contained installations.",
+  "skills": [
+    {"name": "joomengine-jcb", "path": "SKILL.md", "role": "ecosystem-router"},
+    {"name": "super-powers", "path": "super-powers/SKILL.md", "role": "model"},
+    {"name": "field-types", "path": "field-types/SKILL.md", "role": "model"},
+    {"name": "snippets", "path": "snippets/SKILL.md", "role": "model"},
+    {"name": "packages", "path": "packages/SKILL.md", "role": "model"},
+    {"name": "playground", "path": "testing/playground/SKILL.md", "role": "integration"}
+  ]
+}
